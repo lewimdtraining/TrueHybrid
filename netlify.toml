@@ -1,0 +1,72 @@
+# Netlify configuration for True Hybrid
+# This is a pure static site, no build step required.
+
+[build]
+  publish = "."
+
+# Pretty URLs: /tools/nutrition instead of /tools/nutrition/index.html
+[[redirects]]
+  from = "/framework"
+  to = "/framework/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/nutrition"
+  to = "/tools/nutrition/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/vanguard"
+  to = "/vanguard/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/audit"
+  to = "/tools/audit/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/strength"
+  to = "/tools/strength/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/running"
+  to = "/tools/running/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/stretching"
+  to = "/tools/stretching/index.html"
+  status = 200
+
+# Security & caching headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
+
+# Service worker must be re-checked often so updates roll out to installed apps
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Correct content type for the web app manifest
+[[headers]]
+  for = "/manifest.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"

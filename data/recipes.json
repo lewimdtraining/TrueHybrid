@@ -1,0 +1,6410 @@
+[
+  {
+    "id": "B001",
+    "name": "Protein Oats & Berries",
+    "mealType": "breakfast",
+    "calories": 412,
+    "protein": 38,
+    "carbs": 52,
+    "fats": 8,
+    "fibre": 9,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 5,
+    "tags": [
+      "oats",
+      "dairy",
+      "fruit"
+    ],
+    "description": "Cooked oats finished with whey and berries. Sets your morning up without spiking you.",
+    "ingredients": [
+      "60g rolled oats",
+      "300ml skim milk or unsweetened almond milk",
+      "30g whey protein (vanilla)",
+      "80g mixed berries (fresh or frozen)",
+      "1 tsp cinnamon",
+      "10g almond butter (optional)"
+    ],
+    "instructions": [
+      "Combine oats and milk in a saucepan. Bring to a low simmer.",
+      "Cook 4-5 minutes, stirring, until thick.",
+      "Pull off heat. Let it cool 2 minutes (whey will clump in boiling liquid).",
+      "Stir through whey, cinnamon, and almond butter if using.",
+      "Top with berries. Eat."
+    ]
+  },
+  {
+    "id": "B002",
+    "name": "Three-Egg Veg Scramble on Toast",
+    "mealType": "breakfast",
+    "calories": 445,
+    "protein": 32,
+    "carbs": 38,
+    "fats": 18,
+    "fibre": 6,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 7,
+    "tags": [
+      "eggs",
+      "vegetables",
+      "bread"
+    ],
+    "description": "Three eggs, spinach, tomato, on sourdough. Quick, filling, no faffing.",
+    "ingredients": [
+      "3 whole eggs",
+      "50g baby spinach",
+      "60g cherry tomatoes, halved",
+      "1 slice sourdough (60g)",
+      "5g butter",
+      "Salt and black pepper",
+      "Pinch of chilli flakes"
+    ],
+    "instructions": [
+      "Whisk eggs in a bowl with salt and pepper.",
+      "Toast the sourdough.",
+      "Melt butter in a non-stick pan on medium-low.",
+      "Add tomatoes, cook 1 minute until softening.",
+      "Add spinach, stir until wilted, about 30 seconds.",
+      "Pour in eggs. Gentle folds with a spatula. Pull off heat when still a touch wet, they finish cooking on the plate.",
+      "Serve on the toast with chilli flakes over the top."
+    ]
+  },
+  {
+    "id": "B003",
+    "name": "Greek Yoghurt Bowl with Granola",
+    "mealType": "breakfast",
+    "calories": 388,
+    "protein": 34,
+    "carbs": 42,
+    "fats": 9,
+    "fibre": 5,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "fruit",
+      "oats"
+    ],
+    "description": "High-protein yoghurt, granola, banana, honey. Zero cooking.",
+    "ingredients": [
+      "250g 0% fat Greek yoghurt",
+      "30g low-sugar granola",
+      "1 medium banana, sliced",
+      "10g honey",
+      "1 tbsp chia seeds"
+    ],
+    "instructions": [
+      "Spoon yoghurt into a bowl.",
+      "Top with banana, granola, chia, and a drizzle of honey.",
+      "Done."
+    ]
+  },
+  {
+    "id": "B004",
+    "name": "Cottage Cheese & Banana Pancakes",
+    "mealType": "breakfast",
+    "calories": 425,
+    "protein": 36,
+    "carbs": 48,
+    "fats": 10,
+    "fibre": 5,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 8,
+    "tags": [
+      "dairy",
+      "fruit",
+      "eggs"
+    ],
+    "description": "Blender pancakes. Three ingredients in the batter, high protein, no sugar crash.",
+    "ingredients": [
+      "150g low-fat cottage cheese",
+      "1 medium banana",
+      "2 whole eggs",
+      "40g rolled oats",
+      "1 tsp baking powder",
+      "1 tsp vanilla",
+      "Spray oil for the pan",
+      "20g maple syrup to serve"
+    ],
+    "instructions": [
+      "Blend cottage cheese, banana, eggs, oats, baking powder and vanilla until smooth.",
+      "Heat a non-stick pan on medium-low. Spray with oil.",
+      "Pour batter to form small pancakes (you'll get 4-5).",
+      "Cook 2 minutes per side until golden and set.",
+      "Serve with maple syrup."
+    ]
+  },
+  {
+    "id": "B005",
+    "name": "Smoked Salmon Bagel",
+    "mealType": "breakfast",
+    "calories": 458,
+    "protein": 35,
+    "carbs": 48,
+    "fats": 13,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 2,
+    "tags": [
+      "fish",
+      "bread",
+      "dairy"
+    ],
+    "description": "Smoked salmon, light cream cheese, capers, red onion. Classic, fast, no compromise.",
+    "ingredients": [
+      "1 wholemeal bagel (80g)",
+      "80g smoked salmon",
+      "40g light cream cheese",
+      "20g red onion, thinly sliced",
+      "1 tsp capers",
+      "Squeeze of lemon",
+      "Black pepper, dill (fresh or dried)"
+    ],
+    "instructions": [
+      "Toast the bagel halves.",
+      "Spread cream cheese on both halves.",
+      "Layer salmon, red onion, capers, dill, lemon, and a crack of black pepper.",
+      "Close and eat, or eat open."
+    ]
+  },
+  {
+    "id": "B006",
+    "name": "Overnight Oats with Peanut Butter",
+    "mealType": "breakfast",
+    "calories": 478,
+    "protein": 35,
+    "carbs": 55,
+    "fats": 13,
+    "fibre": 8,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 0,
+    "tags": [
+      "oats",
+      "dairy",
+      "nuts"
+    ],
+    "description": "Build it the night before. Five minutes the night before, zero minutes in the morning.",
+    "ingredients": [
+      "60g rolled oats",
+      "250ml skim milk",
+      "25g whey protein (chocolate)",
+      "15g peanut butter (no added sugar)",
+      "1 tbsp chia seeds",
+      "10g honey",
+      "1 tsp cocoa powder (optional)"
+    ],
+    "instructions": [
+      "Mix everything in a jar or container.",
+      "Lid on. Fridge overnight (minimum 4 hours).",
+      "Eat cold straight from the jar."
+    ]
+  },
+  {
+    "id": "B007",
+    "name": "Steak & Eggs",
+    "mealType": "breakfast",
+    "calories": 545,
+    "protein": 52,
+    "carbs": 6,
+    "fats": 32,
+    "fibre": 1,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 8,
+    "tags": [
+      "beef",
+      "eggs"
+    ],
+    "description": "Old-school breakfast for a reason. Lean steak, two eggs, butter. That's the meal.",
+    "ingredients": [
+      "150g lean sirloin steak",
+      "2 whole eggs",
+      "5g butter",
+      "Salt and black pepper",
+      "1 tsp olive oil",
+      "Squeeze of lemon (optional)"
+    ],
+    "instructions": [
+      "Pull steak from fridge 20 minutes before cooking. Season heavy with salt and pepper.",
+      "Heat oil in a pan on high. Sear steak 2-3 minutes each side for medium-rare.",
+      "Rest steak on a plate.",
+      "In the same pan, drop heat to medium, add butter, crack the eggs in.",
+      "Cook eggs sunny-side or to your liking.",
+      "Slice steak across the grain, plate with eggs. Optional squeeze of lemon."
+    ]
+  },
+  {
+    "id": "B008",
+    "name": "High-Protein French Toast",
+    "mealType": "breakfast",
+    "calories": 432,
+    "protein": 38,
+    "carbs": 45,
+    "fats": 10,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 8,
+    "tags": [
+      "eggs",
+      "bread",
+      "dairy"
+    ],
+    "description": "Egg-soaked wholemeal bread, vanilla, whey. Tastes indulgent. Macros say otherwise.",
+    "ingredients": [
+      "2 slices wholemeal bread",
+      "2 whole eggs",
+      "60ml skim milk",
+      "20g whey protein (vanilla)",
+      "1 tsp cinnamon",
+      "1 tsp vanilla extract",
+      "Spray oil",
+      "80g berries to serve",
+      "10g maple syrup"
+    ],
+    "instructions": [
+      "Whisk eggs, milk, whey, cinnamon, vanilla in a wide bowl.",
+      "Heat a non-stick pan, medium heat, spray with oil.",
+      "Dunk each bread slice, soak 10 seconds per side.",
+      "Cook 2 minutes per side until golden.",
+      "Plate with berries and maple syrup."
+    ]
+  },
+  {
+    "id": "B009",
+    "name": "Veggie & Feta Egg Muffins",
+    "mealType": "breakfast",
+    "calories": 285,
+    "protein": 24,
+    "carbs": 8,
+    "fats": 17,
+    "fibre": 2,
+    "servings": 1,
+    "prepTime": 8,
+    "cookTime": 18,
+    "tags": [
+      "eggs",
+      "vegetables",
+      "cheese"
+    ],
+    "description": "Batch cook on Sunday, eat all week. Three muffins per serve.",
+    "ingredients": [
+      "3 whole eggs",
+      "30g feta, crumbled",
+      "30g baby spinach, chopped",
+      "40g red capsicum, diced",
+      "20g red onion, diced",
+      "Salt, pepper, dried oregano",
+      "Spray oil"
+    ],
+    "instructions": [
+      "Oven to 180°C / 350°F. Spray a muffin tin.",
+      "Whisk eggs with salt, pepper, oregano.",
+      "Divide veg and feta between three muffin cups.",
+      "Pour egg mix over the top.",
+      "Bake 16-18 minutes until set and lightly golden.",
+      "Cool. Store in fridge up to 4 days. Reheat 30 seconds in microwave."
+    ]
+  },
+  {
+    "id": "B010",
+    "name": "Avocado Egg Toast",
+    "mealType": "breakfast",
+    "calories": 462,
+    "protein": 24,
+    "carbs": 38,
+    "fats": 24,
+    "fibre": 9,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 5,
+    "tags": [
+      "eggs",
+      "bread",
+      "avocado"
+    ],
+    "description": "Half an avocado, two eggs, sourdough. Not a brunch-cafe price tag.",
+    "ingredients": [
+      "1 slice sourdough (60g)",
+      "1/2 avocado",
+      "2 whole eggs",
+      "Salt, pepper, chilli flakes",
+      "Squeeze of lemon",
+      "1 tsp white vinegar (for poaching)"
+    ],
+    "instructions": [
+      "Toast the sourdough.",
+      "Mash avocado with lemon, salt, pepper. Spread on toast.",
+      "Bring a pot of water to a gentle simmer, add vinegar.",
+      "Crack eggs in one at a time, poach 3 minutes for runny yolks.",
+      "Lift out with a slotted spoon, drain on paper towel.",
+      "Place eggs on top of the avocado toast. Chilli flakes, more pepper. Eat."
+    ]
+  },
+  {
+    "id": "L007",
+    "name": "Garlic Butter Steak & Cajun Mac",
+    "mealType": "lunch",
+    "calories": 562,
+    "protein": 58,
+    "carbs": 45,
+    "fats": 16,
+    "fibre": 3,
+    "servings": 2,
+    "prepTime": 10,
+    "cookTime": 18,
+    "tags": [
+      "beef",
+      "pasta",
+      "cheese"
+    ],
+    "description": "Cajun-spiced creamy mac and pan-seared steak. Carbs, protein, fat, all dialled.",
+    "ingredients": [
+      "400g lean topside, cubed",
+      "1 tsp each salt, black pepper, garlic powder, paprika, oregano, thyme (Cajun base, split)",
+      "1/2 tsp chilli powder",
+      "1 tsp parsley (dried)",
+      "1 tbsp olive oil",
+      "20g butter (split)",
+      "1.5 tbsp minced garlic",
+      "1 tbsp fresh parsley",
+      "100g uncooked macaroni",
+      "140ml skim milk",
+      "75g light cream cheese",
+      "20g light cheddar",
+      "20g mozzarella, grated"
+    ],
+    "instructions": [
+      "Cube steak. Toss with half the Cajun spice mix, parsley, oil. Rest 10 minutes.",
+      "Boil pasta until al dente. Drain.",
+      "Heat pan medium-high, melt half the butter. Sear steak in batches, 3 minutes per side.",
+      "Drop heat to low. Add remaining butter, minced garlic, fresh parsley. Toss steak in the garlic butter. Set aside.",
+      "Same pan, low: milk, cream cheese, both cheeses, remaining Cajun spice. Stir until smooth.",
+      "Fold in pasta. Coat well.",
+      "Plate mac, steak on top, split into two."
+    ]
+  },
+  {
+    "id": "L012",
+    "name": "Creamy Honey Garlic Steak Noodles",
+    "mealType": "lunch",
+    "calories": 580,
+    "protein": 56,
+    "carbs": 50,
+    "fats": 15,
+    "fibre": 3,
+    "servings": 2,
+    "prepTime": 10,
+    "cookTime": 15,
+    "tags": [
+      "beef",
+      "pasta"
+    ],
+    "description": "Steak strips in a sticky honey garlic cream sauce over egg noodles.",
+    "ingredients": [
+      "400g lean topside, sliced",
+      "1 tsp salt",
+      "1 tsp black pepper",
+      "1 tsp garlic powder",
+      "1 tbsp olive oil",
+      "120g uncooked egg noodles",
+      "15g butter",
+      "2 tbsp minced garlic",
+      "20g honey",
+      "1.5 tbsp light soy sauce",
+      "150ml light evaporated milk",
+      "50g light cream cheese",
+      "Spring onions and sesame seeds to finish"
+    ],
+    "instructions": [
+      "Slice steak thin. Toss with salt, pepper, garlic powder, oil.",
+      "Boil noodles per packet. Drain.",
+      "Heat pan high. Sear beef in batches 1-2 minutes. Remove.",
+      "Drop heat to low. Butter, minced garlic, 1 minute.",
+      "Add honey, soy sauce, evaporated milk, cream cheese. Stir smooth.",
+      "Return beef to the pan. Fold in noodles. Coat.",
+      "Finish with spring onion and sesame. Two serves."
+    ]
+  },
+  {
+    "id": "L021",
+    "name": "Korean BBQ Beef Bowls",
+    "mealType": "lunch",
+    "calories": 568,
+    "protein": 54,
+    "carbs": 64,
+    "fats": 9,
+    "fibre": 3,
+    "servings": 2,
+    "prepTime": 10,
+    "cookTime": 15,
+    "tags": [
+      "beef",
+      "rice"
+    ],
+    "description": "Sweet-savoury sticky Korean beef on rice with sesame and spring onion.",
+    "ingredients": [
+      "400g 95% lean beef mince",
+      "5g sesame oil",
+      "40g light soy sauce",
+      "25g dark soy sauce",
+      "18g honey",
+      "1.5 tbsp minced garlic",
+      "20g gochujang paste",
+      "1 tbsp sesame seeds",
+      "60g spring onion, sliced",
+      "100g uncooked jasmine rice",
+      "Optional: kimchi to serve"
+    ],
+    "instructions": [
+      "Cook rice.",
+      "Mix the marinade: both soy sauces, honey, garlic, gochujang.",
+      "Heat sesame oil in a pan, medium-high. Brown the mince 6-7 minutes, breaking it up.",
+      "Drop heat to medium. Pour in marinade. Add sesame seeds and most of the spring onion.",
+      "Stir 4-5 minutes until glossy and slightly sticky.",
+      "Plate over rice. Remaining spring onion on top. Kimchi if using. Two."
+    ]
+  },
+  {
+    "id": "D004",
+    "name": "Garlic Parmesan Steak Alfredo",
+    "mealType": "dinner",
+    "calories": 612,
+    "protein": 62,
+    "carbs": 48,
+    "fats": 16,
+    "fibre": 3,
+    "servings": 2,
+    "prepTime": 10,
+    "cookTime": 18,
+    "tags": [
+      "beef",
+      "pasta",
+      "cheese"
+    ],
+    "description": "Steak strips in a parmesan cream sauce on fettuccine.",
+    "ingredients": [
+      "400g lean topside, sliced",
+      "1 tsp salt",
+      "1 tsp black pepper",
+      "1 tsp garlic powder",
+      "1 tsp Italian herbs",
+      "1 tbsp olive oil",
+      "10g butter",
+      "100g uncooked fettuccine",
+      "2 tbsp minced garlic",
+      "150ml light evaporated milk",
+      "65g light cream cheese",
+      "30g parmesan, grated",
+      "Fresh parsley, black pepper"
+    ],
+    "instructions": [
+      "Slice beef thin. Toss with salt, pepper, garlic powder, Italian herbs, oil.",
+      "Boil pasta to al dente. Drain (keep a small cup of pasta water).",
+      "Heat pan high. Sear beef in batches 1-2 min. Set aside.",
+      "Drop heat, butter, garlic, 1 minute.",
+      "Evaporated milk, cream cheese, parmesan. Stir smooth.",
+      "Fold in pasta. Loosen with pasta water if tight.",
+      "Plate, steak on top, parsley, pepper. Two."
+    ]
+  },
+  {
+    "id": "D009",
+    "name": "Mongolian Beef Noodles",
+    "mealType": "dinner",
+    "calories": 488,
+    "protein": 48,
+    "carbs": 48,
+    "fats": 10,
+    "fibre": 3,
+    "servings": 2,
+    "prepTime": 10,
+    "cookTime": 15,
+    "tags": [
+      "beef",
+      "pasta"
+    ],
+    "description": "Sweet-savoury sticky beef on egg noodles with spring onion.",
+    "ingredients": [
+      "400g lean topside, thinly sliced",
+      "1 tsp black pepper",
+      "1 tsp garlic powder",
+      "10g cornstarch",
+      "1 tbsp light soy sauce",
+      "1 tbsp olive oil",
+      "120g uncooked egg noodles",
+      "Sauce: 30g dark soy, 20g light soy, 20g honey, 1.5 tbsp minced garlic, 1 tbsp ginger paste, 1 tsp chilli flakes",
+      "80g spring onion in 5cm pieces",
+      "1 tsp sesame seeds"
+    ],
+    "instructions": [
+      "Toss beef with pepper, garlic powder, cornstarch, light soy.",
+      "Boil noodles. Drain.",
+      "Sauce: mix soys, honey, garlic, ginger, chilli.",
+      "Heat oil in a pan, high. Sear beef in batches 1-2 min. Set aside.",
+      "Drop heat to medium-low. Pour in sauce, simmer 1-2 min until syrupy.",
+      "Return beef. Add spring onion. Toss 1 minute.",
+      "Fold in noodles. Sesame over. Two."
+    ]
+  },
+  {
+    "id": "D011",
+    "name": "Garlic Shrimp Fried Rice",
+    "mealType": "dinner",
+    "calories": 512,
+    "protein": 44,
+    "carbs": 48,
+    "fats": 13,
+    "fibre": 3,
+    "servings": 2,
+    "prepTime": 10,
+    "cookTime": 12,
+    "tags": [
+      "fish",
+      "rice",
+      "eggs"
+    ],
+    "description": "Quick fried rice with garlic butter prawns. 25-minute dinner.",
+    "ingredients": [
+      "300g raw prawns, peeled",
+      "1 tsp salt",
+      "1 tsp black pepper",
+      "1 tsp paprika",
+      "10g butter",
+      "2 tbsp minced garlic (split)",
+      "2 whole eggs",
+      "300g cooked, cold jasmine rice",
+      "20g light soy sauce",
+      "10g dark soy sauce",
+      "1 tsp sesame oil",
+      "60g frozen peas",
+      "60g carrot, diced",
+      "60g spring onion, sliced"
+    ],
+    "instructions": [
+      "Toss prawns with salt, pepper, paprika.",
+      "Heat butter in a pan, medium-high. Add half the garlic, 30 sec.",
+      "Add prawns, cook 2-3 min until pink. Remove.",
+      "Same pan: scramble eggs, break up, remove.",
+      "Pan back to high. Bit of oil, remaining garlic, 30 sec.",
+      "Add rice, peas, carrot. Stir-fry 3 min.",
+      "Add both soy sauces and sesame oil. Toss.",
+      "Return prawns, eggs, spring onion. Toss. Two serves."
+    ]
+  },
+  {
+    "id": "S001",
+    "name": "Cottage Cheese & Pineapple",
+    "mealType": "snack",
+    "calories": 168,
+    "protein": 18,
+    "carbs": 18,
+    "fats": 3,
+    "fibre": 1,
+    "servings": 1,
+    "prepTime": 2,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "fruit"
+    ],
+    "description": "Old-school fitness snack. Protein, carbs, no prep.",
+    "ingredients": [
+      "150g low-fat cottage cheese",
+      "100g pineapple, chopped"
+    ],
+    "instructions": [
+      "Spoon cottage cheese into a bowl.",
+      "Top with pineapple. Eat."
+    ]
+  },
+  {
+    "id": "S002",
+    "name": "Greek Yoghurt with Berries & Honey",
+    "mealType": "snack",
+    "calories": 185,
+    "protein": 20,
+    "carbs": 22,
+    "fats": 1,
+    "fibre": 2,
+    "servings": 1,
+    "prepTime": 2,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "fruit"
+    ],
+    "description": "20g protein for under 200 calories. No excuses.",
+    "ingredients": [
+      "200g 0% fat Greek yoghurt",
+      "80g mixed berries",
+      "10g honey"
+    ],
+    "instructions": [
+      "Yoghurt in a bowl. Berries and honey on top. Done."
+    ]
+  },
+  {
+    "id": "S003",
+    "name": "Tuna & Crackers",
+    "mealType": "snack",
+    "calories": 218,
+    "protein": 22,
+    "carbs": 18,
+    "fats": 6,
+    "fibre": 1,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 0,
+    "tags": [
+      "fish"
+    ],
+    "description": "Tin of tuna, light mayo, wholegrain crackers. Forever cheap.",
+    "ingredients": [
+      "1 tin tuna in springwater (95g drained)",
+      "15g light mayo",
+      "Squeeze of lemon",
+      "30g wholegrain crackers",
+      "Black pepper"
+    ],
+    "instructions": [
+      "Drain tuna. Mash with mayo, lemon, pepper.",
+      "Eat with crackers."
+    ]
+  },
+  {
+    "id": "S004",
+    "name": "Protein Shake & Banana",
+    "mealType": "snack",
+    "calories": 245,
+    "protein": 28,
+    "carbs": 28,
+    "fats": 3,
+    "fibre": 3,
+    "servings": 1,
+    "prepTime": 2,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "fruit"
+    ],
+    "description": "Post-training default. Shake plus a banana.",
+    "ingredients": [
+      "30g whey protein",
+      "300ml skim milk",
+      "1 medium banana"
+    ],
+    "instructions": [
+      "Shake whey and milk in a shaker.",
+      "Eat the banana with it."
+    ]
+  },
+  {
+    "id": "S005",
+    "name": "Hard-Boiled Eggs & Apple",
+    "mealType": "snack",
+    "calories": 232,
+    "protein": 16,
+    "carbs": 22,
+    "fats": 10,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 2,
+    "cookTime": 10,
+    "tags": [
+      "eggs",
+      "fruit"
+    ],
+    "description": "Two eggs, an apple. Boil six on Sunday, snack all week.",
+    "ingredients": [
+      "2 hard-boiled eggs",
+      "1 medium apple",
+      "Salt and pepper"
+    ],
+    "instructions": [
+      "Eggs into cold water, bring to boil, simmer 8-9 minutes. Cold water bath.",
+      "Peel, season. Eat with the apple."
+    ]
+  },
+  {
+    "id": "S006",
+    "name": "Edamame with Sea Salt",
+    "mealType": "snack",
+    "calories": 185,
+    "protein": 17,
+    "carbs": 15,
+    "fats": 7,
+    "fibre": 8,
+    "servings": 1,
+    "prepTime": 1,
+    "cookTime": 5,
+    "tags": [
+      "legumes"
+    ],
+    "description": "Steamed edamame, salt. That's the whole brief.",
+    "ingredients": [
+      "200g frozen edamame in pods",
+      "Sea salt"
+    ],
+    "instructions": [
+      "Bring water to boil, drop edamame in, 5 min.",
+      "Drain, salt heavy. Eat."
+    ]
+  },
+  {
+    "id": "S007",
+    "name": "Beef Jerky & Cheese",
+    "mealType": "snack",
+    "calories": 215,
+    "protein": 25,
+    "carbs": 4,
+    "fats": 12,
+    "fibre": 0,
+    "servings": 1,
+    "prepTime": 1,
+    "cookTime": 0,
+    "tags": [
+      "beef",
+      "cheese"
+    ],
+    "description": "Travel snack. Throw it in your bag.",
+    "ingredients": [
+      "30g beef jerky (low-sugar variety)",
+      "30g aged cheddar"
+    ],
+    "instructions": [
+      "Unwrap. Eat."
+    ]
+  },
+  {
+    "id": "S008",
+    "name": "Hummus & Veggie Sticks",
+    "mealType": "snack",
+    "calories": 195,
+    "protein": 8,
+    "carbs": 22,
+    "fats": 9,
+    "fibre": 7,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 0,
+    "tags": [
+      "legumes",
+      "vegetables"
+    ],
+    "description": "Carrot, capsicum, cucumber, hummus. Beats anything in a vending machine.",
+    "ingredients": [
+      "60g hummus",
+      "80g carrot sticks",
+      "60g capsicum strips",
+      "80g cucumber strips"
+    ],
+    "instructions": [
+      "Cut veg into sticks.",
+      "Dip and eat."
+    ]
+  },
+  {
+    "id": "S009",
+    "name": "Almonds & Dark Chocolate",
+    "mealType": "snack",
+    "calories": 248,
+    "protein": 7,
+    "carbs": 14,
+    "fats": 19,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 1,
+    "cookTime": 0,
+    "tags": [
+      "nuts"
+    ],
+    "description": "Handful of almonds, a square of dark chocolate. Works.",
+    "ingredients": [
+      "25g raw almonds",
+      "15g 70%+ dark chocolate"
+    ],
+    "instructions": [
+      "Eat together. Mind the portion, easy to overdo nuts."
+    ]
+  },
+  {
+    "id": "S010",
+    "name": "Protein Rice Cakes",
+    "mealType": "snack",
+    "calories": 225,
+    "protein": 12,
+    "carbs": 28,
+    "fats": 8,
+    "fibre": 2,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 0,
+    "tags": [
+      "nuts",
+      "fruit"
+    ],
+    "description": "Rice cakes, peanut butter, banana. Three minutes, decent macros.",
+    "ingredients": [
+      "2 plain rice cakes",
+      "20g peanut butter (no added sugar)",
+      "1 small banana, sliced",
+      "Pinch of cinnamon"
+    ],
+    "instructions": [
+      "Spread peanut butter on rice cakes.",
+      "Top with banana slices and cinnamon."
+    ]
+  },
+  {
+    "id": "B011",
+    "name": "Crispy Potatoes & Creamy Eggs",
+    "mealType": "breakfast",
+    "calories": 432,
+    "protein": 28,
+    "carbs": 36,
+    "fats": 18,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 20,
+    "tags": [
+      "eggs",
+      "vegetables",
+      "cheese"
+    ],
+    "description": "Hash-style crispy potatoes under soft-scrambled eggs. Diner breakfast at home.",
+    "ingredients": [
+      "200g potatoes, cubed small",
+      "1 tsp paprika",
+      "1 tsp garlic powder",
+      "1/2 tsp salt",
+      "1 tsp olive oil",
+      "3 whole eggs",
+      "20g light cream cheese",
+      "10g butter",
+      "1 tbsp fresh chives or spring onion",
+      "Salt and black pepper"
+    ],
+    "instructions": [
+      "Oven 210°C / 410°F. Toss potatoes with paprika, garlic powder, salt, oil. Tray-bake 18-22 minutes until golden.",
+      "Whisk eggs with cream cheese, salt, pepper.",
+      "Heat butter in a non-stick pan on medium-low.",
+      "Pour in eggs. Stir slowly with a spatula in big folds. Pull off the heat when still slightly wet, they finish on the plate.",
+      "Plate potatoes, eggs on top, chives over."
+    ]
+  },
+  {
+    "id": "L030",
+    "name": "Creamy Garlic Beef Pasta",
+    "mealType": "lunch",
+    "calories": 488,
+    "protein": 48,
+    "carbs": 52,
+    "fats": 10,
+    "fibre": 4,
+    "servings": 2,
+    "prepTime": 8,
+    "cookTime": 20,
+    "tags": [
+      "beef",
+      "pasta",
+      "cheese"
+    ],
+    "description": "Lean beef mince in a garlic-parmesan cream sauce, tossed through penne. Simple, fast, hits the numbers.",
+    "ingredients": [
+      "400g 95% lean beef mince",
+      "1 tsp salt",
+      "1 tsp black pepper",
+      "1 tsp Italian herbs",
+      "10g butter",
+      "120g uncooked penne",
+      "2 tbsp minced garlic",
+      "120ml skim milk",
+      "60g light cream cheese",
+      "20g parmesan, grated",
+      "60ml pasta water (reserved)",
+      "Fresh parsley"
+    ],
+    "instructions": [
+      "Boil pasta until al dente. Save 60ml pasta water, drain.",
+      "Heat pan medium-high, melt butter. Brown the mince 6-7 min with salt, pepper, Italian herbs.",
+      "Drop heat to low. Add garlic, 1 minute.",
+      "Add milk, cream cheese, parmesan. Stir smooth.",
+      "Fold in pasta. Loosen with pasta water if it tightens.",
+      "Parsley over. Two."
+    ]
+  },
+  {
+    "id": "D019",
+    "name": "Teriyaki Beef Fried Rice",
+    "mealType": "dinner",
+    "calories": 525,
+    "protein": 48,
+    "carbs": 54,
+    "fats": 12,
+    "fibre": 3,
+    "servings": 2,
+    "prepTime": 10,
+    "cookTime": 15,
+    "tags": [
+      "beef",
+      "rice",
+      "eggs"
+    ],
+    "description": "Sweet teriyaki beef mince through fried rice. 25 minutes from start to bowl.",
+    "ingredients": [
+      "400g 95% lean beef mince",
+      "1 tsp salt",
+      "1 tsp black pepper",
+      "Teriyaki: 25g light soy sauce, 15g dark soy sauce, 18g honey, 1 tbsp minced garlic, 1 tbsp ginger paste, 1 tsp sesame oil",
+      "300g cooked, cold jasmine rice",
+      "2 whole eggs",
+      "1 tbsp olive oil (split)",
+      "60g spring onion, sliced (split)",
+      "60g frozen peas",
+      "60g carrot, diced",
+      "1 tsp sesame seeds"
+    ],
+    "instructions": [
+      "Mix teriyaki sauce: both soys, honey, garlic, ginger, sesame oil.",
+      "Heat half the oil in a wok or large pan, high. Brown mince 6 min with salt, pepper.",
+      "Pour over teriyaki, simmer 2 min until glossy. Remove.",
+      "Same pan, drop heat: scramble eggs, break up, remove.",
+      "Heat remaining oil, high. Add rice, peas, carrot, half the spring onion. Stir-fry 3 min.",
+      "Return beef and eggs. Toss.",
+      "Sesame seeds and remaining spring onion over. Two."
+    ]
+  },
+  {
+    "id": "D021",
+    "name": "Chilli Peanut Chicken Noodles",
+    "mealType": "dinner",
+    "calories": 588,
+    "protein": 50,
+    "carbs": 52,
+    "fats": 18,
+    "fibre": 4,
+    "servings": 2,
+    "prepTime": 10,
+    "cookTime": 15,
+    "tags": [
+      "chicken",
+      "pasta",
+      "nuts"
+    ],
+    "description": "Spicy peanut sauce over egg noodles with seared chicken thigh. Big flavour, fast cook.",
+    "ingredients": [
+      "400g chicken thigh, cubed",
+      "1 tsp salt",
+      "1 tsp paprika",
+      "1 tsp garlic powder",
+      "1 tbsp olive oil",
+      "120g uncooked egg noodles",
+      "Sauce: 30g peanut butter, 20g light soy sauce, 15g honey, 1 tbsp ginger paste, 1 tbsp minced garlic, 1 tsp sriracha, 1 tsp chilli flakes, 1 tsp sesame oil, 60ml water",
+      "60g spring onion, sliced",
+      "1 tbsp crushed peanuts",
+      "Fresh coriander"
+    ],
+    "instructions": [
+      "Toss chicken with salt, paprika, garlic powder, oil.",
+      "Boil noodles per packet. Drain.",
+      "Sauce: whisk peanut butter, soy, honey, ginger, garlic, sriracha, chilli flakes, sesame oil, water. Smooth.",
+      "Heat a pan medium-high. Cook chicken 6-8 min until golden. Remove.",
+      "Same pan, low: pour in sauce, simmer 2 minutes until slightly thick.",
+      "Return chicken, toss. Add noodles, toss to coat.",
+      "Spring onion, peanuts, coriander over. Two."
+    ]
+  },
+  {
+    "id": "D024",
+    "name": "Black Pepper Beef Fried Rice",
+    "mealType": "dinner",
+    "calories": 545,
+    "protein": 50,
+    "carbs": 56,
+    "fats": 11,
+    "fibre": 3,
+    "servings": 2,
+    "prepTime": 10,
+    "cookTime": 12,
+    "tags": [
+      "beef",
+      "rice",
+      "eggs"
+    ],
+    "description": "Peppery beef strips through garlicky fried rice. Quick wok-style dinner.",
+    "ingredients": [
+      "400g lean topside, thinly sliced",
+      "2 tsp coarse black pepper",
+      "1 tbsp light soy sauce",
+      "10g cornstarch",
+      "1 tbsp olive oil (split)",
+      "2 whole eggs",
+      "300g cooked, cold jasmine rice",
+      "2 tbsp minced garlic",
+      "20g dark soy sauce",
+      "10g oyster sauce (or soy)",
+      "1 tsp sesame oil",
+      "60g spring onion, sliced",
+      "1 tsp sesame seeds"
+    ],
+    "instructions": [
+      "Toss beef with black pepper, light soy, cornstarch.",
+      "Heat half the oil in a wok or large pan, high. Sear beef in batches 1-2 min. Remove.",
+      "Same pan, drop heat: scramble eggs, break up, remove.",
+      "Pan back to high. Remaining oil, garlic, 30 seconds.",
+      "Add rice. Stir-fry 3 minutes.",
+      "Pour in dark soy, oyster sauce, sesame oil. Toss.",
+      "Return beef and eggs. Add spring onion. Toss.",
+      "Sesame seeds over. Two."
+    ]
+  },
+  {
+    "id": "D025",
+    "name": "Crispy Spicy Beef Noodles",
+    "mealType": "dinner",
+    "calories": 495,
+    "protein": 50,
+    "carbs": 50,
+    "fats": 8,
+    "fibre": 3,
+    "servings": 2,
+    "prepTime": 10,
+    "cookTime": 15,
+    "tags": [
+      "beef",
+      "pasta"
+    ],
+    "description": "Crispy-fried beef strips in a chilli-garlic-soy glaze over egg noodles.",
+    "ingredients": [
+      "400g lean topside, thinly sliced",
+      "1 tsp salt",
+      "1 tsp black pepper",
+      "1 tsp garlic powder",
+      "15g cornstarch",
+      "1 tbsp olive oil",
+      "120g uncooked egg noodles",
+      "Sauce: 30g light soy sauce, 15g dark soy sauce, 18g honey, 2 tbsp minced garlic, 1.5 tsp chilli flakes, 1 tbsp rice vinegar, 1 tsp sesame oil",
+      "80g spring onion in 5cm pieces",
+      "1 tsp sesame seeds"
+    ],
+    "instructions": [
+      "Toss beef with salt, pepper, garlic powder, cornstarch (gives the crispy edges).",
+      "Boil noodles. Drain.",
+      "Mix the sauce in a small bowl.",
+      "Heat oil in a pan or wok, high. Sear beef in single layer, don't overcrowd, 2-3 min per batch until crispy.",
+      "Drop heat to medium-low. Pour in sauce, simmer 1 minute.",
+      "Return all the beef, add spring onion. Toss.",
+      "Add noodles, toss to coat. Sesame over. Two."
+    ]
+  },
+  {
+    "id": "D026",
+    "name": "Lemon Garlic Prawn Linguine",
+    "mealType": "dinner",
+    "calories": 525,
+    "protein": 42,
+    "carbs": 56,
+    "fats": 12,
+    "fibre": 3,
+    "servings": 2,
+    "prepTime": 8,
+    "cookTime": 12,
+    "tags": [
+      "fish",
+      "pasta",
+      "cheese"
+    ],
+    "description": "Garlic prawns in a light lemon cream over linguine. 20 minutes flat.",
+    "ingredients": [
+      "300g raw prawns, peeled",
+      "1 tsp salt",
+      "1 tsp black pepper",
+      "1 tsp paprika",
+      "120g uncooked linguine",
+      "15g butter",
+      "2 tbsp minced garlic",
+      "Zest and juice of 1 lemon",
+      "120ml light evaporated milk",
+      "40g light cream cheese",
+      "20g parmesan, grated",
+      "1/2 tsp chilli flakes",
+      "60ml pasta water (reserved)",
+      "Fresh parsley"
+    ],
+    "instructions": [
+      "Toss prawns with salt, pepper, paprika.",
+      "Boil pasta until al dente. Reserve 60ml pasta water, drain.",
+      "Heat butter in a pan, medium-high. Add half the garlic, 30 seconds.",
+      "Add prawns, cook 2-3 min per side until pink. Remove.",
+      "Drop heat. Remaining garlic, chilli flakes, lemon zest, 30 seconds.",
+      "Add lemon juice, evaporated milk, cream cheese, parmesan. Stir smooth.",
+      "Return prawns. Fold in linguine. Loosen with pasta water.",
+      "Parsley over. Two."
+    ]
+  },
+  {
+    "id": "B012",
+    "name": "Steak & Eggs with Garlic Butter Toast",
+    "mealType": "breakfast",
+    "calories": 605,
+    "protein": 56,
+    "carbs": 28,
+    "fats": 30,
+    "fibre": 3,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 10,
+    "tags": [
+      "beef",
+      "eggs",
+      "bread"
+    ],
+    "description": "Lean steak, two eggs, and a slice of garlic butter sourdough. The big-meal breakfast.",
+    "ingredients": [
+      "150g lean sirloin",
+      "1 tsp salt",
+      "1 tsp black pepper",
+      "1 tsp garlic powder",
+      "1 tsp olive oil",
+      "10g butter (split)",
+      "1 tbsp minced garlic",
+      "2 whole eggs",
+      "1 slice sourdough (60g)",
+      "Fresh parsley"
+    ],
+    "instructions": [
+      "Pull steak out of fridge 20 min before. Season heavy with salt, pepper, garlic powder. Rub oil over.",
+      "Toast the sourdough.",
+      "Heat pan on high. Sear steak 2-3 min per side for medium-rare. Rest on a plate.",
+      "Drop heat to medium. Melt half the butter, add minced garlic, swirl 30 seconds.",
+      "Brush half the garlic butter onto the toast. The other half stays in the pan.",
+      "Crack the eggs into the same pan. Sunny-side or basted with the garlic butter, your call.",
+      "Slice steak across the grain. Plate with eggs, garlic toast, parsley over. One serve."
+    ]
+  },
+  {
+    "id": "D030",
+    "name": "Crispy Orange Chicken Noodles",
+    "mealType": "dinner",
+    "calories": 538,
+    "protein": 46,
+    "carbs": 60,
+    "fats": 11,
+    "fibre": 3,
+    "servings": 2,
+    "prepTime": 10,
+    "cookTime": 18,
+    "tags": [
+      "chicken",
+      "pasta"
+    ],
+    "description": "Crispy chicken thigh in a sweet-sticky orange glaze over egg noodles. Better than the takeaway.",
+    "ingredients": [
+      "400g chicken thigh, cubed",
+      "1 tsp salt",
+      "1 tsp black pepper",
+      "1 tsp garlic powder",
+      "15g cornstarch",
+      "1 tbsp olive oil",
+      "120g uncooked egg noodles",
+      "Sauce: juice and zest of 1 orange, 20g dark soy sauce, 18g honey, 1 tbsp minced garlic, 1 tbsp ginger paste, 1 tsp chilli flakes, 1 tsp rice vinegar",
+      "Spring onion, sesame seeds"
+    ],
+    "instructions": [
+      "Toss chicken with salt, pepper, garlic powder, cornstarch.",
+      "Boil noodles. Drain.",
+      "Heat oil in pan, medium-high. Cook chicken 6-8 min until crispy and golden. Remove.",
+      "Same pan, low: pour in sauce. Simmer 2-3 min until syrupy.",
+      "Return chicken, toss to glaze. Add noodles, toss to coat.",
+      "Spring onion and sesame over. Two."
+    ]
+  },
+  {
+    "id": "D032",
+    "name": "Chicken Chow Mein",
+    "mealType": "dinner",
+    "calories": 472,
+    "protein": 44,
+    "carbs": 50,
+    "fats": 9,
+    "fibre": 4,
+    "servings": 2,
+    "prepTime": 10,
+    "cookTime": 12,
+    "tags": [
+      "chicken",
+      "pasta",
+      "vegetables"
+    ],
+    "description": "Classic takeaway noodles. Chicken, cabbage, carrot, soy. Faster than ordering it.",
+    "ingredients": [
+      "400g chicken breast, sliced thin",
+      "1 tsp salt",
+      "1 tsp black pepper",
+      "1 tbsp light soy sauce",
+      "10g cornstarch",
+      "1 tbsp olive oil (split)",
+      "120g uncooked egg noodles",
+      "200g cabbage, shredded",
+      "100g carrot, julienned",
+      "60g spring onion, sliced",
+      "2 tbsp minced garlic",
+      "1 tbsp ginger paste",
+      "Sauce: 25g light soy sauce, 15g dark soy sauce, 10g oyster sauce, 12g honey, 1 tsp sesame oil, 60ml water",
+      "1 tsp sesame seeds"
+    ],
+    "instructions": [
+      "Toss chicken with salt, pepper, soy, cornstarch.",
+      "Boil noodles. Drain.",
+      "Mix the sauce.",
+      "Heat half the oil in a wok or large pan, high. Cook chicken 4-5 min until cooked. Remove.",
+      "Same pan, high: remaining oil, garlic, ginger, 30 seconds.",
+      "Add cabbage and carrot. Stir-fry 3 minutes.",
+      "Return chicken. Add noodles. Pour over sauce. Toss.",
+      "Spring onion and sesame over. Two."
+    ]
+  },
+  {
+    "id": "L038",
+    "name": "Chipotle Steak Bowls",
+    "mealType": "lunch",
+    "calories": 535,
+    "protein": 54,
+    "carbs": 46,
+    "fats": 13,
+    "fibre": 6,
+    "servings": 2,
+    "prepTime": 10,
+    "cookTime": 18,
+    "tags": [
+      "beef",
+      "rice",
+      "vegetables"
+    ],
+    "description": "Smoky-spiced steak with lime-coriander rice, black beans, and a fresh corn salsa.",
+    "ingredients": [
+      "400g lean topside, cubed",
+      "1 tsp salt",
+      "1 tsp black pepper",
+      "1 tsp cumin",
+      "1 tsp smoked paprika",
+      "20g chipotle paste",
+      "Juice of 1/2 lime",
+      "1 tbsp olive oil",
+      "10g butter",
+      "100g uncooked basmati rice",
+      "Juice of 1/2 lime (for rice)",
+      "1 tbsp fresh coriander, chopped",
+      "100g canned black beans, drained and rinsed",
+      "Corn salsa: 60g corn kernels, 50g tomato diced, 30g red onion diced, fresh coriander, juice of 1/4 lime, salt"
+    ],
+    "instructions": [
+      "Cook rice. Once done, fold through lime juice, coriander, salt.",
+      "Marinate steak: salt, pepper, cumin, smoked paprika, chipotle paste, lime, oil. 10 min.",
+      "Corn salsa: combine corn, tomato, onion, coriander, lime, salt. Set aside.",
+      "Heat butter in a pan, medium-high. Sear steak in batches 2-3 min per side.",
+      "Plate rice, steak, beans, salsa. Two."
+    ]
+  },
+  {
+    "id": "D033",
+    "name": "Korean Beef Fried Rice",
+    "mealType": "dinner",
+    "calories": 555,
+    "protein": 50,
+    "carbs": 56,
+    "fats": 12,
+    "fibre": 3,
+    "servings": 2,
+    "prepTime": 10,
+    "cookTime": 15,
+    "tags": [
+      "beef",
+      "rice",
+      "eggs"
+    ],
+    "description": "Gochujang beef stir-fried through rice with egg and sesame. Sweet-spicy comfort.",
+    "ingredients": [
+      "400g 95% lean beef mince",
+      "1 tsp salt",
+      "1 tsp black pepper",
+      "Sauce: 20g gochujang, 25g light soy sauce, 18g honey, 1 tbsp minced garlic, 1 tsp sesame oil",
+      "300g cooked, cold jasmine rice",
+      "2 whole eggs",
+      "1 tbsp olive oil (split)",
+      "60g spring onion, sliced (split)",
+      "60g frozen peas",
+      "1 tsp sesame seeds"
+    ],
+    "instructions": [
+      "Mix sauce ingredients.",
+      "Heat half the oil in a wok, high. Brown the mince 6 min with salt and pepper.",
+      "Pour in sauce, stir 2 min until glossy. Remove.",
+      "Drop heat: scramble eggs, break up, remove.",
+      "Pan back to high. Remaining oil, rice, peas, half spring onion. Stir-fry 3 minutes.",
+      "Return beef, eggs. Toss.",
+      "Sesame and remaining spring onion over. Two."
+    ]
+  },
+  {
+    "id": "D034",
+    "name": "Beef Bulgogi Kimchi Fried Rice",
+    "mealType": "dinner",
+    "calories": 508,
+    "protein": 56,
+    "carbs": 44,
+    "fats": 9,
+    "fibre": 3,
+    "servings": 2,
+    "prepTime": 10,
+    "cookTime": 15,
+    "tags": [
+      "beef",
+      "rice",
+      "eggs"
+    ],
+    "description": "Bulgogi-spiced beef through kimchi fried rice. Tangy, spicy, gut-friendly.",
+    "ingredients": [
+      "400g lean topside, thinly sliced (or 95% lean mince)",
+      "Bulgogi marinade: 25g light soy sauce, 20g dark soy sauce, 12g honey, 1 tbsp minced garlic, 1 tbsp ginger paste, 1 tsp sesame oil",
+      "300g cooked, cold jasmine rice",
+      "120g kimchi, chopped (plus a bit of the juice)",
+      "2 whole eggs",
+      "1 tbsp olive oil (split)",
+      "60g spring onion, sliced",
+      "1 tsp sesame seeds"
+    ],
+    "instructions": [
+      "Toss beef with bulgogi marinade. 10 min.",
+      "Heat half the oil in a wok, high. Cook beef 2-3 min if sliced or 6 min if mince. Remove.",
+      "Same pan, drop heat: scramble eggs, break up, remove.",
+      "Pan back on high. Remaining oil. Add rice and kimchi (plus a splash of kimchi juice). Stir-fry 3 minutes.",
+      "Return beef and eggs. Toss.",
+      "Spring onion and sesame over. Two."
+    ]
+  },
+  {
+    "id": "D036",
+    "name": "Nacho Cheese Beef Rice",
+    "mealType": "dinner",
+    "calories": 565,
+    "protein": 52,
+    "carbs": 48,
+    "fats": 17,
+    "fibre": 5,
+    "servings": 2,
+    "prepTime": 10,
+    "cookTime": 18,
+    "tags": [
+      "beef",
+      "rice",
+      "cheese"
+    ],
+    "description": "Jalapeño-spiked beef on rice with a proper nacho cheese sauce. Big-bowl comfort.",
+    "ingredients": [
+      "400g 95% lean beef mince",
+      "10g butter",
+      "Taco spice: 1 tsp each salt, pepper, garlic powder, onion powder, paprika, oregano, cumin; 1/2 tsp chilli powder",
+      "20g tomato paste",
+      "30g pickled jalapeños, chopped",
+      "100g uncooked basmati rice",
+      "Cheese sauce: 100ml light evaporated milk, 50g light cream cheese, 30g light cheddar grated, 1 tbsp jalapeño juice (optional)",
+      "Fresh coriander, spring onion"
+    ],
+    "instructions": [
+      "Cook rice.",
+      "Heat pan medium-high. Melt butter, brown the mince 6 min with taco spice and tomato paste.",
+      "Stir in jalapeños, cook 2 minutes. Remove.",
+      "Same pan, low: evaporated milk, cream cheese, cheddar, jalapeño juice. Stir smooth.",
+      "Plate rice, beef on top, cheese sauce drizzled, coriander, spring onion. Two."
+    ]
+  },
+  {
+    "id": "B013",
+    "name": "Breakfast Burrito",
+    "mealType": "breakfast",
+    "calories": 525,
+    "protein": 35,
+    "carbs": 52,
+    "fats": 18,
+    "fibre": 8,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 8,
+    "tags": [
+      "eggs",
+      "bread",
+      "cheese",
+      "legumes"
+    ],
+    "description": "Wrapped scrambled eggs, black beans, cheese, and salsa. Hand-held, freezer-friendly if you make a batch.",
+    "ingredients": [
+      "1 large wholemeal tortilla wrap (60g)",
+      "3 whole eggs",
+      "60g canned black beans, drained",
+      "30g light cheddar, grated",
+      "30g tomato salsa",
+      "30g 0% Greek yoghurt",
+      "5g butter",
+      "Salt, pepper, pinch of cumin",
+      "Fresh coriander (optional)"
+    ],
+    "instructions": [
+      "Warm the tortilla in a dry pan or microwave 15 seconds. Set aside.",
+      "Whisk eggs with salt, pepper, cumin.",
+      "Heat butter in a non-stick pan, medium-low. Pour in eggs, stir in soft folds until just set.",
+      "Add black beans to warm through, 30 seconds.",
+      "Lay tortilla flat. Spoon eggs and beans down the centre. Top with cheese, salsa, yoghurt, coriander.",
+      "Fold sides in, roll up tight. Eat hot, or wrap in foil for grab-and-go."
+    ]
+  },
+  {
+    "id": "B014",
+    "name": "Breakfast Quesadilla",
+    "mealType": "breakfast",
+    "calories": 478,
+    "protein": 32,
+    "carbs": 38,
+    "fats": 20,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 8,
+    "tags": [
+      "eggs",
+      "bread",
+      "cheese"
+    ],
+    "description": "Crispy tortilla filled with scrambled eggs, melted cheese, and a hit of chilli. Five minutes.",
+    "ingredients": [
+      "2 small flour tortillas (40g each)",
+      "3 whole eggs",
+      "40g light cheddar, grated",
+      "30g red capsicum, diced fine",
+      "20g spring onion, sliced",
+      "5g butter (split)",
+      "Salt, pepper, pinch of paprika",
+      "Hot sauce to serve"
+    ],
+    "instructions": [
+      "Whisk eggs with salt, pepper, paprika.",
+      "Heat half the butter in a pan, medium-low. Add capsicum, 1 min.",
+      "Pour in eggs, stir until just set. Stir through spring onion. Remove.",
+      "Wipe the pan. Place one tortilla in, low heat. Sprinkle half the cheese, spread the eggs, remaining cheese, top with second tortilla.",
+      "Cook 2 min until golden underneath. Flip with a spatula, 2 min the other side.",
+      "Cut into wedges. Hot sauce on the side."
+    ]
+  },
+  {
+    "id": "B015",
+    "name": "Smashed Avocado Toast with Egg",
+    "mealType": "breakfast",
+    "calories": 482,
+    "protein": 22,
+    "carbs": 42,
+    "fats": 25,
+    "fibre": 10,
+    "servings": 1,
+    "prepTime": 4,
+    "cookTime": 6,
+    "tags": [
+      "eggs",
+      "bread",
+      "avocado"
+    ],
+    "description": "Avocado, fried egg, sourdough. The classic that won't quit.",
+    "ingredients": [
+      "1 slice sourdough (60g)",
+      "1/2 avocado",
+      "2 whole eggs",
+      "Squeeze of lemon",
+      "Salt, black pepper, chilli flakes",
+      "1 tsp olive oil",
+      "10g feta, crumbled (optional)"
+    ],
+    "instructions": [
+      "Toast the sourdough.",
+      "Mash avocado with lemon, salt, pepper.",
+      "Heat oil in a non-stick pan, medium. Fry eggs to your liking, usually 3 minutes for runny.",
+      "Spread avocado on toast. Top with eggs, chilli flakes, feta if using."
+    ]
+  },
+  {
+    "id": "B016",
+    "name": "Egg & Bacon English Muffin",
+    "mealType": "breakfast",
+    "calories": 425,
+    "protein": 30,
+    "carbs": 32,
+    "fats": 18,
+    "fibre": 3,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 8,
+    "tags": [
+      "eggs",
+      "bread",
+      "cheese"
+    ],
+    "description": "Diner-style breakfast sandwich. Crispy bacon, fried egg, sharp cheese on a toasted muffin.",
+    "ingredients": [
+      "1 wholemeal English muffin",
+      "2 rashers lean bacon (trim the fat)",
+      "1 whole egg",
+      "20g light cheddar, sliced",
+      "1 tsp butter",
+      "Salt, pepper",
+      "Optional: 1 tsp brown sauce or hot sauce"
+    ],
+    "instructions": [
+      "Toast the English muffin halves.",
+      "Heat pan medium-high. Fry bacon 2 minutes per side until crispy. Set aside on paper towel.",
+      "Drop heat. Same pan: butter, then crack the egg in. Cook 2 minutes for runny yolk, season.",
+      "Build: bottom muffin, cheese, bacon, egg, sauce if using, top muffin. Squeeze together."
+    ]
+  },
+  {
+    "id": "B017",
+    "name": "Sweet Potato Breakfast Hash",
+    "mealType": "breakfast",
+    "calories": 438,
+    "protein": 26,
+    "carbs": 44,
+    "fats": 16,
+    "fibre": 7,
+    "servings": 1,
+    "prepTime": 8,
+    "cookTime": 18,
+    "tags": [
+      "eggs",
+      "vegetables"
+    ],
+    "description": "Spiced sweet potato cubes with peppers and a fried egg on top.",
+    "ingredients": [
+      "200g sweet potato, cubed small",
+      "50g red capsicum, diced",
+      "40g red onion, diced",
+      "1 tsp smoked paprika",
+      "1 tsp cumin",
+      "1/2 tsp salt",
+      "1 tsp olive oil",
+      "2 whole eggs",
+      "1 tsp butter",
+      "Fresh parsley or coriander",
+      "Hot sauce to serve"
+    ],
+    "instructions": [
+      "Heat oil in a pan, medium-high. Add sweet potato, 8-10 min, stirring, until golden and tender.",
+      "Add capsicum and onion, 4 min.",
+      "Stir through smoked paprika, cumin, salt. 1 min.",
+      "Make two wells in the hash. Add butter, crack eggs into the wells. Lid on, 3 min for runny yolks.",
+      "Herbs over, hot sauce on the side."
+    ]
+  },
+  {
+    "id": "B018",
+    "name": "Shakshuka",
+    "mealType": "breakfast",
+    "calories": 412,
+    "protein": 25,
+    "carbs": 32,
+    "fats": 20,
+    "fibre": 7,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 15,
+    "tags": [
+      "eggs",
+      "vegetables",
+      "cheese",
+      "bread"
+    ],
+    "description": "Eggs poached in a spiced tomato-pepper sauce with feta. Eat with bread for dipping.",
+    "ingredients": [
+      "1 tsp olive oil",
+      "50g red onion, diced",
+      "60g red capsicum, diced",
+      "1 tbsp minced garlic",
+      "1 tsp cumin",
+      "1 tsp smoked paprika",
+      "1/2 tsp chilli flakes",
+      "20g tomato paste",
+      "200g canned chopped tomatoes",
+      "2 whole eggs",
+      "20g feta, crumbled",
+      "Fresh parsley or coriander",
+      "1 slice sourdough (60g)"
+    ],
+    "instructions": [
+      "Heat oil in a small pan, medium. Onion and capsicum, 5 min until soft.",
+      "Add garlic, cumin, smoked paprika, chilli flakes, 1 min.",
+      "Add tomato paste, 1 min. Pour in chopped tomatoes, simmer 5 min until thickened. Season.",
+      "Make two wells in the sauce. Crack eggs in. Lid on, low heat, 4-5 min for runny yolks.",
+      "Crumble feta over. Parsley.",
+      "Toast the sourdough. Serve alongside for dipping."
+    ]
+  },
+  {
+    "id": "B019",
+    "name": "Banana Protein Pancakes",
+    "mealType": "breakfast",
+    "calories": 442,
+    "protein": 38,
+    "carbs": 52,
+    "fats": 8,
+    "fibre": 6,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 8,
+    "tags": [
+      "eggs",
+      "fruit",
+      "oats",
+      "dairy"
+    ],
+    "description": "Blender pancakes, protein powder, oats, banana, egg. 35+g protein.",
+    "ingredients": [
+      "1 medium banana",
+      "2 whole eggs",
+      "30g rolled oats",
+      "25g whey protein (vanilla)",
+      "1 tsp baking powder",
+      "1 tsp cinnamon",
+      "Spray oil",
+      "80g berries to serve",
+      "10g maple syrup"
+    ],
+    "instructions": [
+      "Blend banana, eggs, oats, whey, baking powder, cinnamon until smooth.",
+      "Heat a non-stick pan medium-low. Spray with oil.",
+      "Pour batter to form 4-5 small pancakes.",
+      "Cook 2 min per side until golden.",
+      "Plate with berries and maple syrup."
+    ]
+  },
+  {
+    "id": "B020",
+    "name": "Tofu Scramble on Toast",
+    "mealType": "breakfast",
+    "calories": 412,
+    "protein": 28,
+    "carbs": 36,
+    "fats": 18,
+    "fibre": 7,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 8,
+    "tags": [
+      "legumes",
+      "bread",
+      "vegetables"
+    ],
+    "description": "Crumbled spiced tofu with spinach and peppers on sourdough. Vegan, high protein.",
+    "ingredients": [
+      "150g firm tofu, drained",
+      "1 tsp turmeric",
+      "1 tsp smoked paprika",
+      "1 tsp garlic powder",
+      "1 tsp nutritional yeast (optional, for cheesy flavour)",
+      "1/2 tsp salt",
+      "50g baby spinach",
+      "40g cherry tomatoes, halved",
+      "1 tbsp olive oil",
+      "1 slice sourdough (60g)",
+      "Black pepper, chilli flakes"
+    ],
+    "instructions": [
+      "Crumble tofu with your hands into rough chunks.",
+      "Heat oil in a pan, medium. Add tofu, turmeric, smoked paprika, garlic powder, nutritional yeast, salt. Cook 4 min, stirring.",
+      "Toast the sourdough.",
+      "Add tomatoes to the pan, 2 min.",
+      "Add spinach, wilt 30 seconds.",
+      "Plate on toast. Pepper, chilli flakes."
+    ]
+  },
+  {
+    "id": "B021",
+    "name": "Veggie Frittata",
+    "mealType": "breakfast",
+    "calories": 385,
+    "protein": 28,
+    "carbs": 14,
+    "fats": 24,
+    "fibre": 3,
+    "servings": 2,
+    "prepTime": 8,
+    "cookTime": 15,
+    "tags": [
+      "eggs",
+      "vegetables",
+      "cheese"
+    ],
+    "description": "Oven-baked egg, peppers, spinach, feta. Cook one, eat two days.",
+    "ingredients": [
+      "5 whole eggs",
+      "40ml skim milk",
+      "60g red capsicum, diced",
+      "50g baby spinach, chopped",
+      "40g red onion, diced",
+      "40g feta, crumbled",
+      "1 tbsp olive oil",
+      "Salt, pepper, dried oregano",
+      "1 tbsp fresh parsley"
+    ],
+    "instructions": [
+      "Oven 180°C / 360°F.",
+      "Heat oil in an oven-safe pan, medium. Onion and capsicum, 4 min.",
+      "Spinach in, wilt 1 min. Spread evenly.",
+      "Whisk eggs with milk, salt, pepper, oregano. Pour over the veg.",
+      "Crumble feta over the top.",
+      "Pan into the oven, 12-15 min until just set in the middle.",
+      "Parsley over. Slice into two."
+    ]
+  },
+  {
+    "id": "B022",
+    "name": "Blueberry Baked Oats",
+    "mealType": "breakfast",
+    "calories": 425,
+    "protein": 32,
+    "carbs": 55,
+    "fats": 8,
+    "fibre": 8,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 22,
+    "tags": [
+      "oats",
+      "fruit",
+      "dairy",
+      "eggs"
+    ],
+    "description": "Blender baked oats, like a single-serve cake but it's actually breakfast. Bakeable in bulk.",
+    "ingredients": [
+      "50g rolled oats",
+      "1 whole egg",
+      "100ml skim milk",
+      "25g whey protein (vanilla)",
+      "10g maple syrup",
+      "1 tsp baking powder",
+      "1 tsp cinnamon",
+      "1 tsp vanilla extract",
+      "60g blueberries (fresh or frozen)",
+      "Spray oil"
+    ],
+    "instructions": [
+      "Oven 180°C / 360°F. Spray a ramekin or small oven dish.",
+      "Blend everything except blueberries until smooth.",
+      "Fold in blueberries.",
+      "Pour into the dish. Bake 20-22 min until set and slightly golden.",
+      "Eat warm, or cool and refrigerate for up to 3 days."
+    ]
+  },
+  {
+    "id": "B023",
+    "name": "Chia Pudding Bowl",
+    "mealType": "breakfast",
+    "calories": 358,
+    "protein": 28,
+    "carbs": 38,
+    "fats": 10,
+    "fibre": 12,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "fruit"
+    ],
+    "description": "Make the night before, eat in the morning. High fibre, high protein.",
+    "ingredients": [
+      "25g chia seeds",
+      "200ml skim milk",
+      "25g whey protein (vanilla)",
+      "5g honey or maple syrup",
+      "1 tsp vanilla",
+      "100g 0% Greek yoghurt",
+      "60g berries or sliced fruit",
+      "5g flaked almonds or granola (optional)"
+    ],
+    "instructions": [
+      "Whisk chia, milk, whey, honey, vanilla in a jar.",
+      "Cover. Fridge minimum 4 hours, ideally overnight.",
+      "In the morning: top with yoghurt, fruit, almonds. Eat."
+    ]
+  },
+  {
+    "id": "B024",
+    "name": "Berry Protein Smoothie Bowl",
+    "mealType": "breakfast",
+    "calories": 412,
+    "protein": 32,
+    "carbs": 56,
+    "fats": 6,
+    "fibre": 8,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "fruit",
+      "oats"
+    ],
+    "description": "Thick smoothie eaten with a spoon. Berries, banana, whey, granola on top.",
+    "ingredients": [
+      "100g frozen mixed berries",
+      "1 frozen banana (or fresh + ice)",
+      "30g whey protein (vanilla)",
+      "150ml skim milk",
+      "60g 0% Greek yoghurt",
+      "20g low-sugar granola",
+      "10g chia seeds",
+      "Fresh berries to top"
+    ],
+    "instructions": [
+      "Blend frozen berries, banana, whey, milk, yoghurt until thick and spoonable. Add less milk for thicker, more for looser.",
+      "Pour into a bowl.",
+      "Top with granola, chia, fresh berries."
+    ]
+  },
+  {
+    "id": "B025",
+    "name": "Korean Marinated Eggs on Rice",
+    "mealType": "breakfast",
+    "calories": 478,
+    "protein": 28,
+    "carbs": 56,
+    "fats": 14,
+    "fibre": 2,
+    "servings": 1,
+    "prepTime": 8,
+    "cookTime": 8,
+    "tags": [
+      "eggs",
+      "rice"
+    ],
+    "description": "Mayak gyeran. Soft-boiled eggs marinated in soy-sesame-chilli, served on hot rice.",
+    "ingredients": [
+      "3 large eggs",
+      "Marinade: 30g light soy sauce, 1 tbsp minced garlic, 1 tsp sesame oil, 1 tsp honey, 1 tsp chilli flakes, 1 tsp sesame seeds, 20g spring onion sliced, 30ml water",
+      "100g cooked jasmine rice",
+      "1 tsp sesame seeds to finish",
+      "Spring onion"
+    ],
+    "instructions": [
+      "Boil eggs 6.5 minutes for jammy yolks. Cold water bath. Peel.",
+      "Mix marinade in a jar or container that fits the eggs.",
+      "Add eggs to marinade. Cover. Fridge 1-2 hours minimum (overnight = better, will keep 3 days).",
+      "To serve: heat rice. Halve eggs over rice. Spoon over a couple of tablespoons of marinade.",
+      "Sesame and spring onion over."
+    ]
+  },
+  {
+    "id": "B026",
+    "name": "Savoury Cottage Cheese Bowl",
+    "mealType": "breakfast",
+    "calories": 312,
+    "protein": 28,
+    "carbs": 14,
+    "fats": 16,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 4,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "vegetables",
+      "avocado"
+    ],
+    "description": "Cottage cheese, cherry tomato, cucumber, avocado, everything seasoning. Two minutes, 28g protein.",
+    "ingredients": [
+      "200g low-fat cottage cheese",
+      "80g cherry tomatoes, halved",
+      "60g cucumber, diced",
+      "1/4 avocado, sliced",
+      "1 tsp everything bagel seasoning (or sesame seeds + salt + onion powder)",
+      "1 tsp olive oil",
+      "Black pepper",
+      "Squeeze of lemon"
+    ],
+    "instructions": [
+      "Cottage cheese in a bowl.",
+      "Top with tomato, cucumber, avocado.",
+      "Drizzle oil, lemon. Sprinkle seasoning, pepper. Eat."
+    ]
+  },
+  {
+    "id": "B027",
+    "name": "PB&J Protein Wrap",
+    "mealType": "breakfast",
+    "calories": 425,
+    "protein": 30,
+    "carbs": 44,
+    "fats": 14,
+    "fibre": 6,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 0,
+    "tags": [
+      "bread",
+      "fruit",
+      "nuts",
+      "dairy"
+    ],
+    "description": "Wrap with peanut butter, low-sugar jam, banana, and a layer of cottage cheese for the protein bump.",
+    "ingredients": [
+      "1 wholemeal tortilla (60g)",
+      "100g low-fat cottage cheese",
+      "20g peanut butter (no added sugar)",
+      "15g low-sugar strawberry jam",
+      "1 small banana, sliced"
+    ],
+    "instructions": [
+      "Spread cottage cheese across the wrap.",
+      "Drizzle peanut butter and jam.",
+      "Lay banana slices down the centre.",
+      "Roll up tight. Cut in half if you want."
+    ]
+  },
+  {
+    "id": "B028",
+    "name": "Bagel & Cream Cheese with Lox",
+    "mealType": "breakfast",
+    "calories": 412,
+    "protein": 28,
+    "carbs": 48,
+    "fats": 11,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 4,
+    "cookTime": 2,
+    "tags": [
+      "fish",
+      "bread",
+      "dairy"
+    ],
+    "description": "Classic NYC breakfast, smoked salmon, light cream cheese, capers, red onion on a toasted bagel.",
+    "ingredients": [
+      "1 wholemeal bagel (75g)",
+      "60g smoked salmon",
+      "40g light cream cheese",
+      "20g red onion, thin sliced",
+      "1 tsp capers",
+      "Squeeze of lemon",
+      "Fresh dill, black pepper"
+    ],
+    "instructions": [
+      "Toast the bagel halves.",
+      "Cream cheese on both halves.",
+      "Layer salmon, onion, capers, dill, lemon, pepper.",
+      "Eat open-faced (cleaner) or close it up."
+    ]
+  },
+  {
+    "id": "B029",
+    "name": "Breakfast Tacos",
+    "mealType": "breakfast",
+    "calories": 488,
+    "protein": 32,
+    "carbs": 38,
+    "fats": 22,
+    "fibre": 6,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 8,
+    "tags": [
+      "eggs",
+      "bread",
+      "cheese",
+      "avocado"
+    ],
+    "description": "Three soft tortillas filled with scrambled eggs, avocado, salsa, cheese. Tex-Mex morning.",
+    "ingredients": [
+      "3 small corn or flour tortillas (40g total)",
+      "3 whole eggs",
+      "1/4 avocado, sliced",
+      "30g tomato salsa",
+      "25g light cheddar, grated",
+      "5g butter",
+      "20g spring onion, sliced",
+      "Fresh coriander, hot sauce",
+      "Salt, pepper"
+    ],
+    "instructions": [
+      "Warm tortillas in a dry pan, 20 seconds each side. Stack and cover.",
+      "Whisk eggs with salt and pepper.",
+      "Melt butter in the pan, low. Pour in eggs, soft scramble.",
+      "Divide eggs between tortillas. Top with cheese (melts on the hot eggs), avocado, salsa, spring onion, coriander, hot sauce."
+    ]
+  },
+  {
+    "id": "B030",
+    "name": "Sausage Breakfast Bowl",
+    "mealType": "breakfast",
+    "calories": 542,
+    "protein": 35,
+    "carbs": 38,
+    "fats": 28,
+    "fibre": 6,
+    "servings": 1,
+    "prepTime": 8,
+    "cookTime": 15,
+    "tags": [
+      "eggs",
+      "vegetables"
+    ],
+    "description": "Lean chicken or turkey sausage with sweet potato, eggs, and spinach. Hearty bowl breakfast.",
+    "ingredients": [
+      "2 lean chicken or turkey sausages (~120g)",
+      "150g sweet potato, cubed",
+      "1 tsp smoked paprika",
+      "1 tsp olive oil",
+      "Pinch salt",
+      "2 whole eggs",
+      "50g baby spinach",
+      "5g butter",
+      "1 tsp hot sauce or 1 tbsp salsa"
+    ],
+    "instructions": [
+      "Oven 200°C / 400°F. Toss sweet potato with smoked paprika, salt, oil. Tray-bake 18 min.",
+      "Last 10 min: add sausages to the same tray, flipping halfway.",
+      "Meanwhile, heat butter in a pan, medium. Wilt spinach 1 minute, push to one side.",
+      "Crack eggs into the pan, fry to your liking.",
+      "Slice sausages. Build bowl: sweet potato, spinach, sausage, eggs. Hot sauce or salsa."
+    ]
+  },
+  {
+    "id": "B031",
+    "name": "High-Protein Yoghurt Parfait",
+    "mealType": "breakfast",
+    "calories": 365,
+    "protein": 35,
+    "carbs": 42,
+    "fats": 4,
+    "fibre": 5,
+    "servings": 1,
+    "prepTime": 4,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "fruit",
+      "oats",
+      "nuts"
+    ],
+    "description": "Layered Greek yoghurt, whey, berries, granola. Looks fancy in a jar, 35g protein, no cook.",
+    "ingredients": [
+      "200g 0% fat Greek yoghurt",
+      "20g whey protein (vanilla)",
+      "80g mixed berries",
+      "25g low-sugar granola",
+      "10g honey",
+      "5g chia seeds"
+    ],
+    "instructions": [
+      "Whisk whey into yoghurt until smooth.",
+      "In a jar or bowl: half yoghurt, half berries, half granola.",
+      "Repeat layers.",
+      "Drizzle honey, sprinkle chia. Eat."
+    ]
+  },
+  {
+    "id": "B032",
+    "name": "Protein Waffles",
+    "mealType": "breakfast",
+    "calories": 445,
+    "protein": 38,
+    "carbs": 48,
+    "fats": 9,
+    "fibre": 5,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 8,
+    "tags": [
+      "oats",
+      "eggs",
+      "dairy",
+      "fruit"
+    ],
+    "description": "Whey-and-oat waffle batter. Needs a waffle iron, or use the batter as pancakes if you don't have one.",
+    "ingredients": [
+      "40g rolled oats",
+      "25g whey protein (vanilla)",
+      "1 whole egg",
+      "120ml skim milk",
+      "1 tsp baking powder",
+      "1 tsp vanilla",
+      "1 tsp cinnamon",
+      "Spray oil",
+      "80g berries",
+      "15g maple syrup or honey"
+    ],
+    "instructions": [
+      "Blend oats, whey, egg, milk, baking powder, vanilla, cinnamon until smooth.",
+      "Rest the batter 5 min so the oats absorb (this is the trick for fluffiness).",
+      "Heat a waffle iron, spray with oil.",
+      "Pour in batter (makes 1-2 waffles depending on size). Cook per the iron's settings, usually 4 min.",
+      "Plate with berries and syrup."
+    ]
+  },
+  {
+    "id": "D037",
+    "name": "Teriyaki Salmon Rice Bowl",
+    "mealType": "dinner",
+    "calories": 552,
+    "protein": 42,
+    "carbs": 56,
+    "fats": 16,
+    "fibre": 4,
+    "servings": 2,
+    "prepTime": 8,
+    "cookTime": 18,
+    "tags": [
+      "fish",
+      "rice",
+      "vegetables"
+    ],
+    "description": "Glazed salmon on jasmine rice with edamame and a quick cucumber pickle.",
+    "ingredients": [
+      "300g salmon fillets, skin on",
+      "1 tsp salt",
+      "1 tsp black pepper",
+      "1 tsp olive oil",
+      "Teriyaki: 25g light soy sauce, 15g dark soy sauce, 18g honey, 1 tbsp minced garlic, 1 tbsp ginger paste, 1 tsp sesame oil",
+      "100g uncooked jasmine rice",
+      "100g frozen edamame (in pod or shelled)",
+      "Quick cucumber: 100g cucumber sliced, 1 tbsp rice vinegar, 1 tsp soy, 1 tsp sesame seeds",
+      "Spring onion, sesame seeds to finish"
+    ],
+    "instructions": [
+      "Cook rice. Edamame: boil 4 min, drain, salt.",
+      "Pickle cucumber: combine, set aside.",
+      "Mix teriyaki sauce.",
+      "Pat salmon dry, season with salt and pepper.",
+      "Heat oil in a pan, medium-high. Salmon skin-down, 4 min undisturbed. Flip, 2 more min.",
+      "Drop heat. Pour in teriyaki, spoon over salmon to glaze, 1-2 min.",
+      "Plate rice, salmon, edamame, cucumber. Sesame, spring onion. Two."
+    ]
+  },
+  {
+    "id": "D038",
+    "name": "Honey Garlic Salmon & Greens",
+    "mealType": "dinner",
+    "calories": 478,
+    "protein": 40,
+    "carbs": 22,
+    "fats": 24,
+    "fibre": 6,
+    "servings": 2,
+    "prepTime": 8,
+    "cookTime": 15,
+    "tags": [
+      "fish",
+      "vegetables"
+    ],
+    "description": "Sweet garlic-glazed salmon with roasted broccolini and lemon. Lower-carb, big flavour.",
+    "ingredients": [
+      "300g salmon fillets",
+      "1 tsp salt",
+      "1 tsp black pepper",
+      "1 tsp paprika",
+      "1 tbsp olive oil",
+      "10g butter",
+      "2 tbsp minced garlic",
+      "20g honey",
+      "1 tbsp light soy sauce",
+      "Juice of 1/2 lemon",
+      "1 tsp chilli flakes",
+      "200g broccolini (or broccoli florets)",
+      "1 tsp olive oil",
+      "Pinch salt"
+    ],
+    "instructions": [
+      "Oven 200°C / 400°F. Toss broccolini with oil and salt, tray-bake 12 min.",
+      "Pat salmon dry, season with salt, pepper, paprika.",
+      "Heat oil in an oven-safe pan, medium-high. Sear salmon skin-down 4 min undisturbed. Flip 1 min.",
+      "Drop heat. Add butter, garlic, honey, soy, lemon, chilli flakes. Spoon over salmon to glaze, 2 min.",
+      "Plate broccolini with salmon, sauce spooned over. Two."
+    ]
+  },
+  {
+    "id": "L045",
+    "name": "Cajun Fish Tacos",
+    "mealType": "lunch",
+    "calories": 472,
+    "protein": 38,
+    "carbs": 46,
+    "fats": 14,
+    "fibre": 6,
+    "servings": 2,
+    "prepTime": 12,
+    "cookTime": 10,
+    "tags": [
+      "fish",
+      "bread",
+      "vegetables"
+    ],
+    "description": "Spiced white fish in soft tortillas with cabbage slaw and chipotle yoghurt. Fresh, fast, bright.",
+    "ingredients": [
+      "300g white fish (cod, basa, or barramundi), cubed",
+      "Cajun: 1 tsp each salt, pepper, garlic powder, paprika, oregano; 1/2 tsp chilli powder, 1 tsp cumin",
+      "1 tbsp olive oil",
+      "Juice of 1/2 lime",
+      "4 small flour or corn tortillas (~40g each)",
+      "Slaw: 100g cabbage thinly sliced, 60g carrot grated, 1 tbsp fresh coriander, 30g 0% Greek yoghurt, 1 tsp olive oil, juice of 1/2 lime, salt, pepper",
+      "Sauce: 50g 0% Greek yoghurt, 15g chipotle paste, 1 tsp lime juice",
+      "Fresh coriander, lime wedges"
+    ],
+    "instructions": [
+      "Slaw: combine cabbage, carrot, coriander, yoghurt, oil, lime, salt, pepper. Chill.",
+      "Sauce: whisk yoghurt, chipotle, lime.",
+      "Toss fish with Cajun spice, oil, lime juice.",
+      "Heat a pan medium-high. Cook fish 2-3 min per side until just cooked through.",
+      "Warm tortillas in a dry pan, 15 sec each side.",
+      "Build tacos: tortilla, slaw, fish, sauce drizzle, coriander. Lime wedge on the side. Two each."
+    ]
+  },
+  {
+    "id": "L046",
+    "name": "Lemon Dill Prawn Rice Bowl",
+    "mealType": "lunch",
+    "calories": 442,
+    "protein": 38,
+    "carbs": 48,
+    "fats": 9,
+    "fibre": 4,
+    "servings": 2,
+    "prepTime": 10,
+    "cookTime": 12,
+    "tags": [
+      "fish",
+      "rice",
+      "vegetables",
+      "dairy"
+    ],
+    "description": "Garlic prawns over lemon rice with a herby yoghurt sauce and crunchy cucumber.",
+    "ingredients": [
+      "300g raw prawns, peeled",
+      "1 tsp salt",
+      "1 tsp black pepper",
+      "1 tsp paprika",
+      "1 tbsp minced garlic",
+      "10g butter",
+      "100g uncooked basmati rice",
+      "Zest and juice of 1 lemon (split)",
+      "1 tbsp fresh dill, chopped (or 1 tsp dried)",
+      "Yoghurt sauce: 80g 0% Greek yoghurt, 1 tbsp dill, juice of 1/4 lemon, 1 tsp garlic powder, salt and pepper",
+      "120g cucumber, diced",
+      "80g cherry tomatoes, halved"
+    ],
+    "instructions": [
+      "Cook rice. Once done, fold through lemon zest, half the lemon juice, dill, salt.",
+      "Yoghurt sauce: mix everything.",
+      "Toss prawns with salt, pepper, paprika.",
+      "Heat butter in a pan, medium-high. Add garlic, 30 sec.",
+      "Add prawns, 2-3 min per side until pink. Finish with remaining lemon juice.",
+      "Plate rice, prawns, cucumber, tomato. Sauce drizzled over. Two."
+    ]
+  },
+  {
+    "id": "D040",
+    "name": "Halloumi & Couscous Bowl",
+    "mealType": "dinner",
+    "calories": 545,
+    "protein": 28,
+    "carbs": 52,
+    "fats": 25,
+    "fibre": 6,
+    "servings": 2,
+    "prepTime": 12,
+    "cookTime": 12,
+    "tags": [
+      "dairy",
+      "cheese",
+      "vegetables"
+    ],
+    "description": "Pan-seared halloumi over lemon couscous with cherry tomato, cucumber, and tahini-yoghurt dressing.",
+    "ingredients": [
+      "200g halloumi, sliced 1cm thick",
+      "1 tsp olive oil",
+      "1/2 tsp smoked paprika",
+      "100g uncooked couscous",
+      "120ml hot water or vegetable stock",
+      "Zest of 1 lemon",
+      "10g butter",
+      "150g cherry tomatoes, halved",
+      "120g cucumber, diced",
+      "40g red onion, thin",
+      "10g fresh parsley or mint, chopped",
+      "Dressing: 50g 0% Greek yoghurt, 15g tahini, juice of 1/2 lemon, 1 tsp minced garlic, salt, water to loosen",
+      "1 tbsp pomegranate seeds (optional)"
+    ],
+    "instructions": [
+      "Couscous: place in a bowl, pour over hot stock, lid on, 5 min. Fluff with a fork. Stir through butter, lemon zest, salt.",
+      "Combine tomato, cucumber, onion, herbs.",
+      "Dressing: whisk yoghurt, tahini, lemon, garlic, salt. Loosen with water until pourable.",
+      "Pat halloumi dry. Rub with smoked paprika.",
+      "Heat oil in a pan, medium-high. Sear halloumi 1.5-2 min per side until golden.",
+      "Build bowls: couscous base, salad, halloumi on top. Dressing drizzled, pomegranate. Two."
+    ]
+  },
+  {
+    "id": "D041",
+    "name": "Mapo Tofu",
+    "mealType": "dinner",
+    "calories": 488,
+    "protein": 30,
+    "carbs": 58,
+    "fats": 14,
+    "fibre": 4,
+    "servings": 2,
+    "prepTime": 8,
+    "cookTime": 12,
+    "tags": [
+      "legumes",
+      "rice"
+    ],
+    "description": "Silky tofu in a numbing-spicy Sichuan sauce on rice. Cheap, fast, fiery.",
+    "ingredients": [
+      "400g silken or soft tofu, cubed",
+      "100g uncooked jasmine rice",
+      "1 tbsp olive oil",
+      "2 tbsp minced garlic",
+      "1 tbsp ginger paste",
+      "80g spring onion, sliced (split)",
+      "Sauce: 25g doubanjiang (chilli bean paste, or 15g gochujang + 1 tsp chilli flakes), 1 tbsp light soy sauce, 1 tbsp dark soy sauce, 10g honey, 1 tsp sesame oil, 250ml water",
+      "Slurry: 1 tbsp cornstarch + 2 tbsp cold water",
+      "1 tsp Sichuan peppercorns, crushed (or 1/2 tsp black pepper if not available)",
+      "1 tsp sesame seeds"
+    ],
+    "instructions": [
+      "Cook rice.",
+      "Heat oil in a wok or large pan, medium-high. Garlic and ginger, 1 min.",
+      "Add half the spring onion, Sichuan pepper, 30 seconds.",
+      "Stir in doubanjiang, cook 30 sec until oil reddens. Add soy sauces, honey, sesame oil, water. Simmer 2 min.",
+      "Gently add tofu cubes (don't smash). Simmer 4 min, gently stirring once or twice.",
+      "Stir cornstarch slurry, drizzle in. Simmer 1 min until thickened.",
+      "Plate over rice. Remaining spring onion and sesame over. Two."
+    ]
+  },
+  {
+    "id": "L048",
+    "name": "Peanut Tofu Stir-Fry",
+    "mealType": "lunch",
+    "calories": 538,
+    "protein": 32,
+    "carbs": 52,
+    "fats": 22,
+    "fibre": 7,
+    "servings": 2,
+    "prepTime": 12,
+    "cookTime": 15,
+    "tags": [
+      "legumes",
+      "rice",
+      "vegetables",
+      "nuts"
+    ],
+    "description": "Crispy tofu cubes in a peanut-soy sauce with stir-fried veg on rice.",
+    "ingredients": [
+      "300g extra-firm tofu, cubed and pressed (paper towel under a plate for 10 min)",
+      "1 tsp salt",
+      "1 tsp garlic powder",
+      "15g cornstarch",
+      "1 tbsp olive oil (split)",
+      "100g uncooked jasmine rice",
+      "100g broccoli florets",
+      "60g red capsicum, sliced",
+      "60g carrot, julienned",
+      "Sauce: 25g peanut butter, 20g light soy sauce, 15g honey, 1 tbsp minced garlic, 1 tbsp ginger paste, 1 tsp sriracha, 1 tsp sesame oil, 60ml water",
+      "Spring onion, crushed peanuts to finish"
+    ],
+    "instructions": [
+      "Cook rice.",
+      "Toss tofu with salt, garlic powder, cornstarch.",
+      "Sauce: whisk peanut butter, soy, honey, garlic, ginger, sriracha, sesame oil, water.",
+      "Heat half the oil in a pan, medium-high. Cook tofu 8 min, turning, until crispy on all sides. Remove.",
+      "Same pan, high: remaining oil. Add broccoli, capsicum, carrot. Stir-fry 4 min.",
+      "Pour in sauce, simmer 1 min. Return tofu, toss to coat.",
+      "Plate over rice. Spring onion and peanuts over. Two."
+    ]
+  },
+  {
+    "id": "S011",
+    "name": "No-Bake Protein Balls",
+    "mealType": "snack",
+    "calories": 215,
+    "protein": 14,
+    "carbs": 22,
+    "fats": 9,
+    "fibre": 3,
+    "servings": 1,
+    "prepTime": 10,
+    "cookTime": 0,
+    "tags": [
+      "oats",
+      "nuts",
+      "dairy"
+    ],
+    "description": "Peanut butter, oats, whey, honey. Roll, fridge, eat all week. One serve = 3 balls.",
+    "ingredients": [
+      "120g rolled oats",
+      "60g whey protein (vanilla or chocolate)",
+      "100g peanut butter (no added sugar)",
+      "40g honey",
+      "60ml skim milk",
+      "20g dark chocolate chips (optional)",
+      "1 tsp vanilla extract"
+    ],
+    "instructions": [
+      "Mix oats, whey, peanut butter, honey, milk, vanilla, chocolate chips in a bowl.",
+      "Roll into balls (you'll get about 15).",
+      "Fridge 30 min to firm up.",
+      "Stored in an airtight container, lasts a week. One serve = 3 balls."
+    ]
+  },
+  {
+    "id": "S012",
+    "name": "Turkey & Cheese Roll-Ups",
+    "mealType": "snack",
+    "calories": 185,
+    "protein": 24,
+    "carbs": 4,
+    "fats": 8,
+    "fibre": 0,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 0,
+    "tags": [
+      "turkey",
+      "cheese"
+    ],
+    "description": "Sliced turkey wrapped around light cheese. Zero cook, 24g protein, fits in your pocket.",
+    "ingredients": [
+      "100g sliced lean turkey breast (low-sodium if you can find it)",
+      "30g light cheddar or babybel-style cheese",
+      "1 tsp Dijon mustard (optional)",
+      "Cracked black pepper"
+    ],
+    "instructions": [
+      "Lay turkey slices flat.",
+      "Spread thin smear of Dijon if using.",
+      "Top with cheese, roll up tight.",
+      "Black pepper, eat."
+    ]
+  },
+  {
+    "id": "S014",
+    "name": "Tuna Cucumber Boats",
+    "mealType": "snack",
+    "calories": 175,
+    "protein": 22,
+    "carbs": 8,
+    "fats": 6,
+    "fibre": 2,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 0,
+    "tags": [
+      "fish",
+      "vegetables",
+      "dairy"
+    ],
+    "description": "Mashed tuna and yoghurt in cucumber halves. No bread needed.",
+    "ingredients": [
+      "1 tin tuna in springwater (95g drained)",
+      "30g 0% Greek yoghurt",
+      "10g light mayo",
+      "1/2 tsp Dijon mustard",
+      "1 tsp chives or spring onion",
+      "Squeeze of lemon",
+      "Salt, pepper",
+      "1 large cucumber (200g), halved lengthwise and seeds scooped out"
+    ],
+    "instructions": [
+      "Drain tuna well. Mash with yoghurt, mayo, Dijon, chives, lemon, salt, pepper.",
+      "Spoon into the hollowed cucumber halves.",
+      "Eat with a fork or bite directly."
+    ]
+  },
+  {
+    "id": "S015",
+    "name": "Cottage Cheese Veg Dip Pot",
+    "mealType": "snack",
+    "calories": 215,
+    "protein": 22,
+    "carbs": 18,
+    "fats": 6,
+    "fibre": 5,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "vegetables"
+    ],
+    "description": "Blended cottage cheese into a creamy savoury dip with carrot, capsicum, cucumber.",
+    "ingredients": [
+      "150g low-fat cottage cheese",
+      "1 tsp lemon juice",
+      "1/2 tsp garlic powder",
+      "1 tsp dried dill (or 1 tbsp fresh)",
+      "1 tsp olive oil",
+      "Salt, pepper",
+      "80g carrot sticks",
+      "60g capsicum strips",
+      "60g cucumber strips"
+    ],
+    "instructions": [
+      "Blend cottage cheese with lemon, garlic powder, dill, olive oil, salt, pepper until smooth and dip-like. (A small food processor or stick blender works best.)",
+      "Spoon into a container.",
+      "Cut veg into sticks.",
+      "Dip and eat. Sauce keeps 3 days in the fridge."
+    ]
+  },
+  {
+    "id": "S016",
+    "name": "Baked Egg Muffins",
+    "mealType": "snack",
+    "calories": 168,
+    "protein": 16,
+    "carbs": 4,
+    "fats": 10,
+    "fibre": 1,
+    "servings": 1,
+    "prepTime": 8,
+    "cookTime": 18,
+    "tags": [
+      "eggs",
+      "vegetables",
+      "cheese"
+    ],
+    "description": "Two mini frittata muffins. Batch cook 6, eat all week. Different to the breakfast version, bite-sized.",
+    "ingredients": [
+      "4 whole eggs",
+      "30g feta or light cheddar, crumbled/grated",
+      "30g baby spinach, chopped fine",
+      "30g red capsicum, diced fine",
+      "20g spring onion, sliced",
+      "Salt, pepper, pinch of paprika",
+      "Spray oil"
+    ],
+    "instructions": [
+      "Oven 180°C / 360°F. Spray a muffin tin with oil.",
+      "Whisk eggs with salt, pepper, paprika.",
+      "Divide spinach, capsicum, spring onion, cheese between 4 muffin cups.",
+      "Pour egg mix over the top, fill each cup about 3/4.",
+      "Bake 16-18 min until set.",
+      "Cool. Stored in fridge 4 days. One serve = 2 muffins. Reheat 30 sec microwave or eat cold."
+    ]
+  },
+  {
+    "id": "S017",
+    "name": "Cinnamon Apple & Peanut Butter",
+    "mealType": "snack",
+    "calories": 245,
+    "protein": 8,
+    "carbs": 28,
+    "fats": 14,
+    "fibre": 6,
+    "servings": 1,
+    "prepTime": 2,
+    "cookTime": 0,
+    "tags": [
+      "fruit",
+      "nuts"
+    ],
+    "description": "Sliced apple, peanut butter. Three ingredients counting the cinnamon. Toddler-tier easy, grown-up satisfying.",
+    "ingredients": [
+      "1 medium apple",
+      "20g peanut butter (no added sugar)",
+      "Pinch of cinnamon"
+    ],
+    "instructions": [
+      "Slice apple into wedges.",
+      "Dip into peanut butter or smear on top. Cinnamon over."
+    ]
+  },
+  {
+    "id": "S018",
+    "name": "Mini Chicken Meatballs",
+    "mealType": "snack",
+    "calories": 235,
+    "protein": 28,
+    "carbs": 6,
+    "fats": 11,
+    "fibre": 1,
+    "servings": 1,
+    "prepTime": 10,
+    "cookTime": 18,
+    "tags": [
+      "chicken",
+      "cheese"
+    ],
+    "description": "Batch-baked herby chicken meatballs. Eat cold from the fridge with a Greek yoghurt-herb dip. One serve = 4 meatballs.",
+    "ingredients": [
+      "500g chicken mince (makes ~16 meatballs)",
+      "20g grated parmesan",
+      "1 whole egg",
+      "30g breadcrumbs (or rolled oats blitzed)",
+      "2 tbsp minced garlic",
+      "1 tsp salt",
+      "1 tsp black pepper",
+      "1 tsp Italian herbs",
+      "1 tsp smoked paprika",
+      "1 tbsp olive oil",
+      "Dip: 60g 0% Greek yoghurt, 1 tsp dried herbs, squeeze of lemon, salt"
+    ],
+    "instructions": [
+      "Oven 200°C / 400°F. Line a tray.",
+      "Mix mince, parmesan, egg, breadcrumbs, garlic, salt, pepper, Italian herbs, smoked paprika in a bowl. Don't overwork.",
+      "Roll into 16 small meatballs.",
+      "Place on tray, brush with oil. Bake 16-18 min until browned and cooked through.",
+      "Cool. Stored in fridge 4 days.",
+      "Dip: mix all dip ingredients.",
+      "Serve = 4 meatballs + a spoon of dip. Eat cold or warm."
+    ]
+  },
+  {
+    "id": "S019",
+    "name": "Soy Sesame Edamame",
+    "mealType": "snack",
+    "calories": 215,
+    "protein": 18,
+    "carbs": 16,
+    "fats": 10,
+    "fibre": 8,
+    "servings": 1,
+    "prepTime": 2,
+    "cookTime": 5,
+    "tags": [
+      "legumes"
+    ],
+    "description": "Edamame tossed in soy, sesame oil, chilli. More flavour than the plain version.",
+    "ingredients": [
+      "200g frozen edamame in pods",
+      "1 tbsp light soy sauce",
+      "1 tsp sesame oil",
+      "1 tsp chilli flakes",
+      "1 tsp sesame seeds",
+      "Flaky salt"
+    ],
+    "instructions": [
+      "Boil water. Drop edamame in, 4-5 min. Drain.",
+      "In a bowl, toss with soy, sesame oil, chilli flakes, sesame seeds, salt.",
+      "Eat warm or cold. Suck the bean from the pod, discard pod."
+    ]
+  },
+  {
+    "id": "S020",
+    "name": "Chocolate Peanut Butter Protein Shake",
+    "mealType": "snack",
+    "calories": 255,
+    "protein": 32,
+    "carbs": 18,
+    "fats": 8,
+    "fibre": 3,
+    "servings": 1,
+    "prepTime": 2,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "nuts"
+    ],
+    "description": "Cold post-training shake. Whey, milk, peanut butter, cocoa. Shake or blend.",
+    "ingredients": [
+      "30g whey protein (chocolate)",
+      "300ml skim milk",
+      "10g peanut butter",
+      "1 tsp cocoa powder",
+      "Ice (optional, for blender)"
+    ],
+    "instructions": [
+      "Shaker: dry whey + milk first, shake hard, then add peanut butter & cocoa, shake again. Peanut butter will be slightly clumpy.",
+      "Blender (smoother): everything plus ice, blend 30 seconds.",
+      "Drink immediately."
+    ]
+  },
+  {
+    "id": "S021",
+    "name": "Salmon & Avocado Rice Cake Stack",
+    "mealType": "snack",
+    "calories": 235,
+    "protein": 18,
+    "carbs": 20,
+    "fats": 10,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 4,
+    "cookTime": 0,
+    "tags": [
+      "fish",
+      "avocado",
+      "dairy"
+    ],
+    "description": "Smoked salmon, mashed avocado, light cream cheese on rice cakes. Five-minute fancy snack.",
+    "ingredients": [
+      "2 plain rice cakes",
+      "20g light cream cheese",
+      "1/4 avocado",
+      "Squeeze of lemon",
+      "Salt, pepper, chilli flakes",
+      "40g smoked salmon"
+    ],
+    "instructions": [
+      "Mash avocado with lemon, salt, pepper.",
+      "Spread cream cheese on rice cakes. Top with mashed avocado.",
+      "Layer smoked salmon on top. Chilli flakes."
+    ]
+  },
+  {
+    "id": "S022",
+    "name": "Chocolate Whipped Cottage Cheese",
+    "mealType": "snack",
+    "calories": 218,
+    "protein": 22,
+    "carbs": 22,
+    "fats": 5,
+    "fibre": 2,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "fruit"
+    ],
+    "description": "Blended cottage cheese with cocoa and honey, tastes like chocolate mousse, has 22g protein. Sounds wrong, eats right.",
+    "ingredients": [
+      "180g low-fat cottage cheese",
+      "1 tsp cocoa powder",
+      "10g honey",
+      "1/2 tsp vanilla extract",
+      "Pinch of salt",
+      "60g raspberries or strawberries",
+      "5g dark chocolate chips (optional)"
+    ],
+    "instructions": [
+      "Blend cottage cheese, cocoa, honey, vanilla, salt until completely smooth, like mousse. A small food processor or stick blender works.",
+      "Spoon into a bowl.",
+      "Top with berries and chocolate chips.",
+      "Eat immediately or chill."
+    ]
+  },
+  {
+    "id": "S023",
+    "name": "Tzatziki & Pita",
+    "mealType": "snack",
+    "calories": 245,
+    "protein": 14,
+    "carbs": 30,
+    "fats": 7,
+    "fibre": 3,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "bread",
+      "vegetables"
+    ],
+    "description": "Homemade cucumber-garlic yoghurt with warm pita. Mediterranean classic.",
+    "ingredients": [
+      "120g 0% Greek yoghurt",
+      "60g cucumber, grated and squeezed dry (this matters)",
+      "1 tbsp minced garlic",
+      "1 tsp olive oil",
+      "Juice of 1/4 lemon",
+      "1 tsp fresh dill (or 1/2 tsp dried)",
+      "Salt, pepper",
+      "1 small wholemeal pita (60g)"
+    ],
+    "instructions": [
+      "Grate cucumber, squeeze out as much water as you can with your hands or in a clean tea towel.",
+      "Mix yoghurt, cucumber, garlic, olive oil, lemon, dill, salt, pepper.",
+      "Warm pita in a dry pan 30 sec each side, or oven 1 min.",
+      "Cut pita into wedges. Dip and eat. Sauce keeps 3 days."
+    ]
+  },
+  {
+    "id": "S024",
+    "name": "Berry Protein Smoothie",
+    "mealType": "snack",
+    "calories": 268,
+    "protein": 30,
+    "carbs": 32,
+    "fats": 3,
+    "fibre": 5,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "fruit"
+    ],
+    "description": "Frozen berries, banana, whey. Quick, sweet, 30g protein.",
+    "ingredients": [
+      "30g whey protein (vanilla)",
+      "200ml skim milk",
+      "100g frozen mixed berries",
+      "1/2 frozen banana",
+      "60g 0% Greek yoghurt",
+      "5g chia seeds"
+    ],
+    "instructions": [
+      "Blend everything 30-45 seconds until smooth.",
+      "Pour, drink."
+    ]
+  },
+  {
+    "id": "S025",
+    "name": "Hard-Boiled Eggs & Avocado",
+    "mealType": "snack",
+    "calories": 268,
+    "protein": 14,
+    "carbs": 8,
+    "fats": 21,
+    "fibre": 5,
+    "servings": 1,
+    "prepTime": 2,
+    "cookTime": 10,
+    "tags": [
+      "eggs",
+      "avocado"
+    ],
+    "description": "Two boiled eggs, half an avocado, hot sauce. Boil six on Sunday, snack all week.",
+    "ingredients": [
+      "2 hard-boiled eggs",
+      "1/2 avocado",
+      "Salt, pepper, chilli flakes",
+      "Hot sauce (optional)",
+      "Squeeze of lemon"
+    ],
+    "instructions": [
+      "Eggs into cold water. Bring to boil, simmer 8-9 min. Cold water bath. Peel. (Do six at once on Sunday.)",
+      "Slice avocado.",
+      "Plate eggs and avocado. Salt, pepper, chilli flakes, lemon, hot sauce."
+    ]
+  },
+  {
+    "id": "B033",
+    "name": "Greek Yogurt Protein Bowl",
+    "mealType": "breakfast",
+    "calories": 421,
+    "protein": 45,
+    "carbs": 45,
+    "fats": 6,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "fruit"
+    ],
+    "description": "No cooking, three minutes, 40-plus grams of protein. The default high-protein breakfast when you are short on time.",
+    "ingredients": [
+      "250g 0% Greek yogurt",
+      "20g vanilla whey",
+      "80g mixed berries",
+      "30g low-sugar granola",
+      "1 tsp honey"
+    ],
+    "instructions": [
+      "Stir the whey through the yogurt until smooth.",
+      "Top with berries, granola and a drizzle of honey."
+    ]
+  },
+  {
+    "id": "B034",
+    "name": "Egg White & Turkey Scramble",
+    "mealType": "breakfast",
+    "calories": 283,
+    "protein": 47,
+    "carbs": 4,
+    "fats": 7,
+    "fibre": 1,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 7,
+    "tags": [
+      "eggs",
+      "turkey",
+      "vegetables"
+    ],
+    "description": "Lean, high-volume and barely any fat. A cutting-phase staple that still fills the plate.",
+    "ingredients": [
+      "6 egg whites",
+      "80g lean turkey mince",
+      "40g spinach",
+      "40g cherry tomatoes, halved",
+      "1 tsp olive oil"
+    ],
+    "instructions": [
+      "Brown the turkey in the oil for 3-4 minutes.",
+      "Add spinach and tomatoes and cook until wilted.",
+      "Pour in the egg whites and scramble until just set."
+    ]
+  },
+  {
+    "id": "B035",
+    "name": "Cottage Cheese & Berry Bowl",
+    "mealType": "breakfast",
+    "calories": 274,
+    "protein": 37,
+    "carbs": 25,
+    "fats": 3,
+    "fibre": 2,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "fruit"
+    ],
+    "description": "Slow-digesting casein from the cottage cheese keeps you full all morning. Whey lifts the protein further.",
+    "ingredients": [
+      "200g low-fat cottage cheese",
+      "15g vanilla whey",
+      "80g mixed berries",
+      "10g honey"
+    ],
+    "instructions": [
+      "Stir the whey into the cottage cheese until smooth.",
+      "Top with berries and honey, dust with cinnamon if you like."
+    ]
+  },
+  {
+    "id": "B036",
+    "name": "Protein Pancakes",
+    "mealType": "breakfast",
+    "calories": 302,
+    "protein": 35,
+    "carbs": 34,
+    "fats": 4,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 4,
+    "cookTime": 8,
+    "tags": [
+      "eggs",
+      "fruit",
+      "oats",
+      "dairy"
+    ],
+    "description": "Light, fluffy and built almost entirely from protein and a banana. A weekend-feel breakfast that fits the macros.",
+    "ingredients": [
+      "30g vanilla whey",
+      "2 egg whites",
+      "1/2 banana",
+      "25g rolled oats"
+    ],
+    "instructions": [
+      "Blend everything into a smooth batter.",
+      "Cook small pancakes in a nonstick pan, 1-2 minutes a side.",
+      "Stack and top with sugar-free syrup or a spoon of yogurt."
+    ]
+  },
+  {
+    "id": "B037",
+    "name": "Banana Peanut Protein Smoothie",
+    "mealType": "breakfast",
+    "calories": 510,
+    "protein": 42,
+    "carbs": 65,
+    "fats": 11,
+    "fibre": 6,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "fruit",
+      "nuts"
+    ],
+    "description": "Breakfast you can drink on the way out the door. Blends in under two minutes.",
+    "ingredients": [
+      "300ml skim milk",
+      "1 banana",
+      "30g vanilla whey",
+      "15g peanut butter",
+      "25g rolled oats"
+    ],
+    "instructions": [
+      "Add everything to a blender with a handful of ice.",
+      "Blend until smooth and pour."
+    ]
+  },
+  {
+    "id": "B038",
+    "name": "Overnight Protein Oats",
+    "mealType": "breakfast",
+    "calories": 440,
+    "protein": 35,
+    "carbs": 59,
+    "fats": 8,
+    "fibre": 10,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 0,
+    "tags": [
+      "oats",
+      "dairy",
+      "nuts"
+    ],
+    "description": "Mix it the night before and breakfast makes itself. Thick, creamy and ready in the fridge.",
+    "ingredients": [
+      "50g rolled oats",
+      "200ml skim milk",
+      "25g vanilla whey",
+      "10g chia seeds",
+      "60g blueberries"
+    ],
+    "instructions": [
+      "Stir oats, milk, whey and chia in a jar.",
+      "Cover and chill overnight.",
+      "Top with blueberries before eating."
+    ]
+  },
+  {
+    "id": "B039",
+    "name": "Savoury Egg White Oats",
+    "mealType": "breakfast",
+    "calories": 316,
+    "protein": 26,
+    "carbs": 35,
+    "fats": 8,
+    "fibre": 5,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 6,
+    "tags": [
+      "oats",
+      "eggs",
+      "cheese"
+    ],
+    "description": "Don't knock it until you try it. Oats go creamy and savoury, parmesan does the flavour, egg whites do the protein.",
+    "ingredients": [
+      "50g rolled oats",
+      "4 egg whites",
+      "15g grated parmesan"
+    ],
+    "instructions": [
+      "Cook the oats in water until thick.",
+      "Stir in the egg whites off the heat until creamy.",
+      "Season well and finish with parmesan."
+    ]
+  },
+  {
+    "id": "B040",
+    "name": "Scrambled Eggs on Toast",
+    "mealType": "breakfast",
+    "calories": 511,
+    "protein": 39,
+    "carbs": 35,
+    "fats": 23,
+    "fibre": 5,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 6,
+    "tags": [
+      "eggs",
+      "bread"
+    ],
+    "description": "The classic done with extra whites to push the protein without piling on fat.",
+    "ingredients": [
+      "3 whole eggs",
+      "3 egg whites",
+      "2 slices wholegrain bread",
+      "1 tsp olive oil"
+    ],
+    "instructions": [
+      "Whisk the eggs and whites with salt and pepper.",
+      "Scramble gently in the oil over low heat until just set.",
+      "Serve on toasted wholegrain bread."
+    ]
+  },
+  {
+    "id": "B041",
+    "name": "Avocado & Cottage Cheese Toast",
+    "mealType": "breakfast",
+    "calories": 399,
+    "protein": 23,
+    "carbs": 45,
+    "fats": 15,
+    "fibre": 11,
+    "servings": 1,
+    "prepTime": 4,
+    "cookTime": 3,
+    "tags": [
+      "bread",
+      "dairy",
+      "avocado"
+    ],
+    "description": "Cottage cheese carries the protein so the avocado can stay for the good fats and the flavour.",
+    "ingredients": [
+      "2 slices wholegrain bread",
+      "100g low-fat cottage cheese",
+      "1/2 avocado",
+      "40g cherry tomatoes"
+    ],
+    "instructions": [
+      "Toast the bread.",
+      "Spread cottage cheese, then smashed avocado.",
+      "Top with tomatoes, salt, pepper and chilli flakes."
+    ]
+  },
+  {
+    "id": "B042",
+    "name": "Egg & Veg Mug Omelette",
+    "mealType": "breakfast",
+    "calories": 236,
+    "protein": 30,
+    "carbs": 4,
+    "fats": 10,
+    "fibre": 1,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 2,
+    "tags": [
+      "eggs",
+      "vegetables",
+      "cheese"
+    ],
+    "description": "No stove needed. Whisk, microwave, eat. Perfect for a dorm, an office or a campervan.",
+    "ingredients": [
+      "1 whole egg",
+      "4 egg whites",
+      "40g bell pepper, diced",
+      "30g light shredded cheese"
+    ],
+    "instructions": [
+      "Whisk everything in a large mug.",
+      "Microwave 90 seconds, stir, then 30-45 seconds more until set."
+    ]
+  },
+  {
+    "id": "B043",
+    "name": "Mocha Protein Shake",
+    "mealType": "breakfast",
+    "calories": 237,
+    "protein": 42,
+    "carbs": 7,
+    "fats": 5,
+    "fibre": 1,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 0,
+    "tags": [
+      "dairy"
+    ],
+    "description": "Caffeine and 45-plus grams of protein in one glass. Fuel and a coffee hit at the same time.",
+    "ingredients": [
+      "30g chocolate whey",
+      "20g casein",
+      "250ml almond milk",
+      "1 shot espresso or strong coffee"
+    ],
+    "instructions": [
+      "Blend everything with ice until smooth and frothy."
+    ]
+  },
+  {
+    "id": "B044",
+    "name": "Greek Yogurt Granola Parfait",
+    "mealType": "breakfast",
+    "calories": 399,
+    "protein": 42,
+    "carbs": 29,
+    "fats": 12,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 4,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "nuts"
+    ],
+    "description": "Layered for texture, with nut butter and granola adding the carbs and fats to fuel a session.",
+    "ingredients": [
+      "200g 0% Greek yogurt",
+      "15g vanilla whey",
+      "40g protein granola",
+      "10g almond butter"
+    ],
+    "instructions": [
+      "Stir whey into the yogurt.",
+      "Layer with granola in a glass and swirl through the nut butter."
+    ]
+  },
+  {
+    "id": "B045",
+    "name": "Tuna & Egg White Wrap",
+    "mealType": "breakfast",
+    "calories": 244,
+    "protein": 40,
+    "carbs": 16,
+    "fats": 4,
+    "fibre": 10,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 4,
+    "tags": [
+      "fish",
+      "eggs",
+      "bread"
+    ],
+    "description": "Savoury, filling and almost pure protein. Yes, tuna for breakfast works.",
+    "ingredients": [
+      "1 low-carb wrap",
+      "4 egg whites",
+      "1/2 tin tuna in water, drained",
+      "30g spinach"
+    ],
+    "instructions": [
+      "Scramble the egg whites in a nonstick pan.",
+      "Mix the tuna with mustard.",
+      "Fill the wrap with egg, tuna and spinach and roll up."
+    ]
+  },
+  {
+    "id": "B046",
+    "name": "Turkey & Egg Muffin Stack",
+    "mealType": "breakfast",
+    "calories": 378,
+    "protein": 40,
+    "carbs": 29,
+    "fats": 10,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 5,
+    "tags": [
+      "eggs",
+      "turkey",
+      "bread"
+    ],
+    "description": "A clean take on the drive-thru muffin. Toasted, stacked and ready in eight minutes.",
+    "ingredients": [
+      "1 wholemeal English muffin",
+      "1 whole egg",
+      "2 egg whites",
+      "50g lean turkey mince, as a patty",
+      "20g light cheese"
+    ],
+    "instructions": [
+      "Toast the muffin.",
+      "Cook the turkey patty and the egg in a pan.",
+      "Stack patty, egg and cheese inside the muffin."
+    ]
+  },
+  {
+    "id": "B047",
+    "name": "Smoked Salmon Bagel Thin",
+    "mealType": "breakfast",
+    "calories": 271,
+    "protein": 27,
+    "carbs": 28,
+    "fats": 5,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 0,
+    "tags": [
+      "fish",
+      "bread",
+      "dairy"
+    ],
+    "description": "No cooking, omega-3s and a proper protein hit. Eats like a treat, fits a cut.",
+    "ingredients": [
+      "1 bagel thin",
+      "70g smoked salmon",
+      "60g low-fat cottage cheese",
+      "30g cucumber"
+    ],
+    "instructions": [
+      "Toast the bagel thin.",
+      "Spread with cottage cheese.",
+      "Layer over smoked salmon and cucumber, finish with pepper and lemon."
+    ]
+  },
+  {
+    "id": "B048",
+    "name": "Chia Protein Pudding",
+    "mealType": "breakfast",
+    "calories": 305,
+    "protein": 31,
+    "carbs": 30,
+    "fats": 8,
+    "fibre": 9,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "fruit"
+    ],
+    "description": "Set it overnight and it turns thick and spoonable. Quiet, slow-release protein and a load of fibre.",
+    "ingredients": [
+      "200ml skim milk",
+      "25g vanilla whey",
+      "20g chia seeds",
+      "80g mixed berries"
+    ],
+    "instructions": [
+      "Whisk milk, whey and chia.",
+      "Chill overnight until set.",
+      "Top with berries."
+    ]
+  },
+  {
+    "id": "B049",
+    "name": "Apple Cinnamon Protein Oats",
+    "mealType": "breakfast",
+    "calories": 421,
+    "protein": 35,
+    "carbs": 61,
+    "fats": 5,
+    "fibre": 7,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 5,
+    "tags": [
+      "oats",
+      "fruit",
+      "dairy"
+    ],
+    "description": "Warm, sweet and spiced like apple pie, without the sugar load. A cosy training-day breakfast.",
+    "ingredients": [
+      "50g rolled oats",
+      "250ml skim milk",
+      "25g vanilla whey",
+      "1/2 apple, diced"
+    ],
+    "instructions": [
+      "Cook oats in the milk until thick.",
+      "Stir in whey off the heat with plenty of cinnamon.",
+      "Top with diced apple."
+    ]
+  },
+  {
+    "id": "B050",
+    "name": "Cheesy Veggie Egg Muffins",
+    "mealType": "breakfast",
+    "calories": 298,
+    "protein": 33,
+    "carbs": 6,
+    "fats": 15,
+    "fibre": 2,
+    "servings": 2,
+    "prepTime": 6,
+    "cookTime": 18,
+    "tags": [
+      "eggs",
+      "vegetables",
+      "cheese"
+    ],
+    "description": "Bake a tray on Sunday and grab two a morning all week. Genuinely the easiest meal prep there is.",
+    "ingredients": [
+      "4 whole eggs",
+      "6 egg whites",
+      "80g bell pepper, diced",
+      "60g spinach",
+      "60g light shredded cheese"
+    ],
+    "instructions": [
+      "Heat oven to 180C.",
+      "Whisk eggs and whites, stir in veg and cheese, season.",
+      "Pour into a greased muffin tin and bake 18 minutes. Makes 6; two muffins is a serving."
+    ]
+  },
+  {
+    "id": "B051",
+    "name": "Peanut Butter Banana Protein Toast",
+    "mealType": "breakfast",
+    "calories": 483,
+    "protein": 28,
+    "carbs": 66,
+    "fats": 14,
+    "fibre": 9,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 2,
+    "tags": [
+      "bread",
+      "fruit",
+      "nuts",
+      "dairy"
+    ],
+    "description": "Carbs, protein and good fats stacked on toast. Five minutes, eats like dessert.",
+    "ingredients": [
+      "2 slices wholegrain bread",
+      "20g peanut butter",
+      "1 banana, sliced",
+      "15g vanilla whey mixed to a paste"
+    ],
+    "instructions": [
+      "Toast the bread.",
+      "Spread peanut butter, then a thin whey-and-water paste.",
+      "Top with banana slices."
+    ]
+  },
+  {
+    "id": "B052",
+    "name": "Skyr Power Bowl",
+    "mealType": "breakfast",
+    "calories": 378,
+    "protein": 33,
+    "carbs": 37,
+    "fats": 10,
+    "fibre": 5,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "fruit",
+      "nuts"
+    ],
+    "description": "Skyr is thick, tart and very high protein. Granola and almonds round it into a full breakfast.",
+    "ingredients": [
+      "200g 0% skyr",
+      "40g protein granola",
+      "60g blueberries",
+      "10g almonds, chopped"
+    ],
+    "instructions": [
+      "Spoon skyr into a bowl.",
+      "Top with granola, blueberries and almonds."
+    ]
+  },
+  {
+    "id": "L051",
+    "name": "Chicken & Rice Power Bowl",
+    "mealType": "lunch",
+    "calories": 573,
+    "protein": 54,
+    "carbs": 60,
+    "fats": 11,
+    "fibre": 3,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 12,
+    "tags": [
+      "chicken",
+      "rice",
+      "vegetables"
+    ],
+    "description": "The original gym lunch. Lean chicken, rice and greens that reheats perfectly all week.",
+    "ingredients": [
+      "150g cooked chicken breast",
+      "180g cooked rice",
+      "100g steamed green beans",
+      "1 tsp olive oil",
+      "1 tbsp teriyaki or soy"
+    ],
+    "instructions": [
+      "Season and pan-cook the chicken, or use pre-cooked.",
+      "Layer rice, chicken and green beans in a container.",
+      "Drizzle with teriyaki and a little oil."
+    ]
+  },
+  {
+    "id": "L052",
+    "name": "Buffalo Chicken Rice Bowl",
+    "mealType": "lunch",
+    "calories": 530,
+    "protein": 58,
+    "carbs": 55,
+    "fats": 6,
+    "fibre": 1,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 10,
+    "tags": [
+      "chicken",
+      "rice",
+      "dairy"
+    ],
+    "description": "Creamy, spicy and built for meal prep. A bowl you won't get bored of by Thursday.",
+    "ingredients": [
+      "150g cooked chicken breast, shredded",
+      "180g cooked rice",
+      "30g buffalo hot sauce",
+      "60g 0% Greek yogurt",
+      "60g chopped celery and carrot"
+    ],
+    "instructions": [
+      "Toss the shredded chicken in hot sauce.",
+      "Whisk yogurt into a quick ranch-style dressing.",
+      "Serve over rice with the veg and dressing."
+    ]
+  },
+  {
+    "id": "L053",
+    "name": "Quick Teriyaki Salmon Rice Bowl",
+    "mealType": "lunch",
+    "calories": 631,
+    "protein": 45,
+    "carbs": 63,
+    "fats": 21,
+    "fibre": 5,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 8,
+    "tags": [
+      "fish",
+      "rice",
+      "vegetables"
+    ],
+    "description": "Pre-cooked salmon and a rice pouch turn into a five-minute bowl with serious omega-3s.",
+    "ingredients": [
+      "130g cooked salmon",
+      "180g cooked rice",
+      "80g edamame",
+      "2 tbsp teriyaki"
+    ],
+    "instructions": [
+      "Warm the rice and edamame.",
+      "Flake the salmon on top.",
+      "Drizzle teriyaki and scatter sesame seeds."
+    ]
+  },
+  {
+    "id": "L054",
+    "name": "Chicken Burrito Bowl",
+    "mealType": "lunch",
+    "calories": 650,
+    "protein": 67,
+    "carbs": 66,
+    "fats": 11,
+    "fibre": 8,
+    "servings": 1,
+    "prepTime": 6,
+    "cookTime": 10,
+    "tags": [
+      "chicken",
+      "rice",
+      "legumes"
+    ],
+    "description": "All the flavour of a burrito with none of the fuss. Loads of protein and fibre.",
+    "ingredients": [
+      "150g cooked chicken breast",
+      "150g cooked rice",
+      "80g black beans",
+      "50g salsa",
+      "30g light cheese"
+    ],
+    "instructions": [
+      "Warm chicken, rice and beans.",
+      "Build the bowl and top with salsa and cheese."
+    ]
+  },
+  {
+    "id": "L055",
+    "name": "Tuna Pasta Salad",
+    "mealType": "lunch",
+    "calories": 558,
+    "protein": 43,
+    "carbs": 69,
+    "fats": 12,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 8,
+    "cookTime": 10,
+    "tags": [
+      "fish",
+      "pasta",
+      "vegetables"
+    ],
+    "description": "A cold-prep desk lunch that travels well and stays high in protein.",
+    "ingredients": [
+      "70g dry pasta",
+      "1 tin tuna in water, drained",
+      "60g sweetcorn",
+      "40g light mayo",
+      "40g cherry tomatoes"
+    ],
+    "instructions": [
+      "Boil the pasta and cool it.",
+      "Fold through tuna, sweetcorn, tomatoes and light mayo.",
+      "Season and chill."
+    ]
+  },
+  {
+    "id": "L056",
+    "name": "Chicken Caesar Wrap",
+    "mealType": "lunch",
+    "calories": 408,
+    "protein": 62,
+    "carbs": 18,
+    "fats": 12,
+    "fibre": 10,
+    "servings": 1,
+    "prepTime": 6,
+    "cookTime": 6,
+    "tags": [
+      "chicken",
+      "bread",
+      "dairy"
+    ],
+    "description": "The takeaway favourite, rebuilt lean with a yogurt-based caesar.",
+    "ingredients": [
+      "1 low-carb wrap",
+      "140g cooked chicken breast",
+      "60g cos lettuce",
+      "40g 0% Greek yogurt caesar dressing",
+      "10g parmesan"
+    ],
+    "instructions": [
+      "Slice the chicken.",
+      "Toss lettuce with the yogurt caesar and parmesan.",
+      "Fill the wrap and roll tightly."
+    ]
+  },
+  {
+    "id": "L057",
+    "name": "Chicken & Hummus Wrap",
+    "mealType": "lunch",
+    "calories": 429,
+    "protein": 58,
+    "carbs": 24,
+    "fats": 14,
+    "fibre": 13,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 0,
+    "tags": [
+      "chicken",
+      "bread",
+      "legumes"
+    ],
+    "description": "No cooking needed. Hummus does the job of mayo with more fibre and flavour.",
+    "ingredients": [
+      "1 low-carb wrap",
+      "140g cooked chicken breast",
+      "50g hummus",
+      "40g spinach",
+      "40g grated carrot"
+    ],
+    "instructions": [
+      "Spread hummus on the wrap.",
+      "Add chicken, spinach and carrot, then roll."
+    ]
+  },
+  {
+    "id": "L058",
+    "name": "Turkey Taco Rice Bowl",
+    "mealType": "lunch",
+    "calories": 624,
+    "protein": 65,
+    "carbs": 65,
+    "fats": 9,
+    "fibre": 8,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 10,
+    "tags": [
+      "turkey",
+      "rice",
+      "legumes"
+    ],
+    "description": "Seasoned turkey mince over rice and beans. Cheap, fast and reliably tasty.",
+    "ingredients": [
+      "150g lean turkey mince, cooked",
+      "150g cooked rice",
+      "80g black beans",
+      "40g salsa",
+      "30g light cheese"
+    ],
+    "instructions": [
+      "Brown the turkey with taco seasoning.",
+      "Pile over rice and beans.",
+      "Top with salsa and cheese."
+    ]
+  },
+  {
+    "id": "L059",
+    "name": "Chicken Couscous Salad",
+    "mealType": "lunch",
+    "calories": 537,
+    "protein": 55,
+    "carbs": 51,
+    "fats": 11,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 7,
+    "cookTime": 0,
+    "tags": [
+      "chicken",
+      "vegetables"
+    ],
+    "description": "Instant couscous and pre-cooked chicken make a bright lunch you can eat warm or cold.",
+    "ingredients": [
+      "60g dry couscous",
+      "150g cooked chicken breast",
+      "60g cherry tomatoes",
+      "60g cucumber",
+      "1 tsp olive oil"
+    ],
+    "instructions": [
+      "Soak the couscous in boiling water for five minutes and fluff.",
+      "Fold in chopped chicken and veg.",
+      "Dress with oil, lemon and herbs."
+    ]
+  },
+  {
+    "id": "L060",
+    "name": "Smoked Salmon Quinoa Bowl",
+    "mealType": "lunch",
+    "calories": 386,
+    "protein": 26,
+    "carbs": 40,
+    "fats": 14,
+    "fibre": 8,
+    "servings": 1,
+    "prepTime": 8,
+    "cookTime": 0,
+    "tags": [
+      "fish",
+      "vegetables",
+      "avocado"
+    ],
+    "description": "A five-minute assembly bowl with quinoa, smoked salmon and avocado. Light but very filling.",
+    "ingredients": [
+      "150g cooked quinoa",
+      "80g smoked salmon",
+      "50g avocado",
+      "60g cucumber",
+      "40g 0% Greek yogurt dressing"
+    ],
+    "instructions": [
+      "Spoon quinoa into a bowl.",
+      "Top with salmon, avocado and cucumber.",
+      "Finish with a lemon-yogurt drizzle."
+    ]
+  },
+  {
+    "id": "L061",
+    "name": "Tuna Cottage Cheese Crackers",
+    "mealType": "lunch",
+    "calories": 405,
+    "protein": 47,
+    "carbs": 34,
+    "fats": 8,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 0,
+    "tags": [
+      "fish",
+      "dairy"
+    ],
+    "description": "A no-cook lunch that is almost all protein. Keeps you sharp through the afternoon.",
+    "ingredients": [
+      "1 tin tuna in water, drained",
+      "100g low-fat cottage cheese",
+      "6 wholegrain crackers"
+    ],
+    "instructions": [
+      "Mix the tuna with the cottage cheese, pepper and lemon.",
+      "Spoon onto the crackers."
+    ]
+  },
+  {
+    "id": "L062",
+    "name": "Chicken Pesto Pasta",
+    "mealType": "lunch",
+    "calories": 617,
+    "protein": 58,
+    "carbs": 57,
+    "fats": 16,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 8,
+    "cookTime": 12,
+    "tags": [
+      "chicken",
+      "pasta"
+    ],
+    "description": "Pesto brings big flavour for little effort. A bowl that feels like a treat but hits the numbers.",
+    "ingredients": [
+      "70g dry pasta",
+      "150g cooked chicken breast",
+      "20g pesto",
+      "60g cherry tomatoes",
+      "40g spinach"
+    ],
+    "instructions": [
+      "Boil the pasta.",
+      "Toss with chicken, pesto, tomatoes and spinach until the spinach wilts."
+    ]
+  },
+  {
+    "id": "L063",
+    "name": "Beef & Broccoli Rice Bowl",
+    "mealType": "lunch",
+    "calories": 540,
+    "protein": 49,
+    "carbs": 59,
+    "fats": 11,
+    "fibre": 3,
+    "servings": 1,
+    "prepTime": 6,
+    "cookTime": 10,
+    "tags": [
+      "beef",
+      "rice",
+      "vegetables"
+    ],
+    "description": "Lean mince, broccoli and a soy glaze over rice. A takeaway-style bowl that meal-preps well.",
+    "ingredients": [
+      "140g lean beef mince, cooked",
+      "180g cooked rice",
+      "100g broccoli",
+      "2 tbsp soy sauce"
+    ],
+    "instructions": [
+      "Brown the mince and steam the broccoli.",
+      "Toss with soy sauce and serve over rice."
+    ]
+  },
+  {
+    "id": "L064",
+    "name": "Prawn Rice Bowl",
+    "mealType": "lunch",
+    "calories": 499,
+    "protein": 51,
+    "carbs": 62,
+    "fats": 6,
+    "fibre": 5,
+    "servings": 1,
+    "prepTime": 6,
+    "cookTime": 8,
+    "tags": [
+      "fish",
+      "rice",
+      "vegetables"
+    ],
+    "description": "Prawns cook in minutes and are nearly all protein. A light, fresh bowl for warmer days.",
+    "ingredients": [
+      "150g cooked prawns",
+      "180g cooked rice",
+      "80g edamame",
+      "1 tbsp sriracha",
+      "40g cucumber"
+    ],
+    "instructions": [
+      "Warm the rice and prawns.",
+      "Build the bowl with edamame and cucumber.",
+      "Drizzle with sriracha."
+    ]
+  },
+  {
+    "id": "L065",
+    "name": "Chicken Quesadilla",
+    "mealType": "lunch",
+    "calories": 515,
+    "protein": 57,
+    "carbs": 33,
+    "fats": 16,
+    "fibre": 2,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 6,
+    "tags": [
+      "chicken",
+      "bread",
+      "dairy"
+    ],
+    "description": "Pan-toasted and ready fast. Use pre-cooked chicken and it eats like a treat.",
+    "ingredients": [
+      "1 large tortilla",
+      "130g cooked chicken breast",
+      "40g light cheese",
+      "40g salsa"
+    ],
+    "instructions": [
+      "Fill half the tortilla with chicken, cheese and salsa.",
+      "Fold and toast in a dry pan two minutes a side.",
+      "Slice into wedges."
+    ]
+  },
+  {
+    "id": "L066",
+    "name": "Lentil & Feta Rice Bowl",
+    "mealType": "lunch",
+    "calories": 654,
+    "protein": 31,
+    "carbs": 88,
+    "fats": 19,
+    "fibre": 14,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 8,
+    "tags": [
+      "legumes",
+      "rice",
+      "cheese"
+    ],
+    "description": "A vegetarian bowl with real staying power from lentils, finished with salty feta.",
+    "ingredients": [
+      "1 pouch microwave lentils",
+      "150g cooked rice",
+      "40g feta",
+      "40g spinach",
+      "1 tsp olive oil"
+    ],
+    "instructions": [
+      "Warm the lentils and rice.",
+      "Stir spinach through to wilt.",
+      "Crumble over feta and finish with oil and lemon."
+    ]
+  },
+  {
+    "id": "L067",
+    "name": "Chicken Egg Fried Rice",
+    "mealType": "lunch",
+    "calories": 651,
+    "protein": 60,
+    "carbs": 63,
+    "fats": 15,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 10,
+    "tags": [
+      "chicken",
+      "rice",
+      "eggs"
+    ],
+    "description": "Day-old rice, a couple of eggs and pre-cooked chicken. Better and leaner than the takeaway.",
+    "ingredients": [
+      "180g cooked rice",
+      "120g cooked chicken breast",
+      "2 whole eggs",
+      "80g frozen mixed veg",
+      "2 tbsp soy sauce"
+    ],
+    "instructions": [
+      "Scramble the eggs and set aside.",
+      "Fry rice, chicken and veg in a hot pan.",
+      "Fold the egg back in with soy sauce."
+    ]
+  },
+  {
+    "id": "L068",
+    "name": "Mediterranean Chicken Quinoa Bowl",
+    "mealType": "lunch",
+    "calories": 553,
+    "protein": 60,
+    "carbs": 38,
+    "fats": 17,
+    "fibre": 5,
+    "servings": 1,
+    "prepTime": 7,
+    "cookTime": 0,
+    "tags": [
+      "chicken",
+      "vegetables",
+      "cheese"
+    ],
+    "description": "Bright, herby and built for cold prep. Feta and lemon lift simple chicken and quinoa.",
+    "ingredients": [
+      "150g cooked quinoa",
+      "150g cooked chicken breast",
+      "60g cucumber",
+      "40g feta",
+      "60g cherry tomatoes"
+    ],
+    "instructions": [
+      "Combine quinoa, chicken and chopped veg.",
+      "Crumble over feta.",
+      "Dress with lemon, oregano and pepper."
+    ]
+  },
+  {
+    "id": "L069",
+    "name": "Turkey Meatball Marinara Bowl",
+    "mealType": "lunch",
+    "calories": 536,
+    "protein": 57,
+    "carbs": 61,
+    "fats": 5,
+    "fibre": 5,
+    "servings": 1,
+    "prepTime": 8,
+    "cookTime": 12,
+    "tags": [
+      "turkey",
+      "pasta",
+      "vegetables"
+    ],
+    "description": "Lean turkey meatballs in marinara over pasta. Comfort food that stays on plan.",
+    "ingredients": [
+      "150g lean turkey mince, as meatballs",
+      "70g dry pasta",
+      "120g marinara",
+      "40g spinach"
+    ],
+    "instructions": [
+      "Roll and pan-cook the turkey meatballs.",
+      "Simmer in marinara.",
+      "Serve over pasta with wilted spinach."
+    ]
+  },
+  {
+    "id": "L070",
+    "name": "Teriyaki Tofu Rice Bowl",
+    "mealType": "lunch",
+    "calories": 622,
+    "protein": 43,
+    "carbs": 69,
+    "fats": 19,
+    "fibre": 7,
+    "servings": 1,
+    "prepTime": 6,
+    "cookTime": 10,
+    "tags": [
+      "legumes",
+      "rice",
+      "vegetables"
+    ],
+    "description": "A plant-based bowl with crisp tofu and a sticky glaze. Holds up well as a packed lunch.",
+    "ingredients": [
+      "180g firm tofu, cubed",
+      "180g cooked rice",
+      "80g edamame",
+      "2 tbsp teriyaki"
+    ],
+    "instructions": [
+      "Pan-fry the tofu until golden.",
+      "Toss in teriyaki.",
+      "Serve over rice with edamame."
+    ]
+  },
+  {
+    "id": "D045",
+    "name": "One-Pan Chicken & Veg with Rice",
+    "mealType": "dinner",
+    "calories": 700,
+    "protein": 69,
+    "carbs": 72,
+    "fats": 13,
+    "fibre": 7,
+    "servings": 1,
+    "prepTime": 6,
+    "cookTime": 14,
+    "tags": [
+      "chicken",
+      "rice",
+      "vegetables"
+    ],
+    "description": "Everything in one pan, minimal washing up, solid macros. A weeknight default.",
+    "ingredients": [
+      "180g chicken breast, cubed",
+      "180g cooked rice",
+      "150g frozen mixed veg",
+      "2 tbsp soy sauce",
+      "1 tsp olive oil"
+    ],
+    "instructions": [
+      "Cook the chicken in the oil.",
+      "Add veg and cook through.",
+      "Stir in rice and soy until hot."
+    ]
+  },
+  {
+    "id": "D046",
+    "name": "Lean Beef Tacos",
+    "mealType": "dinner",
+    "calories": 644,
+    "protein": 62,
+    "carbs": 45,
+    "fats": 23,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 6,
+    "cookTime": 10,
+    "tags": [
+      "beef",
+      "bread",
+      "dairy"
+    ],
+    "description": "Brown, season, fill. A fast family-style dinner that lands right on the numbers.",
+    "ingredients": [
+      "150g lean beef mince, cooked",
+      "2 small tortillas",
+      "40g light cheese",
+      "50g salsa",
+      "40g lettuce"
+    ],
+    "instructions": [
+      "Brown the mince with taco seasoning.",
+      "Warm the tortillas.",
+      "Fill with beef, cheese, salsa and lettuce."
+    ]
+  },
+  {
+    "id": "D047",
+    "name": "Teriyaki Chicken Stir-Fry",
+    "mealType": "dinner",
+    "calories": 665,
+    "protein": 68,
+    "carbs": 75,
+    "fats": 8,
+    "fibre": 6,
+    "servings": 1,
+    "prepTime": 7,
+    "cookTime": 12,
+    "tags": [
+      "chicken",
+      "rice",
+      "vegetables"
+    ],
+    "description": "Sticky, sweet and faster than delivery. Loads of veg and a clean protein hit.",
+    "ingredients": [
+      "180g chicken breast, sliced",
+      "180g cooked rice",
+      "120g stir-fry veg",
+      "3 tbsp teriyaki"
+    ],
+    "instructions": [
+      "Stir-fry the chicken in a hot pan.",
+      "Add veg for a couple of minutes.",
+      "Toss in teriyaki and serve over rice."
+    ]
+  },
+  {
+    "id": "D048",
+    "name": "Salmon & Potato Traybake",
+    "mealType": "dinner",
+    "calories": 523,
+    "protein": 36,
+    "carbs": 42,
+    "fats": 24,
+    "fibre": 7,
+    "servings": 2,
+    "prepTime": 8,
+    "cookTime": 20,
+    "tags": [
+      "fish",
+      "vegetables"
+    ],
+    "description": "One tray, almost no effort. Roast salmon, potatoes and greens together while you rest.",
+    "ingredients": [
+      "2 salmon fillets (260g cooked)",
+      "400g baby potatoes",
+      "200g broccoli",
+      "1 tbsp olive oil",
+      "1 lemon"
+    ],
+    "instructions": [
+      "Heat oven to 200C.",
+      "Roast potatoes 15 minutes, then add salmon and broccoli.",
+      "Roast 12 minutes more, finish with lemon. Serves two."
+    ]
+  },
+  {
+    "id": "D049",
+    "name": "Turkey Meatballs & Pasta",
+    "mealType": "dinner",
+    "calories": 608,
+    "protein": 62,
+    "carbs": 64,
+    "fats": 9,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 8,
+    "cookTime": 16,
+    "tags": [
+      "turkey",
+      "pasta",
+      "vegetables"
+    ],
+    "description": "Lean meatballs simmered in marinara over pasta. 40-plus grams of protein, big comfort.",
+    "ingredients": [
+      "150g lean turkey mince, as meatballs",
+      "75g dry pasta",
+      "130g marinara",
+      "15g parmesan"
+    ],
+    "instructions": [
+      "Roll and brown the meatballs.",
+      "Simmer in marinara while the pasta boils.",
+      "Combine and finish with parmesan."
+    ]
+  },
+  {
+    "id": "D050",
+    "name": "Chicken Fajitas",
+    "mealType": "dinner",
+    "calories": 628,
+    "protein": 64,
+    "carbs": 51,
+    "fats": 17,
+    "fibre": 6,
+    "servings": 1,
+    "prepTime": 7,
+    "cookTime": 10,
+    "tags": [
+      "chicken",
+      "bread",
+      "vegetables"
+    ],
+    "description": "Sizzling peppers, onions and chicken folded into warm tortillas. A crowd-pleaser that's still lean.",
+    "ingredients": [
+      "180g chicken breast, sliced",
+      "2 small tortillas",
+      "100g bell peppers",
+      "60g onion",
+      "1 tsp olive oil"
+    ],
+    "instructions": [
+      "Fry the chicken with fajita seasoning.",
+      "Add peppers and onion until charred.",
+      "Serve in warm tortillas."
+    ]
+  },
+  {
+    "id": "D051",
+    "name": "Lean Smash Burgers",
+    "mealType": "dinner",
+    "calories": 501,
+    "protein": 55,
+    "carbs": 34,
+    "fats": 15,
+    "fibre": 5,
+    "servings": 1,
+    "prepTime": 6,
+    "cookTime": 8,
+    "tags": [
+      "beef",
+      "bread",
+      "dairy"
+    ],
+    "description": "Thin, crispy-edged patties from lean mince. A burger night that fits a cut.",
+    "ingredients": [
+      "150g lean beef mince",
+      "1 wholemeal bun",
+      "20g light cheese",
+      "40g lettuce and tomato"
+    ],
+    "instructions": [
+      "Smash the mince into thin patties in a hot pan.",
+      "Sear hard both sides and melt the cheese.",
+      "Build in the toasted bun."
+    ]
+  },
+  {
+    "id": "D052",
+    "name": "Beef & Broccoli Stir-Fry",
+    "mealType": "dinner",
+    "calories": 637,
+    "protein": 56,
+    "carbs": 62,
+    "fats": 17,
+    "fibre": 5,
+    "servings": 1,
+    "prepTime": 7,
+    "cookTime": 10,
+    "tags": [
+      "beef",
+      "rice",
+      "vegetables"
+    ],
+    "description": "A takeaway classic, leaner at home. Lean strips, broccoli and a glossy soy-garlic sauce.",
+    "ingredients": [
+      "160g lean beef strips, cooked",
+      "180g cooked rice",
+      "150g broccoli",
+      "2 tbsp soy sauce",
+      "1 tsp olive oil"
+    ],
+    "instructions": [
+      "Sear the beef in the oil.",
+      "Add broccoli and a splash of water to steam.",
+      "Toss in soy and garlic, serve over rice."
+    ]
+  },
+  {
+    "id": "D053",
+    "name": "Baked Cod & Sweet Potato Mash",
+    "mealType": "dinner",
+    "calories": 495,
+    "protein": 48,
+    "carbs": 60,
+    "fats": 7,
+    "fibre": 12,
+    "servings": 1,
+    "prepTime": 8,
+    "cookTime": 18,
+    "tags": [
+      "fish",
+      "vegetables"
+    ],
+    "description": "Flaky white fish over sweet potato mash. Very lean, very filling, easy on the stomach.",
+    "ingredients": [
+      "180g cod fillet, cooked",
+      "250g sweet potato",
+      "150g green beans",
+      "1 tsp olive oil"
+    ],
+    "instructions": [
+      "Bake the cod 15 minutes.",
+      "Boil and mash the sweet potato.",
+      "Serve with steamed green beans."
+    ]
+  },
+  {
+    "id": "D054",
+    "name": "Light Chicken Pasta Bake",
+    "mealType": "dinner",
+    "calories": 689,
+    "protein": 74,
+    "carbs": 66,
+    "fats": 12,
+    "fibre": 4,
+    "servings": 2,
+    "prepTime": 10,
+    "cookTime": 18,
+    "tags": [
+      "chicken",
+      "pasta",
+      "dairy"
+    ],
+    "description": "Creamy without the cream, thanks to a yogurt-and-cheese sauce. Bake once, eat twice.",
+    "ingredients": [
+      "300g cooked chicken breast",
+      "150g dry pasta",
+      "200g marinara",
+      "150g 0% Greek yogurt",
+      "60g light cheese"
+    ],
+    "instructions": [
+      "Boil the pasta.",
+      "Mix with chicken, marinara and yogurt.",
+      "Top with cheese and bake 15 minutes. Serves two."
+    ]
+  },
+  {
+    "id": "D055",
+    "name": "Honey Garlic Chicken & Rice",
+    "mealType": "dinner",
+    "calories": 619,
+    "protein": 65,
+    "carbs": 70,
+    "fats": 7,
+    "fibre": 3,
+    "servings": 1,
+    "prepTime": 7,
+    "cookTime": 12,
+    "tags": [
+      "chicken",
+      "rice",
+      "vegetables"
+    ],
+    "description": "Sweet, sticky and quick. A glaze of honey, garlic and soy over lean chicken.",
+    "ingredients": [
+      "180g chicken breast, cubed",
+      "180g cooked rice",
+      "100g broccoli",
+      "15g honey",
+      "1 tbsp soy sauce"
+    ],
+    "instructions": [
+      "Pan-cook the chicken.",
+      "Add honey, soy and garlic to glaze.",
+      "Serve over rice with steamed broccoli."
+    ]
+  },
+  {
+    "id": "D056",
+    "name": "Sweet Chilli Salmon Noodles",
+    "mealType": "dinner",
+    "calories": 627,
+    "protein": 42,
+    "carbs": 71,
+    "fats": 19,
+    "fibre": 7,
+    "servings": 1,
+    "prepTime": 7,
+    "cookTime": 12,
+    "tags": [
+      "fish",
+      "pasta",
+      "vegetables"
+    ],
+    "description": "Salmon flaked through noodles with a sweet-chilli kick. Restaurant flavour, fifteen minutes.",
+    "ingredients": [
+      "130g cooked salmon",
+      "70g dry noodles or pasta",
+      "100g stir-fry veg",
+      "2 tbsp sweet chilli (sriracha)"
+    ],
+    "instructions": [
+      "Cook the noodles.",
+      "Stir-fry the veg, then add flaked salmon.",
+      "Toss with noodles and sweet chilli."
+    ]
+  },
+  {
+    "id": "D057",
+    "name": "Turkey Chili",
+    "mealType": "dinner",
+    "calories": 446,
+    "protein": 58,
+    "carbs": 40,
+    "fats": 4,
+    "fibre": 14,
+    "servings": 2,
+    "prepTime": 8,
+    "cookTime": 20,
+    "tags": [
+      "turkey",
+      "legumes",
+      "vegetables"
+    ],
+    "description": "A one-pot chili loaded with beans and lean turkey. Even better the next day.",
+    "ingredients": [
+      "300g lean turkey mince, cooked",
+      "240g black beans",
+      "200g chopped tomatoes",
+      "100g bell pepper",
+      "60g onion"
+    ],
+    "instructions": [
+      "Brown the turkey with onion and peppers.",
+      "Add beans, tomatoes and chili spices.",
+      "Simmer 15 minutes. Serves two."
+    ]
+  },
+  {
+    "id": "D058",
+    "name": "Chicken Souvlaki Bowl",
+    "mealType": "dinner",
+    "calories": 587,
+    "protein": 63,
+    "carbs": 55,
+    "fats": 10,
+    "fibre": 2,
+    "servings": 1,
+    "prepTime": 8,
+    "cookTime": 12,
+    "tags": [
+      "chicken",
+      "rice",
+      "dairy"
+    ],
+    "description": "Greek-style chicken over rice with cool tzatziki. Big flavour from a short ingredient list.",
+    "ingredients": [
+      "180g chicken breast, cubed",
+      "180g cooked rice",
+      "60g tzatziki",
+      "60g cucumber and tomato"
+    ],
+    "instructions": [
+      "Marinate and pan-cook the chicken with oregano and lemon.",
+      "Serve over rice.",
+      "Top with tzatziki and chopped salad."
+    ]
+  },
+  {
+    "id": "D059",
+    "name": "Garlic Parmesan Chicken Pasta",
+    "mealType": "dinner",
+    "calories": 672,
+    "protein": 75,
+    "carbs": 62,
+    "fats": 12,
+    "fibre": 3,
+    "servings": 1,
+    "prepTime": 8,
+    "cookTime": 14,
+    "tags": [
+      "chicken",
+      "pasta",
+      "cheese"
+    ],
+    "description": "Comfort-food pasta made lean. Roasted garlic and parmesan do the heavy lifting.",
+    "ingredients": [
+      "150g cooked chicken breast",
+      "75g dry pasta",
+      "100g 0% Greek yogurt",
+      "20g parmesan",
+      "40g spinach"
+    ],
+    "instructions": [
+      "Boil the pasta.",
+      "Stir yogurt, parmesan and garlic into a quick sauce off the heat.",
+      "Fold through chicken, pasta and spinach."
+    ]
+  },
+  {
+    "id": "D060",
+    "name": "Tofu Veg Stir-Fry",
+    "mealType": "dinner",
+    "calories": 647,
+    "protein": 43,
+    "carbs": 78,
+    "fats": 17,
+    "fibre": 9,
+    "servings": 1,
+    "prepTime": 7,
+    "cookTime": 12,
+    "tags": [
+      "legumes",
+      "rice",
+      "vegetables"
+    ],
+    "description": "Crisp tofu and plenty of veg in a soy-ginger sauce. A satisfying plant-based plate.",
+    "ingredients": [
+      "200g firm tofu, cubed",
+      "180g cooked rice",
+      "150g stir-fry veg",
+      "2 tbsp soy sauce"
+    ],
+    "instructions": [
+      "Pan-fry the tofu until crisp.",
+      "Add veg and stir-fry briefly.",
+      "Toss with soy and ginger, serve over rice."
+    ]
+  },
+  {
+    "id": "D061",
+    "name": "Halloumi & Chickpea Traybake",
+    "mealType": "dinner",
+    "calories": 566,
+    "protein": 30,
+    "carbs": 44,
+    "fats": 30,
+    "fibre": 12,
+    "servings": 2,
+    "prepTime": 8,
+    "cookTime": 20,
+    "tags": [
+      "cheese",
+      "legumes",
+      "vegetables"
+    ],
+    "description": "A vegetarian tray of roasted chickpeas, peppers and golden halloumi. Hearty and protein-rich.",
+    "ingredients": [
+      "160g halloumi",
+      "240g chickpeas",
+      "200g bell peppers",
+      "100g red onion",
+      "1 tbsp olive oil"
+    ],
+    "instructions": [
+      "Heat oven to 200C.",
+      "Roast chickpeas, peppers and onion 15 minutes.",
+      "Add sliced halloumi and roast 8 minutes more. Serves two."
+    ]
+  },
+  {
+    "id": "D062",
+    "name": "Chicken Sausage & Veg Tray",
+    "mealType": "dinner",
+    "calories": 514,
+    "protein": 50,
+    "carbs": 52,
+    "fats": 11,
+    "fibre": 9,
+    "servings": 1,
+    "prepTime": 6,
+    "cookTime": 18,
+    "tags": [
+      "chicken",
+      "vegetables"
+    ],
+    "description": "Lean chicken sausages roasted with potatoes and peppers. Set the timer and walk away.",
+    "ingredients": [
+      "2 lean chicken sausages",
+      "250g baby potatoes",
+      "150g bell peppers and onion",
+      "1 tsp olive oil"
+    ],
+    "instructions": [
+      "Heat oven to 200C.",
+      "Toss everything with oil on a tray.",
+      "Roast 18 minutes until golden."
+    ]
+  },
+  {
+    "id": "D063",
+    "name": "Prawn Stir-Fry Rice",
+    "mealType": "dinner",
+    "calories": 568,
+    "protein": 56,
+    "carbs": 68,
+    "fats": 8,
+    "fibre": 6,
+    "servings": 1,
+    "prepTime": 6,
+    "cookTime": 10,
+    "tags": [
+      "fish",
+      "rice",
+      "vegetables"
+    ],
+    "description": "Prawns and veg tossed through fried rice. Light, quick and high in lean protein.",
+    "ingredients": [
+      "160g cooked prawns",
+      "180g cooked rice",
+      "1 egg",
+      "120g stir-fry veg",
+      "2 tbsp soy sauce"
+    ],
+    "instructions": [
+      "Scramble the egg and set aside.",
+      "Fry rice, prawns and veg.",
+      "Fold the egg back in with soy sauce."
+    ]
+  },
+  {
+    "id": "D064",
+    "name": "Steak & Garlic Green Beans",
+    "mealType": "dinner",
+    "calories": 611,
+    "protein": 58,
+    "carbs": 53,
+    "fats": 18,
+    "fibre": 10,
+    "servings": 1,
+    "prepTime": 6,
+    "cookTime": 12,
+    "tags": [
+      "beef",
+      "vegetables"
+    ],
+    "description": "A lean steak seared simply, with garlicky green beans and a baked potato. Date-night easy.",
+    "ingredients": [
+      "180g lean steak, cooked",
+      "250g baked potato",
+      "150g green beans",
+      "1 tsp olive oil"
+    ],
+    "instructions": [
+      "Sear the steak to your liking and rest it.",
+      "Saute green beans with garlic in the oil.",
+      "Serve with a baked potato."
+    ]
+  },
+  {
+    "id": "S026",
+    "name": "Greek Yogurt, Honey & Berries",
+    "mealType": "snack",
+    "calories": 161,
+    "protein": 18,
+    "carbs": 22,
+    "fats": 1,
+    "fibre": 2,
+    "servings": 1,
+    "prepTime": 2,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "fruit"
+    ],
+    "description": "The simplest 20-gram protein hit there is. Thick yogurt, a little honey, a handful of berries.",
+    "ingredients": [
+      "170g 0% Greek yogurt",
+      "60g mixed berries",
+      "10g honey"
+    ],
+    "instructions": [
+      "Spoon yogurt into a pot.",
+      "Top with berries and honey."
+    ]
+  },
+  {
+    "id": "S027",
+    "name": "Pineapple Cottage Cheese Cup",
+    "mealType": "snack",
+    "calories": 148,
+    "protein": 18,
+    "carbs": 15,
+    "fats": 2,
+    "fibre": 1,
+    "servings": 1,
+    "prepTime": 2,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "fruit"
+    ],
+    "description": "A retro gym snack for a reason: high protein, sweet, and it travels in a tub.",
+    "ingredients": [
+      "150g low-fat cottage cheese",
+      "80g pineapple"
+    ],
+    "instructions": [
+      "Combine the cottage cheese and pineapple in a tub."
+    ]
+  },
+  {
+    "id": "S028",
+    "name": "Chocolate Protein Shake",
+    "mealType": "snack",
+    "calories": 222,
+    "protein": 34,
+    "carbs": 18,
+    "fats": 2,
+    "fibre": 0,
+    "servings": 1,
+    "prepTime": 2,
+    "cookTime": 0,
+    "tags": [
+      "dairy"
+    ],
+    "description": "Mixed in thirty seconds. A reliable way to land protein between meals.",
+    "ingredients": [
+      "30g chocolate whey",
+      "300ml skim milk"
+    ],
+    "instructions": [
+      "Shake the whey and milk together until smooth."
+    ]
+  },
+  {
+    "id": "S029",
+    "name": "Whipped Cottage Cheese & PB",
+    "mealType": "snack",
+    "calories": 211,
+    "protein": 22,
+    "carbs": 12,
+    "fats": 9,
+    "fibre": 1,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "nuts"
+    ],
+    "description": "Blend cottage cheese smooth and it eats like a mousse. Peanut butter makes it feel indulgent.",
+    "ingredients": [
+      "150g low-fat cottage cheese",
+      "15g peanut butter",
+      "5g honey"
+    ],
+    "instructions": [
+      "Blend the cottage cheese until smooth.",
+      "Swirl through peanut butter and honey."
+    ]
+  },
+  {
+    "id": "S030",
+    "name": "Skyr Chocolate Mousse",
+    "mealType": "snack",
+    "calories": 169,
+    "protein": 24,
+    "carbs": 19,
+    "fats": 2,
+    "fibre": 3,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 0,
+    "tags": [
+      "dairy"
+    ],
+    "description": "Cocoa whisked into thick skyr. A lean dessert that quietly hits 24 grams of protein.",
+    "ingredients": [
+      "200g 0% skyr",
+      "8g cocoa powder",
+      "8g honey"
+    ],
+    "instructions": [
+      "Whisk cocoa and honey into the skyr until smooth and thick."
+    ]
+  },
+  {
+    "id": "S031",
+    "name": "Edamame & Soy Pot",
+    "mealType": "snack",
+    "calories": 190,
+    "protein": 19,
+    "carbs": 14,
+    "fats": 8,
+    "fibre": 8,
+    "servings": 1,
+    "prepTime": 2,
+    "cookTime": 3,
+    "tags": [
+      "legumes",
+      "vegetables"
+    ],
+    "description": "Shelled edamame with a splash of soy. Plant protein and fibre in one warm pot.",
+    "ingredients": [
+      "150g shelled edamame",
+      "1 tbsp soy sauce"
+    ],
+    "instructions": [
+      "Microwave the edamame for three minutes.",
+      "Toss with soy and chilli flakes."
+    ]
+  },
+  {
+    "id": "S032",
+    "name": "Beef Jerky & Apple",
+    "mealType": "snack",
+    "calories": 166,
+    "protein": 12,
+    "carbs": 25,
+    "fats": 3,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 2,
+    "cookTime": 0,
+    "tags": [
+      "beef",
+      "fruit"
+    ],
+    "description": "Pure portable protein with a crisp apple alongside. Nothing to prepare, nothing to chill.",
+    "ingredients": [
+      "40g beef jerky",
+      "1 apple"
+    ],
+    "instructions": [
+      "Pack the jerky and apple together. Eat on the go."
+    ]
+  },
+  {
+    "id": "S033",
+    "name": "Rice Cakes, PB & Banana",
+    "mealType": "snack",
+    "calories": 211,
+    "protein": 6,
+    "carbs": 32,
+    "fats": 8,
+    "fibre": 3,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 0,
+    "tags": [
+      "nuts",
+      "fruit"
+    ],
+    "description": "Quick carbs and a little protein for around a session. Light but satisfying.",
+    "ingredients": [
+      "2 rice cakes",
+      "15g peanut butter",
+      "1/2 banana"
+    ],
+    "instructions": [
+      "Spread peanut butter on the rice cakes.",
+      "Top with banana slices."
+    ]
+  },
+  {
+    "id": "S034",
+    "name": "No-Bake Protein Oat Bars",
+    "mealType": "snack",
+    "calories": 390,
+    "protein": 27,
+    "carbs": 42,
+    "fats": 14,
+    "fibre": 5,
+    "servings": 2,
+    "prepTime": 8,
+    "cookTime": 0,
+    "tags": [
+      "oats",
+      "dairy",
+      "nuts"
+    ],
+    "description": "Press a tray, chill, and cut into bars. Cheaper and cleaner than the shop versions.",
+    "ingredients": [
+      "80g rolled oats",
+      "40g vanilla whey",
+      "40g peanut butter",
+      "20g honey",
+      "60ml milk"
+    ],
+    "instructions": [
+      "Mix everything into a stiff paste.",
+      "Press into a small dish and chill 30 minutes.",
+      "Cut into two bars."
+    ]
+  },
+  {
+    "id": "S035",
+    "name": "Boiled Eggs & Fruit",
+    "mealType": "snack",
+    "calories": 238,
+    "protein": 13,
+    "carbs": 26,
+    "fats": 10,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 2,
+    "cookTime": 10,
+    "tags": [
+      "eggs",
+      "fruit"
+    ],
+    "description": "Two eggs and a piece of fruit. Old-school, portable, and naturally high protein.",
+    "ingredients": [
+      "2 whole eggs",
+      "1 apple"
+    ],
+    "instructions": [
+      "Boil the eggs 8-9 minutes and cool.",
+      "Eat with the apple."
+    ]
+  },
+  {
+    "id": "S036",
+    "name": "Tuna Pouch & Crackers",
+    "mealType": "snack",
+    "calories": 279,
+    "protein": 29,
+    "carbs": 26,
+    "fats": 6,
+    "fibre": 3,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 0,
+    "tags": [
+      "fish",
+      "bread"
+    ],
+    "description": "Peel a tuna pouch, grab some crackers, done. Savoury protein with zero cooking.",
+    "ingredients": [
+      "1 tuna pouch, drained",
+      "5 wholegrain crackers"
+    ],
+    "instructions": [
+      "Open the tuna pouch.",
+      "Scoop onto the crackers with pepper and lemon."
+    ]
+  },
+  {
+    "id": "S037",
+    "name": "Protein Yogurt Ranch & Veg",
+    "mealType": "snack",
+    "calories": 104,
+    "protein": 16,
+    "carbs": 9,
+    "fats": 1,
+    "fibre": 0,
+    "servings": 1,
+    "prepTime": 4,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "vegetables"
+    ],
+    "description": "A high-protein dip that turns crunchy veg into a proper snack.",
+    "ingredients": [
+      "150g 0% Greek yogurt",
+      "100g carrot and cucumber sticks"
+    ],
+    "instructions": [
+      "Stir ranch or onion seasoning into the yogurt.",
+      "Dip the veg sticks."
+    ]
+  },
+  {
+    "id": "S038",
+    "name": "Apple & Peanut Butter",
+    "mealType": "snack",
+    "calories": 211,
+    "protein": 6,
+    "carbs": 29,
+    "fats": 10,
+    "fibre": 6,
+    "servings": 1,
+    "prepTime": 2,
+    "cookTime": 0,
+    "tags": [
+      "fruit",
+      "nuts"
+    ],
+    "description": "Crisp apple and a scoop of peanut butter. Not the highest protein, but a clean, satisfying fix.",
+    "ingredients": [
+      "1 apple, sliced",
+      "20g peanut butter"
+    ],
+    "instructions": [
+      "Slice the apple.",
+      "Serve with peanut butter for dipping."
+    ]
+  },
+  {
+    "id": "S039",
+    "name": "Chocolate Peanut Protein Balls",
+    "mealType": "snack",
+    "calories": 334,
+    "protein": 25,
+    "carbs": 32,
+    "fats": 13,
+    "fibre": 4,
+    "servings": 2,
+    "prepTime": 8,
+    "cookTime": 0,
+    "tags": [
+      "oats",
+      "dairy",
+      "nuts"
+    ],
+    "description": "Roll a batch and keep them in the fridge. Two or three is a perfect protein-and-carb snack.",
+    "ingredients": [
+      "60g rolled oats",
+      "40g chocolate whey",
+      "40g peanut butter",
+      "15g honey"
+    ],
+    "instructions": [
+      "Mix into a thick dough.",
+      "Roll into balls and chill. Half the batch is one serving."
+    ]
+  },
+  {
+    "id": "S040",
+    "name": "Savoury Cottage Cheese Toast",
+    "mealType": "snack",
+    "calories": 177,
+    "protein": 17,
+    "carbs": 21,
+    "fats": 3,
+    "fibre": 3,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 2,
+    "tags": [
+      "bread",
+      "dairy"
+    ],
+    "description": "One slice, loaded with cottage cheese. A fast, savoury bridge between meals.",
+    "ingredients": [
+      "1 slice wholegrain bread",
+      "100g low-fat cottage cheese",
+      "30g cherry tomatoes"
+    ],
+    "instructions": [
+      "Toast the bread.",
+      "Top with cottage cheese, tomatoes, salt and pepper."
+    ]
+  },
+  {
+    "id": "S041",
+    "name": "Protein Iced Coffee",
+    "mealType": "snack",
+    "calories": 192,
+    "protein": 31,
+    "carbs": 13,
+    "fats": 2,
+    "fibre": 0,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 0,
+    "tags": [
+      "dairy"
+    ],
+    "description": "Cold coffee blended with protein. Caffeine and 25-plus grams of protein in one glass.",
+    "ingredients": [
+      "30g vanilla whey",
+      "200ml skim milk",
+      "1 shot cold espresso"
+    ],
+    "instructions": [
+      "Shake or blend everything with ice."
+    ]
+  },
+  {
+    "id": "S042",
+    "name": "Nuts & Skyr",
+    "mealType": "snack",
+    "calories": 198,
+    "protein": 22,
+    "carbs": 10,
+    "fats": 8,
+    "fibre": 1,
+    "servings": 1,
+    "prepTime": 2,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "nuts"
+    ],
+    "description": "Thick skyr with a small scatter of nuts for crunch and healthy fats.",
+    "ingredients": [
+      "170g 0% skyr",
+      "15g mixed nuts"
+    ],
+    "instructions": [
+      "Top the skyr with chopped nuts."
+    ]
+  },
+  {
+    "id": "S043",
+    "name": "Cottage Cheese Berry Bowl",
+    "mealType": "snack",
+    "calories": 138,
+    "protein": 19,
+    "carbs": 12,
+    "fats": 2,
+    "fibre": 2,
+    "servings": 1,
+    "prepTime": 2,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "fruit"
+    ],
+    "description": "A lighter cousin of the breakfast bowl, sized as a snack but just as high in protein.",
+    "ingredients": [
+      "150g low-fat cottage cheese",
+      "60g mixed berries"
+    ],
+    "instructions": [
+      "Spoon berries over the cottage cheese."
+    ]
+  },
+  {
+    "id": "S044",
+    "name": "Frozen Greek Yogurt Bark",
+    "mealType": "snack",
+    "calories": 136,
+    "protein": 16,
+    "carbs": 18,
+    "fats": 1,
+    "fibre": 2,
+    "servings": 2,
+    "prepTime": 6,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "fruit"
+    ],
+    "description": "Spread, freeze, snap into shards. A frozen treat that is really just protein and fruit.",
+    "ingredients": [
+      "300g 0% Greek yogurt",
+      "100g mixed berries",
+      "15g honey"
+    ],
+    "instructions": [
+      "Stir honey into the yogurt and spread thin on a lined tray.",
+      "Scatter berries and freeze two hours.",
+      "Snap into pieces. Half is a serving."
+    ]
+  },
+  {
+    "id": "S045",
+    "name": "Peanut Banana Protein Smoothie",
+    "mealType": "snack",
+    "calories": 260,
+    "protein": 26,
+    "carbs": 28,
+    "fats": 6,
+    "fibre": 2,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "fruit",
+      "nuts"
+    ],
+    "description": "A smaller smoothie sized as a snack. Banana, peanut butter and whey blended cold.",
+    "ingredients": [
+      "200ml skim milk",
+      "1/2 banana",
+      "20g vanilla whey",
+      "10g peanut butter"
+    ],
+    "instructions": [
+      "Blend everything with ice until smooth."
+    ]
+  },
+  {
+    "id": "B053",
+    "name": "Vegan Peanut Butter Oats",
+    "mealType": "breakfast",
+    "calories": 454,
+    "protein": 19,
+    "carbs": 61,
+    "fats": 17,
+    "fibre": 12,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 3,
+    "tags": [
+      "oats",
+      "fruit",
+      "nuts"
+    ],
+    "description": "Warm oats with banana and peanut butter, made on soy milk for a fully plant-based start with real staying power.",
+    "ingredients": [
+      "50g rolled oats",
+      "200ml soy milk",
+      "1/2 banana, sliced",
+      "15g peanut butter",
+      "8g chia seeds"
+    ],
+    "instructions": [
+      "Simmer the oats in soy milk for 3-4 minutes, stirring, until creamy.",
+      "Stir through the peanut butter and chia.",
+      "Top with the sliced banana."
+    ]
+  },
+  {
+    "id": "B054",
+    "name": "Vegan Berry Overnight Oats",
+    "mealType": "breakfast",
+    "calories": 380,
+    "protein": 16,
+    "carbs": 57,
+    "fats": 11,
+    "fibre": 13,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 0,
+    "tags": [
+      "oats",
+      "fruit"
+    ],
+    "description": "Mix it the night before and it is ready when you are. Berries and chia keep it fresh and high in fibre.",
+    "ingredients": [
+      "50g rolled oats",
+      "200ml soy milk",
+      "12g chia seeds",
+      "80g mixed berries",
+      "10g maple syrup"
+    ],
+    "instructions": [
+      "Stir the oats, soy milk, chia and maple syrup in a jar.",
+      "Chill overnight.",
+      "Top with the berries before eating."
+    ]
+  },
+  {
+    "id": "B055",
+    "name": "Vegan Protein Shake",
+    "mealType": "breakfast",
+    "calories": 435,
+    "protein": 40,
+    "carbs": 44,
+    "fats": 14,
+    "fibre": 8,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 0,
+    "tags": [
+      "fruit",
+      "nuts",
+      "oats",
+      "legumes"
+    ],
+    "description": "A blended plant-protein shake with banana and oats for a fast, drinkable breakfast that still hits the protein.",
+    "ingredients": [
+      "300ml soy milk",
+      "30g pea protein",
+      "1 banana",
+      "10g peanut butter",
+      "20g rolled oats"
+    ],
+    "instructions": [
+      "Add everything to a blender.",
+      "Blend until smooth, loosen with water or ice if needed."
+    ]
+  },
+  {
+    "id": "B056",
+    "name": "Tofu Scramble Wrap",
+    "mealType": "breakfast",
+    "calories": 467,
+    "protein": 29,
+    "carbs": 40,
+    "fats": 22,
+    "fibre": 5,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 7,
+    "tags": [
+      "legumes",
+      "bread",
+      "vegetables"
+    ],
+    "description": "A savoury scramble of crumbled tofu and peppers folded into a warm wrap. Turmeric gives it that egg-like colour.",
+    "ingredients": [
+      "150g firm tofu, crumbled",
+      "1 large tortilla",
+      "50g bell pepper, diced",
+      "30g spinach",
+      "30g salsa",
+      "1 tsp olive oil"
+    ],
+    "instructions": [
+      "Fry the tofu in the oil with a pinch of turmeric for 4-5 minutes.",
+      "Add pepper and spinach until softened.",
+      "Spoon into the wrap with salsa and roll up."
+    ]
+  },
+  {
+    "id": "L071",
+    "name": "Smashed Chickpea Wrap",
+    "mealType": "lunch",
+    "calories": 467,
+    "protein": 26,
+    "carbs": 68,
+    "fats": 16,
+    "fibre": 26,
+    "servings": 1,
+    "prepTime": 8,
+    "cookTime": 0,
+    "tags": [
+      "legumes",
+      "bread",
+      "avocado",
+      "vegetables"
+    ],
+    "description": "Chickpeas mashed with avocado make a creamy, no-cook filling that holds up in a lunchbox all day.",
+    "ingredients": [
+      "150g chickpeas, drained",
+      "50g avocado",
+      "1 low-carb wrap",
+      "30g spinach",
+      "40g sweetcorn"
+    ],
+    "instructions": [
+      "Roughly mash the chickpeas with the avocado and a squeeze of lemon.",
+      "Season well.",
+      "Spread into the wrap with spinach and sweetcorn, then roll."
+    ]
+  },
+  {
+    "id": "L072",
+    "name": "Quinoa Black Bean Bowl",
+    "mealType": "lunch",
+    "calories": 524,
+    "protein": 22,
+    "carbs": 86,
+    "fats": 12,
+    "fibre": 21,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 5,
+    "tags": [
+      "legumes",
+      "vegetables",
+      "avocado"
+    ],
+    "description": "A cold or warm bowl loaded with plant protein and fibre. Salsa and avocado do the flavour work.",
+    "ingredients": [
+      "180g cooked quinoa",
+      "120g black beans",
+      "50g sweetcorn",
+      "40g salsa",
+      "50g avocado",
+      "40g bell pepper"
+    ],
+    "instructions": [
+      "Warm the quinoa and beans if you like, or keep it cold.",
+      "Build the bowl and top with salsa and sliced avocado."
+    ]
+  },
+  {
+    "id": "L073",
+    "name": "Crispy Tofu Burrito Bowl",
+    "mealType": "lunch",
+    "calories": 634,
+    "protein": 36,
+    "carbs": 80,
+    "fats": 19,
+    "fibre": 13,
+    "servings": 1,
+    "prepTime": 6,
+    "cookTime": 10,
+    "tags": [
+      "legumes",
+      "rice",
+      "avocado"
+    ],
+    "description": "Pan-crisped tofu over rice and beans with salsa and avocado. A burrito bowl that happens to be vegan.",
+    "ingredients": [
+      "150g firm tofu, cubed",
+      "180g cooked rice",
+      "80g black beans",
+      "40g salsa",
+      "40g avocado"
+    ],
+    "instructions": [
+      "Fry the tofu cubes until golden on all sides.",
+      "Layer rice, beans and tofu.",
+      "Top with salsa and avocado."
+    ]
+  },
+  {
+    "id": "L074",
+    "name": "Falafel & Hummus Bowl",
+    "mealType": "lunch",
+    "calories": 669,
+    "protein": 26,
+    "carbs": 86,
+    "fats": 26,
+    "fibre": 12,
+    "servings": 1,
+    "prepTime": 6,
+    "cookTime": 0,
+    "tags": [
+      "legumes",
+      "vegetables"
+    ],
+    "description": "Shop-bought falafel turns a few salad bits into a Mediterranean bowl in minutes. Big on flavour and fibre.",
+    "ingredients": [
+      "120g falafel",
+      "50g couscous, dry",
+      "40g hummus",
+      "50g cucumber",
+      "40g cherry tomatoes"
+    ],
+    "instructions": [
+      "Soak the couscous in boiling water for 5 minutes, then fluff.",
+      "Warm the falafel.",
+      "Build the bowl with couscous, salad and a spoon of hummus."
+    ]
+  },
+  {
+    "id": "L075",
+    "name": "BBQ Chicken Rice Bowl",
+    "mealType": "lunch",
+    "calories": 655,
+    "protein": 59,
+    "carbs": 86,
+    "fats": 7,
+    "fibre": 7,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 10,
+    "tags": [
+      "chicken",
+      "rice",
+      "legumes"
+    ],
+    "description": "Smoky barbecue chicken over rice with corn and beans. A sweet-savoury prep bowl that keeps well.",
+    "ingredients": [
+      "150g cooked chicken breast",
+      "180g cooked rice",
+      "30g barbecue sauce",
+      "50g sweetcorn",
+      "60g black beans"
+    ],
+    "instructions": [
+      "Toss the chicken in the barbecue sauce.",
+      "Layer over rice with the corn and beans.",
+      "Warm through and serve."
+    ]
+  },
+  {
+    "id": "L076",
+    "name": "Honey Mustard Chicken Wrap",
+    "mealType": "lunch",
+    "calories": 388,
+    "protein": 58,
+    "carbs": 23,
+    "fats": 9,
+    "fibre": 10,
+    "servings": 1,
+    "prepTime": 6,
+    "cookTime": 0,
+    "tags": [
+      "chicken",
+      "bread",
+      "dairy"
+    ],
+    "description": "A creamy honey-mustard chicken wrap using yogurt instead of mayo, so it stays high in protein.",
+    "ingredients": [
+      "140g cooked chicken breast",
+      "1 low-carb wrap",
+      "40g 0% Greek yogurt",
+      "8g honey",
+      "40g spinach"
+    ],
+    "instructions": [
+      "Mix the yogurt, honey and a little mustard into a dressing.",
+      "Toss with the sliced chicken.",
+      "Fill the wrap with chicken and spinach, then roll."
+    ]
+  },
+  {
+    "id": "L077",
+    "name": "Tuna Sweetcorn Jacket Potato",
+    "mealType": "lunch",
+    "calories": 450,
+    "protein": 38,
+    "carbs": 55,
+    "fats": 9,
+    "fibre": 6,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 12,
+    "tags": [
+      "fish",
+      "vegetables"
+    ],
+    "description": "The classic cafe jacket potato, rebuilt lean. A microwave potato and a tin of tuna and you are done.",
+    "ingredients": [
+      "250g baking potato",
+      "1 tin tuna in water, drained",
+      "50g sweetcorn",
+      "30g light mayo"
+    ],
+    "instructions": [
+      "Microwave the potato until soft, 8-10 minutes, then crisp in a hot oven if you have time.",
+      "Mix the tuna, sweetcorn and light mayo.",
+      "Split the potato and pile the filling in."
+    ]
+  },
+  {
+    "id": "L078",
+    "name": "Turkey & Avocado Rice Bowl",
+    "mealType": "lunch",
+    "calories": 536,
+    "protein": 46,
+    "carbs": 60,
+    "fats": 11,
+    "fibre": 6,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 10,
+    "tags": [
+      "turkey",
+      "rice",
+      "avocado"
+    ],
+    "description": "Lean turkey mince over rice with salsa and avocado. A quick taco-style bowl that reheats cleanly.",
+    "ingredients": [
+      "130g lean turkey mince, cooked",
+      "180g cooked rice",
+      "50g avocado",
+      "40g salsa",
+      "40g bell pepper"
+    ],
+    "instructions": [
+      "Brown the turkey mince with a pinch of cumin and paprika.",
+      "Serve over rice with the pepper.",
+      "Top with salsa and avocado."
+    ]
+  },
+  {
+    "id": "D065",
+    "name": "Black Bean & Sweet Potato Chilli",
+    "mealType": "dinner",
+    "calories": 428,
+    "protein": 20,
+    "carbs": 86,
+    "fats": 2,
+    "fibre": 22,
+    "servings": 2,
+    "prepTime": 10,
+    "cookTime": 18,
+    "tags": [
+      "legumes",
+      "vegetables"
+    ],
+    "description": "A thick, smoky chilli built on beans and sweet potato. Makes two big bowls and tastes better the next day.",
+    "ingredients": [
+      "300g black beans",
+      "300g sweet potato, diced",
+      "200g marinara",
+      "80g onion",
+      "100g bell pepper",
+      "80g sweetcorn"
+    ],
+    "instructions": [
+      "Soften the onion and pepper in a pot.",
+      "Add sweet potato, beans, corn and marinara with chilli and cumin.",
+      "Simmer 15-18 minutes until the sweet potato is tender."
+    ]
+  },
+  {
+    "id": "D066",
+    "name": "Tempeh Teriyaki Bowl",
+    "mealType": "dinner",
+    "calories": 598,
+    "protein": 40,
+    "carbs": 77,
+    "fats": 17,
+    "fibre": 6,
+    "servings": 1,
+    "prepTime": 6,
+    "cookTime": 10,
+    "tags": [
+      "legumes",
+      "rice",
+      "vegetables"
+    ],
+    "description": "Sliced tempeh glazed in teriyaki over rice with broccoli and edamame. High in plant protein and seriously moreish.",
+    "ingredients": [
+      "120g tempeh, sliced",
+      "180g cooked rice",
+      "30g teriyaki",
+      "100g broccoli",
+      "60g edamame"
+    ],
+    "instructions": [
+      "Pan-fry the tempeh until browned.",
+      "Add the teriyaki and let it glaze.",
+      "Serve over rice with steamed broccoli and edamame."
+    ]
+  },
+  {
+    "id": "D067",
+    "name": "Chickpea Coconut Curry",
+    "mealType": "dinner",
+    "calories": 596,
+    "protein": 22,
+    "carbs": 101,
+    "fats": 12,
+    "fibre": 16,
+    "servings": 2,
+    "prepTime": 8,
+    "cookTime": 18,
+    "tags": [
+      "legumes",
+      "rice",
+      "vegetables"
+    ],
+    "description": "A mild, creamy chickpea curry in light coconut milk. One pot, big flavour, and plenty of fibre.",
+    "ingredients": [
+      "300g chickpeas",
+      "200g light coconut milk",
+      "100g spinach",
+      "80g onion",
+      "100g bell pepper",
+      "360g cooked rice"
+    ],
+    "instructions": [
+      "Soften the onion and pepper, then stir in curry powder.",
+      "Add chickpeas and coconut milk and simmer 12-15 minutes.",
+      "Wilt in the spinach and serve over rice."
+    ]
+  },
+  {
+    "id": "S046",
+    "name": "Roasted Chilli Chickpeas",
+    "mealType": "snack",
+    "calories": 290,
+    "protein": 14,
+    "carbs": 40,
+    "fats": 9,
+    "fibre": 12,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 20,
+    "tags": [
+      "legumes"
+    ],
+    "description": "Crunchy roasted chickpeas with a little heat. A high-fibre, plant-protein snack to keep at your desk.",
+    "ingredients": [
+      "150g chickpeas, drained and dried",
+      "1 tsp olive oil"
+    ],
+    "instructions": [
+      "Toss the chickpeas with the oil, paprika and a pinch of chilli.",
+      "Roast at 200C for 18-20 minutes until crisp."
+    ]
+  },
+  {
+    "id": "S047",
+    "name": "Maple Cinnamon Almonds",
+    "mealType": "snack",
+    "calories": 194,
+    "protein": 6,
+    "carbs": 12,
+    "fats": 15,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 2,
+    "cookTime": 0,
+    "tags": [
+      "nuts"
+    ],
+    "description": "Almonds with a touch of maple and cinnamon. Healthy fats and a little sweetness without the sugar crash.",
+    "ingredients": [
+      "30g almonds",
+      "8g maple syrup"
+    ],
+    "instructions": [
+      "Toss the almonds with the maple syrup and cinnamon.",
+      "Eat as is, or bake 5 minutes for a candied finish."
+    ]
+  },
+  {
+    "id": "B057",
+    "name": "Sausage, Egg & Cheese Muffin",
+    "mealType": "breakfast",
+    "calories": 443,
+    "protein": 34,
+    "carbs": 30,
+    "fats": 20,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 7,
+    "tags": [
+      "eggs",
+      "bread",
+      "chicken",
+      "cheese"
+    ],
+    "description": "The drive-thru classic, made lean at home. A toasted muffin stacked with egg, chicken sausage and melted cheese.",
+    "ingredients": [
+      "1 wholemeal English muffin",
+      "2 eggs",
+      "60g chicken sausage",
+      "20g light cheddar"
+    ],
+    "instructions": [
+      "Cook the sausage patty and fry the eggs to your liking.",
+      "Toast the muffin and add the cheese to melt.",
+      "Stack and serve hot."
+    ]
+  },
+  {
+    "id": "B058",
+    "name": "Cinnamon Roll Protein Oats",
+    "mealType": "breakfast",
+    "calories": 421,
+    "protein": 35,
+    "carbs": 59,
+    "fats": 6,
+    "fibre": 6,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 3,
+    "tags": [
+      "oats",
+      "dairy"
+    ],
+    "description": "Tastes like a cinnamon roll, built like a protein breakfast. Creamy oats with a vanilla protein swirl.",
+    "ingredients": [
+      "60g rolled oats",
+      "200ml skim milk",
+      "25g vanilla whey",
+      "10g maple syrup"
+    ],
+    "instructions": [
+      "Cook the oats in the milk with plenty of cinnamon.",
+      "Off the heat, stir in the whey until creamy.",
+      "Finish with a swirl of maple syrup."
+    ]
+  },
+  {
+    "id": "B059",
+    "name": "Ham & Cheese Omelette",
+    "mealType": "breakfast",
+    "calories": 335,
+    "protein": 33,
+    "carbs": 5,
+    "fats": 19,
+    "fibre": 1,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 7,
+    "tags": [
+      "eggs",
+      "cheese",
+      "turkey",
+      "vegetables"
+    ],
+    "description": "A diner-style folded omelette loaded with lean ham, cheese and peppers. Fast, filling and high in protein.",
+    "ingredients": [
+      "3 eggs",
+      "50g lean ham or turkey",
+      "20g light cheddar",
+      "40g bell pepper, diced"
+    ],
+    "instructions": [
+      "Beat the eggs and pour into a hot nonstick pan.",
+      "Scatter ham, pepper and cheese over one half.",
+      "Fold and slide out once just set."
+    ]
+  },
+  {
+    "id": "L079",
+    "name": "Chicken Bacon Ranch Wrap",
+    "mealType": "lunch",
+    "calories": 465,
+    "protein": 63,
+    "carbs": 17,
+    "fats": 17,
+    "fibre": 9,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 6,
+    "tags": [
+      "chicken",
+      "bread",
+      "cheese"
+    ],
+    "description": "One of the most-loved wraps going. Chicken, a little crispy bacon and a creamy yogurt ranch, rolled and ready.",
+    "ingredients": [
+      "130g cooked chicken breast",
+      "1 low-carb wrap",
+      "15g crispy bacon, crumbled",
+      "40g 0% Greek yogurt ranch",
+      "15g light cheddar",
+      "20g lettuce"
+    ],
+    "instructions": [
+      "Stir the yogurt with a little garlic, onion and herbs for a quick ranch.",
+      "Toss the chicken in the ranch.",
+      "Fill the wrap with chicken, bacon, cheese and lettuce, then roll."
+    ]
+  },
+  {
+    "id": "L080",
+    "name": "Philly Cheesesteak Bowl",
+    "mealType": "lunch",
+    "calories": 618,
+    "protein": 54,
+    "carbs": 52,
+    "fats": 20,
+    "fibre": 3,
+    "servings": 1,
+    "prepTime": 6,
+    "cookTime": 10,
+    "tags": [
+      "beef",
+      "cheese",
+      "vegetables",
+      "rice"
+    ],
+    "description": "All the flavour of a cheesesteak over rice instead of a roll. Steak, peppers, onions and melty cheese.",
+    "ingredients": [
+      "140g cooked lean steak, sliced",
+      "80g bell pepper",
+      "50g onion",
+      "30g light mozzarella",
+      "150g cooked rice"
+    ],
+    "instructions": [
+      "Sear the steak strips, then set aside.",
+      "Soften the peppers and onion in the same pan.",
+      "Return the steak, melt the cheese over the top and serve on rice."
+    ]
+  },
+  {
+    "id": "L081",
+    "name": "Sweet & Sour Chicken Rice Bowl",
+    "mealType": "lunch",
+    "calories": 587,
+    "protein": 52,
+    "carbs": 76,
+    "fats": 6,
+    "fibre": 3,
+    "servings": 1,
+    "prepTime": 6,
+    "cookTime": 10,
+    "tags": [
+      "chicken",
+      "rice",
+      "fruit",
+      "vegetables"
+    ],
+    "description": "The takeaway favourite, lightened up. Tender chicken and pineapple in a sticky sweet-and-sour glaze.",
+    "ingredients": [
+      "150g cooked chicken breast",
+      "40g sweet and sour sauce",
+      "60g pineapple chunks",
+      "50g bell pepper",
+      "180g cooked rice"
+    ],
+    "instructions": [
+      "Warm the chicken with the peppers and pineapple.",
+      "Stir through the sweet and sour sauce until sticky.",
+      "Serve over rice."
+    ]
+  },
+  {
+    "id": "L082",
+    "name": "Chicken Shawarma Bowl",
+    "mealType": "lunch",
+    "calories": 561,
+    "protein": 45,
+    "carbs": 47,
+    "fats": 20,
+    "fibre": 2,
+    "servings": 1,
+    "prepTime": 8,
+    "cookTime": 10,
+    "tags": [
+      "chicken",
+      "rice",
+      "dairy",
+      "vegetables"
+    ],
+    "description": "Spiced shawarma-style chicken over rice with a cool garlic yogurt. A massive flavour hit for meal prep.",
+    "ingredients": [
+      "150g cooked chicken thigh",
+      "150g cooked rice",
+      "50g tzatziki",
+      "50g cucumber",
+      "40g cherry tomatoes"
+    ],
+    "instructions": [
+      "Toss the chicken with cumin, paprika, garlic and a squeeze of lemon, then warm through.",
+      "Build the bowl over rice with the salad.",
+      "Spoon the tzatziki on top."
+    ]
+  },
+  {
+    "id": "L083",
+    "name": "Salmon Poke-Style Bowl",
+    "mealType": "lunch",
+    "calories": 624,
+    "protein": 40,
+    "carbs": 61,
+    "fats": 25,
+    "fibre": 7,
+    "servings": 1,
+    "prepTime": 10,
+    "cookTime": 0,
+    "tags": [
+      "fish",
+      "rice",
+      "avocado",
+      "vegetables"
+    ],
+    "description": "The viral poke bowl, no raw fish needed if you use cooked salmon. Fresh, light and full of omega-3s.",
+    "ingredients": [
+      "120g cooked salmon, flaked",
+      "180g cooked rice",
+      "60g edamame",
+      "40g avocado",
+      "40g cucumber"
+    ],
+    "instructions": [
+      "Cool the rice slightly and add a splash of soy and sriracha.",
+      "Top with salmon, edamame, avocado and cucumber.",
+      "Finish with sesame seeds."
+    ]
+  },
+  {
+    "id": "L084",
+    "name": "Beef Burrito Bowl",
+    "mealType": "lunch",
+    "calories": 622,
+    "protein": 55,
+    "carbs": 65,
+    "fats": 14,
+    "fibre": 8,
+    "servings": 1,
+    "prepTime": 6,
+    "cookTime": 10,
+    "tags": [
+      "beef",
+      "rice",
+      "legumes",
+      "cheese"
+    ],
+    "description": "Seasoned beef over rice and beans with salsa and cheese. The beef answer to the chicken burrito bowl.",
+    "ingredients": [
+      "130g cooked lean beef mince",
+      "150g cooked rice",
+      "80g black beans",
+      "40g salsa",
+      "25g light mozzarella"
+    ],
+    "instructions": [
+      "Season the mince with cumin, paprika and a little chilli.",
+      "Layer rice, beans and beef.",
+      "Top with salsa and cheese."
+    ]
+  },
+  {
+    "id": "L085",
+    "name": "Tuna Melt",
+    "mealType": "lunch",
+    "calories": 479,
+    "protein": 47,
+    "carbs": 44,
+    "fats": 12,
+    "fibre": 2,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 6,
+    "tags": [
+      "fish",
+      "bread",
+      "cheese"
+    ],
+    "description": "The classic cafe tuna melt, high in protein and ready in minutes. Crispy bread, creamy tuna, melted cheese.",
+    "ingredients": [
+      "2 slices sourdough",
+      "1 tin tuna in water, drained",
+      "30g light cheddar",
+      "20g light mayo"
+    ],
+    "instructions": [
+      "Mix the tuna with the mayo.",
+      "Pile onto the bread and top with cheese.",
+      "Grill or pan-toast until the cheese melts."
+    ]
+  },
+  {
+    "id": "D068",
+    "name": "Chicken Parm-Style Pasta",
+    "mealType": "dinner",
+    "calories": 661,
+    "protein": 69,
+    "carbs": 61,
+    "fats": 14,
+    "fibre": 4,
+    "servings": 1,
+    "prepTime": 8,
+    "cookTime": 16,
+    "tags": [
+      "chicken",
+      "pasta",
+      "cheese"
+    ],
+    "description": "A lean take on chicken parm, the comfort-food legend. Crisp chicken, marinara and melted mozzarella over pasta.",
+    "ingredients": [
+      "150g cooked chicken breast",
+      "120g marinara",
+      "40g light mozzarella",
+      "70g dry pasta"
+    ],
+    "instructions": [
+      "Boil the pasta.",
+      "Top the chicken with marinara and mozzarella and grill until bubbling.",
+      "Serve over the pasta with the rest of the sauce."
+    ]
+  },
+  {
+    "id": "D069",
+    "name": "Spaghetti Bolognese",
+    "mealType": "dinner",
+    "calories": 583,
+    "protein": 49,
+    "carbs": 69,
+    "fats": 11,
+    "fibre": 5,
+    "servings": 1,
+    "prepTime": 8,
+    "cookTime": 18,
+    "tags": [
+      "beef",
+      "pasta",
+      "vegetables"
+    ],
+    "description": "The everyday classic, done lean. A rich beef and tomato sauce over spaghetti that everyone already loves.",
+    "ingredients": [
+      "130g cooked lean beef mince",
+      "150g marinara",
+      "75g dry spaghetti",
+      "40g onion"
+    ],
+    "instructions": [
+      "Soften the onion, then brown the mince.",
+      "Add the marinara and simmer 10-12 minutes.",
+      "Serve over cooked spaghetti."
+    ]
+  },
+  {
+    "id": "D070",
+    "name": "Butter Chicken with Rice",
+    "mealType": "dinner",
+    "calories": 703,
+    "protein": 50,
+    "carbs": 63,
+    "fats": 26,
+    "fibre": 2,
+    "servings": 1,
+    "prepTime": 6,
+    "cookTime": 16,
+    "tags": [
+      "chicken",
+      "rice",
+      "dairy"
+    ],
+    "description": "A milder, creamy curry-house favourite. Tender chicken in a tomato and yogurt sauce over rice.",
+    "ingredients": [
+      "150g cooked chicken thigh",
+      "120g tikka curry sauce",
+      "40g 0% Greek yogurt",
+      "180g cooked rice"
+    ],
+    "instructions": [
+      "Warm the sauce and stir in the yogurt for creaminess.",
+      "Add the chicken and simmer 8-10 minutes.",
+      "Serve over rice."
+    ]
+  },
+  {
+    "id": "D071",
+    "name": "Cajun Tomato Chicken & Sausage Pasta",
+    "mealType": "dinner",
+    "calories": 578,
+    "protein": 52,
+    "carbs": 63,
+    "fats": 12,
+    "fibre": 5,
+    "servings": 1,
+    "prepTime": 8,
+    "cookTime": 16,
+    "tags": [
+      "chicken",
+      "pasta",
+      "vegetables"
+    ],
+    "description": "A smoky, spicy one-pan pasta that tastes far more indulgent than the macros suggest.",
+    "ingredients": [
+      "100g cooked chicken breast",
+      "60g chicken sausage, sliced",
+      "70g dry pasta",
+      "100g marinara",
+      "50g bell pepper"
+    ],
+    "instructions": [
+      "Boil the pasta.",
+      "Brown the chicken and sausage with cajun seasoning and peppers.",
+      "Stir in the marinara and pasta and toss to coat."
+    ]
+  },
+  {
+    "id": "D072",
+    "name": "Honey Sriracha Chicken Bowl",
+    "mealType": "dinner",
+    "calories": 566,
+    "protein": 54,
+    "carbs": 70,
+    "fats": 6,
+    "fibre": 3,
+    "servings": 1,
+    "prepTime": 6,
+    "cookTime": 12,
+    "tags": [
+      "chicken",
+      "rice",
+      "vegetables"
+    ],
+    "description": "Sweet, spicy and sticky. A glazed chicken bowl that hits the same note as your favourite takeaway.",
+    "ingredients": [
+      "150g cooked chicken breast",
+      "180g cooked rice",
+      "12g honey",
+      "15g sriracha",
+      "100g broccoli"
+    ],
+    "instructions": [
+      "Whisk the honey and sriracha into a glaze.",
+      "Toss the chicken in the glaze and warm through.",
+      "Serve over rice with steamed broccoli."
+    ]
+  },
+  {
+    "id": "D073",
+    "name": "Shrimp Tacos",
+    "mealType": "dinner",
+    "calories": 437,
+    "protein": 43,
+    "carbs": 37,
+    "fats": 15,
+    "fibre": 5,
+    "servings": 1,
+    "prepTime": 8,
+    "cookTime": 8,
+    "tags": [
+      "fish",
+      "bread",
+      "avocado"
+    ],
+    "description": "Quick prawn tacos with salsa and avocado. Light, fresh and on the table in under 20 minutes.",
+    "ingredients": [
+      "130g cooked prawns",
+      "2 small tortillas",
+      "40g salsa",
+      "40g avocado",
+      "20g light mozzarella"
+    ],
+    "instructions": [
+      "Warm the prawns with a little chilli and lime.",
+      "Heat the tortillas.",
+      "Fill with prawns, salsa, avocado and a little cheese."
+    ]
+  },
+  {
+    "id": "D074",
+    "name": "Cheesy Chicken & Salsa Bowl",
+    "mealType": "dinner",
+    "calories": 621,
+    "protein": 64,
+    "carbs": 63,
+    "fats": 10,
+    "fibre": 7,
+    "servings": 1,
+    "prepTime": 6,
+    "cookTime": 12,
+    "tags": [
+      "chicken",
+      "rice",
+      "legumes",
+      "cheese"
+    ],
+    "description": "Saucy salsa chicken over rice and beans, finished with melted cheese. Big Mexican-style comfort in a bowl.",
+    "ingredients": [
+      "150g cooked chicken breast",
+      "150g cooked rice",
+      "70g black beans",
+      "50g salsa",
+      "25g light cheddar"
+    ],
+    "instructions": [
+      "Warm the chicken in the salsa with a little cumin.",
+      "Layer over rice and beans.",
+      "Top with cheese and grill briefly to melt."
+    ]
+  },
+  {
+    "id": "D075",
+    "name": "Lemon Pepper Chicken & Potatoes",
+    "mealType": "dinner",
+    "calories": 487,
+    "protein": 55,
+    "carbs": 40,
+    "fats": 11,
+    "fibre": 7,
+    "servings": 1,
+    "prepTime": 6,
+    "cookTime": 18,
+    "tags": [
+      "chicken",
+      "vegetables"
+    ],
+    "description": "A simple, big-plate roast dinner. Zesty lemon-pepper chicken with potatoes and greens, all on one tray.",
+    "ingredients": [
+      "160g cooked chicken breast",
+      "200g potato, diced",
+      "80g green beans",
+      "1 tsp olive oil"
+    ],
+    "instructions": [
+      "Toss the potatoes in oil and roast until golden.",
+      "Season the chicken with lemon zest and cracked pepper and roast through.",
+      "Steam the green beans and serve alongside."
+    ]
+  },
+  {
+    "id": "S048",
+    "name": "Protein Cookie Dough",
+    "mealType": "snack",
+    "calories": 304,
+    "protein": 25,
+    "carbs": 26,
+    "fats": 12,
+    "fibre": 3,
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "nuts",
+      "oats"
+    ],
+    "description": "An edible cookie-dough that is actually a protein snack. No baking, ready in five minutes.",
+    "ingredients": [
+      "20g vanilla whey",
+      "20g peanut butter",
+      "20g rolled oats",
+      "8g maple syrup",
+      "30ml skim milk"
+    ],
+    "instructions": [
+      "Mix everything into a thick dough, loosening with milk as needed.",
+      "Fold in a few dark chocolate chips if you like.",
+      "Chill briefly and eat with a spoon."
+    ]
+  },
+  {
+    "id": "S049",
+    "name": "Cheesecake Cottage Cheese Bowl",
+    "mealType": "snack",
+    "calories": 288,
+    "protein": 32,
+    "carbs": 26,
+    "fats": 5,
+    "fibre": 3,
+    "servings": 1,
+    "prepTime": 4,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "fruit"
+    ],
+    "description": "Blended cottage cheese tastes shockingly like cheesecake filling. A high-protein dessert-style snack.",
+    "ingredients": [
+      "180g low-fat cottage cheese",
+      "10g vanilla whey",
+      "60g mixed berries",
+      "20g low-sugar granola"
+    ],
+    "instructions": [
+      "Blend the cottage cheese and whey until smooth and creamy.",
+      "Top with berries and granola for crunch."
+    ]
+  },
+  {
+    "id": "S050",
+    "name": "Banana Protein Shake",
+    "mealType": "snack",
+    "calories": 315,
+    "protein": 34,
+    "carbs": 43,
+    "fats": 2,
+    "fibre": 3,
+    "servings": 1,
+    "prepTime": 3,
+    "cookTime": 0,
+    "tags": [
+      "dairy",
+      "fruit"
+    ],
+    "description": "Fast protein hit. Shake or blend, done in a minute.",
+    "ingredients": [
+      "1 scoop (30g) whey protein",
+      "250ml skim milk",
+      "1 banana (about 120g)"
+    ],
+    "instructions": [
+      "Add the whey, milk, and banana to a blender or shaker.",
+      "Blend or shake until smooth. Drink."
+    ]
+  },
+  {
+    "id": "S051",
+    "name": "Crumpets & Jam",
+    "mealType": "snack",
+    "calories": 295,
+    "protein": 5,
+    "carbs": 47,
+    "fats": 9,
+    "fibre": 2,
+    "servings": 1,
+    "prepTime": 1,
+    "cookTime": 3,
+    "tags": [
+      "bread",
+      "dairy"
+    ],
+    "description": "A simple carb-heavy snack. Toast, butter, jam.",
+    "ingredients": [
+      "2 crumpets",
+      "10g butter",
+      "20g jam"
+    ],
+    "instructions": [
+      "Toast the crumpets.",
+      "Spread with butter, then jam. Eat warm."
+    ]
+  }
+]

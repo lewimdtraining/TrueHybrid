@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#15181e">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="True Hybrid">
+<title>True Hybrid, The Complete Framework, Physical · Mental · Spiritual</title>
+<meta name="description" content="True Hybrid: the complete framework for building a hybrid athlete across three layers, physical capacity, mental command, and spiritual direction. Read the framework, use the free tools. No ads, no tracking.">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2315181e'/%3E%3Ctext x='16' y='23' text-anchor='middle' fill='%237cc4e8' font-family='Arial,sans-serif' font-size='20' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E">
+<style>
+/* ===== HERO (dark, echoes the framework cover) ===== */
+.hero {
+  padding: 96px 32px 76px;
+  background: radial-gradient(120% 90% at 78% -10%, rgba(124,196,232,0.16) 0%, transparent 55%), linear-gradient(180deg, var(--coal) 0%, var(--ink) 100%);
+  color: var(--bone);
+  position: relative;
+  overflow: hidden;
+}
+.hero-inner { max-width: 760px; position: relative; }
+.hero .eyebrow { color: var(--brass); margin-bottom: 20px; }
+.hero-rule { width: 68px; height: 3px; background: var(--brass); margin: 0 0 26px; border-radius: 2px; }
+.hero h1 {
+  color: var(--bone);
+  font-size: clamp(40px, 6.4vw, 76px);
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+  margin: 0 0 26px;
+}
+.hero h1 em { font-style: normal; color: var(--brass); font-weight: 900; }
+.hero p { font-size: 17px; color: var(--cream); max-width: 610px; line-height: 1.62; opacity: 0.92; }
+.hero-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+.hero-spiritline {
+  margin-top: 22px; font-family: var(--display); font-size: 13px; letter-spacing: 0.28em;
+  text-transform: uppercase; color: var(--smoke); font-weight: 600;
+}
+.btn-ghost { background: transparent; color: var(--bone); border: 1px solid var(--smoke); }
+.btn-ghost:hover { background: var(--bone); color: var(--ink); border-color: var(--bone); }
+
+/* ===== THE THREE LAYERS ===== */
+.layers { padding: 72px 32px; background: var(--bone); }
+.layers-head { max-width: 760px; margin-bottom: 40px; }
+.layers-head h2 { font-size: 34px; font-style: normal; margin: 10px 0 12px; }
+.layers-head p { color: var(--char); font-size: 15px; line-height: 1.6; max-width: 620px; }
+.layers-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 2px solid var(--ink); }
+.layer { padding: 30px 26px 30px 0; border-right: 1px solid var(--cream); }
+.layer:last-child { border-right: none; padding-right: 0; }
+.layer .lbl { font-family: var(--display); font-style: normal; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brass-dim); font-weight: 700; }
+.layer h3 { font-family: var(--display); font-size: 27px; font-weight: 900; margin: 12px 0 4px; letter-spacing: -0.02em; }
+.layer .job { font-family: var(--display); font-style: normal; font-size: 14px; color: var(--brass-dim); font-weight: 600; margin-bottom: 12px; }
+.layer p { font-size: 14px; color: var(--char); line-height: 1.58; }
+.layers-line { margin-top: 34px; font-family: var(--display); font-style: normal; font-size: 18px; color: var(--ink); font-weight: 700; letter-spacing: -0.01em; }
+.layers-line em { font-style: normal; color: var(--brass-dim); }
+
+/* ===== FRAMEWORK FEATURE BAND ===== */
+.fw { padding: 68px 32px; background: linear-gradient(180deg, var(--ink) 0%, var(--coal) 100%); color: var(--bone); }
+.fw-inner { max-width: 900px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 44px; align-items: center; }
+.fw .eyebrow { color: var(--brass); margin-bottom: 16px; }
+.fw h2 { color: var(--bone); font-size: 34px; font-style: normal; line-height: 1.05; margin-bottom: 16px; }
+.fw p { color: var(--cream); font-size: 15px; line-height: 1.62; margin-bottom: 14px; opacity: 0.9; }
+.fw-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+.fw-card { background: var(--coal); border: 1px solid #232833; padding: 26px; }
+.fw-card .k { font-family: var(--display); font-style: normal; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brass); font-weight: 700; margin-bottom: 14px; }
+.fw-contents { list-style: none; margin: 0; padding: 0; }
+.fw-contents li { font-size: 13px; color: var(--cream); padding: 9px 0 9px 22px; position: relative; border-bottom: 1px solid #222732; line-height: 1.4; }
+.fw-contents li:last-child { border-bottom: none; }
+.fw-contents li::before { content: '›'; position: absolute; left: 0; color: var(--brass); font-weight: 700; }
+
+/* ===== TOOLS ===== */
+.tools-section { padding: 68px 32px 84px; background: var(--paper); }
+.tools-section-title { display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid var(--ink); padding-bottom: 16px; margin-bottom: 34px; flex-wrap: wrap; gap: 16px; }
+.tools-section-title h2 { font-size: 32px; font-weight: 700; font-style: normal; }
+.tools-section-title .count { font-family: var(--display); font-style: normal; color: var(--smoke); font-size: 14px; }
+.tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.tool-card { background: var(--bone); padding: 28px; text-decoration: none; color: var(--ink); position: relative; transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease; border-left: 3px solid var(--cream); display: flex; flex-direction: column; min-height: 236px; }
+.tool-card:hover { border-left-color: var(--brass); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(15,14,12,0.10); }
+.tool-card.coming-soon { background: var(--cream); opacity: 0.72; cursor: not-allowed; }
+.tool-card.coming-soon:hover { transform: none; border-left-color: var(--cream); box-shadow: none; }
+.tool-category { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; color: var(--brass-dim); margin-bottom: 16px; }
+.tool-card.coming-soon .tool-category { color: var(--smoke); }
+.tool-card h3 { font-family: var(--display); font-size: 27px; font-weight: 900; letter-spacing: -0.02em; line-height: 1.05; margin-bottom: 12px; }
+.tool-card h3 em { font-style: normal; color: var(--brass-dim); font-weight: 700; }
+.tool-card p { font-size: 13px; color: var(--char); line-height: 1.55; margin-bottom: 20px; flex-grow: 1; }
+.tool-arrow { font-family: var(--display); font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--brass-dim); display: flex; align-items: center; gap: 8px; margin-top: auto; }
+.tool-arrow::after { content: '→'; font-size: 16px; transition: transform 0.2s; }
+.tool-card:hover .tool-arrow::after { transform: translateX(4px); }
+.coming-tag { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; color: var(--smoke); font-family: var(--body); margin-top: auto; padding-top: 16px; border-top: 1px solid rgba(15,14,12,0.08); }
+
+/* ===== ABOUT ===== */
+.about-section { padding: 64px 32px; background: var(--bone); }
+.about-inner { max-width: 760px; }
+.about-section h2 { font-size: 28px; font-style: normal; margin-bottom: 20px; color: var(--ink); }
+.about-section p { font-size: 15px; color: var(--char); margin-bottom: 14px; line-height: 1.6; }
+.about-section p strong { color: var(--ink); font-weight: 600; }
+
+/* ===== WEEKLY ===== */
+.weekly { padding: 60px 32px; background: var(--coal); color: var(--bone); }
+.weekly-inner { max-width: 620px; }
+.weekly h2 { color: var(--bone); font-size: 30px; font-style: normal; margin: 10px 0 12px; }
+.weekly p { color: var(--cream); font-size: 15px; line-height: 1.6; margin-bottom: 22px; opacity: 0.9; }
+.weekly-form { display: flex; gap: 10px; flex-wrap: wrap; }
+.weekly-form input[type=email] { flex: 1; min-width: 220px; background: var(--ink); border: 1px solid var(--smoke); color: var(--bone); padding: 14px 16px; font-family: var(--body); font-size: 14px; }
+.weekly-form input[type=email]::placeholder { color: var(--smoke); }
+.weekly-form input[type=email]:focus { outline: none; border-color: var(--brass); }
+.weekly-fine { font-size: 11px; color: var(--smoke); margin-top: 12px; }
+
+.footer-help { color: var(--smoke); font-size: 11px; margin-top: 10px; }
+.footer-help a { color: var(--brass); }
+
+@media (max-width: 860px) {
+  .fw-inner { grid-template-columns: 1fr; gap: 28px; }
+}
+@media (max-width: 720px) {
+  .hero { padding: 60px 20px 48px; }
+  .hero p { font-size: 15px; }
+  .layers { padding: 44px 20px; }
+  .layers-head h2 { font-size: 26px; }
+  .layers-grid { grid-template-columns: 1fr; border-top: 2px solid var(--ink); }
+  .layer { border-right: none; border-bottom: 1px solid var(--cream); padding: 24px 0; }
+  .layer:last-child { border-bottom: none; }
+  .fw { padding: 46px 20px; }
+  .fw h2 { font-size: 27px; }
+  .tools-section { padding: 44px 20px 60px; }
+  .tools-section-title h2 { font-size: 24px; }
+  .tools-grid { grid-template-columns: 1fr; }
+  .tool-card { padding: 22px; min-height: 180px; }
+  .tool-card h3 { font-size: 24px; }
+  .about-section { padding: 44px 20px; }
+  .about-section h2 { font-size: 22px; }
+  .weekly { padding: 44px 20px; }
+}
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <header class="mdt-topbar">
+    <a href="/" class="th-brand" aria-label="True Hybrid, home">
+      <span class="th-true">true</span><span class="th-hybrid">HYBRID</span>
+    </a>
+    <nav class="mdt-nav">
+      <a href="framework/">Framework</a>
+      <a href="#tools">Tools</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">The complete framework</div>
+      <div class="hero-rule"></div>
+      <h1>Strong, composed, and <em>aimed</em> at something higher.</h1>
+      <p>A hybrid athlete is asked to be strong, muscular, and conditioned all at once. True Hybrid says that's only the first third of the problem. A complete athlete is built in three layers: physical capacity, mental command, and spiritual direction, all sharing one nervous system and one calendar.</p>
+      <div class="hero-cta">
+        <a href="framework/" class="btn">Read the framework</a>
+        <a href="downloads/true-hybrid-framework.pdf" class="btn btn-ghost" download>Download the PDF</a>
+      </div>
+      <div class="hero-spiritline">Physical · Mental · Spiritual</div>
+    </div>
+  </section>
+
+  <section class="layers" id="layers">
+    <div class="layers-head">
+      <div class="eyebrow">The three layers</div>
+      <h2>One athlete, built in three.</h2>
+      <p>Each layer runs the same arc, regulate the base, build the capacity, then express it when it counts. Train one and neglect the others, and you cap the whole system.</p>
+    </div>
+    <div class="layers-grid">
+      <div class="layer">
+        <span class="lbl">Physical</span>
+        <h3>Capacity</h3>
+        <div class="job">What the body can produce</div>
+        <p>The engine and the structure. Build, Endure, Express, the oxygen-led model, and the discipline of biasing the limiter while the rest of the system ticks over.</p>
+      </div>
+      <div class="layer">
+        <span class="lbl">Mental</span>
+        <h3>Command</h3>
+        <div class="job">Whether it shows up when it counts</div>
+        <p>Regulate the nervous system, build attention and mindset, then express composure under real fatigue. Trained on the same calendar as the body.</p>
+      </div>
+      <div class="layer">
+        <span class="lbl">Spiritual</span>
+        <h3>Direction</h3>
+        <div class="job">What the whole thing is aimed at</div>
+        <p>Anchor, aim, embody. Capacity and composure still need somewhere to point. The layer that gives the effort a vector instead of just motion.</p>
+      </div>
+    </div>
+    <div class="layers-line">Build the base. <em>Earn</em> the expression. Aim it higher.</div>
+  </section>
+
+  <section class="fw" id="framework">
+    <div class="fw-inner">
+      <div>
+        <div class="eyebrow">The master document</div>
+        <h2>The whole system, in one read.</h2>
+        <p>The complete framework, from the philosophy through the physical engine, the programming, the mental and spiritual layers, and the operating manual for running it end to end on a real athlete.</p>
+        <p>Read it in full on the site, or take the PDF with you. Built from years of working with hundreds of real people, with every borrowed idea named where it appears.</p>
+        <div class="fw-cta">
+          <a href="framework/" class="btn">Read the framework</a>
+          <a href="downloads/true-hybrid-framework.pdf" class="btn btn-ghost" download>Download PDF</a>
+        </div>
+      </div>
+      <div class="fw-card">
+        <div class="k">Inside</div>
+        <ul class="fw-contents">
+          <li>The philosophy, three layers, one arc</li>
+          <li>The physical layer, capacity</li>
+          <li>The programming engine</li>
+          <li>The mental layer, command</li>
+          <li>The spiritual layer, direction</li>
+          <li>Integration, one nervous system</li>
+          <li>Running it end to end</li>
+          <li>A full worked athlete</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="tools-section" id="tools">
+    <div class="tools-section-title">
+      <h2>The toolkit.</h2>
+      <span class="count" id="tool-count">5 tools · 2 live</span>
+    </div>
+
+    <div class="tools-grid">
+
+      <a href="tools/audit/" class="tool-card">
+        <div class="tool-category">Mind &amp; Direction</div>
+        <h3>The Dopamine <em>Audit</em></h3>
+        <p>A 12-question, 4-minute self-audit on your phone, dopamine, and doomscrolling. Find where the grip is tightest, the reflex grab, the endless scroll, the flattened baseline, and the fixes that actually work.</p>
+        <div class="tool-arrow">Take the audit</div>
+      </a>
+
+      <a href="tools/nutrition/" class="tool-card">
+        <div class="tool-category">Nutrition</div>
+        <h3>Nutrition <em>Tool</em></h3>
+        <p>Calculate your daily macros and generate a full week of meals from a library of 200 recipes. Bulk-prep mode (multiplies every recipe to cover the week) or daily variety, with food-preference filters.</p>
+        <div class="tool-arrow">Open the tool</div>
+      </a>
+
+      <a href="tools/strength/" class="tool-card coming-soon" aria-disabled="true">
+        <div class="tool-category">Strength</div>
+        <h3>Strength <em>calculator</em></h3>
+        <p>1RM estimator, working-set weight calculator (RPE-based), warm-up set builder, plate maths. Built around the Express end of the model.</p>
+        <div class="coming-tag">Coming soon</div>
+      </a>
+
+      <a href="tools/running/" class="tool-card coming-soon" aria-disabled="true">
+        <div class="tool-category">Conditioning</div>
+        <h3>Run <em>calculator</em></h3>
+        <p>Pace, splits, finish-time predictor across distances, Critical Power and threshold zones, race-day fuel planner.</p>
+        <div class="coming-tag">Coming soon</div>
+      </a>
+
+      <a href="tools/stretching/" class="tool-card coming-soon" aria-disabled="true">
+        <div class="tool-category">Structure</div>
+        <h3>Mobility <em>protocols</em></h3>
+        <p>Position and breathing work, plus mobility flows by body region. Timed sequences with built-in rest periods.</p>
+        <div class="coming-tag">Coming soon</div>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="about-section" id="about">
+    <div class="about-inner">
+      <div class="eyebrow">About</div>
+      <h2>What this is.</h2>
+      <p>True Hybrid is a complete framework for building a hybrid athlete across three layers, physical capacity, mental command, and spiritual direction. The framework document is the master text; the tools are the free, working front door to it.</p>
+      <p>Almost none of the parts were invented from nothing. The progression principles, the oxygen-led view of the engine, the conditioning lineage, and the sports-psychology sources are all named where they appear. What's ours is the way it's assembled: one system, tested and shaped over years of working with hundreds of real people.</p>
+      <p><strong>No ads. No tracking pixels.</strong> Open a tool, use it, close the tab. Your inputs stay in your browser.</p>
+      <p style="margin-top:20px; padding-top:20px; border-top:1px solid var(--cream);">Start with <a href="framework/" style="color:var(--brass-dim); font-weight:600;">the framework</a> to see the whole model, or the <a href="tools/audit/" style="color:var(--brass-dim); font-weight:600;">Dopamine Audit</a> if you want to know where you actually stand.</p>
+    </div>
+  </section>
+
+  <section class="weekly" id="weekly">
+    <div class="weekly-inner">
+      <div class="eyebrow" style="color:var(--brass);">The weekly note</div>
+      <h2>One honest note a week.</h2>
+      <p>For anyone doing the work. One idea, one challenge, no filler, drawn from the same framework that built this. Optional, and you can leave any time.</p>
+      <form name="th-weekly" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="weekly-form">
+        <input type="hidden" name="form-name" value="th-weekly">
+        <p hidden><label>Don't fill this in: <input name="bot-field"></label></p>
+        <input type="email" name="email" placeholder="your@email.com" aria-label="Email">
+        <button type="submit" class="btn">Send it to me</button>
+      </form>
+      <div class="weekly-fine">No spam. No tracking pixels. Unsubscribe in one click.</div>
+    </div>
+  </section>
+
+  <footer class="mdt-footer">
+    <a href="/" class="th-brand th-brand--footer" aria-label="True Hybrid, home">
+      <span class="th-true">true</span><span class="th-hybrid">HYBRID</span>
+    </a>
+    <p>The complete framework. Physical, mental, spiritual, one nervous system, one calendar. Free tools, honest words, no bullsh*t.</p>
+    <p class="footer-help">Struggling more than usual? You don't have to carry it alone, reach out to someone you trust or a professional. <a href="#" id="mdt-help">Help &amp; resources →</a></p>
+    <div class="footer-bar">
+      <span>© <span id="year"></span> True Hybrid</span>
+      <span>No tracking · No ads · No bullsh*t</span>
+    </div>
+  </footer>
+
+</div>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){});});}</script>
+</body>
+</html>

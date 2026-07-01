@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#15181e">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="True Hybrid">
+<title>The Vanguard, coming soon, True Hybrid</title>
+<meta name="description" content="The Vanguard, coming soon. The deep work across all three layers, physical, mental, and spiritual, from True Hybrid.">
+<link rel="stylesheet" href="../assets/styles.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2315181e'/%3E%3Ctext x='16' y='23' text-anchor='middle' fill='%237cc4e8' font-family='Arial,sans-serif' font-size='20' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E">
+<style>
+.vg-hero { padding: 64px 24px 48px; background: radial-gradient(120% 90% at 80% -10%, rgba(124,196,232,0.16) 0%, transparent 55%), linear-gradient(180deg, var(--coal) 0%, var(--ink) 100%); color: var(--bone); }
+.vg-tag { display: inline-block; background: var(--cream); color: var(--ink); padding: 5px 12px; font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 22px; font-family: var(--body); }
+.vg-hero .eyebrow { color: var(--brass); }
+.vg-hero h1 { color: var(--bone); font-family: var(--display); font-size: clamp(40px, 6.5vw, 72px); font-weight: 900; line-height: 0.95; letter-spacing: -0.04em; margin: 8px 0 20px; }
+.vg-hero h1 em { font-style: normal; color: var(--brass); font-weight: 900; }
+.vg-hero .tagline { font-family: var(--display); font-style: normal; font-size: 21px; color: var(--cream); margin-bottom: 18px; max-width: 600px; }
+.vg-hero p { font-size: 16px; color: var(--cream); max-width: 600px; line-height: 1.6; opacity: 0.9; }
+.vg-hero .btn { margin-top: 26px; }
+@media (max-width: 720px) {
+  .vg-hero { padding: 40px 18px 34px; }
+  .vg-hero h1 { font-size: 34px; }
+  .vg-hero .tagline { font-size: 17px; }
+}
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <header class="mdt-topbar">
+    <a href="../" class="th-brand" aria-label="True Hybrid, home">
+      <span class="th-true">true</span><span class="th-hybrid">HYBRID</span>
+    </a>
+    <nav class="mdt-nav">
+      <a href="../framework/">Framework</a>
+      <a href="../#tools">Tools</a>
+    </nav>
+  </header>
+
+  <section class="vg-hero">
+    <span class="vg-tag">Coming soon</span>
+    <div class="eyebrow">True Hybrid</div>
+    <h1>The <em>Vanguard</em>.</h1>
+    <div class="tagline">The deep work, across all three layers.</div>
+    <p>The framework and the tools are the front door. The Vanguard is the room behind it, the deep work across capacity, command, and direction, run together on one nervous system. It's still being built. When it's ready, you'll hear about it here first.</p>
+    <a href="../" class="btn">Back to the tools</a>
+  </section>
+
+  <footer class="mdt-footer">
+    <a href="../" class="th-brand th-brand--footer" aria-label="True Hybrid, home">
+      <span class="th-true">true</span><span class="th-hybrid">HYBRID</span>
+    </a>
+    <p>The complete framework. Physical, mental, spiritual, one nervous system, one calendar. <a href="../" style="color:var(--brass); text-decoration:none;">Back to the tools &rarr;</a></p>
+    <p class="footer-help" style="color:var(--smoke); font-size:11px; margin-top:10px;">Struggling more than usual? You don't have to carry it alone, reach out to someone you trust or a professional.</p>
+    <div class="footer-bar">
+      <span>&copy; <span id="year"></span> True Hybrid</span>
+      <span>No tracking &middot; No ads &middot; No bullsh*t</span>
+    </div>
+  </footer>
+
+</div>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){});});}</script>
+</body>
+</html>

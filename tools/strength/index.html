@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#15181e">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="True Hybrid">
+<title>Strength calculator, True Hybrid</title>
+<meta name="description" content="A growing set of strength tools: 1RM estimator from working sets, RPE and RIR weight calculator, warm-up set builder, plate maths.">
+<link rel="stylesheet" href="../../assets/styles.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2315181e'/%3E%3Ctext x='16' y='23' text-anchor='middle' fill='%237cc4e8' font-family='Arial,sans-serif' font-size='20' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E">
+<style>
+.cs-hero { padding: 64px 24px 40px; background: linear-gradient(180deg, var(--coal) 0%, var(--ink) 100%); color: var(--bone); }
+.cs-hero .eyebrow { color: var(--brass); }
+.cs-tag { display: inline-block; background: var(--brass); color: var(--ink); padding: 5px 12px; font-size: 10px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 24px; font-family: var(--body); }
+.cs-hero h1 { color: var(--bone); font-family: var(--display); font-size: clamp(40px, 6vw, 64px); font-weight: 900; line-height: 0.95; letter-spacing: -0.04em; margin: 8px 0 20px; }
+.cs-hero h1 em { font-style: normal; color: var(--brass); font-weight: 900; }
+.cs-hero .tagline { font-family: var(--display); font-style: normal; font-size: 20px; color: var(--cream); margin-bottom: 20px; max-width: 560px; }
+.cs-hero p { font-size: 15px; color: var(--cream); max-width: 560px; line-height: 1.6; opacity: 0.9; }
+.cs-planned { padding: 56px 24px; background: var(--bone); }
+.cs-planned-title { border-bottom: 1px solid var(--ink); padding-bottom: 14px; margin-bottom: 32px; }
+.cs-planned-title h2 { font-family: var(--display); font-size: 26px; font-style: normal; }
+.cs-planned-list { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.cs-planned-item { background: var(--paper); padding: 22px; border-left: 3px solid var(--cream); }
+.cs-planned-item h3 { font-family: var(--display); font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+.cs-planned-item p { font-size: 13px; color: var(--char); line-height: 1.55; }
+.cs-back { padding: 40px 24px 64px; background: var(--bone); text-align: center; }
+.cs-back p { font-family: var(--display); font-style: normal; color: var(--smoke); margin-bottom: 20px; }
+@media (max-width: 720px) {
+  .cs-hero { padding: 40px 18px 28px; }
+  .cs-hero h1 { font-size: 32px; }
+  .cs-hero .tagline { font-size: 16px; }
+  .cs-planned { padding: 36px 18px; }
+  .cs-planned-list { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <header class="mdt-topbar">
+    <a href="../../" class="th-brand" aria-label="True Hybrid, home">
+      <span class="th-true">true</span><span class="th-hybrid">HYBRID</span>
+    </a>
+    <nav class="mdt-nav">
+      <a href="../../">All tools</a>
+      <a href="" class="active">Strength calculator</a>
+    </nav>
+  </header>
+
+  <section class="cs-hero">
+    <span class="cs-tag">Coming soon</span>
+    <div class="eyebrow">Strength</div>
+    <h1>Strength <em>calculator</em>.</h1>
+    <div class="tagline">For the Express end, producing force on demand.</div>
+    <p>A growing set of strength tools: 1RM estimator from working sets, RPE and RIR weight calculator, warm-up set builder, plate maths.</p>
+  </section>
+
+  <section class="cs-planned">
+    <div class="cs-planned-title">
+      <h2>What's coming.</h2>
+    </div>
+    <div class="cs-planned-list">
+      <div class="cs-planned-item">
+        <h3>1RM estimator</h3>
+        <p>Calculate your one-rep max from any working set using the Epley, Brzycki, and Lombardi formulas.</p>
+      </div>
+      <div class="cs-planned-item">
+        <h3>RPE / RIR calculator</h3>
+        <p>Convert between RPE, %1RM, and reps in reserve, the dials the framework autoregulates by.</p>
+      </div>
+      <div class="cs-planned-item">
+        <h3>Warm-up builder</h3>
+        <p>Auto-generate a warm-up ladder that ramps you into the working load.</p>
+      </div>
+      <div class="cs-planned-item">
+        <h3>Plate calculator</h3>
+        <p>Plug in your target weight, get the plates needed per side. Olympic bar / EZ bar / dumbbell options.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-back">
+    <p>Want to be told when it's live? Best way is just to check back in.</p>
+    <a href="../../" class="btn">&larr; All tools</a>
+  </section>
+
+  <footer class="mdt-footer">
+    <a href="../../" class="th-brand th-brand--footer" aria-label="True Hybrid, home">
+      <span class="th-true">true</span><span class="th-hybrid">HYBRID</span>
+    </a>
+    <p>The complete framework, plus free training and nutrition tools. <a href="../../" style="color:var(--brass); text-decoration:none;">See all tools &rarr;</a></p>
+    <div class="footer-bar">
+      <span>&copy; <span id="year"></span> True Hybrid</span>
+      <span>No tracking &middot; No ads &middot; No bullsh*t</span>
+    </div>
+  </footer>
+
+</div>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){});});}</script>
+</body>
+</html>

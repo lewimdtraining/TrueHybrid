@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#15181e">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="True Hybrid">
+<title>The Complete Framework, True Hybrid</title>
+<meta name="description" content="True Hybrid, the complete framework. Physical capacity, mental command, spiritual direction. The full master document, readable in one place, with a downloadable PDF.">
+<link rel="stylesheet" href="../assets/styles.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2315181e'/%3E%3Ctext x='16' y='23' text-anchor='middle' fill='%237cc4e8' font-family='Arial,sans-serif' font-size='20' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E">
+<style>
+/* ===== COVER ===== */
+.fx-cover {
+  padding: 92px 32px 72px;
+  background: radial-gradient(120% 90% at 80% -10%, rgba(124,196,232,0.16) 0%, transparent 55%), linear-gradient(180deg, var(--coal) 0%, var(--ink) 100%);
+  color: var(--bone);
+}
+.fx-cover-inner { max-width: 820px; }
+.fx-cover .true { font-family: var(--body); font-weight: 700; font-size: 15px; letter-spacing: 0.5em; text-transform: lowercase; color: var(--brass); }
+.fx-cover h1 { color: var(--bone); font-size: clamp(56px, 12vw, 132px); font-weight: 900; line-height: 0.9; letter-spacing: -0.03em; margin: 10px 0 22px; }
+.fx-cover-rule { width: 90px; height: 4px; background: var(--brass); border-radius: 2px; margin-bottom: 24px; }
+.fx-cover .sub { font-family: var(--display); font-style: normal; font-size: 22px; font-weight: 700; color: var(--bone); margin-bottom: 6px; }
+.fx-cover .spirit { font-family: var(--display); font-style: normal; font-size: 13px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--smoke); font-weight: 600; }
+.fx-cover-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+.btn-ghost { background: transparent; color: var(--bone); border: 1px solid var(--smoke); }
+.btn-ghost:hover { background: var(--bone); color: var(--ink); border-color: var(--bone); }
+
+/* ===== CONTENTS ===== */
+.fx-toc { padding: 48px 32px; background: var(--bone); border-bottom: 1px solid var(--cream); }
+.fx-toc-inner { max-width: 820px; }
+.fx-toc .eyebrow { margin-bottom: 20px; }
+.fx-toc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--cream); border: 1px solid var(--cream); }
+.fx-toc-grid a { background: var(--bone); padding: 16px 18px; text-decoration: none; display: flex; gap: 14px; align-items: baseline; transition: background 0.15s; }
+.fx-toc-grid a:hover { background: var(--paper); }
+.fx-toc-grid .n { font-family: var(--display); font-style: normal; font-size: 12px; font-weight: 700; color: var(--brass-dim); letter-spacing: 0.1em; min-width: 46px; }
+.fx-toc-grid .t { font-size: 14px; color: var(--ink); font-weight: 600; line-height: 1.35; }
+
+/* ===== BODY / PROSE ===== */
+.fx-body { background: var(--bone); }
+.fx-part { padding: 60px 32px; border-top: 1px solid var(--cream); }
+.fx-part:nth-child(even) { background: var(--paper); }
+.fx-inner { max-width: 720px; margin: 0 auto; }
+.fx-part-head { margin-bottom: 34px; }
+.fx-part-head .pn { font-family: var(--display); font-style: normal; font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--brass-dim); font-weight: 700; }
+.fx-part-head h2 { font-size: clamp(30px, 5vw, 44px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.0; margin: 10px 0 8px; }
+.fx-part-head .pt { font-family: var(--display); font-style: normal; font-size: 16px; color: var(--brass-dim); font-weight: 600; }
+
+.fx-inner h3 { font-family: var(--display); font-size: 24px; font-weight: 800; letter-spacing: -0.02em; margin: 40px 0 12px; color: var(--ink); }
+.fx-inner h4 { font-family: var(--display); font-size: 17px; font-weight: 700; margin: 28px 0 8px; color: var(--ink); }
+.fx-inner p { font-size: 16.5px; line-height: 1.72; color: var(--char); margin-bottom: 16px; }
+.fx-inner p strong { color: var(--ink); font-weight: 700; }
+.fx-inner ul, .fx-inner ol { margin: 0 0 18px; padding-left: 4px; list-style: none; }
+.fx-inner li { font-size: 16.5px; line-height: 1.66; color: var(--char); margin-bottom: 12px; padding-left: 26px; position: relative; }
+.fx-inner ul li::before { content: '›'; position: absolute; left: 4px; color: var(--brass-dim); font-weight: 700; }
+.fx-inner ol { counter-reset: fxol; }
+.fx-inner ol li { counter-increment: fxol; }
+.fx-inner ol li::before { content: counter(fxol); position: absolute; left: 0; top: 0; color: var(--brass-dim); font-weight: 700; font-family: var(--display); font-size: 14px; }
+.fx-inner li strong { color: var(--ink); font-weight: 700; }
+.fx-lead { font-size: 18px !important; color: var(--ink) !important; line-height: 1.6 !important; }
+.fx-thesis { font-family: var(--display); font-style: normal; font-size: 21px; font-weight: 800; letter-spacing: -0.01em; color: var(--ink); line-height: 1.3; margin: 26px 0; padding-left: 20px; border-left: 4px solid var(--brass); }
+.fx-thesis em { font-style: normal; color: var(--brass-dim); }
+
+/* callout boxes */
+.fx-box { margin: 24px 0; padding: 20px 22px; border-left: 4px solid var(--smoke); background: rgba(122,135,148,0.07); }
+.fx-box .bx-k { font-family: var(--display); font-style: normal; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; margin-bottom: 8px; color: var(--smoke); }
+.fx-box p { font-size: 15px !important; line-height: 1.62 !important; margin-bottom: 10px; }
+.fx-box p:last-child { margin-bottom: 0; }
+.fx-box--apply { border-left-color: var(--brass); background: rgba(124,196,232,0.10); }
+.fx-box--apply .bx-k { color: var(--brass-dim); }
+.fx-box--hood { border-left-color: var(--brass-dim); background: rgba(47,126,166,0.08); }
+.fx-box--hood .bx-k { color: var(--brass-dim); }
+.fx-box--caveat { border-left-color: var(--warn); background: rgba(217,130,54,0.09); }
+.fx-box--caveat .bx-k { color: var(--warn); }
+.fx-box--sources { border-left-color: var(--smoke); background: rgba(122,135,148,0.06); }
+
+/* tables */
+.fx-table-wrap { overflow-x: auto; margin: 22px 0; }
+table.fx { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 460px; }
+table.fx th, table.fx td { text-align: left; padding: 11px 13px; border-bottom: 1px solid var(--cream); vertical-align: top; line-height: 1.45; color: var(--char); }
+table.fx th { font-family: var(--display); font-style: normal; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); font-weight: 700; border-bottom: 2px solid var(--ink); background: transparent; }
+table.fx td strong { color: var(--ink); }
+table.fx tr:last-child td { border-bottom: none; }
+
+/* mini diagrams */
+.fx-dg { margin: 26px 0; padding: 22px; background: var(--ink); color: var(--bone); }
+.fx-dg .cap { font-size: 12.5px; color: var(--smoke); line-height: 1.5; margin-top: 14px; }
+.fx-spectrum { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; text-align: center; }
+.fx-spectrum .cell { background: var(--coal); padding: 16px 10px; }
+.fx-spectrum .cell .a { font-family: var(--display); font-style: normal; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--brass); font-weight: 700; }
+.fx-spectrum .cell .b { font-size: 15px; font-weight: 700; color: var(--bone); margin: 6px 0 4px; }
+.fx-spectrum .cell .c { font-size: 12px; color: var(--smoke); }
+.fx-flow { display: flex; align-items: stretch; gap: 0; }
+.fx-flow .node { flex: 1; background: var(--coal); padding: 16px 12px; text-align: center; }
+.fx-flow .arrow { display: flex; align-items: center; color: var(--brass); font-size: 20px; padding: 0 8px; }
+.fx-flow .node .a { font-family: var(--display); font-style: normal; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--brass); font-weight: 700; }
+.fx-flow .node .b { font-size: 13px; color: var(--cream); margin-top: 6px; line-height: 1.4; }
+.fx-domainline { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; position: relative; }
+.fx-domainline .d { background: var(--coal); padding: 16px 12px; text-align: center; }
+.fx-domainline .d .a { font-family: var(--display); font-style: normal; font-size: 15px; font-weight: 800; color: var(--brass); letter-spacing: 0.04em; }
+.fx-domainline .d .z { font-size: 11px; color: var(--smoke); margin-top: 4px; letter-spacing: 0.1em; }
+.fx-domainline .d .desc { font-size: 12px; color: var(--cream); margin-top: 8px; line-height: 1.4; }
+.fx-thresholds { display: flex; justify-content: space-around; font-size: 11px; color: var(--brass); letter-spacing: 0.2em; text-transform: uppercase; margin-top: 8px; font-weight: 700; }
+
+.fx-partnav { display: flex; justify-content: space-between; gap: 12px; margin-top: 44px; padding-top: 22px; border-top: 1px solid var(--cream); }
+.fx-partnav a { font-family: var(--display); font-style: normal; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: var(--brass-dim); text-decoration: none; }
+.fx-partnav a:hover { color: var(--ink); }
+.fx-totop { text-align: center; padding: 40px 32px 8px; background: var(--bone); }
+.fx-totop a { font-family: var(--display); font-style: normal; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: var(--brass-dim); text-decoration: none; }
+
+/* download band */
+.fx-dl { padding: 56px 32px; background: linear-gradient(180deg, var(--ink) 0%, var(--coal) 100%); color: var(--bone); text-align: center; }
+.fx-dl-inner { max-width: 560px; margin: 0 auto; }
+.fx-dl .eyebrow { color: var(--brass); }
+.fx-dl h2 { color: var(--bone); font-size: 28px; font-style: normal; margin: 10px 0 12px; }
+.fx-dl p { color: var(--cream); font-size: 15px; line-height: 1.6; margin-bottom: 22px; opacity: 0.9; }
+
+@media (max-width: 720px) {
+  .fx-cover { padding: 60px 20px 48px; }
+  .fx-toc { padding: 36px 20px; }
+  .fx-toc-grid { grid-template-columns: 1fr; }
+  .fx-part { padding: 44px 20px; }
+  .fx-inner p, .fx-inner li { font-size: 16px; }
+  .fx-flow { flex-direction: column; }
+  .fx-flow .arrow { transform: rotate(90deg); padding: 6px 0; justify-content: center; }
+  table.fx { font-size: 13px; }
+}
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <header class="mdt-topbar">
+    <a href="../" class="th-brand" aria-label="True Hybrid, home">
+      <span class="th-true">true</span><span class="th-hybrid">HYBRID</span>
+    </a>
+    <nav class="mdt-nav">
+      <a href="../">Home</a>
+      <a href="../#tools">Tools</a>
+      <a href="../downloads/true-hybrid-framework.pdf" download>Download</a>
+    </nav>
+  </header>
+
+  <section class="fx-cover" id="top">
+    <div class="fx-cover-inner">
+      <div class="true">true</div>
+      <h1>HYBRID</h1>
+      <div class="fx-cover-rule"></div>
+      <div class="sub">The Complete Framework</div>
+      <div class="spirit">Physical · Mental · Spiritual</div>
+      <div class="fx-cover-cta">
+        <a href="../downloads/true-hybrid-framework.pdf" class="btn" download>Download the PDF</a>
+        <a href="#contents" class="btn btn-ghost">Jump to contents</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="fx-toc" id="contents">
+    <div class="fx-toc-inner">
+      <div class="eyebrow">Contents</div>
+      <div class="fx-toc-grid">
+        <a href="#part1"><span class="n">I</span><span class="t">The Philosophy</span></a>
+        <a href="#part2"><span class="n">II</span><span class="t">The Physical Layer, Capacity</span></a>
+        <a href="#part3"><span class="n">III</span><span class="t">The Programming Engine</span></a>
+        <a href="#part4"><span class="n">IV</span><span class="t">The Mental Layer, Command</span></a>
+        <a href="#part5"><span class="n">V</span><span class="t">The Spiritual Layer, Direction</span></a>
+        <a href="#part6"><span class="n">VI</span><span class="t">Integration, True Hybrid</span></a>
+        <a href="#part7"><span class="n">VII</span><span class="t">Running It End to End</span></a>
+        <a href="#part8"><span class="n">VIII</span><span class="t">Putting It Together</span></a>
+        <a href="#reference"><span class="n">REF</span><span class="t">Quick Reference &amp; Glossary</span></a>
+      </div>
+    </div>
+  </section>
+
+  <main class="fx-body">
+
+  <section class="fx-part" id="part1">
+   <div class="fx-inner">
+    <div class="fx-part-head">
+      <div class="pn">Part I</div>
+      <h2>The Philosophy</h2>
+      <div class="pt">Capacity · Command · Direction</div>
+    </div>
+
+    <h3>The thesis</h3>
+    <p class="fx-lead">A hybrid athlete is asked to be strong, muscular, and conditioned all at once. True Hybrid says that is only the first third of the problem. A complete athlete is built in three layers.</p>
+    <ul>
+      <li><strong>Physical, the capacity.</strong> What the body can produce.</li>
+      <li><strong>Mental, the command.</strong> Whether that capacity shows up when it counts.</li>
+      <li><strong>Spiritual, the direction.</strong> What the whole thing is aimed at.</li>
+    </ul>
+    <p>Three things hold those layers together as one model instead of three separate programs.</p>
+    <ul>
+      <li><strong>They run the same arc.</strong> Regulate the base, build the capacity, then express it when it matters. The physical domains (Build, Endure, Express) are the template. The mental and spiritual layers run the same shape.</li>
+      <li><strong>They share a nervous system.</strong> Body and mind move together. Every change in your physical state changes your mental one, and it works the other way too. The same slow breathing that settles the body settles the mind. This is not a metaphor. The balance between your stress and recovery branches of the nervous system is the same balance that decides which muscle fibres you recruit and how composed you stay under pressure. Train one layer and ignore the others and you cap the whole thing.</li>
+      <li><strong>Aiming up gives it a vector.</strong> Capacity and composure still need somewhere to go. The spiritual layer points the system. Without it you are just working hard with no idea why.</li>
+    </ul>
+    <div class="fx-thesis">Build the base, <em>earn</em> the expression, aim it higher.</div>
+
+    <div class="fx-box fx-box--sources">
+      <div class="bx-k">On sources</div>
+      <p>Almost none of the parts of this model were invented from nothing. The progression principles come from Pat Davidson. The contemporary, oxygen-led view of energy systems was inspired by the work of Evan Peikon. The conditioning methods grew out of a long lineage of physical preparation coaches. What is mine is the way it is all assembled: one system, tested and shaped over years of working with hundreds of real people, where the pieces are chosen because they are simple, true, and they hold up in application. Where a piece belongs to someone else, it is named where it appears.</p>
+    </div>
+
+    <h3>The hybrid problem, honestly</h3>
+    <p>There is a real constraint underneath all of this, and we name it instead of pretending it away. Maximal force and deep endurance pull against each other. As the engine grows, peak force tends to give up ground, and it works the other way too. Past the beginner phase, nobody maximises both in the same window. That is not a flaw to coach around. It is the ground you are standing on.</p>
+    <p>So the job is not to train every quality equally and forever. The job is to put them in order. You give one quality the lead while the others sit on a maintenance dose, and you rotate which one leads over time. And because the body does not behave like a machine, the same session gives different results in different people and different seasons, so the whole framework is steered by how the athlete responds, not by faith in a fixed plan.</p>
+    <div class="fx-thesis">Bias the limitation, but <em>train the full system</em>.</div>
+    <p>You never abandon a quality. You find the one thing holding the athlete back, give it the lead, and keep everything else ticking over so nothing slips while you fix it. Then you retest and rotate. The rest of this book is the machinery for doing exactly that.</p>
+
+    <h3>Why hybrid breaks most programming</h3>
+    <p>Training inherited two clean traditions. General physical preparation (GPP) builds the broad base. Specific physical preparation (SPP) sharpens the thing the sport actually demands. Most coaches run one or the other. The hybrid athlete breaks both, because the sport itself is no longer one thing. Read a modern mixed-modal athlete and the demand splits into three jobs that all have to happen at once.</p>
+    <div class="fx-table-wrap">
+    <table class="fx">
+      <thead><tr><th>The demand</th><th>What it asks of the athlete</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Conditioning</strong></td><td>The engine. Supply, and the ability to repeat output across durations.</td></tr>
+        <tr><td><strong>Skill</strong></td><td>Body control and the ability to express force through good position.</td></tr>
+        <tr><td><strong>Lifting</strong></td><td>Maximal and near-maximal force. The top end of expression.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Train these as three separate programs and they fight each other. Train them as one undifferentiated mess and none of them improves. The way through is to see that all three sit on the same two underlying spectrums, what the athlete is and where on the engine they are working, and to program against those rather than the surface activity.</p>
+
+    <h3>The three athletes</h3>
+    <p>Every athlete sits somewhere on a single line that runs from pure supply to pure expression. We mark three reference points along it. Most real athletes live between them and always lean one way.</p>
+    <div class="fx-dg">
+      <div class="fx-spectrum">
+        <div class="cell"><div class="a">Supply +</div><div class="b">Endurance</div><div class="c">delivery side</div></div>
+        <div class="cell"><div class="a">Balance ++</div><div class="b">Hybrid</div><div class="c">needs both</div></div>
+        <div class="cell"><div class="a">Expression +++</div><div class="b">Strength</div><div class="c">output side</div></div>
+      </div>
+      <div class="cap">The supply-to-expression spectrum. Supply is the heart and lungs, the delivery side. Expression is the muscular system, the output side. Balance is the hybrid in the middle, needing enough of both.</div>
+    </div>
+    <div class="fx-table-wrap">
+    <table class="fx">
+      <thead><tr><th>Archetype</th><th>Internal state</th><th>Tension / skill</th><th>Leans toward</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Endurance</strong></td><td>Supply</td><td>Low (+)</td><td>Delivery. Moving oxygen and fuel, over and over, for a long time.</td></tr>
+        <tr><td><strong>Hybrid</strong></td><td>Balance</td><td>Moderate (++)</td><td>Both at once, which is why it carries the most conflict from interference.</td></tr>
+        <tr><td><strong>Strength</strong></td><td>Expression</td><td>High (+++)</td><td>Producing force. The muscular expression of output.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Keep this line in mind for the whole physical layer. Everything that follows, the domains, the tests, the limiter logic, is a way of finding where an athlete sits on it and then biasing the gap.</p>
+
+    <div class="fx-partnav"><span></span><a href="#part2">Next: The Physical Layer →</a></div>
+   </div>
+  </section>
+
+  <section class="fx-part" id="part2">
+   <div class="fx-inner">
+    <div class="fx-part-head">
+      <div class="pn">Part II</div>
+      <h2>The Physical Layer</h2>
+      <div class="pt">Capacity, what the body can produce</div>
+    </div>
+    <p class="fx-lead">This is the engine room. Part I gave you the why. This part builds the full picture of the physical system and the language we use to run it: how we define fitness, the two things that shape every athlete, the oxygen-led engine underneath, and the Build, Endure, Express domains that organise the work.</p>
+
+    <h3>Defining fitness</h3>
+    <p>Fitness is not one number. It is a profile across several qualities, and an athlete is just the particular shape of that profile. We read it on one instrument we call the Fitness Compass. The qualities fall into two groups, and the groups do different jobs.</p>
+    <ul>
+      <li><strong>Descriptive qualities</strong> tell you what state the system is in right now. They describe the athlete. CP/CS (critical power or critical speed), VO2, HRV (heart rate variability), and RHR (resting heart rate).</li>
+      <li><strong>Prescriptive qualities</strong> are outputs you can measure today and write straight into a session tomorrow. Strength, power, speed, and mobility.</li>
+    </ul>
+    <p>Read the two groups as two separate lists, not as matched pairs. HRV does not pair with speed, and RHR does not pair with mobility. Each group is a set of dials you read together. A complete read needs the whole compass, the state on one side and the output on the other, not one favourite number.</p>
+    <div class="fx-table-wrap">
+    <table class="fx">
+      <thead><tr><th>Descriptive, the state now</th><th>Prescriptive, outputs you program</th></tr></thead>
+      <tbody>
+        <tr><td><strong>CP / CS</strong> sustainable power or speed</td><td><strong>Strength</strong> force you can produce</td></tr>
+        <tr><td><strong>VO2</strong> aerobic ceiling</td><td><strong>Power</strong> force at speed</td></tr>
+        <tr><td><strong>HRV</strong> recovery and readiness</td><td><strong>Speed</strong> top-end velocity</td></tr>
+        <tr><td><strong>RHR</strong> baseline stress</td><td><strong>Mobility</strong> usable range</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>Structure and function</h3>
+    <p>Conditioning does not happen in a vacuum. Every performance comes out of the athlete, the task, and the environment interacting. The part we can coach most directly is the athlete, and the athlete is two things: structure and function.</p>
+    <h4>Structure dictates function</h4>
+    <p>Structure is the athlete's architecture. The clearest version of it is the relationship between the rib cage, the diaphragm, and the pelvis, and the breathing position that relationship creates. This is not cosmetic. It decides what the body is good at.</p>
+    <div class="fx-dg">
+      <div class="fx-spectrum">
+        <div class="cell"><div class="a">Extended</div><div class="b">Strength lean</div><div class="c">braced, rib flare</div></div>
+        <div class="cell"><div class="a">Neutral</div><div class="b">Hybrid</div><div class="c">stacked, either way</div></div>
+        <div class="cell"><div class="a">Flexed</div><div class="b">Endurance lean</div><div class="c">ribs down, long breath</div></div>
+      </div>
+      <div class="cap">Three structures. The strength lean carries an extended, rib-flared position built to brace and produce force. The endurance lean carries a flexed, ribs-down position built to breathe and absorb. The hybrid sits near neutral, stacked, and can lean either way.</div>
+    </div>
+    <p>An endurance athlete tends to stack the rib cage over the pelvis with a long, usable breathing position, built to take air in and deliver it. A strength athlete tends to carry a more extended, braced position built to lock down and push force. The hybrid sits closer to neutral but is always leaning one way. You cannot recruit a muscle you cannot get into position, and breathing is the first thing that falls apart when position is wrong. So structure decides function.</p>
+    <h4>Function over time changes structure</h4>
+    <p>The arrow also runs the other way, slowly. What you repeatedly ask the body to do remodels the architecture. Tissue, position, and tolerance all adapt over months to the work you give them. This is why the movement and breathing work later in the book is not mobility for its own sake. It is the slow editing of structure so that better function becomes available.</p>
+    <p>Take a real example. A powerlifter has spent years bracing hard against heavy bars. Their structure has set into extension: rib cage flared up and forward, lower back compressed, pelvis tipped forward. That is a brilliant structure for a maximal squat and a poor one for distance running. If that lifter now wants to become an endurance athlete, you cannot just hand them a running program. You have to change the structure first, with exercise selection that pulls them out of extension and into a stacked, flexed-capable position.</p>
+    <ul>
+      <li><strong>Get the ribs down over the pelvis.</strong> Exhale-biased work where you fully blow air out and feel the front of the ribs draw down: 90/90 breathing with hips and ribs stacked, dead bug variations with a full exhale, back-supported breathing drills.</li>
+      <li><strong>Train positions, not just muscles.</strong> Choose exercises that reward a stacked position and punish rib flare. Hands-elevated or supported work first, holding a long exhale at the top, before loading the same pattern free and heavy.</li>
+      <li><strong>Bias the opposite of their default.</strong> A braced extender needs reaching, rounding, and breathing under light load. Someone built for endurance who wants to get strong needs the reverse: bracing, stiffness, and tension they currently cannot produce.</li>
+    </ul>
+    <p>This takes months, not weeks, and it runs alongside the conditioning, not before it. But without it the running never feels right, because the structure underneath is still built for a different job.</p>
+    <h4>So what is function?</h4>
+    <p>We use a precise definition and keep it. Function is the combination of energy systems and muscle fibres, organised for a task. Not one energy system, not one fibre type, the combination. That definition is the hinge between the structure work above and the energetics below.</p>
+
+    <h3>Skill, tension, and the nervous system</h3>
+    <p>Skill is easy to leave out of a physical model because it feels like a separate topic. It is not. Skill changes how much tension a movement costs and how hard the nervous system has to work, so it belongs right next to strength and conditioning.</p>
+    <p>A low-skill athlete produces tension everywhere. They brace muscles that should be relaxed, fire antagonists against the movement, and waste effort fighting themselves. That wasted tension is expensive. It drives the heart rate up, drains the battery faster, and fatigues the system long before the working muscles are actually done. A high-skill athlete produces tension only where and when it is needed, and relaxes everything else. Same external output, far lower internal cost.</p>
+    <p>That is why skill sits on the same low-to-high line as tension. As you climb from Build to Express, you are not only asking for more tension, you are asking for more skill to control it. Build skill and you lower the nervous-system cost of everything above it.</p>
+
+    <h3>Supply, expression, and what to actually build</h3>
+    <ul>
+      <li><strong>Supply is the heart and lungs.</strong> The delivery system. The endurance athlete lives here.</li>
+      <li><strong>Expression is the muscular system.</strong> The producer of output. The strength athlete lives here.</li>
+      <li><strong>Balance is the hybrid.</strong> Enough of both, always leaning, and the athlete who pays the highest interference tax for trying to hold the middle.</li>
+    </ul>
+    <h4>The headline and the support</h4>
+    <p>For any athlete, one quality is the headline and the other is the support. The headline is the one you bias and keep building. The support only needs to be good enough for the sport, and once it is good enough, you stop pushing it.</p>
+    <p>Take a strength athlete. Their headline is expression, so that is what you bias. They also need some supply, enough aerobic function to recover between heavy efforts, but that is the support. You give them just enough conditioning to be sufficient for their sport, and then you stop and put the budget back into expression. More support past sufficient is wasted training that eats into the headline.</p>
+    <h4>The sufficiency principle</h4>
+    <p>Several of an athlete's qualities only need to be sufficient, not maximal. VO2 and expression are often in this group. Chasing the maximum of a quality that only needs to be sufficient is how someone spends a whole block and moves nothing that mattered. Ask what the sport actually requires, satisfy it, and spend the rest of the budget on the real limiter.</p>
+
+    <h3>The engine, an oxygen-led model</h3>
+    <p>The old picture draws three energy systems as separate boxes, alactic, anaerobic-lactic, aerobic, handing off to each other one at a time. The view we use, inspired by the work of Evan Peikon, is that they overlap and run together, and that one thing connects all of them.</p>
+    <div class="fx-thesis">Oxygen is the link. It is <em>always there</em>, and it is always needed.</div>
+    <p>Even the work we call anaerobic depends on oxygen the moment you look at recovery and at rebuilding for the next effort. So instead of asking which system, we follow the oxygen. Into the muscle, through the effort, and back out. That thread never breaks, and it keeps the whole model simple.</p>
+    <h4>Follow the oxygen, the broad view</h4>
+    <p>Zoom out and the body is a supply chain with three links. Each link is an organ system doing one job. Read the words carefully, because uptake, transport, and expression belong here, to the cascade. They are not the names of the training domains.</p>
+    <div class="fx-dg">
+      <div class="fx-flow">
+        <div class="node"><div class="a">Lungs · Uptake</div><div class="b">take oxygen in, breathe CO2 out</div></div>
+        <div class="arrow">→</div>
+        <div class="node"><div class="a">Heart · Transport</div><div class="b">pump blood to the working muscle</div></div>
+        <div class="arrow">→</div>
+        <div class="node"><div class="a">Muscle · Expression</div><div class="b">use the oxygen to produce output</div></div>
+      </div>
+      <div class="cap">The oxygen cascade. The lungs take oxygen in. The heart moves it to the working muscle. The muscle uses it to produce output. Every limiter you will ever chase sits somewhere on this chain.</div>
+    </div>
+    <p>When you go looking for what is holding an athlete back, you are looking for the weakest link on this chain. At the working muscle, output is limited by how much oxygen is actually available right there in the tissue. Three local things drive the drop: the muscle squeezing its own blood vessels as it contracts, which chokes off flow; blood struggling to get in and backing up on the way out; and the muscle burning through oxygen faster than it arrives.</p>
+    <div class="fx-box fx-box--caveat">
+      <div class="bx-k">Caveat</div>
+      <p>You do not need to measure any of this, and most people never will. There is a tool that reads muscle oxygen directly, but you do not need it. What matters is the understanding. When you know that output drops because the muscle has run low on oxygen, you know what to do about it: improve delivery, improve the muscle's ability to use what arrives, or manage the tension that is choking off its own blood supply. The molecular picture is there to guide the decision, not to be tested.</p>
+    </div>
+
+    <h3>Muscle fibres</h3>
+    <ul>
+      <li><strong>Type 1</strong>, slow and aerobic. The supply end. Fatigue-resistant, recruited first.</li>
+      <li><strong>Type 2A</strong>, fast but still aerobic. The middle ground.</li>
+      <li><strong>Type 2B</strong>, fast and glycolytic. The expression end. High force, fast to fatigue.</li>
+    </ul>
+    <p>They are recruited in order. As force goes up, the body brings in progressively higher fibres, Type 1, then 2A, then 2B. This is the reason behind a rule we come back to later: when a muscle will not grow, the first question is whether you are even reaching the right fibres, not whether to add more sets. You have to recruit a fibre before you can load it.</p>
+
+    <h3>The shared nervous system</h3>
+    <p>The same nervous-system state that sets your fibre recruitment also sets your mind. This is the real wiring behind the shared-nervous-system idea, and it is the handshake between this part and the mental layer.</p>
+    <div class="fx-table-wrap">
+    <table class="fx">
+      <thead><tr><th>Nervous-system state</th><th>Fibre bias</th><th>How it shows up</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Parasympathetic</strong> (recover)</td><td>Type 1, slow and aerobic</td><td>Settled, recoverable, durable, composed.</td></tr>
+        <tr><td><strong>Sympathetic</strong> (stress)</td><td>Type 2B, fast and glycolytic</td><td>Switched on, high output, expensive, fragile if unmanaged.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Breathing is the lever that moves both layers because it is the one input that shifts this balance on command. The same slow breathing that pushes you toward recovery and Type 1 function is the breathing that gives you composure under load. One nervous system, trained from two directions.</p>
+    <div class="fx-box fx-box--caveat">
+      <div class="bx-k">Caveat</div>
+      <p>The limiter can sit at either end. Central means the heart and lungs cannot deliver enough oxygen, so the whole system runs out at once. Peripheral means delivery is fine but the muscle cannot extract and use the oxygen fast enough, so it fails locally. Most athletes are limited one way or the other at any given time, and the point of testing is to find out which, not to assume.</p>
+    </div>
+
+    <h3>The domains, Build, Endure, Express</h3>
+    <p>The engine runs across one line of demand, from easy and sustainable at one end to maximal and brief at the other. We split that line with two thresholds, T1 and T2, into three domains. These are the names we use everywhere in the program, and they are not the cascade words above.</p>
+    <div class="fx-dg">
+      <div class="fx-domainline">
+        <div class="d"><div class="a">BUILD</div><div class="z">Z1–Z2</div><div class="desc">low tension, low skill</div></div>
+        <div class="d"><div class="a">ENDURE</div><div class="z">Z3–Z4</div><div class="desc">moderate everything</div></div>
+        <div class="d"><div class="a">EXPRESS</div><div class="z">Z5–Z6 · Z7</div><div class="desc">high tension, high skill</div></div>
+      </div>
+      <div class="fx-thresholds"><span>T1 →</span><span>← T2 →</span></div>
+      <div class="cap">The domains across one line. Build sits below T1. Endure sits between T1 and T2. Express sits past T2, with Z7 above. The same line is also a low-to-high tension and skill gradient.</div>
+    </div>
+    <div class="fx-table-wrap">
+    <table class="fx">
+      <thead><tr><th>Domain</th><th>Zones</th><th>What it does</th><th>Skill, with examples</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Build</strong></td><td>Z1–Z2</td><td>Deliver. Move blood, oxygen and fuel efficiently and repeatably. Easy, sustainable, low cost.</td><td>Low skill. Steady bike, easy row, slow air squats, a long easy run, sled drags.</td></tr>
+        <tr><td><strong>Endure</strong></td><td>Z3–Z4</td><td>Hold output as the cost climbs. Work near the edge of what you can sustain.</td><td>Moderate skill. Threshold intervals, loaded carries, tempo work, a hard-but-controlled piece.</td></tr>
+        <tr><td><strong>Express</strong></td><td>Z5–Z6</td><td>Produce output above what delivery can sustain. Short, expensive, maximal.</td><td>High skill. Heavy and fast lifts, jumps, sprints, complex barbell work under fatigue.</td></tr>
+        <tr><td><strong>(Z7)</strong></td><td>Z7</td><td>The very top. Pure speed and power, almost no repeatability.</td><td>Highest skill. Maximal sprints, single big jumps, true max efforts with full recovery.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Those two thresholds are the two points where the body's metabolic state actually changes. T1 sits between Z2 and Z3: below it you are fully aerobic, lactate at baseline, breathing easy, sustainable for hours. Cross T1 and lactate rises, fuel shifts toward carbohydrate, breathing deepens. T2 sits between Z4 and Z5: it is the highest intensity at which you can still clear lactate as fast as you make it, the top of metabolic steady state. Cross T2 and the balance breaks, and you are on a clock measured in minutes, then seconds. So the three domains are really three metabolic states.</p>
+    <div class="fx-box fx-box--caveat">
+      <div class="bx-k">Caveat</div>
+      <p>Z5 lives in Express. T2 falls between Z4 and Z5, so Z5 is the bottom of Express, not the top of Endure.</p>
+    </div>
+    <div class="fx-box fx-box--hood">
+      <div class="bx-k">Under the hood</div>
+      <p>How the zones are anchored. To make the zones real rather than a vague feeling, we tie them to Critical Power, the hardest effort you can hold for a long time without falling apart. Below it, you are comfortable. Right around it, you are at the edge. Above it, you are spending a reserve that runs out fast, a small extra tank you can only use for short bursts. Build sits well below Critical Power. Endure sits around it. Express sits above it, dipping into that reserve.</p>
+    </div>
+
+    <h3>The five dials, and when to reach for each</h3>
+    <p>You can put a number on effort five ways, and the whole trick is knowing which dial to reach for. Two are about feel, three are about precision.</p>
+    <ul>
+      <li><strong>RPE</strong>, how hard a whole piece feels out of ten. Your default for conditioning.</li>
+      <li><strong>RIR</strong>, reps in reserve, how many reps you had left on a lift. Your default for lifting.</li>
+      <li><strong>Watts</strong>, off your Critical Power test. Precision for cyclical conditioning on the bike, row, or ski.</li>
+      <li><strong>Run pace</strong>, minutes per kilometre off your critical speed or threshold-pace test. The running equivalent of watts.</li>
+      <li><strong>Percent of one-rep max</strong>, or percent of max heart rate. Precision for a specific load or heart-rate zone.</li>
+    </ul>
+    <p>RPE and RIR are the dials you steer by day to day. They are the only ones that work cleanly in a mixed piece, and they are the right tool whenever you are maintaining a quality rather than chasing it. The precise dials come out when you are developing a specific quality and need to hit an exact dose. When you are biasing something and precision matters, get specific. When you are maintaining, or running mixed work, run on feel.</p>
+    <div class="fx-table-wrap">
+    <table class="fx">
+      <thead><tr><th>Domain</th><th>RPE (/10)</th><th>RIR on lifts</th><th>Feels like</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Build</strong></td><td>3–5</td><td>4+ reps left</td><td>Easy, conversational, could keep going a long time.</td></tr>
+        <tr><td><strong>Endure</strong></td><td>6–8</td><td>2–3 reps left</td><td>Working, uncomfortable, holding the edge on purpose.</td></tr>
+        <tr><td><strong>Express</strong></td><td>9–10</td><td>0–1 reps left</td><td>Maximal or near it, short, full recovery between.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="fx-box fx-box--apply">
+      <div class="bx-k">Apply it</div>
+      <p>Take one of your own training pieces from this week. Decide which domain it actually belongs in by feel, then put a number on it. If a piece was meant to be a Build session but kept creeping to an RPE of 8, it was not a Build session. That gap between what you intended and what you did is one of the most common reasons training stalls. Name the domain and the number before you start, not after.</p>
+    </div>
+
+    <h3>The contraction axis</h3>
+    <p>The domains answer how hard and how long. Bolted onto them is a second line that answers how the muscle is asked to contract. It runs from owning tension, to holding position, to controlling tension under load, to releasing it at speed. We line it up with the domains because the right to express force fast is something the muscle and connective tissue have to earn first.</p>
+    <div class="fx-dg">
+      <div class="fx-flow">
+        <div class="node"><div class="a">Concentric</div><div class="b">Build · own the shortening</div></div>
+        <div class="arrow">→</div>
+        <div class="node"><div class="a">Isometric</div><div class="b">Endure entry · hold position</div></div>
+        <div class="arrow">→</div>
+        <div class="node"><div class="a">Tempo ecc.</div><div class="b">Endure loaded · control lowering</div></div>
+        <div class="arrow">→</div>
+        <div class="node"><div class="a">Reactive</div><div class="b">Express · release at speed</div></div>
+      </div>
+      <div class="cap">The contraction line, aligned to the domains. You own the shortening, then hold position, then control the lowering, then release at speed. Each stage earns the next.</div>
+    </div>
+    <h4>The domains are a progression, not separate boxes</h4>
+    <p>Build, Endure, and Express are not three different exercise pools. They are the same movements made progressively harder. Take a squat. In Build it is a slow, controlled goblet or tempo squat at a light load. Move it into Endure and it becomes a heavier front squat, a tempo back squat, or loaded squatting inside a mixed piece. Move it into Express and it becomes a heavy, fast squat, a jump squat, or a clean. Same pattern, walked up the line. When you progress an athlete from one domain to the next, you are not throwing out what they did, you are loading and complicating the things they already own.</p>
+    <h4>Load is the last dial you turn</h4>
+    <p>Concentric base work has to stay light and repeatable, because the whole point is to accumulate quality volume without a recovery bill. What counts as light is entirely athlete-dependent: set it by what they can repeat with clean form at low cost, not by a number on the bar. As a movement climbs the line, the load goes up and the repeatability comes down.</p>
+    <h4>The four stages</h4>
+    <ul>
+      <li><strong>Concentric, own the shortening (Build).</strong> Repeatable and cheap on the tissue. Sled pushes and drags, prowler work, concentric-only machine work, cycling and the assault bike, lighter loaded carries. Add work to the base without wrecking the legs for tomorrow.</li>
+      <li><strong>Isometric, hold the position (Endure, entry).</strong> Tension without movement. The safest way to start loading tendons. Wall sits and split-squat holds, mid-range pause work, planks and carries, the Copenhagen family, tendon-focused holds. Use deliberately when a tendon is the weak link.</li>
+      <li><strong>Tempo eccentric, control the lowering (Endure, loaded).</strong> Slow lowering under continuous tension. A three-to-five-second lowering on a squat, bench, or RDL, slow eccentric chin-ups and dips. Powerful for muscle and tissue, but it produces real soreness, so place it where it will not poison the next priority session.</li>
+      <li><strong>Reactive, release at speed (Express).</strong> The muscle stretches and fires back like a spring. Pogo hops and ankle bounces first, then box and depth jumps, bounding, medicine-ball throws, Olympic lifts. You earn your way into this.</li>
+    </ul>
+    <div class="fx-box fx-box--caveat">
+      <div class="bx-k">Caveat</div>
+      <p>Name the two eccentrics every time. A fast, passive eccentric is cheap and springy, and lives at the top as reactive work. A slow, controlled tempo eccentric holds high tension the whole way down, and that is expensive and lives in the middle. They are not the same thing. And the base is not purely concentric: running is heavily eccentric every footstrike, so if your base is running, account for that eccentric load before piling on tempo leg work the same day.</p>
+    </div>
+
+    <h3>Hypertrophy and strength inside the domains</h3>
+    <ul>
+      <li><strong>Tension drives growth.</strong> How close you get to failure and how much continuous tension you hold matter more than any magic rep range. Roughly 30 to 90 percent of your one-rep max can build muscle if taken close enough to failure, with the bottom cutoff around 20 to 30 percent.</li>
+      <li><strong>The dose, and keep the two numbers separate.</strong> Roughly 8 to 14 hard sets per muscle per session is the working ceiling. Weekly volume is higher and split across sessions. Per session and per week are different numbers, so never quote them as one.</li>
+      <li><strong>Recruitment before volume.</strong> When a muscle will not grow, more sets is usually the wrong answer. Check recruitment, position, execution, and recovery first. You cannot recruit what you cannot get into position.</li>
+      <li><strong>Strength is more than size.</strong> It is also nervous-system drive, technique, arousal, and the energy system feeding the effort. A heavy endurance block can look like a strength loss that is partly the nervous system handling tension differently, not lost muscle.</li>
+      <li><strong>Mind the connective tissue.</strong> Tendons, ligaments, and bone are the tissues hybrid loading actually injures, and they adapt slower than muscle.</li>
+    </ul>
+    <h4>Loading connective tissue</h4>
+    <p>The classic hybrid injury is muscle and nervous system getting strong faster than connective tissue can keep up. When your strength outruns your tendons, something tears. So you load tissue on purpose, early, and patiently. <strong>Isometrics</strong> are the entry point: hold a demanding mid-range position against a heavy load for thirty to forty-five seconds, three to five sets, three or four times a week. <strong>Heavy slow resistance</strong> is the next step: a moderate-to-heavy load lifted and lowered slowly, around three seconds each way, for several sets of six to ten reps. <strong>Then, and only then, speed</strong>: reactive, spring-like loading belongs last. And underneath all of it, bone will not build, and will actively weaken, if the athlete is chronically under-fuelled.</p>
+
+    <h3>Combining them, the hybrid problem in practice</h3>
+    <ul>
+      <li><strong>Order.</strong> The priority quality goes first, in the session and in the week, while you are fresh. Fast, high-skill, nervous-system work leads. Fatiguing work follows.</li>
+      <li><strong>Modality.</strong> Running interferes with leg strength and size far more than cycling, because the eccentric pounding of footstrike competes directly with leg growth. When lower-body development is the priority, push conditioning toward low-impact options.</li>
+      <li><strong>Dose.</strong> Building a quality is expensive. Holding it is cheap. That gap is the whole basis of concurrent training.</li>
+    </ul>
+    <h4>Interference, what it really is</h4>
+    <p>The loudest claim in hybrid training is that cardio kills your gains. Mostly it does not. Almost everything people blame on interference is actually two things you can manage: fatigue and tension.</p>
+    <p><strong>Fatigue</strong> is paid out of three accounts, and the body cannot tell them apart: training, life, and recovery. Most of what looks like interference is just too much total cost arriving at the same session. Compare a full-time athlete, whose life account is nearly empty of stress and recovery account full, with an amateur carrying a demanding job, a commute, a family, and broken sleep. Hand the amateur the full-time athlete's program and it will not just feel harder, it will actively break them down. You program the person in front of you, not the athlete they wish they were.</p>
+    <p><strong>Tension</strong> is the other half. The same tension that builds muscle also squeezes off the muscle's own blood supply and adds to fatigue. High tension in the right place at the right time is what you want; high tension everywhere all week is how concurrent training collapses. Think of it as a budget. Spread high-tension work out, and keep the low-tension days genuinely low.</p>
+
+    <h3>The foundation, fuel, sleep, hydration</h3>
+    <p>None of the programming matters if the foundation under it is missing. The most common failure in hybrid athletes is not their program. It is that they are under-fuelled, under-slept, and under-recovered. When the inputs are short, the body triages, and survival always beats adaptation.</p>
+    <ul>
+      <li><strong>Nutrition.</strong> Match intake to intent. Low energy availability quietly caps strength, blunts conditioning, and erodes bone and hormone health. Stop trying to strip fat and build performance in the same breath. Get enough protein to repair the work, and enough carbohydrate to fuel the hard sessions.</li>
+      <li><strong>Sleep.</strong> Where adaptation actually happens, and the cheapest performance lever there is. For the amateur with a stressful job, fixing sleep is often a bigger win than any change to the training.</li>
+      <li><strong>Hydration.</strong> Even mild dehydration drops output, raises heart rate and perceived effort. Drink to thirst across the day, add electrolytes around long or sweaty sessions.</li>
+    </ul>
+
+    <div class="fx-partnav"><a href="#part1">← The Philosophy</a><a href="#part3">Next: The Programming Engine →</a></div>
+   </div>
+  </section>
+
+  <section class="fx-part" id="part3">
+   <div class="fx-inner">
+    <div class="fx-part-head">
+      <div class="pn">Part III</div>
+      <h2>The Programming Engine</h2>
+      <div class="pt">Progress a movement, fill a domain, build a week, shape a program</div>
+    </div>
+    <p class="fx-lead">Part II explained why. This part is how you actually run it: how you advance a movement and walk it back when it breaks, what fills each domain, how the week is built, and how a program comes together over time.</p>
+
+    <h3>Module 1, the movement progression engine</h3>
+    <p>This is the logic underneath choosing exercises: how you advance a movement, and how you regress it when execution falls apart. It is a troubleshooting map, not a fixed ladder. You start a movement with every bit of help switched on, then progress by taking that help away, one piece at a time.</p>
+    <div class="fx-box fx-box--sources">
+      <div class="bx-k">On sources</div>
+      <p>These ten principles of progression come from Pat Davidson. I use them here because they are the simplest and most honest progression model I have found, and they fit everyone and every modality. Think of the whole thing as a skill spectrum: every quality can be made easier or harder along the same set of dials.</p>
+    </div>
+    <ol>
+      <li><strong>Start static.</strong> Master the position before it moves. Hold a split-squat position before you do a walking lunge.</li>
+      <li><strong>Start sagittal.</strong> Front-to-back first, then side-to-side, then rotation, then everything at once.</li>
+      <li><strong>Start two limbs, even load.</strong> A two-leg squat before a split squat before a pistol.</li>
+      <li><strong>Make gravity easy first.</strong> Supported or horizontal before standing and loaded.</li>
+      <li><strong>Only train the range you can control.</strong> Squat to the depth you own, then expand it on purpose.</li>
+      <li><strong>Start with short levers.</strong> Keep loads and limbs close before lengthening them.</li>
+      <li><strong>Add a small wrong-way cue.</strong> A light band pulling the knee the wrong way so the body learns to correct itself.</li>
+      <li><strong>Give the athlete things to feel.</strong> A wall, the floor, a bench, a band to orient against.</li>
+      <li><strong>Limit the freedom.</strong> Take away the wrong options so only the right movement is available.</li>
+      <li><strong>Add load last.</strong> Load is the final dial you turn up, not the first. Earn the pattern, then load it.</li>
+    </ol>
+    <p>Progress by removing help or adding demand. Regress when form breaks under fatigue or load: do not throw the exercise out, walk back up the list. Not scaling in training is a mistake. Scaling is not giving up, it is the tool that keeps an athlete training the right pattern at the right quality instead of practising failure.</p>
+    <div class="fx-box fx-box--caveat">
+      <div class="bx-k">Know when to break the rules</div>
+      <p>You would never break these rules with a beginner. But an athlete with a long training history, high skill, and good recoverability will sometimes do well with them broken on purpose. A CrossFit athlete heading into competition needs to practise high load with high skill at the same time, because that is what the sport demands. Follow the progression to build, break it deliberately to prepare for a known specific demand, and only with an athlete who has earned the right.</p>
+    </div>
+    <div class="fx-table-wrap">
+    <table class="fx">
+      <thead><tr><th>Movement stage</th><th>Contraction</th><th>Domain</th></tr></thead>
+      <tbody>
+        <tr><td>Static, sagittal, two-leg, short lever, lots of help, light load</td><td>Concentric / isometric</td><td>Build, early Endure</td></tr>
+        <tr><td>Controlled tempo, side-to-side, staggered, longer levers, moderate load</td><td>Tempo eccentric</td><td>Endure</td></tr>
+        <tr><td>Moving, rotational, single-leg, free, fast, reactive, heavy load</td><td>Reactive / SSC</td><td>Express</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>Module 2, the method library</h3>
+    <p>These are the conditioning methods, sorted onto the spine. Two ideas organise them. First, the domain: each method lives in Build, Endure, or Express. Second, the mode: a method is either cyclical (one repeatable, measurable action, like a bike or row) or mixed (several movements blended, often loaded, like a CrossFit-style piece). Build is best done cyclical. Endure works both ways. Express works both ways too.</p>
+    <p>One rule governs every method, and it is driven by data: run a method until the numbers stop improving, then change to attack the next limiter. Do not change for variety. Repeat, plateau, move on.</p>
+
+    <h4>Build, base the engine</h4>
+    <div class="fx-table-wrap">
+    <table class="fx">
+      <thead><tr><th>Method</th><th>For</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Aerobic Base</strong><br>cyclical or mixed</td><td>A big, efficient engine at low cost, plus breathing, pacing, durability.</td><td>Bike 75 min @ RPE 4 (conversation pace, ~65% max HR); or a 50 min easy EMOM of carries and easy erg work.</td></tr>
+        <tr><td><strong>Tension Base</strong><br>cyclical</td><td>Slow-twitch and local muscular endurance. The concentric resistance base.</td><td>Tempo goblet squat or leg press, 2s down / 2s up, 40–50% 1RM, 8–10 × 4–6, RPE 4–5, RIR 4+; or 10 × (40s air squats / 20s rest).</td></tr>
+        <tr><td><strong>Spring Prep</strong><br>cyclical</td><td>Lay down elastic, durable tissue. Soft landings and bounce at minimal fatigue.</td><td>Low pogo hops and short box step-downs @ RPE 4: 8–15 quiet contacts × 4–6. No soreness next day.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <h4>Endure, hold output at the edge</h4>
+    <div class="fx-table-wrap">
+    <table class="fx">
+      <thead><tr><th>Method</th><th>For</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Recoverable Intervals</strong><br>cyclical</td><td>Heart-rate recoverability and pacing. The bridge into intensity.</td><td>Bike 10s hard / 60s easy @ RPE 6 for 20–30 min; or Row 90s / 90s easy × 10.</td></tr>
+        <tr><td><strong>Edge Intervals</strong><br>cyclical</td><td>Sustained effort right at the edge. Threshold work.</td><td>2 × 18 min Bike @ RPE 7 (~85% max HR), rest 5 min.</td></tr>
+        <tr><td><strong>Grind</strong><br>cyclical</td><td>Fast-twitch and local endurance under heavy, continuous output.</td><td>5–20 min continuous @ RPE 7–8: high-resistance bike at low cadence, unbroken.</td></tr>
+        <tr><td><strong>Loaded Mixed</strong><br>mixed</td><td>Tension and skill at the edge. A controlled mixed-modal piece.</td><td>18 min AMRAP @ RPE 7–8: 18 cal Ski / 18 walking lunges / 18 alt DB snatch / 30 double-unders.</td></tr>
+        <tr><td><strong>Carry and Brace</strong><br>mixed</td><td>Trunk, grip, and posture. The bracing entry into Endure.</td><td>5 rounds @ RPE 7: 40m heavy farmer carry / 20m front-rack / 30s sandbag hold, rest 60–90s.</td></tr>
+        <tr><td><strong>Lactic Pieces</strong><br>mixed</td><td>Output under heavy metabolic stress. The top of Endure.</td><td>30–60s all-body efforts @ RPE 8, rest 2–5 min, × 4–6. Long rest so each set stays strong.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <h4>Express, produce maximal output</h4>
+    <div class="fx-table-wrap">
+    <table class="fx">
+      <thead><tr><th>Method</th><th>For</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Power Repeats</strong><br>cyclical</td><td>Pure short-burst power. Quality over quantity.</td><td>6 × 15s heavy sled push, max turnover, rest 3–4 min; or 6–8 × 10s bike sprint, rest 2–3 min.</td></tr>
+        <tr><td><strong>Peak Intervals</strong><br>cyclical</td><td>Drive the heart to its ceiling. Mechanics under real fatigue.</td><td>4 × 1 km Row @ RPE 9, rest 3 min; or 12–15 × 60s Bike @ RPE 9–10, rest 60s.</td></tr>
+        <tr><td><strong>Reactive Repeats</strong><br>mixed</td><td>Repeatable explosive power. Spends the elastic base from Spring Prep.</td><td>5–20 sets @ RPE 9, 60s rest: 3–5 broad or box jumps, maximal intent. Cut it when height drops.</td></tr>
+        <tr><td><strong>Heavy Mixed</strong><br>mixed</td><td>Express force and skill together, competition-like.</td><td>5 min AMRAP @ RPE 9–10: 10 wall balls / 10 burpees / 10 cal Ski, rest 10 min × 3.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Notice the bookend. Spring Prep at the bottom of Build lays down the elastic, durable tissue. Reactive Repeats at the top of Express spends it. Same quality, opposite ends of the line.</p>
+
+    <h4>What each domain costs, and how often you can train it</h4>
+    <div class="fx-table-wrap">
+    <table class="fx">
+      <thead><tr><th>Domain</th><th>RPE</th><th>% max HR</th><th>Talk test</th><th>Recovery before you repeat it</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Build</strong></td><td>3–5</td><td>50–75%</td><td>Full conversation</td><td>Very low cost. Train daily, twice a day, or back to back.</td></tr>
+        <tr><td><strong>Endure</strong></td><td>6–8</td><td>75–90%</td><td>Short sentences</td><td>Moderate. Most repeats inside 24h; the near-threshold end needs ~48h.</td></tr>
+        <tr><td><strong>Express</strong></td><td>9–10</td><td>90–100%</td><td>Cannot talk</td><td>High. Roughly 72h before the next true Express session.</td></tr>
+        <tr><td><strong>Z7</strong></td><td>Max</td><td>n/a</td><td>n/a</td><td>Low cost despite intensity: tiny bouts, complete rest.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="fx-box fx-box--apply">
+      <div class="bx-k">Apply it</div>
+      <p>Write every conditioning piece from a normal week into a table: its domain, its mode, the RPE you actually hit, its recovery cost. Most people find they are crowded into one box, usually mixed Endure pieces, because those are fun, while their cyclical Build base and true Express work are missing. A balanced week has work in more than one box, with the most volume sitting in the domain that is actually your limiter, not the one you enjoy most.</p>
+    </div>
+
+    <h3>Module 3, programming strength and hypertrophy</h3>
+    <p>Strength and size are not the same job. <strong>Strength</strong> is producing force: heavy loads, low reps, full effort with a rep or two in reserve, the nervous system doing most of the work. <strong>Hypertrophy</strong> is building tissue: moderate loads close to failure, more reps, more volume, the muscle doing most of the work.</p>
+    <div class="fx-table-wrap">
+    <table class="fx">
+      <thead><tr><th>Tier</th><th>What it is</th><th>Typical dose</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Primary</strong></td><td>The big compound that drives the session. Squat, deadlift, press, pull, or an Olympic variation.</td><td>Heavy. 3–6 × 1–5 for strength, 1–2 RIR.</td></tr>
+        <tr><td><strong>Secondary</strong></td><td>A supporting compound. Front squat, RDL, incline press, weighted pull-up.</td><td>Moderate. 3–4 × 5–10, near but not at failure.</td></tr>
+        <tr><td><strong>Accessory</strong></td><td>Isolation and health work. Muscles, tendons, and positions that keep the athlete intact.</td><td>Higher reps. 2–4 × 8–20, close to failure for growth.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Strength obeys the same rule as everything else: bias the limitation, maintain the rest. When strength is the headline, it leads, two to three times a week with progressing load. When strength is the support, holding it is cheap: a couple of heavy primary sets once or twice a week, kept fresh and well short of failure, will hold most of an athlete's strength while the conditioning leads. You do not need to chase a new max in a conditioning block.</p>
+
+    <h3>Module 4, session structure and the warm-up</h3>
+    <p>Every session runs the same shape: warm-up, then your priority quality, then supporting work, then cooldown. The highest-quality, highest-skill, most neural work goes first while you are fresh, and the fatiguing work follows. The warm-up has three jobs, done in order:</p>
+    <ul>
+      <li><strong>Raise the temperature.</strong> A few minutes of easy aerobic work. Build domain, easy.</li>
+      <li><strong>Get into position.</strong> Mobility, breathing, and position work that puts the athlete into the structure the session needs. Get the ribs stacked over the pelvis, get a full breath, own the positions you are about to load.</li>
+      <li><strong>Rehearse and ramp.</strong> Rehearse the actual patterns and build toward the working load or speed. By the end, the body should be ready to express, not surprised by it.</li>
+    </ul>
+    <p>The cooldown is the first deposit into the recovery account, and most people skip it. A few minutes of easy Build work, then slow breathing to shift the nervous system from stress toward recovery. This is the same breathing that trains the mental regulate layer, so the cooldown does double duty.</p>
+
+    <h3>Module 5, the weekly engine</h3>
+    <div class="fx-table-wrap">
+    <table class="fx">
+      <thead><tr><th>Day type</th><th>Stress / RPE</th><th>Role</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Development</strong></td><td>High, 9–10</td><td>The expensive day. One or two conditioning methods plus possible max-effort lifting. Drives adaptation.</td></tr>
+        <tr><td><strong>Stimulation</strong></td><td>Moderate, 7–8</td><td>The priming day. Moderate volume and intensity plus one or two core lifts. Sets up development.</td></tr>
+        <tr><td><strong>Recovery</strong></td><td>Low, 6 or less</td><td>Regeneration. Mostly low intensity, stimulating the body without heavy eccentric load.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Week shape: two or three development days, one or two stimulation days, one or two recovery days, one or two off. Stimulation comes before development, you prime then push. Development days carry the Express and upper-Endure work and the mental express work. Stimulation days carry Endure with core lifts and the mental build work. Recovery days are the Build domain by design, and the home for the mental regulate work and the spiritual anchor work.</p>
+
+    <h3>Module 6, building the program</h3>
+    <p>A week becomes a program when you decide how it changes over time. There are two honest ways to build, and good programming uses both.</p>
+    <div class="fx-table-wrap">
+    <table class="fx">
+      <thead><tr><th>Top-down, what should be done</th><th>Bottom-up, what can be done</th></tr></thead>
+      <tbody>
+        <tr><td>Starts from the destination. Picture the whole year or goal, break it into blocks, break blocks into weeks. Keeps you pointed at the goal.</td><td>Starts from reality. What this athlete can actually do right now given qualities, equipment, training age, and how much life and recovery they have left. Keeps the plan honest and doable.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Good programming holds both at once. There is a second pairing on top of this: <strong>proactive</strong> programming is the plan you write in advance; <strong>reactive</strong> programming is what you change once the athlete starts responding. The plan is a hypothesis, and the athlete's response is the data. Be proactive enough to have a real direction and reactive enough to change it when the body tells you to. This is the same idea as bias the limitation, but train the full system, now applied across time.</p>
+
+    <div class="fx-partnav"><a href="#part2">← The Physical Layer</a><a href="#part4">Next: The Mental Layer →</a></div>
+   </div>
+  </section>
+
+  <section class="fx-part" id="part4">
+   <div class="fx-inner">
+    <div class="fx-part-head">
+      <div class="pn">Part IV</div>
+      <h2>The Mental Layer</h2>
+      <div class="pt">Command, whether the capacity shows up when it counts</div>
+    </div>
+    <p class="fx-lead">This is the layer that decides whether the capacity you built in Part II actually shows up under pressure. It runs the same arc as the body, on the same nervous system: regulate, build, express.</p>
+
+    <h3>Regulate, condition the nervous system</h3>
+    <p>Start by learning to settle your own physiology on command. There is a named principle underneath this, the psychophysiological principle described by Green, Green, and Walters in 1970: every change in your physical state comes with a change in your mental state, and the reverse. They move together, always, in both directions. Breathing is the lever you can grab, because it is the one part of that system you can run by hand.</p>
+    <p>Think of it as a gas and a brake. The stress branch of your nervous system is the gas; the recovery branch is the brake. The brake is faster to engage than the gas, which is why this is trainable. You build the brake first, on purpose, so that you can use the gas hard and still come back down. And this is the same recovery state that biases Type 1 function in the muscle, which is why one slow-breathing habit pays off in both the body and the mind.</p>
+    <h4>The breathing toolkit</h4>
+    <ul>
+      <li><strong>To settle down</strong>, slow the breath and stretch the exhale. Diaphragmatic breathing at around five to seven breaths a minute, roughly four seconds in and eight out, for five minutes. The long exhale is what trips the brake. For an instant settle, use a double inhale then a long exhale.</li>
+      <li><strong>To switch on</strong>, do the opposite. Longer, more vigorous inhales with short exhales, a few cycles of thirty seconds to a minute, when you need to come up before a hard effort and you are flat.</li>
+    </ul>
+    <p>Dose it like training: five minutes a day to build the brake, one to three minutes at transitions, one to three breaths inside a reset when you need to drop arousal right now. One warning: do not run the settling version right before you need to be switched on.</p>
+    <h4>Find your line</h4>
+    <p>There is a sweet spot of arousal for performance, the old Yerkes and Dodson curve from 1908: too little and you are flat, too much and you fragment. Hanin's work on the individual zone of optimal functioning makes clear the sweet spot is not the same for everyone or every task. Fine, complex, decision-heavy tasks want lower arousal; raw speed, power, and strength want higher. Know what the task demands, know honestly whether you are above or below your line, then breathe up or down to get there.</p>
+
+    <h3>Build, train attention and mindset</h3>
+    <p>The single most useful distinction here comes from Gardner and Moore: attention is either self-focused or task-focused. Self-focused means you are in your own head, judging yourself, stuck on the last rep. Task-focused means you are absorbed in the thing in front of you. Peak performance is absorption in the task rather than absorption in the self.</p>
+    <p>Attention behaves like a muscle. Four to eight weeks of consistent daily practice improves focus, the ability to reset after a mistake, and emotional steadiness. The mechanism people get wrong: when your mind wanders and you drag it back, that drag back is not a failure, it is the repetition. A wandering mind in practice is not a problem, it is reps. The drills are simple: rest your attention on an object or the breath and return it each time it drifts, run a slow body scan, open to broad awareness, then practise shifting deliberately between these. Three to ten minutes a day is enough to start.</p>
+    <p>How you read a hard situation changes your body's response to it. Crum's work on stress mindset shows that seeing a stressor as a challenge rather than a threat produces a measurably different, more useful physiology, even though the stressor is identical. A study of Navy SEAL training found candidates who held a stress-is-enhancing mindset lasted longer and performed better. This is not pretending something is easy. It is deciding it is a test worth taking rather than a danger to survive.</p>
+
+    <h3>Express, perform under pressure</h3>
+    <p>Express is what you actually run when it counts, a small set of routines you have rehearsed enough that they fire on their own.</p>
+    <ul>
+      <li><strong>Recognise, reset, refocus.</strong> Recognise that your attention has gone self-focused or your arousal is off. Reset with a breath or two, taking in your surroundings. Refocus on the next thing you can actually control. The ability to run this loop fast is the entire difference between one bad rep and a bad session.</li>
+      <li><strong>Control the controllables.</strong> Before a hard event, split it into what you can control and what you cannot, and spend nothing on the second list. What you can always control is short: your mindset, your effort, your attention, your breathing, and your next action.</li>
+      <li><strong>See it before you do it.</strong> Visualization is a real rep. The brain runs a vividly imagined action through close to the same machinery as the real one. Make it vivid using all your senses, make it controllable by rehearsing it going right, run it from inside your own eyes at real speed.</li>
+      <li><strong>Goals that actually drive.</strong> Lead with process and performance goals, the ones you can actually move, and let the outcome take care of itself. Pair them with if-then plans: decide in advance that if a specific obstacle shows up, you will do a specific thing.</li>
+      <li><strong>The pre-performance routine.</strong> One short, identical sequence before every key effort. A breath to set your arousal, a cue word for the one thing that matters, then act.</li>
+    </ul>
+
+    <h3>Sustaining, not burning out</h3>
+    <p>Program these the way you program everything else, onto the day types. Regulate work lives on recovery days and cooldowns; build work fits the moderate stimulation days; express work only truly trains on the hard development days, because composure under fatigue cannot be rehearsed when you are fresh.</p>
+    <p>Push hard without recovering and you climb a ladder you do not want to climb. Kellmann's work lays out the stages: first under-recovery (cheap to fix), then overtraining (weeks to months to come back), then burnout (the urge to quit entirely). Catch it at the bottom, because the bottom is cheap and the top is expensive. Schwartz frames four states: performance (high energy, productive), recovery (low energy, restoring), survival (high energy, unproductive, stuck on the gas), and burnout (low energy, unproductive). Move deliberately between performance and recovery, because if you never deliberately recover, you drift into survival, and survival is the on-ramp to burnout.</p>
+    <div class="fx-box fx-box--caveat">
+      <div class="bx-k">Caveat</div>
+      <p>Skills are trained, not summoned. The mind, like the body, will not produce a skill under pressure that it never built in calm. And performance is not therapy: coaching the performing mind is not treating the struggling one. When something is mental health rather than mental performance, the move is to refer, not to coach.</p>
+    </div>
+    <div class="fx-box fx-box--sources">
+      <div class="bx-k">On sources</div>
+      <p>The psychophysiological principle is Green, Green, and Walters. The self-focused versus task-focused split, and mental toughness as acting on your values under pressure, are Gardner and Moore. The stress-mindset work, including the Navy SEAL study, is Crum and colleagues. The individual optimal-arousal idea is Hanin, on the older Yerkes and Dodson curve. The imagery guidance follows Vealey, the if-then plans follow Oettingen and Gollwitzer, the recovery-stress ladder is Kellmann, the four states are Schwartz, and the readiness check follows Keegan and colleagues. The way these are organised for performance prep owes a debt to a military cognitive-performance manual by Ben Wellborn, adapted here for the athlete.</p>
+    </div>
+
+    <div class="fx-partnav"><a href="#part3">← The Programming Engine</a><a href="#part5">Next: The Spiritual Layer →</a></div>
+   </div>
+  </section>
+
+  <section class="fx-part" id="part5">
+   <div class="fx-inner">
+    <div class="fx-part-head">
+      <div class="pn">Part V</div>
+      <h2>The Spiritual Layer</h2>
+      <div class="pt">Direction, what the whole thing is aimed at</div>
+    </div>
+    <p class="fx-lead">Capacity and composure still need somewhere to point. This is the layer most people have never trained, and the one that gives the other two their meaning. Same shape: anchor, aim, embody.</p>
+
+    <h3>Anchor, stand on something bigger</h3>
+    <p>A person without an anchor drifts. The base of this layer is having something larger than yourself to answer to, the ground everything else is built on. It is the equivalent of regulate. There is a practical handle on this, and it is your values and your why. Frankl and, more recently, Simon Sinek both make the same point: a person who knows why endures things that break a person who does not.</p>
+    <p>So do it on paper. Name your handful of core values, then turn each one from a noun into something you do by adding a verb, so challenge becomes seek out hard things and discipline becomes show up when you do not feel like it. Then find the why underneath your training by asking why about five times, each answer feeding the next question, until you hit something that does not reduce any further. Write that in one sentence. That sentence is what you reach for when the work stops being fun.</p>
+
+    <h3>Aim, aim up</h3>
+    <p>Point yourself at the highest good you can imagine, and willingly take on the responsibility that comes with it. Carry the heaviest load you can, not as punishment, but because a load aimed at something gives your effort a direction instead of just motion. This is the heart of the layer: aiming, not just moving.</p>
+    <p>Life carries a real weight, and a person can meet that weight with resentment and drift, or they can voluntarily pick up a load and aim it at the highest thing they can conceive. Aiming up is what orders the chaos. It turns suffering into something with a point, and it pulls a person toward who they could be rather than letting them settle into who they are. What you aim at is yours, and it shows up in different lives in different ways: the religious person accountable to something above them, the parent carrying more so their family has a better life, the athlete chasing a standard just out of reach. Each is the same move: something above the self, freely served, that gives the effort a direction. The point is not which one you pick. The point is that you have one.</p>
+
+    <h3>Embody, live it out</h3>
+    <p>Conviction in action. The point where physical discipline, mental composure, and belief stop being separate practices and become one identity. Gardner and Moore give the cleanest definition of what this looks like under load: mental toughness, properly understood, is acting toward your values in a purposeful, consistent way even, and especially, when strong emotions are pulling you the other way. It is not the absence of fear, doubt, or the urge to quit. Embodiment is moving toward what you are about anyway, with the fear still there.</p>
+    <div class="fx-box fx-box--hood">
+      <div class="bx-k">Under the hood</div>
+      <p>Meaning changes how much you can carry, and it does it through the nervous system. A person aimed at something higher can tolerate more, because meaning shifts how they read stress, from threat toward challenge, the same mechanism as the mental layer. Direction changes how much weight someone can carry before it crushes them. That is why this layer is not decoration. It raises the ceiling on the other two.</p>
+    </div>
+    <div class="fx-box fx-box--caveat">
+      <div class="bx-k">Caveat</div>
+      <p>This is an invitation, not a rule, offered as a lens rather than a law. The claim is never which anchor you choose, only that you have one. Anyone who reads this and goes looking for their own grounding, wherever it leads, has taken the point. The invitation stays open and is never forced.</p>
+    </div>
+
+    <div class="fx-partnav"><a href="#part4">← The Mental Layer</a><a href="#part6">Next: Integration →</a></div>
+   </div>
+  </section>
+
+  <section class="fx-part" id="part6">
+   <div class="fx-inner">
+    <div class="fx-part-head">
+      <div class="pn">Part VI</div>
+      <h2>Integration, True Hybrid</h2>
+      <div class="pt">Three layers, one nervous system, one calendar</div>
+    </div>
+    <p class="fx-lead">True Hybrid is not three programs stacked on top of each other. It is three layers that share a nervous system and point the same way.</p>
+    <ul>
+      <li><strong>Physical is capacity.</strong> Something to command.</li>
+      <li><strong>Mental is command.</strong> The ability to express that capacity when it counts.</li>
+      <li><strong>Spiritual is direction.</strong> Where it is all aimed.</li>
+    </ul>
+    <p>Train one and neglect the others and you cap the whole system. A strong body with no command chokes. A disciplined mind with no direction drifts. Conviction with no capacity is just talk. The complete picture is the integration: warrior, scholar, and person of conviction as one.</p>
+    <p>And the integration is practical, not just an idea. The day-type model is where it lives. Recovery days build the regulate and anchor base of all three layers. Development days train physical and mental expression together. The way the program phases over time moves all three through regulate, build, express in step. One nervous system, one direction, one calendar.</p>
+    <div class="fx-thesis">Build the base. <em>Earn</em> the expression. Aim it higher.</div>
+    <div class="fx-partnav"><a href="#part5">← The Spiritual Layer</a><a href="#part7">Next: Running It →</a></div>
+   </div>
+  </section>
+
+  <section class="fx-part" id="part7">
+   <div class="fx-inner">
+    <div class="fx-part-head">
+      <div class="pn">Part VII</div>
+      <h2>Running It End to End</h2>
+      <div class="pt">Test, profile, find the limiter, program, monitor, retest</div>
+    </div>
+    <p class="fx-lead">The whole system runs on one loop: test, program, train, monitor, adjust, retest. This part is the operating manual, how you assess an athlete, find the one thing holding them back, build the program around it, and steer by how they respond.</p>
+
+    <h3>1. Assess</h3>
+    <p>The first rule of testing is the most often broken: test what you will program. If you cannot repeat a test, you cannot read change from it, and you are guessing. There are two kinds of testing. <strong>Prescriptive</strong> testing is reproducible, controlled, cyclical work that gives you numbers to program against (a Critical Power test, a rep-max, a measured time trial). <strong>Descriptive</strong> testing is messy, mixed, sport-like work that describes the athlete's state and where they break (a benchmark workout, a step test). Lead with prescriptive when you want numbers; use descriptive to understand the athlete and find where the wheels come off.</p>
+    <div class="fx-table-wrap">
+    <table class="fx">
+      <thead><tr><th>Test</th><th>Type</th><th>What it gives you</th></tr></thead>
+      <tbody>
+        <tr><td>Critical Power test (3 min + 12 min)</td><td>Prescriptive</td><td>Sustainable power and short reserve. Turns generic zones into real watts.</td></tr>
+        <tr><td>Distance time trial (2k row, 5k run)</td><td>Prescriptive</td><td>Pace at the edge. Sets exact paces for running and rowing intervals.</td></tr>
+        <tr><td>Rep-max test (3–5 reps)</td><td>Prescriptive</td><td>Working loads for strength. Sets weights and progression.</td></tr>
+        <tr><td>Step test on the bike</td><td>Descriptive</td><td>Where effort, heart rate, and form come apart. Points at the limiter.</td></tr>
+        <tr><td>Benchmark mixed workout</td><td>Descriptive</td><td>How the athlete holds up under real mixed fatigue.</td></tr>
+        <tr><td>Movement screen</td><td>Descriptive</td><td>Structure and position limits. What to fix before you load a pattern.</td></tr>
+        <tr><td>Resting HR and HRV trend</td><td>Descriptive</td><td>Readiness over time. Used day to day, not as a one-off.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <h4>Telling the limiters apart: central, peripheral, or tension</h4>
+    <p>When the engine is the problem, it can sit in three places. <strong>Central</strong> means delivery: the heart and lungs cannot move enough oxygen, so the whole system runs out at once, breathlessness with the heart rate pinned near max. It improves when you train delivery. <strong>Peripheral</strong> means use: one muscle burns out and fails locally while breathing is not maxed. It improves with local muscular endurance, threshold work, and the capillary and mitochondrial work that lets a muscle use what arrives. <strong>Tension</strong> is an efficiency problem: the athlete braces and grips harder than the task needs and chokes off their own blood supply. It improves with skill, breathing, and position rather than more conditioning.</p>
+    <h4>Finding the zones without a lab</h4>
+    <p>Most athletes will never see a lactate analyser, and they do not need one. If you have power or pace, use the Critical Power test or a time trial and set the zones off that number. If you do not, use heart rate and the talk test. To use heart-rate zones you need a real maximum, found with a hard ramp test, not the crude 220-minus-age formula. Heart rate lags, so do not chase a heart-rate number on Express work; pace those by power, pace, or feel. Where heart rate earns its keep is the easy end, keeping Build work honestly easy, and reading decoupling on long efforts.</p>
+    <div class="fx-box fx-box--apply">
+      <div class="bx-k">Apply it</div>
+      <p>For your current goal, name your one limiter. Write that work precisely, with real numbers and a week-to-week progression. Then take everything else in your week and switch it to feel: an RIR on the lifts, an RPE on the conditioning. Hold the limiter work no matter what, and let the feel-based work rise and fall with how you turn up each day. Notice how much less beaten up you feel while the priority still moves.</p>
+    </div>
+
+    <h3>2. Build the profile and find the limiter</h3>
+    <p>Before any numbers, two questions frame the whole athlete: <strong>Where did they come from? Where do they want to go?</strong> From there, three blunt questions do most of the work: where did you come from, what are you good at, and what do you suck at? The last one is usually pointing at the limiter.</p>
+    <p>Limiters cluster into six levers you can change: structure and position, strength and tension, cardiac output, skill, VO2max, and expression. Keep what the athlete is (the archetype) separate from how you change them (these six). Walk the list against the goal: are they sufficient in each one, for their sport? The first no that blocks everything downstream is the limiter.</p>
+    <h4>The decision-making process</h4>
+    <p>Finding the limiter is a fixed sequence, run as a loop. Strength gates structure, structure gates skill, skill gates function. You do not move past a gate until it is sufficient.</p>
+    <ol>
+      <li>Are they strong enough for their sport? If not, bias strength before going on. Then retest.</li>
+      <li>If strong enough, look at how efficient they are at the task.</li>
+      <li>If not efficient, look at structure. If structure is the limit, train it before going on, then retest the task.</li>
+      <li>If efficient at the task, train the function itself.</li>
+      <li>If function is not improving, go back to the start.</li>
+    </ol>
+    <p>Then place two things on the Build, Endure, Express line, separately: where the sport's demand actually sits, and where the athlete's current conditioning is pointed. The gap between them is the program. A lot of athletes are conditioning a domain their sport never asks for, and that mismatch is usually the fastest win.</p>
+
+    <h3>3. Program</h3>
+    <p>With the limiter found, the build is mechanical. Pick the domain the limiter points to. Pick the method from the library, cyclical or mixed. Choose exercises at the right progression level. Put them on the right day type. Set which domain leads across the block, and let the others sit on a maintenance dose, prescribed precisely if they are the limiter and run on feel if they are not.</p>
+
+    <h3>4. Monitor and autoregulate</h3>
+    <p>Steer by response. Two things sit above everything else. <strong>Tension</strong> is how you build and how you choke off blood supply and add fatigue; mismanaged, it is the quiet source of most interference and connective-tissue injury. <strong>Fatigue</strong> is paid from three accounts, training, life, and recovery, and the body cannot tell them apart. Keep monitoring to a few numbers you will actually log: every day, resting heart rate and HRV, sleep, a soreness score, and an honest energy and motivation rating; every session, what you did and the RPE and RIR; every week, a five-minute review of whether the limiter is moving. The back-off signals are consistent: resting heart rate creeping up, HRV sliding, bar speed stalling, loads feeling harder, sleep falling apart, motivation draining. One is noise. Several together, for several days, is the body telling you to deload.</p>
+
+    <h3>5. Adjust, and test sparingly</h3>
+    <p>Run a method until it stops improving, then change to attack the next limiter. Back off on the data, not the calendar. Adjusting does not mean formally retesting at the end of every block, have confidence in the prescriptions and let the training report back: a fixed top set shows the strength trend, easy work at a set heart rate shows the engine trend. Save the formal retest for the end of a cycle, when a taper has cleared the fatigue and the number is honest.</p>
+    <h4>The deload</h4>
+    <p>A deload is a planned step back so the body can catch up and absorb the work. The trigger is mostly the data, but it is also fine to plan one proactively every four to six weeks in a hard block. The protocol is simple: drop volume by roughly fifteen to twenty percent and hold the intensity. You cut the amount of work, not the sharpness, so you shed fatigue while keeping the quality and the skill. A deload is not lost time. It is when the previous block's training actually turns into adaptation.</p>
+
+    <h3>6. Recovery is a programmed variable</h3>
+    <p>Recovery, sleep, hydration, and nutrition are not things that happen around the training. They are part of it, prescribed with the same intent as a hard interval, and they are the three non-training accounts that decide whether the training works at all. Sleep is where adaptation happens and the cheapest gain available. Nutrition matches intake to intent. Hydration, even mild dehydration raises effort and drops output. Active recovery, easy Build work, mobility, and breathing, is the regeneration engine that makes the expensive days repeatable.</p>
+    <div class="fx-box fx-box--apply">
+      <div class="bx-k">Apply it</div>
+      <p>Score your last week on the four foundations, sleep, nutrition, hydration, and active recovery, out of ten each. The lowest score is almost certainly costing you more than any tweak to your sets and reps. Fix that one first, and only then go looking for a programming change.</p>
+    </div>
+    <div class="fx-partnav"><a href="#part6">← Integration</a><a href="#part8">Next: Putting It Together →</a></div>
+   </div>
+  </section>
+
+  <section class="fx-part" id="part8">
+   <div class="fx-inner">
+    <div class="fx-part-head">
+      <div class="pn">Part VIII</div>
+      <h2>Putting It Together</h2>
+      <div class="pt">One athlete, the whole model, end to end</div>
+    </div>
+    <p class="fx-lead">Everything in this book is theory until you run it on a real person. So here is the whole model applied to one athlete, from the first conversation to a written session. The numbers are an example, not a prescription.</p>
+
+    <h3>The athlete</h3>
+    <p>Call him Sam. He is thirty-two, has a demanding full-time job, a commute, and average sleep, and trains five or six times a week with a few years of CrossFit behind him. He squats 205 kilos, which is genuinely strong, but he runs a slow five kilometres at around twenty-six minutes and gasses out badly late in any long workout. He wants a much bigger engine and a faster five kilometre, over twelve weeks, while holding the strength he already has. His job and sleep already draw on the same finite pool that training draws from, so whatever we build has to fit inside what he can actually recover from.</p>
+
+    <h3>Assess and find the limiter</h3>
+    <p>He came from a strength and short-power background and wants a durable engine. He is good at strength and short bursts; he sucks at holding output for a long time, and at pacing. Testing confirms it: a Critical Power test shows a strong short reserve and a weak sustainable engine; a five-kilometre time trial confirms the slow aerobic pace; a benchmark long workout shows him starting fast and falling apart in the back half; a movement screen shows him a little extended and braced from years of heavy lifting.</p>
+    <p>Run the decision process. Strong enough for the goal? Easily, so strength moves to maintenance. Efficient at the long task? No, mostly engine, with some structure feeding it. The limiter is the Build and Endure engine, plus pacing. His conditioning currently lives almost entirely in hard mixed Express pieces, with no Build base underneath. That gap, a missing base, is the fastest win. We bias the engine and hold his strength.</p>
+
+    <h3>Program, twelve weeks</h3>
+    <div class="fx-table-wrap">
+    <table class="fx">
+      <thead><tr><th>Block</th><th>Lead</th><th>Conditioning</th><th>Strength &amp; size</th></tr></thead>
+      <tbody>
+        <tr><td><strong>1</strong> (wk 1–4)</td><td>Build</td><td>Aerobic Base with easy running introduced, low impact. Pacing practice.</td><td>Maintain on low-fatigue lifts: reverse-banded squats, heavy concentric trap-bar pulls. Daily position and breathing.</td></tr>
+        <tr><td><strong>2</strong> (wk 5–8)</td><td>Build (extended)</td><td>Bigger base. More slow-running volume, longer easy sessions, plus Build skill and endurance.</td><td>Same low-fatigue lifts, still just holding strength. No tempo squatting.</td></tr>
+        <tr><td><strong>3</strong> (wk 9–12)</td><td>Endure + Build</td><td>Threshold and tempo running on the bigger base, with mixed Endure. No Express, a 5 km does not need it.</td><td>Strength held. Weeks 11–12: slight volume drop, daily readiness scoring, then retest.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Top-down sets the direction: engine-led, base built long, no Express work at all. Bottom-up keeps it honest: his busy life caps the volume, the lifting stays light and concentric so it never robs the running, and the final weeks are scored daily so he only peaks if he is genuinely ready. The whole plan is proactive, steered reactively by what his readiness and his running actually do.</p>
+
+    <h3>A session, written out</h3>
+    <p>Here is the Monday from block two in full, so you can see the structure module in action even on a base-building week.</p>
+    <div class="fx-table-wrap">
+    <table class="fx">
+      <thead><tr><th>Block</th><th>Work</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Warm-up</strong></td><td>5 min easy bike. Then position and breathing: 90/90 breaths, dead bug, get stacked. Then ramp into the squat.</td><td>Raise temperature, get into position, rehearse and build to load.</td></tr>
+        <tr><td><strong>Primary</strong></td><td>Reverse-banded back squat, 4 × 4, light and fast off the bottom, well short of failure.</td><td>Keeps the squat pattern sharp with almost no fatigue cost.</td></tr>
+        <tr><td><strong>Strength</strong></td><td>Trap-bar deadlift, work up to one heavy top set of 3 at 2–3 RIR. Same target every week.</td><td>One heavy exposure holds strength concentrically. The identical top set doubles as a strength gauge.</td></tr>
+        <tr><td><strong>Conditioning</strong></td><td>Easy Build, 30–40 min on the bike or an easy run @ RPE 4.</td><td>The engine work. Easy and aerobic, the base he is here to build.</td></tr>
+        <tr><td><strong>Accessory</strong></td><td>Hamstrings, calves, trunk, 2–3 sets each.</td><td>Connective-tissue health and a little size, low cost, at the end.</td></tr>
+        <tr><td><strong>Cooldown</strong></td><td>3 min easy spin, then 3 min slow breathing at six breaths a minute.</td><td>Start recovery and train down-regulation. The cooldown does double duty.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Notice the autoregulation. The trap-bar top set is fixed at 3 reps at 2–3 RIR every week, so the work-up carries the volume and the top set doubles as a strength gauge: hold the reps in reserve fixed and watch whether the load creeps up, holds, or slips. On a heavy-legged day after a long run he simply hits the same RIR at whatever load is honest that day, and the running stays protected. That is bias the limitation, train the full system, inside a single session.</p>
+    <div class="fx-box fx-box--apply">
+      <div class="bx-k">Apply it</div>
+      <p>Run yourself through this exact sequence. Write your athlete, or yourself, in a paragraph. List what you are good at and what you suck at. Pick the single limiter. Sketch three blocks that bias it while holding the rest. Then write one full session, warm-up to cooldown, with the priority work prescribed tightly and everything else on feel. That document is a True Hybrid program.</p>
+    </div>
+    <div class="fx-partnav"><a href="#part7">← Running It</a><a href="#reference">Next: Quick Reference →</a></div>
+   </div>
+  </section>
+
+  <section class="fx-part" id="reference">
+   <div class="fx-inner">
+    <div class="fx-part-head">
+      <div class="pn">Reference</div>
+      <h2>Quick Reference &amp; Glossary</h2>
+      <div class="pt">The model on a page</div>
+    </div>
+
+    <h3>The loop</h3>
+    <p>Test, program, train, monitor, adjust, retest. Find the limiter, bias it while holding the rest, steer by the athlete's response, and rotate the lead when it moves.</p>
+
+    <h3>The domains at a glance</h3>
+    <div class="fx-table-wrap">
+    <table class="fx">
+      <thead><tr><th>Domain</th><th>Zones</th><th>% max HR</th><th>RPE</th><th>Talk test</th><th>Recovery</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Build</strong></td><td>Z1–Z2</td><td>50–75%</td><td>3–5</td><td>Full conversation</td><td>Daily, low cost</td></tr>
+        <tr><td><strong>Endure</strong></td><td>Z3–Z4</td><td>75–90%</td><td>6–8</td><td>Short sentences</td><td>24–48 hours</td></tr>
+        <tr><td><strong>Express</strong></td><td>Z5–Z6</td><td>90–100%</td><td>9–10</td><td>Cannot talk</td><td>~72 hours</td></tr>
+        <tr><td><strong>Z7</strong></td><td>Z7</td><td>n/a</td><td>Max</td><td>n/a</td><td>Low, full rest</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>The day types</h3>
+    <p><strong>Development</strong> (high, RPE 9–10), the expensive day that drives adaptation. <strong>Stimulation</strong> (moderate, RPE 7–8), the priming day. <strong>Recovery</strong> (low, RPE 6 or less), regeneration that still does something useful. Stim before Dev, recovery after the hardest day.</p>
+
+    <h3>The decision process, in one line</h3>
+    <p>Strong enough? If not, build strength. Then: efficient at the task? If not, fix structure or skill. Then: train the function. If it is not improving, start again.</p>
+
+    <h3>Glossary</h3>
+    <div class="fx-table-wrap">
+    <table class="fx">
+      <tbody>
+        <tr><td><strong>Build, Endure, Express</strong></td><td>The three energy domains, from easy and sustainable to maximal and brief, split by the thresholds T1 and T2.</td></tr>
+        <tr><td><strong>Supply, Balance, Expression</strong></td><td>The internal-state spectrum. Supply is the heart and lungs, expression is the muscles, balance is the hybrid in the middle.</td></tr>
+        <tr><td><strong>T1, T2</strong></td><td>The two thresholds that divide the domains. T1 sits between Z2 and Z3, T2 between Z4 and Z5.</td></tr>
+        <tr><td><strong>Critical Power (CP)</strong></td><td>The hardest effort you can hold for a long time without falling apart. Anchors the zones.</td></tr>
+        <tr><td><strong>Reserve</strong></td><td>The small tank of effort you can spend above Critical Power, which runs out fast and needs refilling.</td></tr>
+        <tr><td><strong>Cyclical / Mixed</strong></td><td>Two modes of conditioning. Cyclical is one repeatable, measurable action. Mixed blends several movements, with more tension and skill.</td></tr>
+        <tr><td><strong>RPE / RIR</strong></td><td>Rate of perceived exertion out of ten, and reps in reserve on a lift. Both let you prescribe and autoregulate by feel.</td></tr>
+        <tr><td><strong>The cascade</strong></td><td>The oxygen supply chain: lungs take oxygen up, heart transports it, muscle expresses it. Different from the training domains.</td></tr>
+        <tr><td><strong>Sufficiency</strong></td><td>Some qualities only need to be good enough for the sport, not maximal. Stop building a support quality once it is sufficient.</td></tr>
+        <tr><td><strong>Bias the limitation</strong></td><td>Give the limiting quality the lead while holding everything else on a maintenance dose. The core operating rule.</td></tr>
+        <tr><td><strong>Top-down / bottom-up</strong></td><td>Two directions of planning. Top-down works back from the goal. Bottom-up works up from what the athlete can do now.</td></tr>
+        <tr><td><strong>Proactive / reactive</strong></td><td>The plan you write in advance, and the changes you make once the athlete responds. You need both.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="fx-partnav"><a href="#part8">← Putting It Together</a><a href="#top">Back to top ↑</a></div>
+   </div>
+  </section>
+
+  </main>
+
+  <section class="fx-dl">
+    <div class="fx-dl-inner">
+      <div class="eyebrow">Take it with you</div>
+      <h2>The complete framework, as a PDF.</h2>
+      <p>The whole master document in one file, formatted for print and offline reading. Yours to keep.</p>
+      <a href="../downloads/true-hybrid-framework.pdf" class="btn" download>Download the PDF</a>
+    </div>
+  </section>
+
+  <footer class="mdt-footer">
+    <a href="../" class="th-brand th-brand--footer" aria-label="True Hybrid, home">
+      <span class="th-true">true</span><span class="th-hybrid">HYBRID</span>
+    </a>
+    <p>The complete framework. Physical, mental, spiritual, one nervous system, one calendar. <a href="../" style="color:var(--brass); text-decoration:none;">Back to the tools →</a></p>
+    <p class="footer-help" style="color:var(--smoke); font-size:11px; margin-top:10px;">Struggling more than usual? You don't have to carry it alone, reach out to someone you trust or a professional.</p>
+    <div class="footer-bar">
+      <span>© <span id="year"></span> True Hybrid</span>
+      <span>No tracking · No ads · No bullsh*t</span>
+    </div>
+  </footer>
+
+</div>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){});});}</script>
+</body>
+</html>
