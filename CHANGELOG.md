@@ -31,7 +31,12 @@ Retired the MDT / Modern Day Templar identity. The site is now **True Hybrid** e
 - **Placeholder tools + Vanguard rebranded.** running / strength / stretching and the Vanguard page carry the new lockup, dark heroes, and framework-tied taglines (Critical Power zones, the Express end, position + breathing).
 - **Weekly form renamed** `mdt-weekly` to `th-weekly` on the homepage.
 
-**Flag, audit + nutrition tool pages:** the source HTML for `tools/audit/index.html` and `tools/nutrition/index.html` was not part of this pass, so those two files are unchanged and still carry MDT chrome. They need the same find-replace (topbar/footer lockup, PWA meta title, `<title>`, footer copy, and any `mdt-weekly` form name to `th-weekly`). The homepage already links to both at their correct paths, so on the live site the links work; only the in-page branding needs updating. Send those two files to finish them.
+**Audit + nutrition tools rebuilt.** The original `tools/audit/index.html` and `tools/nutrition/index.html` source was never available (not in the uploads, the project, or the project knowledge), and on a fresh deploy of the rebranded package those two links led nowhere. Both were rebuilt from scratch as working, self-contained True Hybrid pages:
+
+- **Nutrition Tool** (`tools/nutrition/index.html`): macro calculator (Mifflin-St Jeor, metric/imperial, activity + goal, calorie floor), editable daily target, weekly planner in daily-variety or bulk-prep mode, 5/4/3/2 meal layouts, vegetarian/vegan/gluten-free/no-nuts filters, per-meal calorie scaling to hit the target, delivered-vs-target readout with the `OFF_TARGET = 0.10` colour rule and swap-impact note, per-recipe modal, meal swap, and a jsPDF plan export. Verified against the real 200-recipe `data/recipes.json`: calories land on target, fibre totals shown.
+- **Dopamine Audit** (`tools/audit/index.html`): 12 questions across four grips (reflex, scroll, protection, baseline), scored 0-3 each, a verdict band on the total, a per-grip breakdown highlighting the tightest grip, and a handoff to the matching practice-card PDF already in `downloads/` (break-the-reflex / kill-the-scroll / protect-what-matters / reset-your-baseline). Runs entirely client-side, nothing stored.
+
+_Note: these are faithful rebuilds to the documented spec, not the original files. If the originals turn up, they can be dropped back in, they only need the same brand pass (topbar/footer lockup, PWA title, `<title>`, footer copy, `mdt-weekly` to `th-weekly`)._
 
 ### Earlier sessions (pre-rebrand, still current)
 
@@ -43,7 +48,7 @@ Retired the MDT / Modern Day Templar identity. The site is now **True Hybrid** e
 
 ## Open follow-ups
 
-- **Finish audit + nutrition rebrand** once those two files are provided (see flag above).
+- **Audit + nutrition** are working rebuilds; swap in the originals if you still have them (see note above).
 - **Paid tier:** revisit any "free" labels when a subscription launches.
 - **Vanguard** is an unlinked coming-soon page; wire navigation to it when the offer is ready.
 - **PWA** install/offline needs HTTPS and a second visit; verify on the live domain.

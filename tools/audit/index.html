@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#15181e">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="True Hybrid">
+<title>The Dopamine Audit, True Hybrid</title>
+<meta name="description" content="A 12-question, 4-minute self-audit on your phone, dopamine, and doomscrolling. Find where the grip is tightest and get the one fix to run first. Runs entirely in your browser.">
+<link rel="stylesheet" href="../../assets/styles.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2315181e'/%3E%3Ctext x='16' y='23' text-anchor='middle' fill='%237cc4e8' font-family='Arial,sans-serif' font-size='20' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E">
+<style>
+.au-hero { padding: 48px 24px 28px; background: linear-gradient(180deg, var(--coal) 0%, var(--ink) 100%); color: var(--bone); }
+.au-hero .eyebrow{ color:var(--brass); }
+.au-hero h1 { color: var(--bone); font-family: var(--display); font-size: clamp(32px,5vw,52px); font-weight: 900; letter-spacing: -0.03em; margin: 8px 0 12px; }
+.au-hero h1 em { font-style: normal; color: var(--brass); }
+.au-hero p { color: var(--cream); max-width: 600px; font-size: 15px; line-height: 1.6; opacity: 0.9; }
+.au-wrap { padding: 32px 24px 64px; background: var(--bone); }
+.au-panel { max-width: 700px; margin: 0 auto; }
+
+.au-progress { height: 4px; background: var(--cream); margin-bottom: 30px; }
+.au-progress .bar { height: 100%; background: var(--brass); width: 0; transition: width 0.3s; }
+
+.au-q { margin-bottom: 6px; }
+.au-qnum { font-family: var(--display); font-style: normal; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--brass-dim); font-weight: 700; }
+.au-qtext { font-family: var(--display); font-style: normal; font-size: 22px; font-weight: 800; line-height: 1.25; color: var(--ink); margin: 8px 0 22px; letter-spacing: -0.01em; }
+.au-opts { display: grid; gap: 10px; }
+.au-opt { text-align: left; background: var(--paper); border: 1px solid var(--cream); border-left: 3px solid var(--cream); padding: 15px 18px; font-family: var(--body); font-size: 15px; color: var(--char); cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+.au-opt:hover { border-left-color: var(--brass); background: var(--bone); }
+.au-opt.sel { border-left-color: var(--brass); background: var(--bone); color: var(--ink); font-weight: 600; }
+.au-nav { display: flex; justify-content: space-between; margin-top: 26px; }
+.au-back { background: none; border: none; color: var(--smoke); font-family: var(--body); font-size: 13px; font-weight: 600; cursor: pointer; }
+.au-back:hover { color: var(--ink); }
+
+/* results */
+.au-results { display: none; }
+.au-verdict { background: var(--ink); color: var(--bone); padding: 30px 26px; }
+.au-verdict .k { font-family: var(--display); font-style: normal; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass); font-weight: 700; }
+.au-verdict h2 { color: var(--bone); font-family: var(--display); font-size: 30px; font-style: normal; margin: 8px 0 12px; }
+.au-verdict p { color: var(--cream); font-size: 15px; line-height: 1.6; opacity: 0.92; }
+.au-bars { padding: 26px; background: var(--paper); }
+.au-bars h3 { font-family: var(--display); font-style: normal; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brass-dim); margin-bottom: 16px; }
+.au-bar { margin-bottom: 16px; }
+.au-bar .lab { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 6px; }
+.au-bar .lab .n { font-weight: 600; color: var(--ink); }
+.au-bar .lab .s { color: var(--smoke); font-family: var(--display); font-style: normal; }
+.au-bar .track { height: 8px; background: var(--cream); }
+.au-bar .fill { height: 100%; background: var(--brass-dim); }
+.au-bar.top .fill { background: var(--warn); }
+.au-bar.top .lab .n::after { content: ' · tightest grip'; color: var(--warn); font-weight: 700; font-size: 12px; }
+
+.au-fix { padding: 30px 26px; background: var(--bone); border-top: 1px solid var(--cream); }
+.au-fix .k { font-family: var(--display); font-style: normal; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass-dim); font-weight: 700; }
+.au-fix h3 { font-family: var(--display); font-size: 26px; font-style: normal; margin: 8px 0 12px; }
+.au-fix p { font-size: 15px; color: var(--char); line-height: 1.62; margin-bottom: 18px; }
+.au-fix .btn { margin-right: 10px; }
+.au-fix .again { background:none; border:1px solid var(--cream); color:var(--brass-dim); padding:13px 20px; font-family:var(--body); font-size:11px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; cursor:pointer; }
+.au-soft { font-size: 13px; color: var(--smoke); margin-top: 18px; line-height: 1.55; }
+.au-priv { font-size: 12px; color: var(--smoke); margin-top: 24px; text-align:center; }
+@media (max-width:720px){ .au-hero{padding:36px 18px 24px;} .au-wrap{padding:24px 16px 48px;} .au-qtext{font-size:19px;} }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <header class="mdt-topbar">
+    <a href="../../" class="th-brand" aria-label="True Hybrid, home">
+      <span class="th-true">true</span><span class="th-hybrid">HYBRID</span>
+    </a>
+    <nav class="mdt-nav">
+      <a href="../../">All tools</a>
+      <a href="../../framework/">Framework</a>
+      <a href="" class="active">The Audit</a>
+    </nav>
+  </header>
+
+  <section class="au-hero">
+    <div class="eyebrow">Mind &amp; Direction</div>
+    <h1>The Dopamine <em>Audit</em>.</h1>
+    <p>Twelve questions, about four minutes. An honest read on your phone, your dopamine, and the scroll, to find where the grip is tightest and hand you the one fix to run first. Nothing is saved or sent, it all runs in your browser.</p>
+  </section>
+
+  <div class="au-wrap">
+   <div class="au-panel">
+
+    <div id="au-quiz">
+      <div class="au-progress"><div class="bar" id="au-bar"></div></div>
+      <div class="au-q">
+        <div class="au-qnum" id="au-qnum">Question 1 of 12</div>
+        <div class="au-qtext" id="au-qtext"></div>
+        <div class="au-opts" id="au-opts"></div>
+      </div>
+      <div class="au-nav">
+        <button class="au-back" id="au-backbtn" style="visibility:hidden;">&larr; Back</button>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="au-results" id="au-results">
+      <div class="au-verdict">
+        <div class="k">Your read</div>
+        <h2 id="au-vtitle"></h2>
+        <p id="au-vtext"></p>
+      </div>
+      <div class="au-bars">
+        <h3>Where the grip is</h3>
+        <div id="au-barlist"></div>
+      </div>
+      <div class="au-fix">
+        <div class="k">Your first fix</div>
+        <h3 id="au-fixtitle"></h3>
+        <p id="au-fixtext"></p>
+        <a class="btn" id="au-carddl" download>Download the card</a>
+        <button class="again" id="au-again">Retake</button>
+        <div class="au-soft">This is the fix for the pattern that scored tightest. Run it for a week before you add another, the other three are waiting when you're ready. The card is one page: why it's the fight, how it works, the practice, and a seven-day tracker.</div>
+      </div>
+    </div>
+
+    <div class="au-priv">Private by design. No account, no storage, no tracking. Refresh and it's gone.</div>
+
+   </div>
+  </div>
+
+  <footer class="mdt-footer">
+    <a href="../../" class="th-brand th-brand--footer" aria-label="True Hybrid, home">
+      <span class="th-true">true</span><span class="th-hybrid">HYBRID</span>
+    </a>
+    <p>The complete framework, plus free training and nutrition tools. <a href="../../" style="color:var(--brass); text-decoration:none;">See all tools &rarr;</a></p>
+    <p class="footer-help" style="color:var(--smoke); font-size:11px; margin-top:10px;">Struggling more than usual? You don't have to carry it alone, reach out to someone you trust or a professional.</p>
+    <div class="footer-bar">
+      <span>&copy; <span id="year"></span> True Hybrid</span>
+      <span>No tracking &middot; No ads &middot; No bullsh*t</span>
+    </div>
+  </footer>
+
+</div>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){});});}
+
+const OPTS = ['Not me','Sometimes','Often','That\u2019s me, most days'];
+
+const QUESTIONS = [
+  { axis:'reflex', text:'First thing when you wake, your hand finds your phone before you\u2019re really conscious.' },
+  { axis:'scroll', text:'You open an app for one thing and surface twenty minutes later, having forgotten what.' },
+  { axis:'protect', text:'The phone comes to meals, or interrupts time with people you actually care about.' },
+  { axis:'baseline', text:'A book, a walk, or a slow conversation has started to feel flat or boring.' },
+  { axis:'reflex', text:'You pick the phone up without deciding to, then wonder why it\u2019s in your hand.' },
+  { axis:'scroll', text:'You keep scrolling a feed well past the point it\u2019s giving you anything.' },
+  { axis:'protect', text:'You lose sleep to the screen, one more video, later than you meant to.' },
+  { axis:'baseline', text:'You need a second screen going, phone in hand while you watch, eat, or walk.' },
+  { axis:'reflex', text:'Your phone sleeps within arm\u2019s reach of your bed.' },
+  { axis:'scroll', text:'Something outside the app, a call, someone walking in, is usually what makes you stop.' },
+  { axis:'protect', text:'When a feeling shows up that you\u2019d rather not sit with, the phone is the nearest exit.' },
+  { axis:'baseline', text:'Quiet or boredom makes you reach for a hit almost straight away.' },
+];
+
+const AXES = {
+  reflex:   { name:'The reflex grab', file:'break-the-reflex.pdf',    piece:'Break the Reflex',    blurb:'Your hand moves before you do. The fix kills the cues and adds friction to the grab, so the reflex has nothing to fire on. Change the environment, not your willpower.' },
+  scroll:   { name:'The endless scroll', file:'kill-the-scroll.pdf',   piece:'Kill the Scroll',     blurb:'Feeds have no bottom on purpose. The fix builds the edge the app refuses to give you: a hard time limit and real friction on opening, so a graze becomes a short, deliberate visit.' },
+  protect:  { name:'What it\u2019s costing', file:'protect-what-matters.pdf', piece:'Protect What Matters', blurb:'The real cost isn\u2019t screen time, it\u2019s what that time quietly replaces, your sleep, your focus, the people in the room. The fix fences off a few things the phone isn\u2019t allowed to touch, and defends them.' },
+  baseline: { name:'The flattened baseline', file:'reset-your-baseline.pdf', piece:'Reset Your Baseline', blurb:'A constant drip of fast novelty raises the bar for what registers as interesting, so ordinary things feel dull. The fix spends time below the line on purpose, until slow rewards land again.' },
+};
+
+const VERDICTS = [
+  { max:8,  title:'Light grip.', text:'The phone isn\u2019t running you. There\u2019s one pattern worth tightening up, but you\u2019re mostly in the driver\u2019s seat. Run the fix below to close the last gap.' },
+  { max:17, title:'Some pull.', text:'Nothing out of control, but there\u2019s a clear pull in one direction. Left alone it tends to grow. Take the one fix below and hold it for a week before anything else.' },
+  { max:26, title:'Real grip.', text:'The phone has a genuine hold on more than one front. That\u2019s the design working as intended, not a character flaw. Don\u2019t try to fix all of it, take the single tightest grip below and start there.' },
+  { max:36, title:'Tight grip.', text:'The device is winning most of the day right now. The way back isn\u2019t willpower against all of it at once, it\u2019s one change, run until it holds, then the next. Start with the tightest grip below.' },
+];
+
+let current=0; const answers=new Array(QUESTIONS.length).fill(null);
+
+function render(){
+  const q=QUESTIONS[current];
+  document.getElementById('au-qnum').textContent=`Question ${current+1} of ${QUESTIONS.length}`;
+  document.getElementById('au-qtext').textContent=q.text;
+  document.getElementById('au-bar').style.width=`${(current/(QUESTIONS.length))*100}%`;
+  const wrap=document.getElementById('au-opts'); wrap.innerHTML='';
+  OPTS.forEach((label,val)=>{
+    const b=document.createElement('button');
+    b.className='au-opt'+(answers[current]===val?' sel':'');
+    b.textContent=label;
+    b.addEventListener('click',()=>{ answers[current]=val; if(current<QUESTIONS.length-1){ current++; render(); } else { finish(); } });
+    wrap.appendChild(b);
+  });
+  document.getElementById('au-backbtn').style.visibility=current>0?'visible':'hidden';
+}
+document.getElementById('au-backbtn').addEventListener('click',()=>{ if(current>0){ current--; render(); } });
+
+function finish(){
+  const scores={reflex:0,scroll:0,protect:0,baseline:0};
+  QUESTIONS.forEach((q,i)=> scores[q.axis]+= (answers[i]||0));
+  const total=Object.values(scores).reduce((a,b)=>a+b,0);
+  const order=Object.keys(scores).sort((a,b)=>scores[b]-scores[a]);
+  const top=order[0];
+  const verdict=VERDICTS.find(v=>total<=v.max);
+
+  document.getElementById('au-vtitle').textContent=verdict.title;
+  document.getElementById('au-vtext').textContent=verdict.text;
+
+  const list=document.getElementById('au-barlist'); list.innerHTML='';
+  order.forEach(ax=>{
+    const pct=Math.round((scores[ax]/9)*100);
+    const div=document.createElement('div');
+    div.className='au-bar'+(ax===top?' top':'');
+    div.innerHTML=`<div class="lab"><span class="n">${AXES[ax].name}</span><span class="s">${scores[ax]}/9</span></div><div class="track"><div class="fill" style="width:${pct}%"></div></div>`;
+    list.appendChild(div);
+  });
+
+  const a=AXES[top];
+  document.getElementById('au-fixtitle').textContent=a.piece;
+  document.getElementById('au-fixtext').textContent=a.blurb;
+  document.getElementById('au-carddl').href='../../downloads/'+a.file;
+
+  document.getElementById('au-bar').style.width='100%';
+  document.getElementById('au-quiz').style.display='none';
+  document.getElementById('au-results').style.display='block';
+  document.getElementById('au-results').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+document.getElementById('au-again').addEventListener('click',()=>{
+  current=0; answers.fill(null);
+  document.getElementById('au-results').style.display='none';
+  document.getElementById('au-quiz').style.display='block';
+  render();
+  document.getElementById('au-quiz').scrollIntoView({behavior:'smooth',block:'start'});
+});
+
+render();
+</script>
+</body>
+</html>

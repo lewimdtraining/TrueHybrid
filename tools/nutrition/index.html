@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#15181e">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="True Hybrid">
+<title>Nutrition Tool, True Hybrid</title>
+<meta name="description" content="Calculate your daily macros and build a week of meals from a library of 200 recipes. Bulk-prep or daily variety, with food-preference filters. Runs entirely in your browser.">
+<link rel="stylesheet" href="../../assets/styles.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2315181e'/%3E%3Ctext x='16' y='23' text-anchor='middle' fill='%237cc4e8' font-family='Arial,sans-serif' font-size='20' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E">
+<style>
+.nt-hero { padding: 48px 24px 28px; background: linear-gradient(180deg, var(--coal) 0%, var(--ink) 100%); color: var(--bone); }
+.nt-hero .eyebrow { color: var(--brass); }
+.nt-hero h1 { color: var(--bone); font-family: var(--display); font-size: clamp(32px,5vw,48px); font-weight: 900; letter-spacing: -0.03em; margin: 8px 0 10px; }
+.nt-hero h1 em { font-style: normal; color: var(--brass); }
+.nt-hero p { color: var(--cream); max-width: 620px; font-size: 15px; line-height: 1.6; opacity: 0.9; }
+.nt-wrap { padding: 32px 24px 64px; background: var(--bone); }
+.nt-panel { max-width: 920px; margin: 0 auto; }
+.nt-card { background: var(--paper); border-left: 3px solid var(--brass); padding: 22px 22px 24px; margin-bottom: 22px; }
+.nt-card h2 { font-family: var(--display); font-size: 18px; font-style: normal; letter-spacing: 0.02em; margin-bottom: 4px; }
+.nt-card .hint { font-size: 12.5px; color: var(--smoke); margin-bottom: 18px; }
+.nt-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); gap: 14px; }
+.nt-field label { display:block; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brass-dim); font-weight: 700; margin-bottom: 6px; }
+.nt-field input, .nt-field select { width:100%; padding: 11px 12px; border: 1px solid var(--cream); background: var(--bone); color: var(--ink); font-family: var(--body); font-size: 14px; }
+.nt-field input:focus, .nt-field select:focus { outline: none; border-color: var(--brass); }
+.nt-seg { display:inline-flex; border:1px solid var(--cream); overflow:hidden; }
+.nt-seg button { background: var(--bone); border:none; padding: 9px 14px; font-family: var(--body); font-size: 12px; font-weight:700; letter-spacing:0.06em; color: var(--char); cursor:pointer; }
+.nt-seg button.on { background: var(--ink); color: var(--bone); }
+.nt-row { display:flex; flex-wrap:wrap; gap: 18px; align-items:flex-end; }
+.nt-row .nt-field { flex: 1; min-width: 150px; }
+.nt-check { display:flex; gap: 18px; flex-wrap:wrap; margin-top: 4px; }
+.nt-check label { display:flex; align-items:center; gap:8px; font-size: 13px; color: var(--char); text-transform:none; letter-spacing:0; font-weight:500; cursor:pointer; }
+.nt-check input { width:auto; }
+.btn-row { display:flex; gap:12px; flex-wrap:wrap; margin-top: 20px; }
+
+.nt-targets { display:grid; grid-template-columns: repeat(5,1fr); gap:2px; background: var(--cream); border:1px solid var(--cream); margin-top: 4px; }
+.nt-targets .t { background: var(--bone); padding: 14px 10px; text-align:center; }
+.nt-targets .t .k { font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--smoke); font-weight:700; }
+.nt-targets .t .v { font-family:var(--display); font-style:normal; font-size:22px; font-weight:900; color:var(--ink); margin-top:4px; }
+.nt-targets .t .u { font-size:10px; color:var(--smoke); }
+
+.nt-readout { display:grid; grid-template-columns: repeat(5,1fr); gap:2px; background: var(--cream); border:1px solid var(--cream); margin: 6px 0 2px; }
+.nt-readout .t { background: var(--bone); padding: 12px 8px; text-align:center; }
+.nt-readout .t .k { font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--smoke); font-weight:700; }
+.nt-readout .t .v { font-family:var(--display); font-style:normal; font-size:18px; font-weight:800; color:var(--ink); margin-top:3px; }
+.nt-readout .t .v.over { color: var(--warn); }
+.nt-readout .t .v.ok { color: var(--brass-dim); }
+.nt-note { font-size:12.5px; color:var(--char); line-height:1.55; margin-top:12px; background:rgba(124,196,232,0.10); border-left:3px solid var(--brass); padding:12px 14px; }
+.nt-note strong{color:var(--ink);}
+
+.nt-mode-banner { font-size:13px; color:var(--char); background: var(--ink); color:var(--cream); padding:12px 16px; margin-bottom:16px; line-height:1.5; }
+.nt-mode-banner strong{color:var(--brass);}
+
+.nt-day { margin-bottom: 20px; }
+.nt-day h3 { font-family:var(--display); font-style:normal; font-size:14px; letter-spacing:0.14em; text-transform:uppercase; color:var(--brass-dim); border-bottom:1px solid var(--cream); padding-bottom:8px; margin-bottom:12px; }
+.nt-meal { display:flex; justify-content:space-between; gap:14px; padding:12px 0; border-bottom:1px solid var(--cream); align-items:flex-start; }
+.nt-meal:last-child{border-bottom:none;}
+.nt-meal .m-main { flex:1; }
+.nt-meal .m-slot { font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--smoke); font-weight:700; }
+.nt-meal .m-name { font-size:15px; font-weight:600; color:var(--ink); margin:2px 0 2px; cursor:pointer; }
+.nt-meal .m-name:hover{ color: var(--brass-dim); text-decoration:underline; }
+.nt-meal .m-macros { font-size:12px; color:var(--smoke); }
+.nt-meal .m-side { text-align:right; white-space:nowrap; }
+.nt-meal .m-cal { font-family:var(--display); font-style:normal; font-weight:800; color:var(--ink); }
+.nt-swap { background:none; border:1px solid var(--cream); color:var(--brass-dim); font-size:11px; font-weight:700; letter-spacing:0.06em; padding:5px 9px; cursor:pointer; margin-top:6px; }
+.nt-swap:hover{ border-color:var(--brass); }
+
+.nt-cooklist { margin-top: 8px; }
+.nt-cooklist .ci { display:flex; justify-content:space-between; gap:12px; padding:10px 0; border-bottom:1px solid var(--cream); font-size:14px; }
+.nt-cooklist .ci .b { color:var(--brass-dim); font-weight:700; white-space:nowrap; }
+
+.nt-empty { color:var(--smoke); font-size:14px; padding:20px 0; }
+.nt-hidden{ display:none; }
+
+/* modal */
+.nt-modal { position:fixed; inset:0; background:rgba(15,18,23,0.72); display:none; align-items:center; justify-content:center; padding:20px; z-index:50; }
+.nt-modal.on{ display:flex; }
+.nt-modal-inner { background:var(--bone); max-width:560px; width:100%; max-height:86vh; overflow:auto; padding:26px; }
+.nt-modal-inner h3 { font-family:var(--display); font-size:22px; font-style:normal; margin-bottom:6px; }
+.nt-modal-inner .desc { font-size:14px; color:var(--char); line-height:1.55; margin-bottom:16px; }
+.nt-modal-inner h4 { font-family:var(--display); font-style:normal; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--brass-dim); margin:16px 0 8px; }
+.nt-modal-inner li { font-size:14px; color:var(--char); line-height:1.5; margin-bottom:6px; margin-left:18px; }
+.nt-modal-close { float:right; background:none; border:none; font-size:24px; color:var(--smoke); cursor:pointer; line-height:1; }
+@media (max-width:720px){
+  .nt-targets, .nt-readout { grid-template-columns: repeat(5, 1fr); }
+  .nt-targets .t .v { font-size:17px; }
+  .nt-hero{ padding:36px 18px 24px; }
+  .nt-wrap{ padding:24px 16px 48px; }
+}
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <header class="mdt-topbar">
+    <a href="../../" class="th-brand" aria-label="True Hybrid, home">
+      <span class="th-true">true</span><span class="th-hybrid">HYBRID</span>
+    </a>
+    <nav class="mdt-nav">
+      <a href="../../">All tools</a>
+      <a href="../../framework/">Framework</a>
+      <a href="" class="active">Nutrition</a>
+    </nav>
+  </header>
+
+  <section class="nt-hero">
+    <div class="eyebrow">Nutrition</div>
+    <h1>Nutrition <em>Tool</em>.</h1>
+    <p>Set your calories and macros from your own numbers, then build a week of meals from 200 recipes. Bulk-prep the same meals across the week, or eat for variety. Everything runs in your browser, nothing is sent anywhere.</p>
+  </section>
+
+  <div class="nt-wrap">
+   <div class="nt-panel">
+
+    <div class="nt-card">
+      <h2>1. Your numbers</h2>
+      <div class="hint">Used to estimate your daily energy and macro targets. Rough is fine, you can override the target below.</div>
+      <div class="nt-row" style="margin-bottom:16px;">
+        <div class="nt-field" style="flex:0 0 auto;">
+          <label>Units</label>
+          <div class="nt-seg" id="nt-units">
+            <button data-u="metric" class="on">Metric</button>
+            <button data-u="imperial">Imperial</button>
+          </div>
+        </div>
+        <div class="nt-field" style="flex:0 0 auto;">
+          <label>Sex</label>
+          <div class="nt-seg" id="nt-sex">
+            <button data-s="male" class="on">Male</button>
+            <button data-s="female">Female</button>
+          </div>
+        </div>
+      </div>
+      <div class="nt-grid">
+        <div class="nt-field"><label>Age</label><input id="nt-age" type="number" value="32" min="14" max="90"></div>
+        <div class="nt-field"><label id="lbl-weight">Weight (kg)</label><input id="nt-weight" type="number" value="82"></div>
+        <div class="nt-field"><label id="lbl-height">Height (cm)</label><input id="nt-height" type="number" value="180"></div>
+        <div class="nt-field">
+          <label>Activity</label>
+          <select id="nt-activity">
+            <option value="1.2">Sedentary</option>
+            <option value="1.375">Light (1-3 days)</option>
+            <option value="1.55" selected>Moderate (3-5 days)</option>
+            <option value="1.725">Hard (6-7 days)</option>
+            <option value="1.9">Very hard / physical job</option>
+          </select>
+        </div>
+        <div class="nt-field">
+          <label>Goal</label>
+          <select id="nt-goal">
+            <option value="-0.20">Lose fat (-20%)</option>
+            <option value="-0.10">Lean down (-10%)</option>
+            <option value="0" selected>Maintain</option>
+            <option value="0.10">Lean gain (+10%)</option>
+            <option value="0.20">Build (+20%)</option>
+          </select>
+        </div>
+      </div>
+      <div class="btn-row">
+        <button class="btn" id="nt-calc">Calculate targets</button>
+      </div>
+    </div>
+
+    <div class="nt-card nt-hidden" id="nt-target-card">
+      <h2>2. Your daily target</h2>
+      <div class="hint">Protein set from bodyweight, fats at 25% of calories, carbs fill the rest. Edit any value and the plan will aim at it.</div>
+      <div class="nt-targets" id="nt-targets"></div>
+      <div class="nt-row" style="margin-top:16px;">
+        <div class="nt-field"><label>Calories</label><input id="tg-cal" type="number"></div>
+        <div class="nt-field"><label>Protein (g)</label><input id="tg-p" type="number"></div>
+        <div class="nt-field"><label>Carbs (g)</label><input id="tg-c" type="number"></div>
+        <div class="nt-field"><label>Fats (g)</label><input id="tg-f" type="number"></div>
+      </div>
+    </div>
+
+    <div class="nt-card nt-hidden" id="nt-plan-card">
+      <h2>3. Build the plan</h2>
+      <div class="hint">Pick how many meals a day, how you want to eat, and any food filters.</div>
+      <div class="nt-row" style="margin-bottom:14px;">
+        <div class="nt-field" style="flex:0 0 auto;">
+          <label>Meals a day</label>
+          <div class="nt-seg" id="nt-meals">
+            <button data-m="5">5</button>
+            <button data-m="4" class="on">4</button>
+            <button data-m="3">3</button>
+            <button data-m="2">2 (IF)</button>
+          </div>
+        </div>
+        <div class="nt-field" style="flex:0 0 auto;">
+          <label>Mode</label>
+          <div class="nt-seg" id="nt-mode">
+            <button data-mode="variety" class="on">Daily variety</button>
+            <button data-mode="bulk">Bulk-prep</button>
+          </div>
+        </div>
+      </div>
+      <div class="nt-field">
+        <label>Filters</label>
+        <div class="nt-check">
+          <label><input type="checkbox" id="f-veg"> Vegetarian</label>
+          <label><input type="checkbox" id="f-vegan"> Vegan</label>
+          <label><input type="checkbox" id="f-gf"> Gluten-free</label>
+          <label><input type="checkbox" id="f-nonuts"> No nuts</label>
+        </div>
+      </div>
+      <div class="btn-row">
+        <button class="btn" id="nt-generate">Generate the week</button>
+        <button class="btn btn-outline" id="nt-pdf" style="color:var(--ink);border-color:var(--brass-dim);display:none;">Download PDF</button>
+      </div>
+    </div>
+
+    <div class="nt-card nt-hidden" id="nt-result-card">
+      <h2>Your week</h2>
+      <div id="nt-readout-wrap">
+        <div class="hint" style="margin-bottom:2px;">Delivered per day, averaged across the week. Orange means more than 10% over target.</div>
+        <div class="nt-readout" id="nt-readout"></div>
+        <div class="nt-note" id="nt-swap-note"><strong>Swapping a meal changes the totals.</strong> A swap can push a macro into surplus or deficit without you noticing, so glance back at this readout after any swap. Anything in orange is over the 10% threshold.</div>
+      </div>
+      <div id="nt-mode-banner" class="nt-mode-banner" style="margin-top:16px;"></div>
+      <div id="nt-output"></div>
+    </div>
+
+   </div>
+  </div>
+
+  <footer class="mdt-footer">
+    <a href="../../" class="th-brand th-brand--footer" aria-label="True Hybrid, home">
+      <span class="th-true">true</span><span class="th-hybrid">HYBRID</span>
+    </a>
+    <p>The complete framework, plus free training and nutrition tools. <a href="../../" style="color:var(--brass); text-decoration:none;">See all tools &rarr;</a></p>
+    <div class="footer-bar">
+      <span>&copy; <span id="year"></span> True Hybrid</span>
+      <span>No tracking &middot; No ads &middot; No bullsh*t</span>
+    </div>
+  </footer>
+
+</div>
+
+<div class="nt-modal" id="nt-modal"><div class="nt-modal-inner" id="nt-modal-inner"></div></div>
+
+<script src="../../assets/jspdf.umd.min.js"></script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){});});}
+
+const OFF_TARGET = 0.10;
+const DAYS = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+let RECIPES = [];
+const state = { units:'metric', sex:'male', meals:4, mode:'variety', target:null, plan:null };
+
+// ---- load recipes ----
+fetch('../../data/recipes.json').then(r=>r.json()).then(d=>{ RECIPES = Array.isArray(d)?d:(d.recipes||[]); })
+  .catch(()=>{ RECIPES=[]; });
+
+// ---- segmented controls ----
+function seg(id, key, cast){
+  document.getElementById(id).addEventListener('click', e=>{
+    const b=e.target.closest('button'); if(!b) return;
+    [...e.currentTarget.children].forEach(x=>x.classList.remove('on'));
+    b.classList.add('on');
+    const v=b.dataset[Object.keys(b.dataset)[0]];
+    state[key]= cast? cast(v): v;
+    if(key==='units') applyUnits();
+  });
+}
+seg('nt-units','units'); seg('nt-sex','sex'); seg('nt-meals','meals',v=>+v); seg('nt-mode','mode');
+
+function applyUnits(){
+  const w=document.getElementById('nt-weight'), h=document.getElementById('nt-height');
+  if(state.units==='imperial'){
+    document.getElementById('lbl-weight').textContent='Weight (lb)';
+    document.getElementById('lbl-height').textContent='Height (in)';
+    w.value=Math.round(+w.value*2.20462); h.value=Math.round(+h.value/2.54);
+  } else {
+    document.getElementById('lbl-weight').textContent='Weight (kg)';
+    document.getElementById('lbl-height').textContent='Height (cm)';
+    w.value=Math.round(+w.value/2.20462); h.value=Math.round(+h.value*2.54);
+  }
+}
+
+// ---- calculate targets ----
+document.getElementById('nt-calc').addEventListener('click', ()=>{
+  let kg=+document.getElementById('nt-weight').value, cm=+document.getElementById('nt-height').value;
+  if(state.units==='imperial'){ kg=kg/2.20462; cm=cm*2.54; }
+  const age=+document.getElementById('nt-age').value;
+  const act=+document.getElementById('nt-activity').value;
+  const goal=+document.getElementById('nt-goal').value;
+  const s = state.sex==='male'?5:-161;
+  const bmr = 10*kg + 6.25*cm - 5*age + s;
+  let cal = Math.round(bmr*act*(1+goal));
+  const floor = state.sex==='male'?1500:1200;
+  if(cal<floor) cal=floor;
+  const protein = Math.round(kg*2.0);           // 2 g/kg
+  const fats = Math.round(cal*0.25/9);          // 25% cals
+  const carbs = Math.max(0, Math.round((cal - protein*4 - fats*9)/4));
+  state.target = { cal, protein, carbs, fats };
+  renderTargets();
+  document.getElementById('tg-cal').value=cal;
+  document.getElementById('tg-p').value=protein;
+  document.getElementById('tg-c').value=carbs;
+  document.getElementById('tg-f').value=fats;
+  document.getElementById('nt-target-card').classList.remove('nt-hidden');
+  document.getElementById('nt-plan-card').classList.remove('nt-hidden');
+});
+['tg-cal','tg-p','tg-c','tg-f'].forEach(id=>document.getElementById(id).addEventListener('input',()=>{
+  state.target={ cal:+document.getElementById('tg-cal').value, protein:+document.getElementById('tg-p').value,
+    carbs:+document.getElementById('tg-c').value, fats:+document.getElementById('tg-f').value };
+  renderTargets();
+}));
+function renderTargets(){
+  const t=state.target; if(!t) return;
+  document.getElementById('nt-targets').innerHTML =
+    tcell('Calories',t.cal,'kcal')+tcell('Protein',t.protein,'g')+tcell('Carbs',t.carbs,'g')+tcell('Fats',t.fats,'g')+tcell('Fibre','30+','g');
+}
+function tcell(k,v,u){ return `<div class="t"><div class="k">${k}</div><div class="v">${v}</div><div class="u">${u}</div></div>`; }
+
+// ---- filters ----
+const MEAT=['chicken','beef','turkey','fish'];
+const ANIMAL=['chicken','beef','turkey','fish','eggs','dairy','cheese'];
+function passesFilters(r){
+  const tags=r.tags||[];
+  if(document.getElementById('f-veg').checked && MEAT.some(m=>tags.includes(m))) return false;
+  if(document.getElementById('f-vegan').checked && ANIMAL.some(m=>tags.includes(m))) return false;
+  if(document.getElementById('f-gf').checked && (tags.includes('bread')||tags.includes('pasta'))) return false;
+  if(document.getElementById('f-nonuts').checked && tags.includes('nuts')) return false;
+  return true;
+}
+
+// ---- meal slot layout ----
+function slots(n){
+  if(n===5) return ['breakfast','snack','lunch','snack','dinner'];
+  if(n===4) return ['breakfast','lunch','snack','dinner'];
+  if(n===3) return ['breakfast','lunch','dinner'];
+  return ['lunch','dinner'];
+}
+// calorie share per slot type
+const SHARE={ breakfast:1, lunch:1.15, dinner:1.2, snack:0.55 };
+function slotTargets(n){
+  const s=slots(n); const w=s.map(x=>SHARE[x]); const sum=w.reduce((a,b)=>a+b,0);
+  return s.map((type,i)=>({ type, cal: state.target.cal*w[i]/sum }));
+}
+
+function pickFor(type, calTarget, used){
+  const pool=RECIPES.filter(r=>r.mealType===type && passesFilters(r));
+  if(!pool.length) return null;
+  // prefer unused, closest calorie fit after scaling within 0.5x-2.5x
+  let best=null, bestScore=1e9;
+  const shuffled=pool.slice().sort(()=>Math.random()-0.5);
+  for(const r of shuffled){
+    const per=r.calories/(r.servings||1);
+    let mult=calTarget/per; mult=Math.max(0.5,Math.min(2.5,mult));
+    const delivered=per*mult;
+    let score=Math.abs(delivered-calTarget);
+    if(used.has(r.id)) score+=400;
+    if(score<bestScore){ bestScore=score; best={r,mult}; }
+  }
+  return best;
+}
+function scaledMeal(pick, type){
+  const r=pick.r, m=pick.mult, per=1/(r.servings||1);
+  return { id:r.id, type, name:r.name, mult:m,
+    cal:Math.round(r.calories*per*m), protein:Math.round(r.protein*per*m),
+    carbs:Math.round(r.carbs*per*m), fats:Math.round(r.fats*per*m), fibre:Math.round((r.fibre||0)*per*m),
+    servingsPortion:+(m).toFixed(2) };
+}
+
+// ---- generate ----
+document.getElementById('nt-generate').addEventListener('click', ()=>{
+  if(!state.target){ return; }
+  if(!RECIPES.length){ document.getElementById('nt-output').innerHTML='<div class="nt-empty">Recipes are still loading, or could not be loaded. If this persists, reload the page.</div>'; document.getElementById('nt-result-card').classList.remove('nt-hidden'); return; }
+  const st=slotTargets(state.meals);
+  let plan;
+  if(state.mode==='bulk'){
+    const used=new Set(); const chosen=st.map(s=>{ const p=pickFor(s.type,s.cal,used); if(p){used.add(p.r.id);} return p?scaledMeal(p,s.type):null; });
+    plan={ mode:'bulk', slots:chosen.filter(Boolean) };
+  } else {
+    const days=DAYS.map(()=>{ const used=new Set(); return st.map(s=>{ const p=pickFor(s.type,s.cal,used); if(p){used.add(p.r.id);} return p?scaledMeal(p,s.type):null; }).filter(Boolean); });
+    plan={ mode:'variety', days };
+  }
+  state.plan=plan;
+  renderPlan();
+  document.getElementById('nt-result-card').classList.remove('nt-hidden');
+  document.getElementById('nt-pdf').style.display='inline-block';
+  document.getElementById('nt-result-card').scrollIntoView({behavior:'smooth',block:'start'});
+});
+
+function dayTotals(meals){
+  return meals.reduce((a,m)=>({cal:a.cal+m.cal,protein:a.protein+m.protein,carbs:a.carbs+m.carbs,fats:a.fats+m.fats,fibre:a.fibre+m.fibre}),{cal:0,protein:0,carbs:0,fats:0,fibre:0});
+}
+function renderReadout(){
+  let avg;
+  if(state.plan.mode==='bulk'){ avg=dayTotals(state.plan.slots); }
+  else { const tot=state.plan.days.map(dayTotals); avg={}; ['cal','protein','carbs','fats','fibre'].forEach(k=>avg[k]=Math.round(tot.reduce((a,d)=>a+d[k],0)/tot.length)); }
+  const t=state.target;
+  // calories/carbs/fats: over target is a real warning (orange). in-band is ok (blue).
+  const cls=(v,tg)=> v>tg*(1+OFF_TARGET)?'over': (v>=tg*(1-OFF_TARGET)?'ok':'');
+  // protein: at or above target is good, never a warning; only short of target is neutral.
+  const clsP=(v,tg)=> v>=tg*(1-OFF_TARGET)?'ok':'';
+  document.getElementById('nt-readout').innerHTML =
+    rcell('Calories',avg.cal,cls(avg.cal,t.cal))+
+    rcell('Protein',avg.protein+'g',clsP(avg.protein,t.protein))+
+    rcell('Carbs',avg.carbs+'g',cls(avg.carbs,t.carbs))+
+    rcell('Fats',avg.fats+'g',cls(avg.fats,t.fats))+
+    rcell('Fibre',avg.fibre+'g', avg.fibre>=30?'ok':'');
+}
+function rcell(k,v,c){ return `<div class="t"><div class="k">${k}</div><div class="v ${c}">${v}</div></div>`; }
+
+function mealRow(m, dayIndex, slotIndex){
+  const port = m.mult!==1? ` &middot; ${m.servingsPortion}x portion`:'';
+  return `<div class="nt-meal">
+    <div class="m-main">
+      <div class="m-slot">${m.type}</div>
+      <div class="m-name" data-id="${m.id}">${m.name}</div>
+      <div class="m-macros">P ${m.protein}g &middot; C ${m.carbs}g &middot; F ${m.fats}g${port}</div>
+      <button class="nt-swap" data-day="${dayIndex}" data-slot="${slotIndex}">Swap</button>
+    </div>
+    <div class="m-side"><div class="m-cal">${m.cal}</div><div class="m-macros">kcal</div></div>
+  </div>`;
+}
+
+function renderPlan(){
+  renderReadout();
+  const out=document.getElementById('nt-output');
+  const banner=document.getElementById('nt-mode-banner');
+  if(state.plan.mode==='bulk'){
+    banner.innerHTML = `<strong>Bulk-prep.</strong> The same ${state.plan.slots.length} meals every day. Cook once to cover all 7 days, the cook list below multiplies each recipe out.`;
+    let html='<div class="nt-day"><h3>Every day</h3>';
+    state.plan.slots.forEach((m,i)=> html+=mealRow(m,-1,i));
+    html+='</div>';
+    // cook list
+    html+='<div class="nt-day"><h3>Cook list for the week</h3><div class="nt-cooklist">';
+    state.plan.slots.forEach(m=>{
+      const r=RECIPES.find(x=>x.id===m.id);
+      const weekServings = m.servingsPortion*7;
+      const batches = Math.ceil(weekServings/(r.servings||1));
+      html+=`<div class="ci"><span>${m.name}</span><span class="b">cook x${batches} (${(r.servings||1)*batches} servings)</span></div>`;
+    });
+    html+='</div></div>';
+    out.innerHTML=html;
+  } else {
+    banner.innerHTML = `<strong>Daily variety.</strong> A different mix every day, ${slots(state.meals).length} meals a day across the week.`;
+    let html='';
+    state.plan.days.forEach((meals,di)=>{
+      html+=`<div class="nt-day"><h3>${DAYS[di]}</h3>`;
+      meals.forEach((m,si)=> html+=mealRow(m,di,si));
+      const t=dayTotals(meals);
+      html+=`<div class="m-macros" style="text-align:right;padding-top:8px;color:var(--brass-dim);font-weight:700;">Day total: ${t.cal} kcal &middot; P ${t.protein} &middot; C ${t.carbs} &middot; F ${t.fats}</div>`;
+      html+='</div>';
+    });
+    out.innerHTML=html;
+  }
+  bindMealEvents();
+}
+
+function bindMealEvents(){
+  document.querySelectorAll('.m-name').forEach(el=>el.addEventListener('click',()=>openRecipe(el.dataset.id)));
+  document.querySelectorAll('.nt-swap').forEach(el=>el.addEventListener('click',()=>{
+    const di=+el.dataset.day, si=+el.dataset.slot;
+    const st=slotTargets(state.meals);
+    if(state.plan.mode==='bulk'){
+      const slotType=state.plan.slots[si].type;
+      const target=st.find(s=>s.type===slotType)?.cal || state.target.cal/state.plan.slots.length;
+      const used=new Set(state.plan.slots.map(m=>m.id));
+      const p=pickFor(slotType,target,used); if(p) state.plan.slots[si]=scaledMeal(p,slotType);
+    } else {
+      const meals=state.plan.days[di]; const slotType=meals[si].type;
+      const target=st.filter(s=>s.type===slotType)[0]?.cal || state.target.cal/meals.length;
+      const used=new Set(meals.map(m=>m.id));
+      const p=pickFor(slotType,target,used); if(p) meals[si]=scaledMeal(p,slotType);
+    }
+    renderPlan();
+  }));
+}
+
+function openRecipe(id){
+  const r=RECIPES.find(x=>x.id===id); if(!r) return;
+  const inner=document.getElementById('nt-modal-inner');
+  inner.innerHTML = `<button class="nt-modal-close" id="nt-close">&times;</button>
+    <h3>${r.name}</h3>
+    <div class="desc">${r.description||''}</div>
+    <div class="m-macros">${r.calories} kcal &middot; P ${r.protein}g &middot; C ${r.carbs}g &middot; F ${r.fats}g &middot; ${r.fibre||0}g fibre &middot; makes ${r.servings||1}</div>
+    <h4>Ingredients</h4><ul>${(r.ingredients||[]).map(i=>`<li>${i}</li>`).join('')}</ul>
+    <h4>Method</h4><ol>${(r.instructions||[]).map(i=>`<li>${i}</li>`).join('')}</ol>`;
+  document.getElementById('nt-modal').classList.add('on');
+  document.getElementById('nt-close').addEventListener('click',()=>document.getElementById('nt-modal').classList.remove('on'));
+}
+document.getElementById('nt-modal').addEventListener('click',e=>{ if(e.target.id==='nt-modal') e.currentTarget.classList.remove('on'); });
+
+// ---- PDF ----
+document.getElementById('nt-pdf').addEventListener('click',()=>{
+  if(!state.plan || !window.jspdf) return;
+  const { jsPDF } = window.jspdf; const doc=new jsPDF({unit:'pt',format:'a4'});
+  const W=doc.internal.pageSize.getWidth(); let y=54;
+  const ink='#15181e', blue='#2f7ea6', grey='#7a8794';
+  doc.setTextColor(blue); doc.setFont('helvetica','bold'); doc.setFontSize(10); doc.text('TRUE HYBRID  ·  NUTRITION',54,y); y+=26;
+  doc.setTextColor(ink); doc.setFontSize(22); doc.text('Your week of meals',54,y); y+=24;
+  const t=state.target;
+  doc.setFont('helvetica','normal'); doc.setFontSize(11); doc.setTextColor(grey);
+  doc.text(`Target: ${t.cal} kcal  ·  P ${t.protein}g  ·  C ${t.carbs}g  ·  F ${t.fats}g`,54,y); y+=22;
+  function line(){ doc.setDrawColor(220); doc.line(54,y,W-54,y); y+=16; }
+  function page(){ if(y>760){ doc.addPage(); y=54; } }
+  function meal(m){ page(); doc.setTextColor(ink); doc.setFont('helvetica','bold'); doc.setFontSize(11);
+    doc.text(`${m.type.toUpperCase()}  ${m.name}${m.mult!==1?'  ('+m.servingsPortion+'x)':''}`,54,y);
+    doc.setFont('helvetica','normal'); doc.setTextColor(grey); doc.setFontSize(10);
+    doc.text(`${m.cal} kcal · P ${m.protein} · C ${m.carbs} · F ${m.fats}`, W-54, y, {align:'right'}); y+=17; }
+  if(state.plan.mode==='bulk'){
+    doc.setTextColor(blue); doc.setFont('helvetica','bold'); doc.setFontSize(13); doc.text('Bulk-prep, the same meals every day',54,y); y+=20;
+    state.plan.slots.forEach(meal); y+=6; line();
+    doc.setTextColor(blue); doc.setFont('helvetica','bold'); doc.setFontSize(13); doc.text('Cook list for the week',54,y); y+=20;
+    state.plan.slots.forEach(m=>{ const r=RECIPES.find(x=>x.id===m.id); const b=Math.ceil(m.servingsPortion*7/(r.servings||1)); page();
+      doc.setTextColor(ink); doc.setFont('helvetica','normal'); doc.setFontSize(11); doc.text(m.name,54,y);
+      doc.setTextColor(blue); doc.text(`cook x${b}`, W-54,y,{align:'right'}); y+=16; });
+  } else {
+    state.plan.days.forEach((meals,di)=>{ page(); doc.setTextColor(blue); doc.setFont('helvetica','bold'); doc.setFontSize(13); doc.text(DAYS[di],54,y); y+=20; meals.forEach(meal); y+=6; line(); });
+  }
+  doc.save('true-hybrid-meal-plan.pdf');
+});
+</script>
+</body>
+</html>
