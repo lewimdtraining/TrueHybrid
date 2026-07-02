@@ -18,6 +18,25 @@ A running record of the build so the project knowledge stays current. Most recen
 
 ## Changelog
 
+### Full recipe audit (current)
+
+Ran a complete audit of all 200 recipes for anything that could throw off a user's calories:
+
+- **Compound ingredient lines now scale.** Sauces, marinades, dressings, and dips written as one line ("Sauce: 30g peanut butter, 15g honey, ...") previously did not scale at all, because the scaler only handled a leading quantity. Rewrote it to scale every quantity in a line (grams, ml, tbsp, tsp, cups, and leading counts) while leaving percentages like "0% yoghurt" / "2% milk" and seasoning lines alone. This was the one real accuracy bug found.
+- **Internal calorie/macro consistency: clean.** All 200 recipes' stated calories match their macros (the single apparent outlier, L071, is correct once its 26g fibre is accounted for).
+- **Serving counts: verified.** Cross-checked every recipe's protein macro against the protein in its ingredients; the only mismatches were the three batch recipes already corrected (meatballs, protein balls, egg muffins). The 36 two-serving recipes are correctly labelled.
+- **Calorie values: well-calibrated.** An independent ingredient-level estimate lands at a median 1.07x of the stated calories across all 200 (tight), so the calorie numbers are trustworthy in aggregate. Absolute per-recipe calories can't be certified without a full nutrition database, but nothing looks systematically wrong.
+- **Structural checks: clean.** No duplicate IDs or names, all meal types valid, no missing/zero/negative fields.
+
+
+### Recipe quantity fix (current)
+
+- **Fixed absurd bulk quantities** (e.g. a week of meatballs asking for ~5.8kg of chicken). Root cause: calories and macros in the data are per serving, while `servings` is the batch yield, but the tool was dividing per-serving calories by `servings` a second time. Harmless for the 164 single-serving recipes, wrong for batches.
+- **Corrected the tool's serving math** so a portion is calculated straight from per-serving calories and ingredients are scaled by (portions eaten / recipe yield). This also fixes the 36 legitimate 2-serving recipes, which were previously having their ingredient lists doubled in the plan.
+- **Fixed three mislabelled batch recipes** in `recipes.json` whose ingredient lists were written for the whole batch but tagged `servings: 1`: Mini Chicken Meatballs (now 4), No-Bake Protein Balls (now 6), Baked Egg Muffins (now 2). Verified by cross-checking each recipe's protein macro against the protein in its ingredients.
+- **Stale yield notes** like "(makes ~16 meatballs)" are now stripped from ingredient lines once they've been rescaled, so they can't contradict the new amounts.
+
+
 ### Nutrition tool adjustments (current)
 
 - **Food likes and dislikes.** Two inputs added: liked foods get favoured when meals are chosen; disliked foods exclude any recipe containing them (checked across name, tags, and ingredients). A guard warns if filters plus dislikes leave a meal type with nothing to pick.

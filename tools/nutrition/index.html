@@ -384,9 +384,10 @@ function pickFor(type, calTarget, used){
   let best=null, bestScore=1e9;
   const shuffled=pool.slice().sort(()=>Math.random()-0.5);
   for(const r of shuffled){
-    const per=r.calories/(r.servings||1);
-    let mult=calTarget/per; mult=Math.max(0.5,Math.min(2.5,mult));
-    const delivered=per*mult;
+    const perServing=r.calories;                 // calories field is PER SERVING
+    let mult=calTarget/perServing;               // mult = how many servings to eat this meal
+    mult=Math.max(0.5,Math.min(2.5,mult));
+    const delivered=perServing*mult;
     let score=Math.abs(delivered-calTarget);
     score -= likeBoost(r)*120;          // favour liked foods
     if(used.has(r.id)) score+=400;
@@ -394,34 +395,53 @@ function pickFor(type, calTarget, used){
   }
   return best;
 }
+// mult is the number of SERVINGS eaten for this meal; macros are per serving
 function scaledMeal(pick, type){
-  const r=pick.r, m=pick.mult, per=1/(r.servings||1);
+  const r=pick.r, m=pick.mult;
   return { id:r.id, type, name:r.name, mult:m,
-    cal:Math.round(r.calories*per*m), protein:Math.round(r.protein*per*m),
-    carbs:Math.round(r.carbs*per*m), fats:Math.round(r.fats*per*m), fibre:Math.round((r.fibre||0)*per*m) };
+    cal:Math.round(r.calories*m), protein:Math.round(r.protein*m),
+    carbs:Math.round(r.carbs*m), fats:Math.round(r.fats*m), fibre:Math.round((r.fibre||0)*m) };
 }
 
 // ---- ingredient scaling ----
+// Scales EVERY quantity in a line (grams, ml, tbsp, tsp, cups, leading counts),
+// so compound lines like "Sauce: 30g peanut butter, 15g honey" scale fully.
+// Leaves percentages (0% yoghurt, 2% milk) and unit-less counts mid-sentence alone.
+function scaleNum(numStr, factor){
+  let val;
+  if(numStr.includes('/')){
+    const parts=numStr.trim().split(/\s+/);
+    if(parts.length===2){ const [a,b]=parts[1].split('/'); val=parseFloat(parts[0]) + (+a/+b); }
+    else { const [a,b]=numStr.split('/'); val=+a/+b; }
+  } else val=parseFloat(numStr);
+  let v=val*factor;
+  if(v>=10) v=Math.round(v);
+  else if(v>=1) v=Math.round(v*2)/2;
+  else v=Math.max(0.25, Math.round(v*4)/4);
+  return String(parseFloat(v.toFixed(2)));
+}
 function scaleQty(str, factor){
-  return str.replace(/^(\d+\s+\d+\/\d+|\d+\/\d+|\d+(?:\.\d+)?)/, (m)=>{
-    let val;
-    if(m.includes('/')){
-      const parts=m.trim().split(/\s+/);
-      if(parts.length===2){ const [a,b]=parts[1].split('/'); val=parseFloat(parts[0]) + (+a/+b); }
-      else { const [a,b]=m.split('/'); val=+a/+b; }
-    } else val=parseFloat(m);
-    let v=val*factor;
-    if(v>=10) v=Math.round(v);
-    else if(v>=1) v=Math.round(v*2)/2;
-    else v=Math.max(0.25, Math.round(v*4)/4);
-    return (Number.isInteger(v)? v : v.toFixed(v<1?2:1)).toString();
-  });
+  if(!factor || factor===1) return str;
+  const NUM='(\\d+\\s+\\d+\\/\\d+|\\d+\\/\\d+|\\d+(?:\\.\\d+)?)';
+  const UNITS='(?:kg|g|ml|l|oz|tbsp|tbs|tsp|cups?|scoops?)';
+  // 1) number + attached unit (g, kg, ml, l, oz)
+  str = str.replace(new RegExp(NUM+'\\s*(kg|g|ml|l|oz)\\b','gi'), (m,n,u)=> scaleNum(n,factor)+u.toLowerCase());
+  // 2) number + spaced unit (tbsp, tsp, cup, scoop)
+  str = str.replace(new RegExp(NUM+'\\s*(tbsp|tbs|tsp|cups?|scoops?)\\b','gi'), (m,n,u)=> scaleNum(n,factor)+' '+u.toLowerCase());
+  // 3) leading bare count (eggs, slices, fruit): number then space+word, not a unit, not %
+  str = str.replace(new RegExp('^'+NUM+'(?=\\s+[A-Za-z])(?!\\s*%)(?!\\s*'+UNITS+'\\b)','i'), (m,n)=> scaleNum(n,factor));
+  return str;
 }
 // factor to turn the base recipe into ONE daily portion of this meal
 function dailyFactor(meal){ const r=RECIPES.find(x=>x.id===meal.id); return meal.mult/(r.servings||1); }
 function scaledIngredients(meal, factor){
   const r=RECIPES.find(x=>x.id===meal.id); if(!r) return [];
-  return (r.ingredients||[]).map(i=>scaleQty(i, factor));
+  return (r.ingredients||[]).map(i=>{
+    let line=scaleQty(i, factor);
+    // drop stale batch-yield notes like "(makes ~16 meatballs)" once we've rescaled
+    line=line.replace(/\s*\(makes[^)]*\)/ig,'');
+    return line;
+  });
 }
 
 document.getElementById('nt-generate').addEventListener('click', ()=>{
