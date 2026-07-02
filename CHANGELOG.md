@@ -18,6 +18,18 @@ A running record of the build so the project knowledge stays current. Most recen
 
 ## Changelog
 
+### Restructured as a mobile web app (current)
+
+Reworked the site from a scrolling website into an app-style PWA:
+
+- **Bottom tab bar** with four logical destinations: Home, Framework, Tools, More. Fixed to the bottom with safe-area handling for notched phones, active-state highlighting, and identical absolute-path nav on every screen.
+- **App headers** replace the old website topbar: compact dark headers with a title, a back chevron on sub-screens (tools, Vanguard), and contextual actions (e.g. Download on the framework screen).
+- **New screens.** Home is now an app dashboard (hero, the three layers, quick-access cards, weekly-note prompt). Added a dedicated **Tools** hub (live vs coming-soon) and a **More** screen (framework download, the weekly note, about, Vanguard, help resources).
+- **Retrofitted** the framework reader and all five tool pages plus Vanguard into the app shell; tool logic untouched.
+- **App column** is centered and phone-width (max 600px) on desktop, full-width on mobile. Content scrolls between the fixed header and tab bar.
+- **Plumbing:** service worker cache bumped to th-v2 and precaches the new screens; `/more` pretty-URL redirect added; year scripts made null-safe after the footers were removed. Pinch-zoom left enabled for accessibility.
+
+
 ### Full recipe audit (current)
 
 Ran a complete audit of all 200 recipes for anything that could throw off a user's calories:

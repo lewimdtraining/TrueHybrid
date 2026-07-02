@@ -40,18 +40,15 @@
 }
 </style>
 </head>
-<body>
-<div class="page-wrap">
+<body class="app-mode">
+<div class="app">
 
-  <header class="mdt-topbar">
-    <a href="../../" class="th-brand" aria-label="True Hybrid, home">
-      <span class="th-true">true</span><span class="th-hybrid">HYBRID</span>
-    </a>
-    <nav class="mdt-nav">
-      <a href="../../">All tools</a>
-      <a href="" class="active">Run calculator</a>
-    </nav>
+  <header class="app-header">
+    <a href="/tools/" class="h-back" aria-label="Back">‹</a>
+    <span class="h-title">Run calculator</span>
   </header>
+
+  <main class="app-main">
 
   <section class="cs-hero">
     <span class="cs-tag">Coming soon</span>
@@ -90,19 +87,17 @@
     <a href="../../" class="btn">&larr; All tools</a>
   </section>
 
-  <footer class="mdt-footer">
-    <a href="../../" class="th-brand th-brand--footer" aria-label="True Hybrid, home">
-      <span class="th-true">true</span><span class="th-hybrid">HYBRID</span>
-    </a>
-    <p>The complete framework, plus free training and nutrition tools. <a href="../../" style="color:var(--brass); text-decoration:none;">See all tools &rarr;</a></p>
-    <div class="footer-bar">
-      <span>&copy; <span id="year"></span> True Hybrid</span>
-      <span>No tracking &middot; No ads &middot; No bullsh*t</span>
-    </div>
-  </footer>
+  </main>
+
+  <nav class="app-tabbar">
+    <a class="app-tab" href="/" aria-label="Home"><svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5"/></svg><span>Home</span></a>
+    <a class="app-tab" href="/framework/" aria-label="Framework"><svg viewBox="0 0 24 24"><path d="M12 6.5v14"/><path d="M4 4.5h5A3 3 0 0 1 12 7v13.5a2.2 2.2 0 0 0-2.2-2H4z"/><path d="M20 4.5h-5A3 3 0 0 0 12 7v13.5a2.2 2.2 0 0 1 2.2-2H20z"/></svg><span>Framework</span></a>
+    <a class="app-tab active" href="/tools/" aria-label="Tools"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Tools</span></a>
+    <a class="app-tab" href="/more/" aria-label="More"><svg viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg><span>More</span></a>
+  </nav>
 
 </div>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>var _y=document.getElementById('year'); if(_y) _y.textContent=new Date().getFullYear();</script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){});});}</script>
 </body>
 </html>

@@ -11,6 +11,11 @@
   status = 200
 
 [[redirects]]
+  from = "/more"
+  to = "/more/index.html"
+  status = 200
+
+[[redirects]]
   from = "/tools/nutrition"
   to = "/tools/nutrition/index.html"
   status = 200

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#15181e">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="True Hybrid">
+<title>Tools, True Hybrid</title>
+<meta name="description" content="The True Hybrid toolkit: the Dopamine Audit and Nutrition Tool, with strength, running and mobility tools on the way.">
+<link rel="stylesheet" href="/assets/styles.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2315181e'/%3E%3Ctext x='16' y='23' text-anchor='middle' fill='%237cc4e8' font-family='Arial,sans-serif' font-size='20' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E">
+</head>
+<body class="app-mode">
+<div class="app">
+
+  <header class="app-header">
+    <span class="h-title">Tools</span>
+    <span class="h-spacer"></span>
+    <span style="font-family:var(--display);font-size:12px;color:var(--smoke);font-weight:600;">5 tools · 2 live</span>
+  </header>
+
+  <main class="app-main">
+    <section class="scr" style="padding-top:18px;">
+      <div class="scr-title">Live now</div>
+      <a href="/tools/audit/" class="app-card">
+        <div class="ac-body"><div class="ac-cat">Mind &amp; Direction</div><h3>The Dopamine Audit</h3><p>A 12-question read on your phone, dopamine, and the scroll. Find the tightest grip and the one fix to run first.</p></div>
+        <span class="ac-arrow">&rarr;</span>
+      </a>
+      <a href="/tools/nutrition/" class="app-card">
+        <div class="ac-body"><div class="ac-cat">Nutrition</div><h3>Nutrition Tool</h3><p>Set your macros, then build a week of meals from 200 recipes. Bulk-prep or daily variety, likes and dislikes, PDF export.</p></div>
+        <span class="ac-arrow">&rarr;</span>
+      </a>
+    </section>
+
+    <section class="scr">
+      <div class="scr-title">Coming soon</div>
+      <a href="/tools/strength/" class="app-card soon">
+        <div class="ac-body"><div class="ac-cat">Strength</div><h3>Strength calculator</h3><p>1RM, RPE and RIR, warm-up builder, plate maths. The Express end of the model.</p></div>
+        <span class="ac-tag">Soon</span>
+      </a>
+      <a href="/tools/running/" class="app-card soon">
+        <div class="ac-body"><div class="ac-cat">Conditioning</div><h3>Run calculator</h3><p>Pace, splits, race predictor, Critical Power zones, race-day fuel.</p></div>
+        <span class="ac-tag">Soon</span>
+      </a>
+      <a href="/tools/stretching/" class="app-card soon">
+        <div class="ac-body"><div class="ac-cat">Structure</div><h3>Mobility protocols</h3><p>Position and breathing work, plus mobility flows by region.</p></div>
+        <span class="ac-tag">Soon</span>
+      </a>
+    </section>
+  </main>
+
+  <nav class="app-tabbar">
+    <a class="app-tab " href="/" aria-label="Home"><svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5"/></svg><span>Home</span></a>
+    <a class="app-tab " href="/framework/" aria-label="Framework"><svg viewBox="0 0 24 24"><path d="M12 6.5v14"/><path d="M4 4.5h5A3 3 0 0 1 12 7v13.5a2.2 2.2 0 0 0-2.2-2H4z"/><path d="M20 4.5h-5A3 3 0 0 0 12 7v13.5a2.2 2.2 0 0 1 2.2-2H20z"/></svg><span>Framework</span></a>
+    <a class="app-tab active" href="/tools/" aria-label="Tools"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Tools</span></a>
+    <a class="app-tab " href="/more/" aria-label="More"><svg viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg><span>More</span></a>
+  </nav>
+
+</div>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){});});}</script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#15181e">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="True Hybrid">
+<title>More, True Hybrid</title>
+<meta name="description" content="About True Hybrid, the framework download, the weekly note, and more.">
+<link rel="stylesheet" href="/assets/styles.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2315181e'/%3E%3Ctext x='16' y='23' text-anchor='middle' fill='%237cc4e8' font-family='Arial,sans-serif' font-size='20' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E">
+<style>
+.more-about p { font-size:14px; color:var(--char); line-height:1.6; margin-bottom:12px; }
+.more-about p strong{ color:var(--ink); }
+.weekly-box { background:var(--coal); color:var(--bone); padding:20px 18px; }
+.weekly-box .scr-title{ color:var(--brass); margin-top:0; }
+.weekly-box h3 { color:var(--bone); font-family:var(--display); font-style:normal; font-size:20px; margin-bottom:8px; }
+.weekly-box p { color:var(--cream); font-size:13px; line-height:1.55; opacity:0.9; margin-bottom:16px; }
+.weekly-box input[type=email]{ width:100%; box-sizing:border-box; background:var(--ink); border:1px solid var(--smoke); color:var(--bone); padding:14px 15px; font-family:var(--body); font-size:15px; margin-bottom:10px; }
+.weekly-box input[type=email]::placeholder{ color:var(--smoke); }
+.weekly-box input[type=email]:focus{ outline:none; border-color:var(--brass); }
+.weekly-box .fine{ font-size:11px; color:var(--smoke); margin-top:10px; }
+.help-note{ font-size:13px; color:var(--char); line-height:1.55; background:var(--paper); border-left:3px solid var(--brass-dim); padding:14px 16px; }
+.help-note a{ color:var(--brass-dim); font-weight:600; }
+.more-foot{ text-align:center; padding:8px 18px 4px; }
+.more-foot .tl{ font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--smoke); }
+</style>
+</head>
+<body class="app-mode">
+<div class="app">
+
+  <header class="app-header">
+    <span class="h-title">More</span>
+  </header>
+
+  <main class="app-main">
+
+    <section class="scr" style="padding-top:18px;">
+      <div class="scr-title">The framework</div>
+      <a href="/framework/" class="app-card">
+        <div class="ac-body"><div class="ac-cat">Read</div><h3>The complete framework</h3><p>The full master document, on the web.</p></div>
+        <span class="ac-arrow">&rarr;</span>
+      </a>
+      <a href="/downloads/true-hybrid-framework.pdf" class="app-card" download>
+        <div class="ac-body"><div class="ac-cat">Download</div><h3>Framework PDF</h3><p>Take the whole document with you, offline.</p></div>
+        <span class="ac-arrow">&darr;</span>
+      </a>
+    </section>
+
+    <section class="scr">
+      <div class="weekly-box" id="weekly">
+        <div class="scr-title">The weekly note</div>
+        <h3>One honest note a week.</h3>
+        <p>One idea, one challenge, no filler, drawn from the framework. Optional, and you can leave any time.</p>
+        <form name="th-weekly" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="th-weekly">
+          <p hidden><label>Don't fill this in: <input name="bot-field"></label></p>
+          <input type="email" name="email" placeholder="your@email.com" aria-label="Email">
+          <button type="submit" class="btn btn-block">Send it to me</button>
+        </form>
+        <div class="fine">No spam. No tracking pixels. Unsubscribe in one click.</div>
+      </div>
+    </section>
+
+    <section class="scr more-about">
+      <div class="scr-title">About</div>
+      <p>True Hybrid is a complete framework for building a hybrid athlete across three layers: physical capacity, mental command, and spiritual direction. The framework is the master text; the tools are the free, working front door to it.</p>
+      <p>Almost none of the parts were invented from nothing. The progression principles, the oxygen-led view of the engine, the conditioning lineage, and the sports-psychology sources are named where they appear. What's ours is the way it's assembled, tested over years with hundreds of real people.</p>
+      <p><strong>No ads. No tracking pixels.</strong> Open a tool, use it, close the tab. Your inputs stay in your browser.</p>
+    </section>
+
+    <section class="scr">
+      <div class="scr-title">More</div>
+      <a href="/vanguard/" class="app-card soon">
+        <div class="ac-body"><div class="ac-cat">Coming soon</div><h3>The Vanguard</h3><p>The deep work across all three layers.</p></div>
+        <span class="ac-tag">Soon</span>
+      </a>
+    </section>
+
+    <section class="scr">
+      <div class="help-note">Struggling more than usual? You don't have to carry it alone, reach out to someone you trust or a professional. <a href="#" id="th-help">Help &amp; resources &rarr;</a></div>
+    </section>
+
+    <div class="more-foot">
+      <div class="tl">&copy; <span id="year"></span> True Hybrid · No tracking · No ads</div>
+    </div>
+
+  </main>
+
+  <nav class="app-tabbar">
+    <a class="app-tab " href="/" aria-label="Home"><svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5"/></svg><span>Home</span></a>
+    <a class="app-tab " href="/framework/" aria-label="Framework"><svg viewBox="0 0 24 24"><path d="M12 6.5v14"/><path d="M4 4.5h5A3 3 0 0 1 12 7v13.5a2.2 2.2 0 0 0-2.2-2H4z"/><path d="M20 4.5h-5A3 3 0 0 0 12 7v13.5a2.2 2.2 0 0 1 2.2-2H20z"/></svg><span>Framework</span></a>
+    <a class="app-tab " href="/tools/" aria-label="Tools"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Tools</span></a>
+    <a class="app-tab active" href="/more/" aria-label="More"><svg viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg><span>More</span></a>
+  </nav>
+
+</div>
+<script>var _y=document.getElementById('year'); if(_y) _y.textContent=new Date().getFullYear();</script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){});});}</script>
+</body>
+</html>

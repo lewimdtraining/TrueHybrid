@@ -2,13 +2,15 @@
    Bump CACHE_VERSION whenever you want to force every visitor to drop old cached
    assets on their next visit. Pages and recipe data are fetched network-first, so
    normal content edits show up without changing this number. */
-const CACHE_VERSION = 'th-v1';
+const CACHE_VERSION = 'th-v2';
 const CACHE = `th-cache-${CACHE_VERSION}`;
 
 // Core shell precached on install so the site opens offline.
 const PRECACHE = [
   '/',
   '/index.html',
+  '/tools/',
+  '/more/',
   '/framework/',
   '/framework/index.html',
   '/offline.html',
