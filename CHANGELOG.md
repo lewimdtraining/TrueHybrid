@@ -18,6 +18,16 @@ A running record of the build so the project knowledge stays current. Most recen
 
 ## Changelog
 
+### Nutrition tool adjustments (current)
+
+- **Food likes and dislikes.** Two inputs added: liked foods get favoured when meals are chosen; disliked foods exclude any recipe containing them (checked across name, tags, and ingredients). A guard warns if filters plus dislikes leave a meal type with nothing to pick.
+- **PDF now includes the full recipes.** The plan download prints every meal with its scaled ingredient amounts and full method, not just names and macros. Variety mode scales each recipe to that meal's portion; bulk-prep scales to the whole week.
+- **Bulk-prep multiplier removed.** The old "cook x11-12" wording (portion multiplier x7 days, which was correct but confusing) is gone. Bulk-prep now scales each recipe's ingredients to make the whole week in one cook and simply says to divide into 7 daily portions.
+- **Per-meal numbers verified.** Confirmed the calorie/macro scaling is arithmetically correct (base per-serving x portion) and that the recipe data is internally consistent (199/200 within 50 kcal of their macro math). The raw portion multiplier is no longer shown anywhere; the recipe view shows exact scaled amounts instead.
+- **Safer goals.** Deficit/surplus options capped at plus or minus 15% (was 20%), with a calorie floor and a note that steeper cuts under-fuel training and bigger surpluses are mostly fat.
+- **IF explained.** The 2-meal option now spells out that IF means intermittent fasting, two meals in a shorter eating window.
+
+
 ### 2026-07-01, full rebrand to True Hybrid (current)
 
 Retired the MDT / Modern Day Templar identity. The site is now **True Hybrid** end to end.

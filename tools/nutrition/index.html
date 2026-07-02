@@ -11,7 +11,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="True Hybrid">
 <title>Nutrition Tool, True Hybrid</title>
-<meta name="description" content="Calculate your daily macros and build a week of meals from a library of 200 recipes. Bulk-prep or daily variety, with food-preference filters. Runs entirely in your browser.">
+<meta name="description" content="Calculate your daily macros and build a week of meals from a library of 200 recipes. Bulk-prep or daily variety, with food likes, dislikes and preference filters. Runs entirely in your browser.">
 <link rel="stylesheet" href="../../assets/styles.css">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2315181e'/%3E%3Ctext x='16' y='23' text-anchor='middle' fill='%237cc4e8' font-family='Arial,sans-serif' font-size='20' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E">
 <style>
@@ -29,6 +29,7 @@
 .nt-field label { display:block; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brass-dim); font-weight: 700; margin-bottom: 6px; }
 .nt-field input, .nt-field select { width:100%; padding: 11px 12px; border: 1px solid var(--cream); background: var(--bone); color: var(--ink); font-family: var(--body); font-size: 14px; }
 .nt-field input:focus, .nt-field select:focus { outline: none; border-color: var(--brass); }
+.nt-field .sub { font-size: 11px; color: var(--smoke); margin-top: 5px; letter-spacing: 0; text-transform: none; font-weight: 400; }
 .nt-seg { display:inline-flex; border:1px solid var(--cream); overflow:hidden; }
 .nt-seg button { background: var(--bone); border:none; padding: 9px 14px; font-family: var(--body); font-size: 12px; font-weight:700; letter-spacing:0.06em; color: var(--char); cursor:pointer; }
 .nt-seg button.on { background: var(--ink); color: var(--bone); }
@@ -38,6 +39,8 @@
 .nt-check label { display:flex; align-items:center; gap:8px; font-size: 13px; color: var(--char); text-transform:none; letter-spacing:0; font-weight:500; cursor:pointer; }
 .nt-check input { width:auto; }
 .btn-row { display:flex; gap:12px; flex-wrap:wrap; margin-top: 20px; }
+.nt-caveat { font-size:12px; color:var(--char); line-height:1.55; margin-top:12px; background:rgba(217,130,54,0.09); border-left:3px solid var(--warn); padding:11px 14px; }
+.nt-caveat strong{ color:var(--ink); }
 
 .nt-targets { display:grid; grid-template-columns: repeat(5,1fr); gap:2px; background: var(--cream); border:1px solid var(--cream); margin-top: 4px; }
 .nt-targets .t { background: var(--bone); padding: 14px 10px; text-align:center; }
@@ -54,7 +57,7 @@
 .nt-note { font-size:12.5px; color:var(--char); line-height:1.55; margin-top:12px; background:rgba(124,196,232,0.10); border-left:3px solid var(--brass); padding:12px 14px; }
 .nt-note strong{color:var(--ink);}
 
-.nt-mode-banner { font-size:13px; color:var(--char); background: var(--ink); color:var(--cream); padding:12px 16px; margin-bottom:16px; line-height:1.5; }
+.nt-mode-banner { font-size:13px; background: var(--ink); color:var(--cream); padding:12px 16px; margin-bottom:16px; line-height:1.5; }
 .nt-mode-banner strong{color:var(--brass);}
 
 .nt-day { margin-bottom: 20px; }
@@ -70,25 +73,33 @@
 .nt-meal .m-cal { font-family:var(--display); font-style:normal; font-weight:800; color:var(--ink); }
 .nt-swap { background:none; border:1px solid var(--cream); color:var(--brass-dim); font-size:11px; font-weight:700; letter-spacing:0.06em; padding:5px 9px; cursor:pointer; margin-top:6px; }
 .nt-swap:hover{ border-color:var(--brass); }
+.nt-view { background:none; border:1px solid var(--cream); color:var(--brass-dim); font-size:11px; font-weight:700; letter-spacing:0.06em; padding:5px 9px; cursor:pointer; margin-top:6px; margin-left:6px; }
+.nt-view:hover{ border-color:var(--brass); }
 
-.nt-cooklist { margin-top: 8px; }
-.nt-cooklist .ci { display:flex; justify-content:space-between; gap:12px; padding:10px 0; border-bottom:1px solid var(--cream); font-size:14px; }
-.nt-cooklist .ci .b { color:var(--brass-dim); font-weight:700; white-space:nowrap; }
+.nt-cook { padding:14px 0; border-bottom:1px solid var(--cream); }
+.nt-cook:last-child{ border-bottom:none; }
+.nt-cook .ch { display:flex; justify-content:space-between; gap:12px; align-items:baseline; }
+.nt-cook .cn { font-size:15px; font-weight:700; color:var(--ink); }
+.nt-cook .cp { font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--brass-dim); font-weight:700; white-space:nowrap; }
+.nt-cook ul { margin:10px 0 0; padding-left:0; list-style:none; }
+.nt-cook li { font-size:13px; color:var(--char); line-height:1.5; padding:3px 0 3px 16px; position:relative; }
+.nt-cook li::before{ content:'·'; position:absolute; left:4px; color:var(--brass-dim); font-weight:700; }
+.nt-cook .cportion { font-size:12.5px; color:var(--ink); margin-top:8px; font-weight:600; }
 
 .nt-empty { color:var(--smoke); font-size:14px; padding:20px 0; }
 .nt-hidden{ display:none; }
 
-/* modal */
 .nt-modal { position:fixed; inset:0; background:rgba(15,18,23,0.72); display:none; align-items:center; justify-content:center; padding:20px; z-index:50; }
 .nt-modal.on{ display:flex; }
 .nt-modal-inner { background:var(--bone); max-width:560px; width:100%; max-height:86vh; overflow:auto; padding:26px; }
 .nt-modal-inner h3 { font-family:var(--display); font-size:22px; font-style:normal; margin-bottom:6px; }
-.nt-modal-inner .desc { font-size:14px; color:var(--char); line-height:1.55; margin-bottom:16px; }
+.nt-modal-inner .desc { font-size:14px; color:var(--char); line-height:1.55; margin-bottom:14px; }
+.nt-modal-inner .macros { font-size:13px; color:var(--smoke); margin-bottom:6px; }
 .nt-modal-inner h4 { font-family:var(--display); font-style:normal; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--brass-dim); margin:16px 0 8px; }
 .nt-modal-inner li { font-size:14px; color:var(--char); line-height:1.5; margin-bottom:6px; margin-left:18px; }
+.nt-modal-inner .portion-tip { font-size:12.5px; color:var(--ink); background:rgba(124,196,232,0.10); border-left:3px solid var(--brass); padding:10px 12px; margin-top:10px; }
 .nt-modal-close { float:right; background:none; border:none; font-size:24px; color:var(--smoke); cursor:pointer; line-height:1; }
 @media (max-width:720px){
-  .nt-targets, .nt-readout { grid-template-columns: repeat(5, 1fr); }
   .nt-targets .t .v { font-size:17px; }
   .nt-hero{ padding:36px 18px 24px; }
   .nt-wrap{ padding:24px 16px 48px; }
@@ -112,7 +123,7 @@
   <section class="nt-hero">
     <div class="eyebrow">Nutrition</div>
     <h1>Nutrition <em>Tool</em>.</h1>
-    <p>Set your calories and macros from your own numbers, then build a week of meals from 200 recipes. Bulk-prep the same meals across the week, or eat for variety. Everything runs in your browser, nothing is sent anywhere.</p>
+    <p>Set your calories and macros from your own numbers, tell it the foods you like and the ones you don't, then build a week of meals from 200 recipes. Bulk-prep the same meals across the week, or eat for variety. Everything runs in your browser, nothing is sent anywhere.</p>
   </section>
 
   <div class="nt-wrap">
@@ -154,14 +165,15 @@
         <div class="nt-field">
           <label>Goal</label>
           <select id="nt-goal">
-            <option value="-0.20">Lose fat (-20%)</option>
+            <option value="-0.15">Lose fat (-15%)</option>
             <option value="-0.10">Lean down (-10%)</option>
             <option value="0" selected>Maintain</option>
             <option value="0.10">Lean gain (+10%)</option>
-            <option value="0.20">Build (+20%)</option>
+            <option value="0.15">Build (+15%)</option>
           </select>
         </div>
       </div>
+      <div class="nt-caveat"><strong>On the deficit and surplus:</strong> these are kept in a sustainable range on purpose. Cutting much harder than this under-fuels your training and recovery; a bigger surplus is mostly fat, not muscle. A calorie floor also stops the target dropping too low. Slower and steady wins here.</div>
       <div class="btn-row">
         <button class="btn" id="nt-calc">Calculate targets</button>
       </div>
@@ -181,8 +193,8 @@
 
     <div class="nt-card nt-hidden" id="nt-plan-card">
       <h2>3. Build the plan</h2>
-      <div class="hint">Pick how many meals a day, how you want to eat, and any food filters.</div>
-      <div class="nt-row" style="margin-bottom:14px;">
+      <div class="hint">Pick how many meals a day and how you want to eat, then make it yours with likes, dislikes, and filters.</div>
+      <div class="nt-row" style="margin-bottom:16px;">
         <div class="nt-field" style="flex:0 0 auto;">
           <label>Meals a day</label>
           <div class="nt-seg" id="nt-meals">
@@ -191,6 +203,7 @@
             <button data-m="3">3</button>
             <button data-m="2">2 (IF)</button>
           </div>
+          <div class="sub">2 (IF) = two meals, intermittent-fasting style, in a shorter eating window.</div>
         </div>
         <div class="nt-field" style="flex:0 0 auto;">
           <label>Mode</label>
@@ -198,8 +211,23 @@
             <button data-mode="variety" class="on">Daily variety</button>
             <button data-mode="bulk">Bulk-prep</button>
           </div>
+          <div class="sub">Bulk-prep builds one big cook of each meal for the whole week.</div>
         </div>
       </div>
+
+      <div class="nt-grid" style="margin-bottom:14px;">
+        <div class="nt-field">
+          <label>Foods you love</label>
+          <input id="nt-likes" type="text" placeholder="e.g. chicken, oats, eggs, rice">
+          <div class="sub">Comma separated. These get favoured when picking meals.</div>
+        </div>
+        <div class="nt-field">
+          <label>Foods to avoid</label>
+          <input id="nt-dislikes" type="text" placeholder="e.g. tuna, mushrooms, cottage cheese">
+          <div class="sub">Comma separated. Any recipe containing these is left out.</div>
+        </div>
+      </div>
+
       <div class="nt-field">
         <label>Filters</label>
         <div class="nt-check">
@@ -211,14 +239,15 @@
       </div>
       <div class="btn-row">
         <button class="btn" id="nt-generate">Generate the week</button>
-        <button class="btn btn-outline" id="nt-pdf" style="color:var(--ink);border-color:var(--brass-dim);display:none;">Download PDF</button>
+        <button class="btn btn-outline" id="nt-pdf" style="color:var(--ink);border-color:var(--brass-dim);display:none;">Download PDF (with recipes)</button>
       </div>
+      <div id="nt-warn" class="nt-caveat nt-hidden" style="background:rgba(217,130,54,0.09);"></div>
     </div>
 
     <div class="nt-card nt-hidden" id="nt-result-card">
       <h2>Your week</h2>
       <div id="nt-readout-wrap">
-        <div class="hint" style="margin-bottom:2px;">Delivered per day, averaged across the week. Orange means more than 10% over target.</div>
+        <div class="hint" style="margin-bottom:2px;">Delivered per day, averaged across the week. Orange means more than 10% over target on calories, carbs, or fats.</div>
         <div class="nt-readout" id="nt-readout"></div>
         <div class="nt-note" id="nt-swap-note"><strong>Swapping a meal changes the totals.</strong> A swap can push a macro into surplus or deficit without you noticing, so glance back at this readout after any swap. Anything in orange is over the 10% threshold.</div>
       </div>
@@ -254,11 +283,9 @@ const DAYS = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sun
 let RECIPES = [];
 const state = { units:'metric', sex:'male', meals:4, mode:'variety', target:null, plan:null };
 
-// ---- load recipes ----
 fetch('../../data/recipes.json').then(r=>r.json()).then(d=>{ RECIPES = Array.isArray(d)?d:(d.recipes||[]); })
   .catch(()=>{ RECIPES=[]; });
 
-// ---- segmented controls ----
 function seg(id, key, cast){
   document.getElementById(id).addEventListener('click', e=>{
     const b=e.target.closest('button'); if(!b) return;
@@ -284,7 +311,6 @@ function applyUnits(){
   }
 }
 
-// ---- calculate targets ----
 document.getElementById('nt-calc').addEventListener('click', ()=>{
   let kg=+document.getElementById('nt-weight').value, cm=+document.getElementById('nt-height').value;
   if(state.units==='imperial'){ kg=kg/2.20462; cm=cm*2.54; }
@@ -296,8 +322,8 @@ document.getElementById('nt-calc').addEventListener('click', ()=>{
   let cal = Math.round(bmr*act*(1+goal));
   const floor = state.sex==='male'?1500:1200;
   if(cal<floor) cal=floor;
-  const protein = Math.round(kg*2.0);           // 2 g/kg
-  const fats = Math.round(cal*0.25/9);          // 25% cals
+  const protein = Math.round(kg*2.0);
+  const fats = Math.round(cal*0.25/9);
   const carbs = Math.max(0, Math.round((cal - protein*4 - fats*9)/4));
   state.target = { cal, protein, carbs, fats };
   renderTargets();
@@ -320,7 +346,9 @@ function renderTargets(){
 }
 function tcell(k,v,u){ return `<div class="t"><div class="k">${k}</div><div class="v">${v}</div><div class="u">${u}</div></div>`; }
 
-// ---- filters ----
+// ---- likes / dislikes / filters ----
+function terms(id){ return document.getElementById(id).value.toLowerCase().split(',').map(s=>s.trim()).filter(Boolean); }
+function recipeText(r){ return (r.name+' '+(r.tags||[]).join(' ')+' '+(r.ingredients||[]).join(' ')).toLowerCase(); }
 const MEAT=['chicken','beef','turkey','fish'];
 const ANIMAL=['chicken','beef','turkey','fish','eggs','dairy','cheese'];
 function passesFilters(r){
@@ -329,17 +357,21 @@ function passesFilters(r){
   if(document.getElementById('f-vegan').checked && ANIMAL.some(m=>tags.includes(m))) return false;
   if(document.getElementById('f-gf').checked && (tags.includes('bread')||tags.includes('pasta'))) return false;
   if(document.getElementById('f-nonuts').checked && tags.includes('nuts')) return false;
+  const dis=terms('nt-dislikes');
+  if(dis.length){ const txt=recipeText(r); if(dis.some(d=>txt.includes(d))) return false; }
   return true;
 }
+function likeBoost(r){
+  const likes=terms('nt-likes'); if(!likes.length) return 0;
+  const txt=recipeText(r); let n=0; likes.forEach(l=>{ if(txt.includes(l)) n++; }); return n;
+}
 
-// ---- meal slot layout ----
 function slots(n){
   if(n===5) return ['breakfast','snack','lunch','snack','dinner'];
   if(n===4) return ['breakfast','lunch','snack','dinner'];
   if(n===3) return ['breakfast','lunch','dinner'];
   return ['lunch','dinner'];
 }
-// calorie share per slot type
 const SHARE={ breakfast:1, lunch:1.15, dinner:1.2, snack:0.55 };
 function slotTargets(n){
   const s=slots(n); const w=s.map(x=>SHARE[x]); const sum=w.reduce((a,b)=>a+b,0);
@@ -349,7 +381,6 @@ function slotTargets(n){
 function pickFor(type, calTarget, used){
   const pool=RECIPES.filter(r=>r.mealType===type && passesFilters(r));
   if(!pool.length) return null;
-  // prefer unused, closest calorie fit after scaling within 0.5x-2.5x
   let best=null, bestScore=1e9;
   const shuffled=pool.slice().sort(()=>Math.random()-0.5);
   for(const r of shuffled){
@@ -357,6 +388,7 @@ function pickFor(type, calTarget, used){
     let mult=calTarget/per; mult=Math.max(0.5,Math.min(2.5,mult));
     const delivered=per*mult;
     let score=Math.abs(delivered-calTarget);
+    score -= likeBoost(r)*120;          // favour liked foods
     if(used.has(r.id)) score+=400;
     if(score<bestScore){ bestScore=score; best={r,mult}; }
   }
@@ -366,14 +398,41 @@ function scaledMeal(pick, type){
   const r=pick.r, m=pick.mult, per=1/(r.servings||1);
   return { id:r.id, type, name:r.name, mult:m,
     cal:Math.round(r.calories*per*m), protein:Math.round(r.protein*per*m),
-    carbs:Math.round(r.carbs*per*m), fats:Math.round(r.fats*per*m), fibre:Math.round((r.fibre||0)*per*m),
-    servingsPortion:+(m).toFixed(2) };
+    carbs:Math.round(r.carbs*per*m), fats:Math.round(r.fats*per*m), fibre:Math.round((r.fibre||0)*per*m) };
 }
 
-// ---- generate ----
+// ---- ingredient scaling ----
+function scaleQty(str, factor){
+  return str.replace(/^(\d+\s+\d+\/\d+|\d+\/\d+|\d+(?:\.\d+)?)/, (m)=>{
+    let val;
+    if(m.includes('/')){
+      const parts=m.trim().split(/\s+/);
+      if(parts.length===2){ const [a,b]=parts[1].split('/'); val=parseFloat(parts[0]) + (+a/+b); }
+      else { const [a,b]=m.split('/'); val=+a/+b; }
+    } else val=parseFloat(m);
+    let v=val*factor;
+    if(v>=10) v=Math.round(v);
+    else if(v>=1) v=Math.round(v*2)/2;
+    else v=Math.max(0.25, Math.round(v*4)/4);
+    return (Number.isInteger(v)? v : v.toFixed(v<1?2:1)).toString();
+  });
+}
+// factor to turn the base recipe into ONE daily portion of this meal
+function dailyFactor(meal){ const r=RECIPES.find(x=>x.id===meal.id); return meal.mult/(r.servings||1); }
+function scaledIngredients(meal, factor){
+  const r=RECIPES.find(x=>x.id===meal.id); if(!r) return [];
+  return (r.ingredients||[]).map(i=>scaleQty(i, factor));
+}
+
 document.getElementById('nt-generate').addEventListener('click', ()=>{
+  const warn=document.getElementById('nt-warn'); warn.classList.add('nt-hidden');
   if(!state.target){ return; }
   if(!RECIPES.length){ document.getElementById('nt-output').innerHTML='<div class="nt-empty">Recipes are still loading, or could not be loaded. If this persists, reload the page.</div>'; document.getElementById('nt-result-card').classList.remove('nt-hidden'); return; }
+  // check filters/dislikes haven't emptied a needed meal type
+  const need=[...new Set(slots(state.meals))];
+  const missing=need.filter(type=>!RECIPES.some(r=>r.mealType===type && passesFilters(r)));
+  if(missing.length){ warn.textContent='Your filters and dislikes left no '+missing.join(' or ')+' recipes to choose from. Loosen them a little and try again.'; warn.classList.remove('nt-hidden'); return; }
+
   const st=slotTargets(state.meals);
   let plan;
   if(state.mode==='bulk'){
@@ -398,9 +457,7 @@ function renderReadout(){
   if(state.plan.mode==='bulk'){ avg=dayTotals(state.plan.slots); }
   else { const tot=state.plan.days.map(dayTotals); avg={}; ['cal','protein','carbs','fats','fibre'].forEach(k=>avg[k]=Math.round(tot.reduce((a,d)=>a+d[k],0)/tot.length)); }
   const t=state.target;
-  // calories/carbs/fats: over target is a real warning (orange). in-band is ok (blue).
   const cls=(v,tg)=> v>tg*(1+OFF_TARGET)?'over': (v>=tg*(1-OFF_TARGET)?'ok':'');
-  // protein: at or above target is good, never a warning; only short of target is neutral.
   const clsP=(v,tg)=> v>=tg*(1-OFF_TARGET)?'ok':'';
   document.getElementById('nt-readout').innerHTML =
     rcell('Calories',avg.cal,cls(avg.cal,t.cal))+
@@ -412,12 +469,12 @@ function renderReadout(){
 function rcell(k,v,c){ return `<div class="t"><div class="k">${k}</div><div class="v ${c}">${v}</div></div>`; }
 
 function mealRow(m, dayIndex, slotIndex){
-  const port = m.mult!==1? ` &middot; ${m.servingsPortion}x portion`:'';
   return `<div class="nt-meal">
     <div class="m-main">
       <div class="m-slot">${m.type}</div>
-      <div class="m-name" data-id="${m.id}">${m.name}</div>
-      <div class="m-macros">P ${m.protein}g &middot; C ${m.carbs}g &middot; F ${m.fats}g${port}</div>
+      <div class="m-name" data-day="${dayIndex}" data-slot="${slotIndex}">${m.name}</div>
+      <div class="m-macros">P ${m.protein}g &middot; C ${m.carbs}g &middot; F ${m.fats}g</div>
+      <button class="nt-view" data-day="${dayIndex}" data-slot="${slotIndex}">Recipe</button>
       <button class="nt-swap" data-day="${dayIndex}" data-slot="${slotIndex}">Swap</button>
     </div>
     <div class="m-side"><div class="m-cal">${m.cal}</div><div class="m-macros">kcal</div></div>
@@ -429,22 +486,24 @@ function renderPlan(){
   const out=document.getElementById('nt-output');
   const banner=document.getElementById('nt-mode-banner');
   if(state.plan.mode==='bulk'){
-    banner.innerHTML = `<strong>Bulk-prep.</strong> The same ${state.plan.slots.length} meals every day. Cook once to cover all 7 days, the cook list below multiplies each recipe out.`;
-    let html='<div class="nt-day"><h3>Every day</h3>';
+    banner.innerHTML = `<strong>Bulk-prep.</strong> The same ${state.plan.slots.length} meals every day. Cook each one once for the whole week using the quantities below, then split it into 7 daily portions.`;
+    let html='<div class="nt-day"><h3>Your daily meals</h3>';
     state.plan.slots.forEach((m,i)=> html+=mealRow(m,-1,i));
     html+='</div>';
-    // cook list
-    html+='<div class="nt-day"><h3>Cook list for the week</h3><div class="nt-cooklist">';
-    state.plan.slots.forEach(m=>{
-      const r=RECIPES.find(x=>x.id===m.id);
-      const weekServings = m.servingsPortion*7;
-      const batches = Math.ceil(weekServings/(r.servings||1));
-      html+=`<div class="ci"><span>${m.name}</span><span class="b">cook x${batches} (${(r.servings||1)*batches} servings)</span></div>`;
+    html+='<div class="nt-day"><h3>Cook once for the week</h3>';
+    state.plan.slots.forEach((m,i)=>{
+      const weekFactor = dailyFactor(m)*7;              // base recipe -> whole week of this meal
+      const ings = scaledIngredients(m, weekFactor);
+      html+=`<div class="nt-cook">
+        <div class="ch"><span class="cn">${m.name}</span><span class="cp">whole week</span></div>
+        <ul>${ings.map(i=>`<li>${i}</li>`).join('')}</ul>
+        <div class="cportion">Cook it all, then divide into 7 portions, one per day (about ${m.cal} kcal each).</div>
+      </div>`;
     });
-    html+='</div></div>';
+    html+='</div>';
     out.innerHTML=html;
   } else {
-    banner.innerHTML = `<strong>Daily variety.</strong> A different mix every day, ${slots(state.meals).length} meals a day across the week.`;
+    banner.innerHTML = `<strong>Daily variety.</strong> A different mix every day, ${slots(state.meals).length} meals a day across the week. Tap Recipe on any meal for the exact amounts at your portion.`;
     let html='';
     state.plan.days.forEach((meals,di)=>{
       html+=`<div class="nt-day"><h3>${DAYS[di]}</h3>`;
@@ -458,8 +517,10 @@ function renderPlan(){
   bindMealEvents();
 }
 
+function getMeal(di,si){ return di<0 ? state.plan.slots[si] : state.plan.days[di][si]; }
+
 function bindMealEvents(){
-  document.querySelectorAll('.m-name').forEach(el=>el.addEventListener('click',()=>openRecipe(el.dataset.id)));
+  document.querySelectorAll('.m-name, .nt-view').forEach(el=>el.addEventListener('click',()=>openRecipe(+el.dataset.day,+el.dataset.slot)));
   document.querySelectorAll('.nt-swap').forEach(el=>el.addEventListener('click',()=>{
     const di=+el.dataset.day, si=+el.dataset.slot;
     const st=slotTargets(state.meals);
@@ -478,46 +539,67 @@ function bindMealEvents(){
   }));
 }
 
-function openRecipe(id){
-  const r=RECIPES.find(x=>x.id===id); if(!r) return;
+function openRecipe(di,si){
+  const m=getMeal(di,si); const r=RECIPES.find(x=>x.id===m.id); if(!r) return;
   const inner=document.getElementById('nt-modal-inner');
+  const isBulk = state.plan.mode==='bulk';
+  const factor = isBulk ? dailyFactor(m)*7 : dailyFactor(m);
+  const ings = scaledIngredients(m, factor);
+  const portionTip = isBulk
+    ? `Amounts below make the <strong>whole week</strong> of this meal. Cook it all, then divide into 7 portions, one a day (about ${m.cal} kcal each).`
+    : `Amounts below are scaled to <strong>your portion</strong> for this meal (${m.cal} kcal).`;
   inner.innerHTML = `<button class="nt-modal-close" id="nt-close">&times;</button>
     <h3>${r.name}</h3>
     <div class="desc">${r.description||''}</div>
-    <div class="m-macros">${r.calories} kcal &middot; P ${r.protein}g &middot; C ${r.carbs}g &middot; F ${r.fats}g &middot; ${r.fibre||0}g fibre &middot; makes ${r.servings||1}</div>
-    <h4>Ingredients</h4><ul>${(r.ingredients||[]).map(i=>`<li>${i}</li>`).join('')}</ul>
+    <div class="macros">This portion: ${m.cal} kcal &middot; P ${m.protein}g &middot; C ${m.carbs}g &middot; F ${m.fats}g &middot; ${m.fibre}g fibre</div>
+    <div class="portion-tip">${portionTip}</div>
+    <h4>Ingredients</h4><ul>${ings.map(i=>`<li>${i}</li>`).join('')}</ul>
     <h4>Method</h4><ol>${(r.instructions||[]).map(i=>`<li>${i}</li>`).join('')}</ol>`;
   document.getElementById('nt-modal').classList.add('on');
   document.getElementById('nt-close').addEventListener('click',()=>document.getElementById('nt-modal').classList.remove('on'));
 }
 document.getElementById('nt-modal').addEventListener('click',e=>{ if(e.target.id==='nt-modal') e.currentTarget.classList.remove('on'); });
 
-// ---- PDF ----
+// ---- PDF (now includes the full recipes) ----
 document.getElementById('nt-pdf').addEventListener('click',()=>{
   if(!state.plan || !window.jspdf) return;
   const { jsPDF } = window.jspdf; const doc=new jsPDF({unit:'pt',format:'a4'});
-  const W=doc.internal.pageSize.getWidth(); let y=54;
+  const W=doc.internal.pageSize.getWidth(), M=54, CW=W-M*2; let y=54;
   const ink='#15181e', blue='#2f7ea6', grey='#7a8794';
-  doc.setTextColor(blue); doc.setFont('helvetica','bold'); doc.setFontSize(10); doc.text('TRUE HYBRID  ·  NUTRITION',54,y); y+=26;
-  doc.setTextColor(ink); doc.setFontSize(22); doc.text('Your week of meals',54,y); y+=24;
+  function page(need){ if(y>780-(need||0)){ doc.addPage(); y=54; } }
+  function heading(txt){ page(30); doc.setTextColor(blue); doc.setFont('helvetica','bold'); doc.setFontSize(13); doc.text(txt,M,y); y+=18; }
+  function rule(){ doc.setDrawColor(222); doc.line(M,y,W-M,y); y+=14; }
+  function recipeBlock(m, factor, portionLine){
+    const r=RECIPES.find(x=>x.id===m.id);
+    page(60);
+    doc.setTextColor(ink); doc.setFont('helvetica','bold'); doc.setFontSize(12); doc.text(`${m.type.toUpperCase()}  ·  ${m.name}`,M,y); y+=15;
+    doc.setFont('helvetica','normal'); doc.setTextColor(grey); doc.setFontSize(9.5);
+    doc.text(`${m.cal} kcal · P ${m.protein} · C ${m.carbs} · F ${m.fats} · ${m.fibre}g fibre`,M,y); y+=13;
+    if(portionLine){ doc.setTextColor(blue); doc.setFontSize(9.5); doc.text(portionLine,M,y); y+=13; }
+    doc.setTextColor(ink); doc.setFont('helvetica','bold'); doc.setFontSize(9.5); doc.text('Ingredients',M,y); y+=12;
+    doc.setFont('helvetica','normal'); doc.setTextColor(60);
+    scaledIngredients(m,factor).forEach(i=>{ const lines=doc.splitTextToSize('• '+i, CW); page(lines.length*11); doc.text(lines,M,y); y+=lines.length*11; });
+    y+=3;
+    doc.setTextColor(ink); doc.setFont('helvetica','bold'); doc.setFontSize(9.5); doc.text('Method',M,y); y+=12;
+    doc.setFont('helvetica','normal'); doc.setTextColor(60);
+    (r.instructions||[]).forEach((ins,idx)=>{ const lines=doc.splitTextToSize(`${idx+1}. ${ins}`, CW); page(lines.length*11); doc.text(lines,M,y); y+=lines.length*11+1; });
+    y+=8; rule();
+  }
+  // header
+  doc.setTextColor(blue); doc.setFont('helvetica','bold'); doc.setFontSize(10); doc.text('TRUE HYBRID  ·  NUTRITION',M,y); y+=24;
+  doc.setTextColor(ink); doc.setFontSize(22); doc.text('Your week of meals',M,y); y+=22;
   const t=state.target;
   doc.setFont('helvetica','normal'); doc.setFontSize(11); doc.setTextColor(grey);
-  doc.text(`Target: ${t.cal} kcal  ·  P ${t.protein}g  ·  C ${t.carbs}g  ·  F ${t.fats}g`,54,y); y+=22;
-  function line(){ doc.setDrawColor(220); doc.line(54,y,W-54,y); y+=16; }
-  function page(){ if(y>760){ doc.addPage(); y=54; } }
-  function meal(m){ page(); doc.setTextColor(ink); doc.setFont('helvetica','bold'); doc.setFontSize(11);
-    doc.text(`${m.type.toUpperCase()}  ${m.name}${m.mult!==1?'  ('+m.servingsPortion+'x)':''}`,54,y);
-    doc.setFont('helvetica','normal'); doc.setTextColor(grey); doc.setFontSize(10);
-    doc.text(`${m.cal} kcal · P ${m.protein} · C ${m.carbs} · F ${m.fats}`, W-54, y, {align:'right'}); y+=17; }
+  doc.text(`Target: ${t.cal} kcal  ·  P ${t.protein}g  ·  C ${t.carbs}g  ·  F ${t.fats}g`,M,y); y+=20; rule();
+
   if(state.plan.mode==='bulk'){
-    doc.setTextColor(blue); doc.setFont('helvetica','bold'); doc.setFontSize(13); doc.text('Bulk-prep, the same meals every day',54,y); y+=20;
-    state.plan.slots.forEach(meal); y+=6; line();
-    doc.setTextColor(blue); doc.setFont('helvetica','bold'); doc.setFontSize(13); doc.text('Cook list for the week',54,y); y+=20;
-    state.plan.slots.forEach(m=>{ const r=RECIPES.find(x=>x.id===m.id); const b=Math.ceil(m.servingsPortion*7/(r.servings||1)); page();
-      doc.setTextColor(ink); doc.setFont('helvetica','normal'); doc.setFontSize(11); doc.text(m.name,54,y);
-      doc.setTextColor(blue); doc.text(`cook x${b}`, W-54,y,{align:'right'}); y+=16; });
+    heading('Bulk-prep, cook once for the whole week');
+    doc.setFont('helvetica','normal'); doc.setTextColor(grey); doc.setFontSize(10);
+    const intro=doc.splitTextToSize('Each recipe below is scaled to make all 7 days of that meal in one cook. Cook it, then divide into 7 equal portions, one per day.', CW);
+    doc.text(intro,M,y); y+=intro.length*12+6;
+    state.plan.slots.forEach(m=> recipeBlock(m, dailyFactor(m)*7, 'Makes the whole week — divide into 7 portions, one a day.'));
   } else {
-    state.plan.days.forEach((meals,di)=>{ page(); doc.setTextColor(blue); doc.setFont('helvetica','bold'); doc.setFontSize(13); doc.text(DAYS[di],54,y); y+=20; meals.forEach(meal); y+=6; line(); });
+    state.plan.days.forEach((meals,di)=>{ heading(DAYS[di]); meals.forEach(m=> recipeBlock(m, dailyFactor(m), 'Scaled to your portion for this meal.')); });
   }
   doc.save('true-hybrid-meal-plan.pdf');
 });
