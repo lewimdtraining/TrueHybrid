@@ -1,95 +1,120 @@
-# True Hybrid, Project Status & Changelog
+# MDT Online Tools, Project Status & Changelog
 
-_Last updated: 2026-07-01_
+_Last updated: 2026-06-04_
 
-A running record of the build so the project knowledge stays current. Most recent work is at the top.
+A running record of the build so the project knowledge stays current. Most recent work is at the top of the changelog.
 
 ---
 
 ## What this is
 
-**True Hybrid**: a static training/nutrition/development site built around one master document, the True Hybrid framework (physical capacity, mental command, spiritual direction). Free tools now, a possible paid tier later. Deploys to Netlify via GitHub. Installable PWA.
+The Modern Day Templar (MDT) site: a static, men's training / nutrition / development site offering free tools now, with a planned ten-dollar-a-month subscription later. It deploys to Netlify via GitHub.
 
-**Brand voice:** grounded, plain, no preaching, no politics. Recurring line: "Build the base, earn the expression, aim it higher." Three layers: Physical/Capacity, Mental/Command, Spiritual/Direction.
+**Brand voice:** Peterson's "why" plus Huberman's "how" plus Lewi's "lived it." Plain, grounded, no preaching, no politics. Tagline energy: "Men Doing Things." Recurring frames from the No-Input Morning: commander vs passenger, servant vs tyrant, "most men lose the war before breakfast."
 
-**Writing rules:** no em or en dashes (use commas); keep claims honest; footer trust line "No tracking, No ads, No bullsh*t".
+**Writing rules:** no em or en dashes (use commas); don't name-drop Peterson or Huberman in user-facing copy, use the framing instead; keep claims honest.
+
+---
+
+## Current state
+
+**Stack / deploy:** static HTML/CSS/JS, GitHub to Netlify. Installable PWA.
+
+**Palette (CSS vars in `assets/styles.css`):**
+
+| Var | Hex | Role |
+| --- | --- | --- |
+| `--ink` | `#15181e` | near-black, text and dark bars |
+| `--char` | `#353a42` | body text |
+| `--smoke` | `#7a8794` | muted blue-grey |
+| `--bone` | `#ffffff` | white, page wrap and cards |
+| `--paper` | `#f7f2e8` | cream, main background |
+| `--cream` | `#e7dcc8` | warm light, borders |
+| `--brass` | `#7cc4e8` | baby blue accent (var name kept for compatibility) |
+| `--brass-dim` | `#2f7ea6` | denim, text-on-light and hover |
+| `--rust` | `#1f6385` | deep blue |
+| `--warn` | `#d98236` | amber, warnings |
+
+**Key files:**
+
+- `index.html`, `assets/styles.css`, `assets/jspdf.umd.min.js`
+- Logos: `assets/mdt-logo-white.png`, `assets/mdt-logo-charcoal.png` (flanking lines now baby blue)
+- PWA: `manifest.webmanifest`, `sw.js`, `offline.html`, `assets/icon-{180,192,512}.png`, `assets/icon-maskable-512.png`
+- `data/recipes.json` (200 recipes)
+- `downloads/` (four Morning Audit practice cards, see below)
+- Tools: `tools/{nutrition,running,strength,audit,stretching}/index.html`
+- `vanguard/index.html` (now an unlinked "coming soon" page)
+- `netlify.toml`, `README.md`
+
+**Deliverables / packaging:** working copy at `/home/claude/work/`. Outputs go to `/mnt/user-data/outputs/` as `mdt-site.zip` (re-zipped after each change), plus loose `recipes.json` and `styles.css`. Build scripts (not shipped in the zip): `build_recipes.py`, `recipes_data.py`, `add_recipes.py`, `add_recipes2.py`, `build_cards.py`.
+
+**Tool status:**
+
+- **Nutrition** , complete. 200 recipes, re-engineered meal planner, swap-impact note added.
+- **Audit** , rebuilt as "The Morning Audit" around the No-Input Morning.
+- **Running / Strength / Stretching** , unchanged this phase.
 
 ---
 
 ## Changelog
 
-### Restructured as a mobile web app (current)
+### 2026-07 session (current)
 
-Reworked the site from a scrolling website into an app-style PWA:
+**Weekly-note signup removed.** Dropped the `mdt-weekly` email opt-in section from the homepage (and its CSS). Removed "for now" at the owner's request; the Netlify form definition can be re-added later if the note returns. _Flag: the audit results screen may still reference/contain the `mdt-weekly` form, check `tools/audit/index.html` when that file is in the repo._
 
-- **Bottom tab bar** with four logical destinations: Home, Framework, Tools, More. Fixed to the bottom with safe-area handling for notched phones, active-state highlighting, and identical absolute-path nav on every screen.
-- **App headers** replace the old website topbar: compact dark headers with a title, a back chevron on sub-screens (tools, Vanguard), and contextual actions (e.g. Download on the framework screen).
-- **New screens.** Home is now an app dashboard (hero, the three layers, quick-access cards, weekly-note prompt). Added a dedicated **Tools** hub (live vs coming-soon) and a **More** screen (framework download, the weekly note, about, Vanguard, help resources).
-- **Retrofitted** the framework reader and all five tool pages plus Vanguard into the app shell; tool logic untouched.
-- **App column** is centered and phone-width (max 600px) on desktop, full-width on mobile. Content scrolls between the fixed header and tab bar.
-- **Plumbing:** service worker cache bumped to th-v2 and precaches the new screens; `/more` pretty-URL redirect added; year scripts made null-safe after the footers were removed. Pinch-zoom left enabled for accessibility.
+**Anti-marketing copy stripped.** Removed the "No ads / No tracking / No bullsh\*t" lines across the homepage (hero trust line, About section, footer tagline, footer bar) and the meta description, since a paid tier is planned and the site should read as being about the training, not the positioning. Softened "free" wording (hero CTA now "See the tools"). Privacy is still true (client-side, nothing stored) but no longer sold as a slogan. _Flag: swearing removed to match the True Hybrid brand voice; check other pages for the same lines._
 
+**Vanguard teaser removed.** Deleted the homepage "The Vanguard, coming soon" section and its CSS. The `/vanguard/` page and its netlify redirect are untouched (still unlinked, reachable by direct URL only).
 
-### Full recipe audit (current)
+**Free framework doc added.** New "The complete framework" section (dark band, replacing the old weekly/vanguard slot) with a direct download of `downloads/true-hybrid-framework.pdf` (the updated True Hybrid framework, 64pp). No email gate, per the note-removal above.
 
-Ran a complete audit of all 200 recipes for anything that could throw off a user's calories:
+**Open items surfaced this session (not yet actioned):**
+- **Brand-guide alignment (True Hybrid 2026).** Palette + typography live in `assets/styles.css` and the logo PNGs, none of which are in the current project snapshot, so visual alignment (exact navy `#0E141F` / bone `#ECE6D8` / signal blue `#4A9FE0` / steel `#8B94A6`, and Anton/Oswald/Poppins) is pending those files. Also open: whether the site name becomes **True Hybrid** or stays **MDT / Modern Day Templar**.
+- **"Works from a link" on mobile.** The site is already a standard responsive website; opening it from a link requires it to be live on a host (Netlify). Nothing in the code blocks browser access.
 
-- **Compound ingredient lines now scale.** Sauces, marinades, dressings, and dips written as one line ("Sauce: 30g peanut butter, 15g honey, ...") previously did not scale at all, because the scaler only handled a leading quantity. Rewrote it to scale every quantity in a line (grams, ml, tbsp, tsp, cups, and leading counts) while leaving percentages like "0% yoghurt" / "2% milk" and seasoning lines alone. This was the one real accuracy bug found.
-- **Internal calorie/macro consistency: clean.** All 200 recipes' stated calories match their macros (the single apparent outlier, L071, is correct once its 26g fibre is accounted for).
-- **Serving counts: verified.** Cross-checked every recipe's protein macro against the protein in its ingredients; the only mismatches were the three batch recipes already corrected (meatballs, protein balls, egg muffins). The 36 two-serving recipes are correctly labelled.
-- **Calorie values: well-calibrated.** An independent ingredient-level estimate lands at a median 1.07x of the stated calories across all 200 (tight), so the calorie numbers are trustworthy in aggregate. Absolute per-recipe calories can't be certified without a full nutrition database, but nothing looks systematically wrong.
-- **Structural checks: clean.** No duplicate IDs or names, all meal types valid, no missing/zero/negative fields.
+### 2026-06 session
 
+**Logo lines recoloured.** The short lines flanking the "MDT" wordmark were still the old rust colour after the site recolour. Recoloured just those line pixels to baby blue (`124,196,232`) in both `mdt-logo-white.png` and `mdt-logo-charcoal.png`; lettering untouched.
 
-### Recipe quantity fix (current)
+**Subscription-copy removed.** Stripped "no subscriptions / no upsells / no accounts / no sign-up" promises across the homepage and audit, since a paid tier is planned later. Footer trust line changed to "No tracking, No ads, No bullsh\*t." Privacy and "free" wording kept. _Flag: revisit any remaining "free" labels when the paid tier launches._
 
-- **Fixed absurd bulk quantities** (e.g. a week of meatballs asking for ~5.8kg of chicken). Root cause: calories and macros in the data are per serving, while `servings` is the batch yield, but the tool was dividing per-serving calories by `servings` a second time. Harmless for the 164 single-serving recipes, wrong for batches.
-- **Corrected the tool's serving math** so a portion is calculated straight from per-serving calories and ingredients are scaled by (portions eaten / recipe yield). This also fixes the 36 legitimate 2-serving recipes, which were previously having their ingredient lists doubled in the plan.
-- **Fixed three mislabelled batch recipes** in `recipes.json` whose ingredient lists were written for the whole batch but tagged `servings: 1`: Mini Chicken Meatballs (now 4), No-Bake Protein Balls (now 6), Baked Egg Muffins (now 2). Verified by cross-checking each recipe's protein macro against the protein in its ingredients.
-- **Stale yield notes** like "(makes ~16 meatballs)" are now stripped from ingredient lines once they've been rescaled, so they can't contradict the new amounts.
+**PWA / installable app.** Added `manifest.webmanifest`, a service worker (`sw.js`, network-first for navigations and `/data/*`, stale-while-revalidate for assets, offline fallback), `offline.html`, and app icons. Injected manifest link, apple-touch-icon, web-app metas, and SW registration into all pages. `netlify.toml` headers added for `sw.js` and the manifest. _Install / SW behaviour needs HTTPS (Netlify provides it) and kicks in on the second visit; won't work from `file://`._
 
+**Vanguard + waitlist removed, now "coming soon."** Dropped the "Vanguard" nav link and the homepage waitlist CTA; homepage teaser is now a no-CTA "Coming soon" note. `vanguard/index.html` stripped of the eight-week sell and the Netlify waitlist form, reduced to a single "coming soon" block. The page is no longer linked from anywhere (reachable by direct URL only).
 
-### Nutrition tool adjustments (current)
+**Audit rebuilt as "The Morning Audit"** (`tools/audit/index.html`), reframed entirely around the No-Input Morning Challenge. Reused the existing quiz engine and visual structure; swapped the data, copy, results logic, and CTA.
 
-- **Food likes and dislikes.** Two inputs added: liked foods get favoured when meals are chosen; disliked foods exclude any recipe containing them (checked across name, tags, and ingredients). A guard warns if filters plus dislikes leave a meal type with nothing to pick.
-- **PDF now includes the full recipes.** The plan download prints every meal with its scaled ingredient amounts and full method, not just names and macros. Variety mode scales each recipe to that meal's portion; bulk-prep scales to the whole week.
-- **Bulk-prep multiplier removed.** The old "cook x11-12" wording (portion multiplier x7 days, which was correct but confusing) is gone. Bulk-prep now scales each recipe's ingredients to make the whole week in one cook and simply says to divide into 7 daily portions.
-- **Per-meal numbers verified.** Confirmed the calorie/macro scaling is arithmetically correct (base per-serving x portion) and that the recipe data is internally consistent (199/200 within 50 kcal of their macro math). The raw portion multiplier is no longer shown anywhere; the recipe view shows exact scaled amounts instead.
-- **Safer goals.** Deficit/surplus options capped at plus or minus 15% (was 20%), with a calorie floor and a note that steeper cuts under-fuel training and bigger surpluses are mostly fat.
-- **IF explained.** The 2-meal option now spells out that IF means intermittent fasting, two meals in a shorter eating window.
+- One question underneath it: are you the commander of your morning, or the passenger?
+- Four dimensions, three questions each (12 total, scored 0 healthy to 3 drift, max 9 per dimension): **Input** (the phone / reactivity, Pillar 5), **Stillness** (the Morning Oath / silence), **Allegiance** (something bigger / ego, servant vs tyrant, Pillar 9), **Mission** (the Narrative / setting one aim).
+- Verdicts run on a commander-to-passenger scale (Commander / Mostly in command / Slipping into the passenger seat / Passenger).
+- Per-dimension prescriptions each point at the matching morning practice.
+- Homepage references updated to match (button, tool card, copy).
 
+**Four branded practice cards** replace the whole-challenge download. The audit now hands over **only the one card matching the person's weakest dimension**, not the full five-day challenge. Built with `build_cards.py` (reportlab) in the new palette and voice, each one page, print-ready: Why this is the fight / How it works / The practice, a five-morning Y-N tracker, an evening debrief, the servant-or-tyrant review, and the closing line "A man who is a master of himself is a master of the world." A soft "full twelve-pillar system is coming" note, no waitlist.
 
-### 2026-07-01, full rebrand to True Hybrid (current)
+| Weakest dimension | Card (`downloads/...pdf`) |
+| --- | --- |
+| Input | `take-command-of-your-inputs.pdf` |
+| Stillness | `the-morning-oath.pdf` |
+| Allegiance | `something-bigger-than-you.pdf` |
+| Mission | `set-one-mission.pdf` |
 
-Retired the MDT / Modern Day Templar identity. The site is now **True Hybrid** end to end.
+The results button label and link are set on render from the loudest dimension (`MOVES[axis].file` / `.piece`).
 
-- **New wordmark.** Replaced the MDT logo images with a text lockup (small blue "true" + bold "HYBRID"), built in CSS as `.th-brand` / `.th-brand--footer` in `assets/styles.css`. No logo image to maintain. Internal class names (`.mdt-topbar`, `.mdt-footer`, `.mdt-nav`) were deliberately kept to avoid touching selectors on every page; they're invisible to visitors, same pattern as the `--brass` variable name being baby blue.
-- **New framework page.** `framework/index.html`, a full readable web version of the master document: dark cover echoing the PDF, contents, all eight parts plus the quick reference and glossary, with styled tables, callout boxes, and CSS diagrams (supply/expression spectrum, oxygen cascade, the Build/Endure/Express domain line, the contraction line). Pretty URL `/framework` added to `netlify.toml`.
-- **Framework download.** The framework PDF ships at `downloads/true-hybrid-framework.pdf`, linked from the hero, the homepage feature band, and the framework page.
-- **Homepage rewrite.** Dark cover-style hero ("Strong, composed, and aimed at something higher", CTAs to read/download the framework), a three-layers section (Capacity / Command / Direction), a framework feature band, then the tools grid rebranded, weekly note, and footer. Tool count label kept at "5 tools, 2 live".
-- **New app icons.** Regenerated `icon-(180, 192, 512).png` and the maskable icon as a blue "H" mark on near-black with the framework's blue rule. Favicons updated to match.
-- **PWA + config.** `manifest.webmanifest` renamed to True Hybrid; `sw.js` cache bumped to `th-v1`, precache now includes the framework page and drops the old logo PNGs; `offline.html` rebranded; `netlify.toml` header comment + `/framework` redirect.
-- **Placeholder tools + Vanguard rebranded.** running / strength / stretching and the Vanguard page carry the new lockup, dark heroes, and framework-tied taglines (Critical Power zones, the Express end, position + breathing).
-- **Weekly form renamed** `mdt-weekly` to `th-weekly` on the homepage.
+**Nutrition swap-impact note.** Added an explanation between the totals readout and the meal list: swapping a meal changes its macros and can push a macro into surplus or deficit without the user noticing, so check the totals after a swap (anything in orange is over the threshold). Tied the note's percentage to a single source-of-truth constant, `OFF_TARGET = 0.10`, that also drives the totals colour logic, so the wording and the behaviour can't drift apart.
 
-**Audit + nutrition tools rebuilt.** The original `tools/audit/index.html` and `tools/nutrition/index.html` source was never available (not in the uploads, the project, or the project knowledge), and on a fresh deploy of the rebranded package those two links led nowhere. Both were rebuilt from scratch as working, self-contained True Hybrid pages:
+### Earlier sessions (complete)
 
-- **Nutrition Tool** (`tools/nutrition/index.html`): macro calculator (Mifflin-St Jeor, metric/imperial, activity + goal, calorie floor), editable daily target, weekly planner in daily-variety or bulk-prep mode, 5/4/3/2 meal layouts, vegetarian/vegan/gluten-free/no-nuts filters, per-meal calorie scaling to hit the target, delivered-vs-target readout with the `OFF_TARGET = 0.10` colour rule and swap-impact note, per-recipe modal, meal swap, and a jsPDF plan export. Verified against the real 200-recipe `data/recipes.json`: calories land on target, fibre totals shown.
-- **Dopamine Audit** (`tools/audit/index.html`): 12 questions across four grips (reflex, scroll, protection, baseline), scored 0-3 each, a verdict band on the total, a per-grip breakdown highlighting the tightest grip, and a handoff to the matching practice-card PDF already in `downloads/` (break-the-reflex / kill-the-scroll / protect-what-matters / reset-your-baseline). Runs entirely client-side, nothing stored.
-
-_Note: these are faithful rebuilds to the documented spec, not the original files. If the originals turn up, they can be dropped back in, they only need the same brand pass (topbar/footer lockup, PWA title, `<title>`, footer copy, `mdt-weekly` to `th-weekly`)._
-
-### Earlier sessions (pre-rebrand, still current)
-
-- Dopamine Audit ("The Morning Audit") built around the No-Input Morning; four branded practice cards in `downloads/`.
-- Nutrition tool: 200 recipes, re-engineered meal planner, swap-impact note, `OFF_TARGET` single-source constant, self-hosted jsPDF plan download.
-- Site recoloured to the baby-blue / cream / white / near-black palette.
+- **Recipe library rebuilt to 198 recipes** (59 breakfast / 43 lunch / 48 dinner / 48 snack). Validated: valid JSON, no duplicate IDs or names, tags within the controlled vocabulary, no em/en dashes.
+- **Site recoloured** to the baby-blue / cream / white / black palette above (replaced the old rust/brass scheme).
+- **Meal planner re-engineered:** portion scaling, calorie-floor guardrails, carb/fat steering, delivered-vs-target readout, manual override, gluten-free and vegan filters, lb/ft units, flexible meal count (5/4/3/2-meal IF), fibre totals.
 
 ---
 
-## Open follow-ups
+## Open follow-ups / flags
 
-- **Audit + nutrition** are working rebuilds; swap in the originals if you still have them (see note above).
-- **Paid tier:** revisit any "free" labels when a subscription launches.
-- **Vanguard** is an unlinked coming-soon page; wire navigation to it when the offer is ready.
-- **PWA** install/offline needs HTTPS and a second visit; verify on the live domain.
+- **Paid tier:** when the ten-dollar-a-month subscription launches, revisit "free" labels/titles. The audit's per-area prescriptions and the "full system coming" line are the natural funnel point. (Earlier research leaned PWA now, done; Stripe + Netlify or a low-code membership later. AU Stripe fees roughly 1.75% + A$0.30; app-store cut 15 to 30%.)
+- **OFF_TARGET:** the nutrition swap note and the totals "off target" colour now share the `OFF_TARGET` constant. Change it once and both move together.
+- **Vanguard page** is an unlinked coming-soon page; wire navigation back to it when the offer is ready.
+- **PWA** install and offline behaviour require HTTPS and a second visit; verify on the live Netlify domain.
+- **Parked future project, the AI Training Engine:** an AI tool that generates personalised training blocks from the coaching method. The method, principles, and v1 system prompt now live in a separate Claude project ("MDT Training Engine"); the draft is saved as `training-tool-system-prompt-v1.md`. Resume after the current site and tools are refined. Would sit behind the paid tier (login + Stripe + a backend function calling the Anthropic API, output rendered like the nutrition tool).
