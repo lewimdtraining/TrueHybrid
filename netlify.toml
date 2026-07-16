@@ -1,49 +1,30 @@
-# Netlify configuration for True Hybrid
-# This is a pure static site, no build step required.
+# Netlify configuration for True Hybrid Nutrition
+# Pure static site, no build step required.
 
 [build]
   publish = "."
 
-# Pretty URLs: /tools/nutrition instead of /tools/nutrition/index.html
+# Old site URLs no longer exist. Send any lingering bookmarks or links
+# to the nutrition tool instead of a 404.
 [[redirects]]
-  from = "/framework"
-  to = "/framework/index.html"
-  status = 200
+  from = "/framework/*"
+  to = "/"
+  status = 301
 
 [[redirects]]
-  from = "/more"
-  to = "/more/index.html"
-  status = 200
+  from = "/vanguard/*"
+  to = "/"
+  status = 301
 
 [[redirects]]
-  from = "/tools/nutrition"
-  to = "/tools/nutrition/index.html"
-  status = 200
+  from = "/downloads/*"
+  to = "/"
+  status = 301
 
 [[redirects]]
-  from = "/vanguard"
-  to = "/vanguard/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/tools/audit"
-  to = "/tools/audit/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/tools/strength"
-  to = "/tools/strength/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/tools/running"
-  to = "/tools/running/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/tools/stretching"
-  to = "/tools/stretching/index.html"
-  status = 200
+  from = "/tools/*"
+  to = "/"
+  status = 301
 
 # Security & caching headers
 [[headers]]

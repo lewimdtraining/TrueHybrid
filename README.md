@@ -1,96 +1,60 @@
-# True Hybrid, Website (setup & editing guide)
+# True Hybrid, Nutrition Tool
 
-The True Hybrid site: the readable **framework** (the complete master document), the framework **PDF download**, the free **tools** (Dopamine Audit + Nutrition Tool), the weekly-note signup, and the Vanguard coming-soon page. Everything you need to get it live and keep it edited is below.
+A single-page static site: the free nutrition tool, and nothing else. Everything
+runs in the browser — no accounts, no ads, no tracking, no server calls except
+loading the recipe data.
 
-**Quick start:** create a free GitHub account, upload the contents of this folder, connect Netlify, you're live in ~15 minutes. Step-by-step below.
+## What it does
+- Estimates daily calorie and macro targets from your own numbers (with manual override)
+- Filters by foods you like / dislike and dietary preferences
+- Builds a week of meals from a 200-recipe library (bulk-prep or daily variety)
+- Exports a plan to PDF (via jsPDF, bundled locally)
+- Works offline after the first visit (installable PWA)
 
-Live site: _(add URL once deployed)_
-
----
-
-## What's in this repo
-
+## Structure
 ```
-true-hybrid-site/
-├── index.html                  ← homepage (three layers + framework + tools + weekly)
-├── framework/index.html        ← the complete framework, readable web version
-├── vanguard/index.html         ← The Vanguard, coming-soon page
-├── offline.html                ← PWA offline fallback
-├── manifest.webmanifest        ← PWA identity
-├── sw.js                       ← service worker (offline + caching)
-├── netlify.toml                ← redirects + headers
-├── assets/
-│   ├── styles.css              ← shared brand styles for every page
-│   ├── jspdf.umd.min.js        ← self-hosted PDF library (nutrition tool)
-│   └── icon-*.png              ← app / home-screen icons
-├── data/
-│   └── recipes.json            ← all 200 Nutrition Tool recipes, edit here
-├── downloads/
-│   ├── true-hybrid-framework.pdf   ← the framework PDF (the download)
-│   └── *.pdf                    ← the four Dopamine Audit practice cards
-└── tools/
-    ├── audit/index.html         ← The Dopamine Audit (live)
-    ├── nutrition/index.html     ← Nutrition Tool (live)
-    ├── strength/index.html      ← Strength calc (placeholder)
-    ├── running/index.html       ← Run calc (placeholder)
-    └── stretching/index.html    ← Mobility protocols (placeholder)
+index.html                 the nutrition tool (site homepage)
+offline.html               shown when a page isn't cached and you're offline
+manifest.webmanifest       PWA manifest
+sw.js                      service worker (offline shell + recipe caching)
+netlify.toml               static hosting config + redirects + headers
+assets/
+  styles.css               shared styles
+  jspdf.umd.min.js         PDF export library
+  icon-*.png               app icons
+data/
+  recipes.json             200 recipes
 ```
 
-Everything is plain HTML + CSS + JavaScript. No build step, no frameworks, no node_modules.
+## Deploy
+Drag the folder into Netlify, or serve it with any static host. No build step.
 
----
+Local preview:
+```
+python3 -m http.server 8080
+# then open http://localhost:8080
+```
 
-## The brand
+## Branding
+Aligned to the True Hybrid Brand Guide (2026):
+- Palette: Deep Navy `#0E141F`, Bone Cream `#ECE6D8`, Signal Blue `#4A9FE0`,
+  Steel Slate `#8B94A6` — four colours, no off-brand amber.
+- Type: Anton (display), Oswald (labels/buttons/eyebrows), Poppins (body).
+  Fonts are self-hosted in `assets/fonts/` (latin woff2) so nothing is loaded
+  from a third party — keeping the "no tracking" promise. They're precached by
+  the service worker for offline use.
 
-**True Hybrid.** The wordmark is set in text, not an image: a small blue **true** next to a bold **HYBRID**, built from the `.th-brand` styles in `assets/styles.css`. To change how the wordmark looks everywhere at once, edit those styles. There's no logo image to swap.
+## Scaling & recipe data
+- Every recipe's `calories` is now internally consistent with its macros
+  (calories = 4·protein + 4·carbs + 9·fats across all 200 recipes).
+- Meal portions auto-scale to hit the daily calorie target. After the tool
+  picks recipes for each slot, a normalization pass rescales every portion so
+  the day's total lands on target (variety: each day; bulk: the daily total).
+  Portions stay within a sane 0.4×–3.0× range. This also runs after a swap.
+- Bulk-prep multiplies each daily portion by 7 automatically for the weekly cook.
 
-The palette lives in the `:root` block at the top of `assets/styles.css`: `--ink` (near-black), `--paper`/`--bone` (cream/white), `--brass` (baby blue accent), `--brass-dim` (denim, for text-on-light and hover). Change a value there and it updates across every page. Body and titles use the device's own system font stack, so there are no web-font downloads.
-
-_Note: internal CSS class names (`.mdt-topbar`, `.mdt-footer`, `.mdt-nav`) were kept as-is on purpose so the rebrand didn't have to touch selectors on every page. They're invisible to visitors. Same reasoning as the `--brass` variable name, which is baby blue despite the name._
-
----
-
-## The framework (readable page + download)
-
-- **Readable version:** `framework/index.html`, the complete master document laid out for the web, dark cover, contents, all eight parts plus the quick reference and glossary. Linked from the homepage and the top nav. Pretty URL: `/framework`.
-- **Download:** `downloads/true-hybrid-framework.pdf`, linked from the hero, the framework feature band, and the framework page itself. To update it, replace that file with a new PDF of the same name.
-
-To edit the readable framework copy, open `framework/index.html` and edit the prose directly, it's static HTML, no special syntax.
-
----
-
-## How to get this live
-
-You only do this once. After that, every edit auto-publishes.
-
-1. **GitHub:** sign up at https://github.com, create a new repository (e.g. `true-hybrid-site`), set it Public, then use **uploading an existing file** and drag in the contents of this folder (open the folder first, upload the contents, not the folder). Commit.
-2. **Netlify:** sign up at https://netlify.com with **Sign in with GitHub**, then **Add new site → Import an existing project → Deploy with GitHub**, pick your repo. No build command needed (static site). **Deploy site.** You get a URL like `dazzling-bunny-12345.netlify.app` in ~30 seconds.
-3. **Custom domain (optional):** buy a domain (Cloudflare Registrar is cheapest), then Netlify → **Domain management → Add custom domain**, and add the DNS records it gives you.
-
-## How to edit things
-
-Every edit is 30 seconds via the GitHub web interface (pencil icon, edit, **Commit changes**). Netlify rebuilds within ~60 seconds.
-
-- **Recipes:** `data/recipes.json`. Schema and rules unchanged, use `B###/L###/D###/S###` ids, keep `mealType` exact, validate at https://jsonlint.com before committing.
-- **Colours / fonts / wordmark:** `assets/styles.css` (`:root` for palette, `.th-brand` for the wordmark).
-- **Homepage copy:** `index.html`. **Framework copy:** `framework/index.html`. **Tool copy:** the relevant `tools/{name}/index.html`.
-
-## Forms (Netlify Forms)
-
-The weekly-note signup uses Netlify Forms (no backend). Its form name is **`th-weekly`** (it was `mdt-weekly` before the rebrand, renamed on the homepage). If you have any other page still posting to `mdt-weekly`, rename it to `th-weekly` so submissions pool into one list. Find submissions in Netlify dashboard → **Forms**.
-
-## PWA / installable app
-
-`manifest.webmanifest`, `sw.js`, `offline.html`, and the `assets/icon-*.png` set make the site installable and offline-capable. The service worker cache version is `th-v1`, bump it in `sw.js` when you want every installed app to drop old cached assets. Install/offline behaviour needs HTTPS (Netlify provides it) and kicks in on the second visit; it won't work from a `file://` preview.
-
-## Local testing
-
-Right-click `index.html` → Open With → your browser works for the homepage, framework page, and audit. The **nutrition tool won't load recipes from `file://`** (browsers block `fetch()` there); use VS Code + the **Live Server** extension to test it locally, or just rely on the deployed Netlify site.
-
----
-
-## Tech notes
-
-- No build step, no analytics, no outside calls. Fonts are the system stack; the only library is jsPDF, self-hosted in `assets/`.
-- No accounts, nothing stored server-side. Every tool runs client-side and keeps state in browser memory only.
-- Recipes are fetched at runtime from `data/recipes.json`; adding one is a single-file edit.
+## Notes
+The previous site had a framework reader, a dopamine audit, additional training
+tools, a members area and PDF downloads. Those have been removed — only the
+nutrition tool remains reachable. Old URLs (`/framework`, `/tools/*`, `/vanguard`,
+`/downloads`) redirect to the tool.

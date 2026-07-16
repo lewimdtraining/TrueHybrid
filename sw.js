@@ -1,22 +1,27 @@
-/* True Hybrid service worker.
+/* True Hybrid Nutrition service worker.
    Bump CACHE_VERSION whenever you want to force every visitor to drop old cached
    assets on their next visit. Pages and recipe data are fetched network-first, so
    normal content edits show up without changing this number. */
-const CACHE_VERSION = 'th-v2';
+const CACHE_VERSION = 'th-nutrition-v2-brand';
 const CACHE = `th-cache-${CACHE_VERSION}`;
 
-// Core shell precached on install so the site opens offline.
+// Core shell precached on install so the tool opens offline.
 const PRECACHE = [
   '/',
   '/index.html',
-  '/tools/',
-  '/more/',
-  '/framework/',
-  '/framework/index.html',
   '/offline.html',
   '/assets/styles.css',
+  '/assets/jspdf.umd.min.js',
   '/assets/icon-192.png',
   '/assets/icon-512.png',
+  '/assets/fonts/anton-latin-400-normal.woff2',
+  '/assets/fonts/oswald-latin-500-normal.woff2',
+  '/assets/fonts/oswald-latin-600-normal.woff2',
+  '/assets/fonts/poppins-latin-400-normal.woff2',
+  '/assets/fonts/poppins-latin-500-normal.woff2',
+  '/assets/fonts/poppins-latin-600-normal.woff2',
+  '/assets/fonts/poppins-latin-700-normal.woff2',
+  '/data/recipes.json',
   '/manifest.webmanifest',
 ];
 
