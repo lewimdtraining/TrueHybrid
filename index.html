@@ -11,7 +11,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="True Hybrid">
 <title>True Hybrid, Free Nutrition Tool</title>
-<meta name="description" content="Calculate your daily macros and build a week of meals from a library of 200 recipes. Bulk-prep or daily variety, with food likes, dislikes and preference filters. Runs entirely in your browser.">
+<meta name="description" content="Calculate your daily macros and build a week of meals from a library of 200 recipes. Choose bulk-prep or cook-fresh per meal, with food likes, dislikes and preference filters. Runs entirely in your browser.">
 <link rel="stylesheet" href="assets/styles.css">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230E141F'/%3E%3Ctext x='16' y='23' text-anchor='middle' fill='%234A9FE0' font-family='Arial,sans-serif' font-size='20' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E">
 <style>
@@ -33,6 +33,14 @@
 .nt-seg { display:inline-flex; border:1px solid var(--cream); overflow:hidden; }
 .nt-seg button { background: var(--bone); border:none; padding: 9px 15px; font-family: var(--label); font-size: 13px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color: var(--char); cursor:pointer; }
 .nt-seg button.on { background: var(--ink); color: var(--bone); }
+.nt-prep { display:flex; flex-direction:column; gap:8px; max-width:520px; }
+.nt-prep-row { display:flex; align-items:center; justify-content:space-between; gap:14px; padding:9px 12px; background:var(--bone); border:1px solid var(--cream); }
+.nt-prep-name { font-family:var(--label); font-size:14px; letter-spacing:0.05em; text-transform:uppercase; color:var(--ink); font-weight:600; }
+.nt-prep-row.off { opacity:0.4; }
+.nt-prep-row.off .nt-prep-seg button { cursor:default; }
+.nt-prep-seg button { padding:7px 12px; font-size:12px; }
+.m-batch { display:inline-block; font-family:var(--label); font-size:10px; letter-spacing:0.12em; text-transform:uppercase; font-weight:600; color:var(--ink); background:var(--brass); padding:2px 7px; margin-left:8px; vertical-align:middle; }
+.m-finish { display:inline-block; font-family:var(--label); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; font-weight:600; color:var(--warn); border:1px solid var(--warn); padding:1px 6px; margin-left:8px; vertical-align:middle; }
 .nt-row { display:flex; flex-wrap:wrap; gap: 18px; align-items:flex-end; }
 .nt-row .nt-field { flex: 1; min-width: 150px; }
 .nt-check { display:flex; gap: 18px; flex-wrap:wrap; margin-top: 4px; }
@@ -121,7 +129,7 @@
   <section class="nt-hero">
     <div class="eyebrow">Nutrition</div>
     <h1>Nutrition <em>Tool</em>.</h1>
-    <p>Set your calories and macros from your own numbers, tell it the foods you like and the ones you don't, then build a week of meals from 200 recipes. Bulk-prep the same meals across the week, or eat for variety. Everything runs in your browser, nothing is sent anywhere.</p>
+    <p>Set your calories and macros from your own numbers, tell it the foods you like and the ones you don't, then build a week of meals from 200 recipes. Choose bulk-prep or cook-fresh for each meal, breakfast, lunch, dinner and snacks. Bulk meals only use recipes that keep and reheat well. Everything runs in your browser, nothing is sent anywhere.</p>
   </section>
 
   <div class="nt-wrap">
@@ -203,13 +211,40 @@
           </div>
           <div class="sub">2 (IF) = two meals, intermittent-fasting style, in a shorter eating window.</div>
         </div>
-        <div class="nt-field" style="flex:0 0 auto;">
-          <label>Mode</label>
-          <div class="nt-seg" id="nt-mode">
-            <button data-mode="variety" class="on">Daily variety</button>
-            <button data-mode="bulk">Bulk-prep</button>
+      </div>
+
+      <div class="nt-field" id="nt-prep-field" style="margin-bottom:16px;">
+        <label>Prep style, per meal</label>
+        <div class="sub" style="margin:0 0 12px;">Choose how each meal is handled. <strong>Bulk-prep</strong> meals are cooked once for the week and only draw from recipes that keep and reheat well. <strong>Cook fresh</strong> meals rotate for variety and can use anything.</div>
+        <div class="nt-prep" id="nt-prep">
+          <div class="nt-prep-row" data-type="breakfast">
+            <span class="nt-prep-name">Breakfast</span>
+            <div class="nt-seg nt-prep-seg">
+              <button data-prep="fresh" class="on">Cook fresh</button>
+              <button data-prep="bulk">Bulk-prep</button>
+            </div>
           </div>
-          <div class="sub">Bulk-prep builds one big cook of each meal for the whole week.</div>
+          <div class="nt-prep-row" data-type="lunch">
+            <span class="nt-prep-name">Lunch</span>
+            <div class="nt-seg nt-prep-seg">
+              <button data-prep="fresh">Cook fresh</button>
+              <button data-prep="bulk" class="on">Bulk-prep</button>
+            </div>
+          </div>
+          <div class="nt-prep-row" data-type="dinner">
+            <span class="nt-prep-name">Dinner</span>
+            <div class="nt-seg nt-prep-seg">
+              <button data-prep="fresh">Cook fresh</button>
+              <button data-prep="bulk" class="on">Bulk-prep</button>
+            </div>
+          </div>
+          <div class="nt-prep-row" data-type="snack">
+            <span class="nt-prep-name">Snacks</span>
+            <div class="nt-seg nt-prep-seg">
+              <button data-prep="fresh" class="on">Cook fresh</button>
+              <button data-prep="bulk">Bulk-prep</button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -279,7 +314,7 @@ if("serviceWorker" in navigator){window.addEventListener("load",function(){navig
 const OFF_TARGET = 0.10;
 const DAYS = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
 let RECIPES = [];
-const state = { units:'metric', sex:'male', meals:4, mode:'variety', target:null, plan:null };
+const state = { units:'metric', sex:'male', meals:4, prep:{breakfast:'fresh', lunch:'bulk', dinner:'bulk', snack:'fresh'}, target:null, plan:null };
 
 fetch('data/recipes.json').then(r=>r.json()).then(d=>{ RECIPES = Array.isArray(d)?d:(d.recipes||[]); })
   .catch(()=>{ RECIPES=[]; });
@@ -294,7 +329,28 @@ function seg(id, key, cast){
     if(key==='units') applyUnits();
   });
 }
-seg('nt-units','units'); seg('nt-sex','sex'); seg('nt-meals','meals',v=>+v); seg('nt-mode','mode');
+seg('nt-units','units'); seg('nt-sex','sex'); seg('nt-meals','meals',v=>+v);
+
+// per-meal prep style (bulk vs fresh)
+document.querySelectorAll('#nt-prep .nt-prep-row').forEach(row=>{
+  const type=row.dataset.type;
+  row.querySelector('.nt-prep-seg').addEventListener('click', e=>{
+    if(row.classList.contains('off')) return;
+    const b=e.target.closest('button'); if(!b) return;
+    row.querySelectorAll('button').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on');
+    state.prep[type]=b.dataset.prep;
+  });
+});
+// dim meal-types not present at the current meal count
+function refreshPrepRows(){
+  const act=new Set(slots(state.meals));
+  document.querySelectorAll('#nt-prep .nt-prep-row').forEach(row=>{
+    row.classList.toggle('off', !act.has(row.dataset.type));
+  });
+}
+document.getElementById('nt-meals').addEventListener('click', refreshPrepRows);
+refreshPrepRows();
 
 function applyUnits(){
   const w=document.getElementById('nt-weight'), h=document.getElementById('nt-height');
@@ -376,8 +432,8 @@ function slotTargets(n){
   return s.map((type,i)=>({ type, cal: state.target.cal*w[i]/sum }));
 }
 
-function pickFor(type, calTarget, used){
-  const pool=RECIPES.filter(r=>r.mealType===type && passesFilters(r));
+function pickFor(type, calTarget, used, bulkOnly){
+  const pool=RECIPES.filter(r=>r.mealType===type && passesFilters(r) && (!bulkOnly || r.bulkPrep!=='no'));
   if(!pool.length) return null;
   let best=null, bestScore=1e9;
   const shuffled=pool.slice().sort(()=>Math.random()-0.5);
@@ -394,7 +450,7 @@ function pickFor(type, calTarget, used){
 }
 function scaledMeal(pick, type){
   const r=pick.r, m=pick.mult, per=1/(r.servings||1);
-  return { id:r.id, type, name:r.name, mult:m,
+  return { id:r.id, type, name:r.name, mult:m, bulkPrep:r.bulkPrep,
     cal:Math.round(r.calories*per*m), protein:Math.round(r.protein*per*m),
     carbs:Math.round(r.carbs*per*m), fats:Math.round(r.fats*per*m), fibre:Math.round((r.fibre||0)*per*m) };
 }
@@ -406,30 +462,25 @@ function pickCal(p){ return (p.r.calories/(p.r.servings||1))*p.mult; }
 // the number, no matter which recipes were drawn. Portions stay within a
 // sane range so nobody ends up "eating" a third of a meal or triple a meal.
 const MULT_MIN=0.4, MULT_MAX=3.0;
-function normalizePicks(picks){
+function normalizePicks(picks, targetCal){
   if(!picks.length || !state.target) return picks;
+  const tc = (targetCal==null) ? state.target.cal : targetCal;
+  if(tc<=0) return picks;
   for(let pass=0; pass<3; pass++){
     const tot=picks.reduce((a,p)=>a+pickCal(p),0);
     if(tot<=0) break;
-    const k=state.target.cal/tot;
+    const k=tc/tot;
     if(Math.abs(k-1)<0.005) break;            // close enough
     picks.forEach(p=>{ p.mult=Math.max(MULT_MIN,Math.min(MULT_MAX,p.mult*k)); });
   }
   return picks;
 }
-// Pick a full day of meals for the given slot targets, then normalize to target.
-function buildMeals(st){
-  const used=new Set(); const picks=[];
-  st.forEach(s=>{ const p=pickFor(s.type,s.cal,used); if(p){ used.add(p.r.id); picks.push({r:p.r,mult:p.mult,type:s.type}); } });
-  normalizePicks(picks);
-  return picks.map(p=>scaledMeal(p,p.type));
-}
-// Re-normalize an existing set of scaled meals (used after a swap) so the day
-// still hits the target once one meal has been replaced.
-function renormMeals(meals){
-  const picks=meals.map(m=>({r:RECIPES.find(x=>x.id===m.id),mult:m.mult,type:m.type})).filter(p=>p.r);
-  normalizePicks(picks);
-  return picks.map(p=>scaledMeal(p,p.type));
+// Ordered slot descriptors for the current meal count, each carrying its
+// calorie share and whether that meal-type is bulk-prepped or cooked fresh.
+function slotList(){
+  const types=slots(state.meals);
+  const st=slotTargets(state.meals);
+  return types.map((type,i)=>({ i, type, cal:st[i].cal, mode:(state.prep[type]||'fresh') }));
 }
 
 // ---- ingredient scaling ----
@@ -459,20 +510,42 @@ document.getElementById('nt-generate').addEventListener('click', ()=>{
   const warn=document.getElementById('nt-warn'); warn.classList.add('nt-hidden');
   if(!state.target){ return; }
   if(!RECIPES.length){ document.getElementById('nt-output').innerHTML='<div class="nt-empty">Recipes are still loading, or could not be loaded. If this persists, reload the page.</div>'; document.getElementById('nt-result-card').classList.remove('nt-hidden'); return; }
-  // check filters/dislikes haven't emptied a needed meal type
-  const need=[...new Set(slots(state.meals))];
-  const missing=need.filter(type=>!RECIPES.some(r=>r.mealType===type && passesFilters(r)));
-  if(missing.length){ warn.textContent='Your filters and dislikes left no '+missing.join(' or ')+' recipes to choose from. Loosen them a little and try again.'; warn.classList.remove('nt-hidden'); return; }
 
-  const st=slotTargets(state.meals);
-  let plan;
-  if(state.mode==='bulk'){
-    plan={ mode:'bulk', slots: buildMeals(st) };
-  } else {
-    const days=DAYS.map(()=> buildMeals(st));
-    plan={ mode:'variety', days };
+  const sd=slotList();
+  const bulkSlots=sd.filter(s=>s.mode==='bulk');
+  const freshSlots=sd.filter(s=>s.mode==='fresh');
+
+  // check no slot's recipe pool is empty (respecting bulk-only where chosen)
+  const missing=[];
+  sd.forEach(s=>{
+    const has=RECIPES.some(r=>r.mealType===s.type && passesFilters(r) && (s.mode!=='bulk' || r.bulkPrep!=='no'));
+    if(!has) missing.push(s.type + (s.mode==='bulk'?' (bulk-friendly)':''));
+  });
+  if(missing.length){ warn.textContent='Your choices left no '+[...new Set(missing)].join(' or ')+' recipes to choose from. Loosen your filters, or set that meal to cook fresh, and try again.'; warn.classList.remove('nt-hidden'); return; }
+
+  // 1) Bulk meals: one fixed set, cooked once, sized to the bulk slots' combined calorie share.
+  const bulkMeals={}; let bulkActual=0;
+  if(bulkSlots.length){
+    const used=new Set(); const picks=[];
+    bulkSlots.forEach(s=>{ const p=pickFor(s.type,s.cal,used,true); if(p){ used.add(p.r.id); picks.push({r:p.r,mult:p.mult,type:s.type,slot:s.i}); } });
+    normalizePicks(picks, bulkSlots.reduce((a,s)=>a+s.cal,0));
+    picks.forEach(p=>{ bulkMeals[p.slot]=scaledMeal(p,p.type); });
+    bulkActual=Object.values(bulkMeals).reduce((a,m)=>a+m.cal,0);
   }
-  state.plan=plan;
+  // 2) Fresh meals: a different set each day, filling whatever the fixed bulk meals leave.
+  const freshTarget=Math.max(0, state.target.cal - bulkActual);
+  const days=[];
+  for(let d=0; d<7; d++){
+    const dayFresh={};
+    if(freshSlots.length){
+      const used=new Set(); const picks=[];
+      freshSlots.forEach(s=>{ const p=pickFor(s.type,s.cal,used,false); if(p){ used.add(p.r.id); picks.push({r:p.r,mult:p.mult,type:s.type,slot:s.i}); } });
+      normalizePicks(picks, freshTarget||state.target.cal);
+      picks.forEach(p=>{ dayFresh[p.slot]=scaledMeal(p,p.type); });
+    }
+    days.push(dayFresh);
+  }
+  state.plan={ slotDesc:sd, bulkMeals, days, bulkActual };
   renderPlan();
   document.getElementById('nt-result-card').classList.remove('nt-hidden');
   document.getElementById('nt-pdf').style.display='inline-block';
@@ -482,10 +555,13 @@ document.getElementById('nt-generate').addEventListener('click', ()=>{
 function dayTotals(meals){
   return meals.reduce((a,m)=>({cal:a.cal+m.cal,protein:a.protein+m.protein,carbs:a.carbs+m.carbs,fats:a.fats+m.fats,fibre:a.fibre+m.fibre}),{cal:0,protein:0,carbs:0,fats:0,fibre:0});
 }
+// full ordered plate for a day: fixed bulk meals interleaved with that day's fresh picks
+function fullDay(d){ return state.plan.slotDesc.map(s=> s.mode==='bulk'? state.plan.bulkMeals[s.i] : state.plan.days[d][s.i]).filter(Boolean); }
+function capitalize(s){ return s.charAt(0).toUpperCase()+s.slice(1); }
+
 function renderReadout(){
-  let avg;
-  if(state.plan.mode==='bulk'){ avg=dayTotals(state.plan.slots); }
-  else { const tot=state.plan.days.map(dayTotals); avg={}; ['cal','protein','carbs','fats','fibre'].forEach(k=>avg[k]=Math.round(tot.reduce((a,d)=>a+d[k],0)/tot.length)); }
+  const tot=[]; for(let d=0; d<7; d++) tot.push(dayTotals(fullDay(d)));
+  const avg={}; ['cal','protein','carbs','fats','fibre'].forEach(k=>avg[k]=Math.round(tot.reduce((a,x)=>a+x[k],0)/tot.length));
   const t=state.target;
   const cls=(v,tg)=> v>tg*(1+OFF_TARGET)?'over': (v>=tg*(1-OFF_TARGET)?'ok':'');
   const clsP=(v,tg)=> v>=tg*(1-OFF_TARGET)?'ok':'';
@@ -498,14 +574,19 @@ function renderReadout(){
 }
 function rcell(k,v,c){ return `<div class="t"><div class="k">${k}</div><div class="v ${c}">${v}</div></div>`; }
 
-function mealRow(m, dayIndex, slotIndex){
+function mealRow(m, di, si, opts){
+  opts=opts||{};
+  const tags = (opts.bulk?'<span class="m-batch">batch</span>':'')
+             + (opts.bulk && m.bulkPrep==='finish-fresh'?'<span class="m-finish">finish fresh</span>':'');
+  const slotLbl = m.type + (opts.bulk?' &middot; cooked once':'');
+  const swapBtn = (opts.showSwap===false) ? '' : `<button class="nt-swap" data-day="${di}" data-slot="${si}">Swap</button>`;
   return `<div class="nt-meal">
     <div class="m-main">
-      <div class="m-slot">${m.type}</div>
-      <div class="m-name" data-day="${dayIndex}" data-slot="${slotIndex}">${m.name}</div>
+      <div class="m-slot">${slotLbl}</div>
+      <div class="m-name" data-day="${di}" data-slot="${si}">${m.name}${tags}</div>
       <div class="m-macros">P ${m.protein}g &middot; C ${m.carbs}g &middot; F ${m.fats}g</div>
-      <button class="nt-view" data-day="${dayIndex}" data-slot="${slotIndex}">Recipe</button>
-      <button class="nt-swap" data-day="${dayIndex}" data-slot="${slotIndex}">Swap</button>
+      <button class="nt-view" data-day="${di}" data-slot="${si}">Recipe</button>
+      ${swapBtn}
     </div>
     <div class="m-side"><div class="m-cal">${m.cal}</div><div class="m-macros">kcal</div></div>
   </div>`;
@@ -515,66 +596,94 @@ function renderPlan(){
   renderReadout();
   const out=document.getElementById('nt-output');
   const banner=document.getElementById('nt-mode-banner');
-  if(state.plan.mode==='bulk'){
-    banner.innerHTML = `<strong>Bulk-prep.</strong> The same ${state.plan.slots.length} meals every day. Cook each one once for the whole week using the quantities below, then split it into 7 daily portions.`;
-    let html='<div class="nt-day"><h3>Your daily meals</h3>';
-    state.plan.slots.forEach((m,i)=> html+=mealRow(m,-1,i));
-    html+='</div>';
+  const sd=state.plan.slotDesc;
+  const bulkTypes=[...new Set(sd.filter(s=>s.mode==='bulk').map(s=>capitalize(s.type)))];
+  const freshTypes=[...new Set(sd.filter(s=>s.mode==='fresh').map(s=>capitalize(s.type)))];
+  let bh='';
+  if(bulkTypes.length) bh+=`<strong>Bulk-prep:</strong> ${bulkTypes.join(', ')} — cooked once for the week, quantities in the prep list. `;
+  if(freshTypes.length) bh+=`<strong>Cook fresh:</strong> ${freshTypes.join(', ')} — a different pick each day.`;
+  banner.innerHTML=bh;
+
+  let html='';
+  // Prep list: cook once for the week (bulk meals only)
+  const bulkSlotsPresent=sd.filter(s=>s.mode==='bulk');
+  if(bulkSlotsPresent.length){
     html+='<div class="nt-day"><h3>Cook once for the week</h3>';
-    state.plan.slots.forEach((m,i)=>{
-      const weekFactor = dailyFactor(m)*7;              // base recipe -> whole week of this meal
-      const ings = scaledIngredients(m, weekFactor);
+    bulkSlotsPresent.forEach(s=>{
+      const m=state.plan.bulkMeals[s.i]; if(!m) return;
+      const ings=scaledIngredients(m, dailyFactor(m)*7);
+      const ff = m.bulkPrep==='finish-fresh'
+        ? `<div class="cportion" style="color:var(--warn);">Batch this as a base and store it, but add the fresh bits (open the recipe) each day rather than pre-assembling.</div>` : '';
       html+=`<div class="nt-cook">
-        <div class="ch"><span class="cn">${m.name}</span><span class="cp">whole week</span></div>
+        <div class="ch"><span class="cn">${capitalize(m.type)} &middot; ${m.name}</span>
+          <span class="cp"><button class="nt-view" data-day="-1" data-slot="${s.i}">Recipe</button> <button class="nt-swap" data-day="-1" data-slot="${s.i}">Swap</button></span></div>
         <ul>${ings.map(i=>`<li>${i}</li>`).join('')}</ul>
         <div class="cportion">Cook it all, then divide into 7 portions, one per day (about ${m.cal} kcal each).</div>
+        ${ff}
       </div>`;
     });
     html+='</div>';
-    out.innerHTML=html;
-  } else {
-    banner.innerHTML = `<strong>Daily variety.</strong> A different mix every day, ${slots(state.meals).length} meals a day across the week. Tap Recipe on any meal for the exact amounts at your portion.`;
-    let html='';
-    state.plan.days.forEach((meals,di)=>{
-      html+=`<div class="nt-day"><h3>${DAYS[di]}</h3>`;
-      meals.forEach((m,si)=> html+=mealRow(m,di,si));
-      const t=dayTotals(meals);
-      html+=`<div class="m-macros" style="text-align:right;padding-top:8px;color:var(--brass-dim);font-weight:700;">Day total: ${t.cal} kcal &middot; P ${t.protein} &middot; C ${t.carbs} &middot; F ${t.fats}</div>`;
-      html+='</div>';
-    });
-    out.innerHTML=html;
   }
+  // The 7-day plan (full plate each day; bulk rows are read-only, managed above)
+  for(let d=0; d<7; d++){
+    html+=`<div class="nt-day"><h3>${DAYS[d]}</h3>`;
+    sd.forEach(s=>{
+      const isBulk=s.mode==='bulk';
+      const m=isBulk? state.plan.bulkMeals[s.i] : state.plan.days[d][s.i];
+      if(!m) return;
+      html+= isBulk ? mealRow(m,-1,s.i,{bulk:true,showSwap:false}) : mealRow(m,d,s.i,{});
+    });
+    const t=dayTotals(fullDay(d));
+    html+=`<div class="m-macros" style="text-align:right;padding-top:8px;color:var(--brass-dim);font-weight:700;">Day total: ${t.cal} kcal &middot; P ${t.protein} &middot; C ${t.carbs} &middot; F ${t.fats}</div>`;
+    html+='</div>';
+  }
+  out.innerHTML=html;
   bindMealEvents();
 }
 
-function getMeal(di,si){ return di<0 ? state.plan.slots[si] : state.plan.days[di][si]; }
+function getMeal(di,si){ return di<0 ? state.plan.bulkMeals[si] : state.plan.days[di][si]; }
+
+// re-normalize the fixed bulk set to its combined target after a change
+function renormBulk(){
+  const bs=state.plan.slotDesc.filter(s=>s.mode==='bulk');
+  const picks=bs.map(s=>{ const m=state.plan.bulkMeals[s.i]; const r=RECIPES.find(x=>x.id===m.id); return r?{r,mult:m.mult,type:s.type,slot:s.i}:null; }).filter(Boolean);
+  normalizePicks(picks, bs.reduce((a,s)=>a+s.cal,0));
+  picks.forEach(p=> state.plan.bulkMeals[p.slot]=scaledMeal(p,p.type));
+  state.plan.bulkActual=Object.values(state.plan.bulkMeals).reduce((a,m)=>a+m.cal,0);
+}
+// re-normalize one day's fresh meals to fill whatever the bulk meals leave
+function renormDay(d){
+  const fs=state.plan.slotDesc.filter(s=>s.mode==='fresh'); if(!fs.length) return;
+  const picks=fs.map(s=>{ const m=state.plan.days[d][s.i]; if(!m) return null; const r=RECIPES.find(x=>x.id===m.id); return r?{r,mult:m.mult,type:s.type,slot:s.i}:null; }).filter(Boolean);
+  const ft=Math.max(0, state.target.cal - state.plan.bulkActual) || state.target.cal;
+  normalizePicks(picks, ft);
+  picks.forEach(p=> state.plan.days[d][p.slot]=scaledMeal(p,p.type));
+}
 
 function bindMealEvents(){
   document.querySelectorAll('.m-name, .nt-view').forEach(el=>el.addEventListener('click',()=>openRecipe(+el.dataset.day,+el.dataset.slot)));
   document.querySelectorAll('.nt-swap').forEach(el=>el.addEventListener('click',()=>{
     const di=+el.dataset.day, si=+el.dataset.slot;
-    const st=slotTargets(state.meals);
-    if(state.plan.mode==='bulk'){
-      const slotType=state.plan.slots[si].type;
-      const target=st.find(s=>s.type===slotType)?.cal || state.target.cal/state.plan.slots.length;
-      const used=new Set(state.plan.slots.map(m=>m.id));
-      const p=pickFor(slotType,target,used); if(p) state.plan.slots[si]=scaledMeal(p,slotType);
-      state.plan.slots=renormMeals(state.plan.slots);
-    } else {
-      const meals=state.plan.days[di]; const slotType=meals[si].type;
-      const target=st.filter(s=>s.type===slotType)[0]?.cal || state.target.cal/meals.length;
-      const used=new Set(meals.map(m=>m.id));
-      const p=pickFor(slotType,target,used); if(p) meals[si]=scaledMeal(p,slotType);
-      state.plan.days[di]=renormMeals(meals);
+    const s=state.plan.slotDesc.find(x=>x.i===si); if(!s) return;
+    if(di<0){ // bulk meal — swapping changes it for the whole week
+      const used=new Set(Object.values(state.plan.bulkMeals).map(m=>m.id));
+      const p=pickFor(s.type,s.cal,used,true); if(p) state.plan.bulkMeals[si]=scaledMeal(p,s.type);
+      renormBulk();
+      for(let d=0; d<7; d++) renormDay(d);   // bulk change shifts what fresh meals must fill
+    } else { // fresh meal for that one day
+      const used=new Set(Object.values(state.plan.days[di]).map(m=>m.id));
+      const p=pickFor(s.type,s.cal,used,false); if(p) state.plan.days[di][si]=scaledMeal(p,s.type);
+      renormDay(di);
     }
     renderPlan();
   }));
 }
 
 function openRecipe(di,si){
-  const m=getMeal(di,si); const r=RECIPES.find(x=>x.id===m.id); if(!r) return;
+  const m=getMeal(di,si); if(!m) return; const r=RECIPES.find(x=>x.id===m.id); if(!r) return;
   const inner=document.getElementById('nt-modal-inner');
-  const isBulk = state.plan.mode==='bulk';
+  const s=state.plan.slotDesc.find(x=>x.i===si);
+  const isBulk = s ? s.mode==='bulk' : di<0;
   const factor = isBulk ? dailyFactor(m)*7 : dailyFactor(m);
   const ings = scaledIngredients(m, factor);
   const portionTip = isBulk
@@ -624,14 +733,29 @@ document.getElementById('nt-pdf').addEventListener('click',()=>{
   doc.setFont('helvetica','normal'); doc.setFontSize(11); doc.setTextColor(grey);
   doc.text(`Target: ${t.cal} kcal  ·  P ${t.protein}g  ·  C ${t.carbs}g  ·  F ${t.fats}g`,M,y); y+=20; rule();
 
-  if(state.plan.mode==='bulk'){
-    heading('Bulk-prep, cook once for the whole week');
+  const sd=state.plan.slotDesc;
+  const bulkSlots=sd.filter(s=>s.mode==='bulk');
+  const hasFresh=sd.some(s=>s.mode==='fresh');
+
+  if(bulkSlots.length){
+    heading('Cook once for the week');
     doc.setFont('helvetica','normal'); doc.setTextColor(grey); doc.setFontSize(10);
     const intro=doc.splitTextToSize('Each recipe below is scaled to make all 7 days of that meal in one cook. Cook it, then divide into 7 equal portions, one per day.', CW);
     doc.text(intro,M,y); y+=intro.length*12+6;
-    state.plan.slots.forEach(m=> recipeBlock(m, dailyFactor(m)*7, 'Makes the whole week — divide into 7 portions, one a day.'));
-  } else {
-    state.plan.days.forEach((meals,di)=>{ heading(DAYS[di]); meals.forEach(m=> recipeBlock(m, dailyFactor(m), 'Scaled to your portion for this meal.')); });
+    bulkSlots.forEach(s=>{ const m=state.plan.bulkMeals[s.i]; if(m) recipeBlock(m, dailyFactor(m)*7, 'Makes the whole week — divide into 7 portions, one a day.'); });
+  }
+  if(hasFresh){
+    for(let d=0; d<7; d++){
+      heading(DAYS[d]);
+      // one-line reminder of the batch meals eaten this day
+      const batchLine=bulkSlots.map(s=>{ const m=state.plan.bulkMeals[s.i]; return m?`${m.name} (~${m.cal} kcal)`:null; }).filter(Boolean);
+      if(batchLine.length){
+        doc.setFont('helvetica','italic'); doc.setTextColor(grey); doc.setFontSize(9.5);
+        const bl=doc.splitTextToSize('From your weekly batch: '+batchLine.join('; '), CW);
+        page(bl.length*11); doc.text(bl,M,y); y+=bl.length*11+5; doc.setFont('helvetica','normal');
+      }
+      sd.filter(s=>s.mode==='fresh').forEach(s=>{ const m=state.plan.days[d][s.i]; if(m) recipeBlock(m, dailyFactor(m), 'Cooked fresh — scaled to your portion.'); });
+    }
   }
   doc.save('true-hybrid-meal-plan.pdf');
 });
