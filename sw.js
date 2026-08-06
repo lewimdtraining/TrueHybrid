@@ -2,7 +2,7 @@
    Bump CACHE_VERSION whenever you want to force every visitor to drop old cached
    assets on their next visit. Pages and recipe data are fetched network-first, so
    normal content edits show up without changing this number. */
-const CACHE_VERSION = 'th-nutrition-v3-prep';
+const CACHE_VERSION = 'th-nutrition-v3-oneserve';
 const CACHE = `th-cache-${CACHE_VERSION}`;
 
 // Core shell precached on install so the tool opens offline.
@@ -25,9 +25,16 @@ const PRECACHE = [
   '/manifest.webmanifest',
 ];
 
+// addAll() rejects the whole install if a single file 404s, which silently
+// leaves visitors with no service worker and no offline mode at all. Cache each
+// entry on its own so one missing asset cannot take the rest down with it.
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE).then((c) => c.addAll(PRECACHE)).then(() => self.skipWaiting())
+    caches.open(CACHE).then((c) => Promise.allSettled(
+      PRECACHE.map((url) => c.add(url).catch((err) => {
+        console.warn('[sw] could not precache', url, err);
+      }))
+    )).then(() => self.skipWaiting())
   );
 });
 
