@@ -2,7 +2,7 @@
    Bump CACHE_VERSION whenever you want to force every visitor to drop old cached
    assets on their next visit. Pages and recipe data are fetched network-first, so
    normal content edits show up without changing this number. */
-const CACHE_VERSION = 'th-nutrition-v3-oneserve';
+const CACHE_VERSION = 'th-nutrition-v6-audited';
 const CACHE = `th-cache-${CACHE_VERSION}`;
 
 // Core shell precached on install so the tool opens offline.

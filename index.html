@@ -10,8 +10,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="True Hybrid">
-<title>True Hybrid, Free Nutrition Tool</title>
-<meta name="description" content="Calculate your daily macros and build a week of meals from a library of 200 recipes. Bulk-prep or daily variety, with food likes, dislikes and preference filters. Runs entirely in your browser.">
+<title>True Hybrid, Nutrition Tool</title>
+<meta name="description" content="Calculate your daily calories and macros, then build a week of meals from a library of 200 single-serving recipes. Bulk-prep or daily variety, with likes, dislikes and dietary filters. Runs entirely in your browser.">
 <link rel="stylesheet" href="assets/styles.css">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230E141F'/%3E%3Ctext x='16' y='23' text-anchor='middle' fill='%234A9FE0' font-family='Arial,sans-serif' font-size='20' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E">
 <style>
@@ -54,7 +54,9 @@
 .nt-readout .t .v { font-family:var(--display); font-style:normal; font-size:18px; font-weight:800; color:var(--ink); margin-top:3px; }
 .nt-readout .t .v.over { color: var(--warn); }
 .nt-readout .t .v.ok { color: var(--brass-dim); }
-.nt-readout .t .v.under { color: var(--warn); }
+.nt-readout .t .v.under { color: var(--brass-dim); opacity:0.75; }
+.nt-readout .t .v.over { color: var(--warn); }
+.nt-readout .t .v .arrow { font-size:11px; font-weight:700; margin-left:2px; }
 .nt-note { font-size:12.5px; color:var(--char); line-height:1.55; margin-top:12px; background:rgba(74,159,224,0.10); border-left:3px solid var(--brass); padding:12px 14px; }
 .nt-note strong{color:var(--ink);}
 
@@ -254,7 +256,7 @@
     <div class="nt-card nt-hidden" id="nt-result-card">
       <h2>Your week</h2>
       <div id="nt-readout-wrap">
-        <div class="hint" style="margin-bottom:2px;">Delivered per day, averaged across the week. Orange means more than 10% over target on calories, carbs, or fats.</div>
+        <div class="hint" style="margin-bottom:2px;">Delivered per day, averaged across the week. Ingredient amounts in each recipe are tuned to your targets, so these should sit close. Amber with &#9650; is more than 10% over; faded with &#9660; more than 10% under. Unmarked is within 10%.</div>
         <div class="nt-readout" id="nt-readout"></div>
         <div id="nt-offtarget" class="nt-caveat nt-hidden" style="margin-top:10px;"></div>
         <div class="nt-note" id="nt-swap-note"><strong>Swapping a meal changes the totals.</strong> A swap can push a macro into surplus or deficit without you noticing, so glance back at this readout after any swap. Anything in orange is over the 10% threshold.</div>
@@ -270,7 +272,7 @@
     <a href="/" class="th-brand th-brand--footer" aria-label="True Hybrid, home">
       <span class="th-true">true</span><span class="th-hybrid">HYBRID</span>
     </a>
-    <p>A free nutrition tool. Set your calories and macros, pick the foods you like, and build a week of meals &mdash; all in your browser.</p>
+    <p>Set your calories and macros, pick the foods you like, and build a week of meals. Every recipe is adjusted ingredient by ingredient to fit your numbers &mdash; all in your browser.</p>
     <p class="footer-disclaimer">General information only, not medical or dietetic
       advice. Calorie and macro figures are estimates. Speak to a qualified
       professional before making significant changes to your diet.</p>
@@ -318,7 +320,8 @@
   var BLOCK = new RegExp('(' + NUM + ')\\s*(' + UNIT + ')?\\b', 'gi');
   var NOSCALE = /^\s*(?:%|\+|cm\b|mm\b|min\b|mins\b|minute|degrees|C\b|F\b)/i;
   var ITEMS = '(?:egg|tortilla|fillet|bun|wrap|muffin|crumpet|slice|bagel|pita|' +
-              'rice cake|crispbread|banana|apple|sausage|waffle|pancake)';
+              'rice cake|crispbread|banana|apple|sausage|waffle|pancake|' +
+              'pouch|tin|can|jar|sachet|packet)';
   var DISCRETE = new RegExp('^[^,()]{0,28}?\\b' + ITEMS + 's?\\b', 'i');
 
   var SINGULAR = {
@@ -327,7 +330,9 @@
     'muffins': 'muffin', 'crumpets': 'crumpet', 'slices': 'slice', 'bagels': 'bagel',
     'rice cakes': 'rice cake', 'crispbreads': 'crispbread', 'bananas': 'banana',
     'apples': 'apple', 'sausages': 'sausage', 'waffles': 'waffle',
-    'pancakes': 'pancake', 'crackers': 'cracker', 'potatoes': 'potato'
+    'pancakes': 'pancake', 'crackers': 'cracker', 'potatoes': 'potato',
+    'pouches': 'pouch', 'tins': 'tin', 'cans': 'can', 'sachets': 'sachet',
+    'jars': 'jar', 'packets': 'packet'
   };
 
   var NICE = [[1, 4], [1, 3], [1, 2], [2, 3], [3, 4]];
@@ -371,15 +376,49 @@
     return whole ? whole + ' ' + f : f;
   }
 
+  var PLURAL = {}, PLURAL_KEYS = [], SINGULAR_KEYS = [];
+  (function(){
+    for (var k in SINGULAR) PLURAL[SINGULAR[k]] = k;
+    // Longest first, so "egg white" is matched before "egg" and we never
+    // produce "eggs whites".
+    PLURAL_KEYS = Object.keys(PLURAL).sort(function(a,b){ return b.length - a.length; });
+    SINGULAR_KEYS = Object.keys(SINGULAR).sort(function(a,b){ return b.length - a.length; });
+  })();
+
+  // "2 pouch" reads wrong; if the count went above one, put the noun back in
+  // the plural.
+  function pluralise(text) {
+    var head = text.split(/[,(]/)[0];
+    var m = head.match(/^\s*(\d+(?:\s+\d\/\d)?|\d\/\d)\s+/);
+    if (!m) return text;
+    if (value(m[1]) <= 1) return text;
+    // Already plural ("5 egg whites"): leave it alone, or "egg" inside
+    // "egg whites" gets pluralised and yields "eggs whites".
+    for (var qi = 0; qi < SINGULAR_KEYS.length; qi++) {
+      if (new RegExp('\\b' + SINGULAR_KEYS[qi] + '\\b', 'i').test(head)) return text;
+    }
+    for (var pi = 0; pi < PLURAL_KEYS.length; pi++) {
+      var sing = PLURAL_KEYS[pi];
+      var re = new RegExp('\\b' + sing + '\\b(?!s)', 'i');
+      var hit = head.match(re);
+      if (hit) {
+        var at = text.toLowerCase().indexOf(hit[0].toLowerCase());
+        return text.slice(0, at) + PLURAL[sing] + text.slice(at + hit[0].length);
+      }
+    }
+    return text;
+  }
+
   function singularise(text) {
     var head = text.split(/[,(]/)[0];
     if (!/^\s*1\s+\D/.test(head)) return text;
-    for (var plur in SINGULAR) {
+    for (var si = 0; si < SINGULAR_KEYS.length; si++) {
+      var plur = SINGULAR_KEYS[si], sing = SINGULAR[plur];
       var re = new RegExp('\\b' + plur + '\\b', 'i');
       var m = head.match(re);
       if (m) {
         var at = text.toLowerCase().indexOf(m[0].toLowerCase());
-        return text.slice(0, at) + SINGULAR[plur] + text.slice(at + m[0].length);
+        return text.slice(0, at) + sing + text.slice(at + m[0].length);
       }
     }
     return text;
@@ -395,10 +434,36 @@
     return spans;
   }
 
+  // A countable item can only move in halves, so "1 tin (95g drained)" at 0.75x
+  // must not become "1 tin (70g drained)" - the count and the weight would
+  // contradict each other. Work out the count's rounded ratio first, then apply
+  // that same ratio to everything else on the line.
+  function discreteRatio(line, factor) {
+    BLOCK.lastIndex = 0;
+    var m;
+    while ((m = BLOCK.exec(line)) !== null) {
+      var after = line.slice(m.index + m[0].length);
+      var before = line.slice(0, m.index);
+      if (m[2]) continue;                                  // has a unit, not a count
+      if (NOSCALE.test(after)) continue;
+      if (!DISCRETE.test(after.slice(0, 32))) continue;
+      var tail = before.replace(/\s+$/, '');
+      var ok = m.index === 0 || /(?:^|[,+(])\s*$/.test(before) || /\bof$/i.test(tail);
+      if (!ok) continue;
+      var base = value(m[1]);
+      if (!(base > 0)) continue;
+      var rounded = Math.max(0.5, Math.round(base * factor * 2) / 2);
+      return rounded / base;
+    }
+    return null;
+  }
+
   function scaleDetailed(line, factor) {
     if (!factor || Math.abs(factor - 1) < 1e-9) return { text: line, ratio: 1 };
     var out = '', pos = 0, m, changed = false, ratios = [];
     var frozen = perUnitSpans(line);
+    var dr = discreteRatio(line, factor);
+    if (dr != null) factor = dr;
     function inFrozen(i) {
       for (var k = 0; k < frozen.length; k++) if (i > frozen[k][0] && i < frozen[k][1]) return true;
       return false;
@@ -438,11 +503,157 @@
     var ratio = ratios.length
       ? ratios.reduce(function (a, b) { return a + b; }, 0) / ratios.length
       : 1;
-    return { text: singularise(out), ratio: ratio };
+    return { text: pluralise(singularise(out)), ratio: ratio };
   }
 
   function scaleIngredient(line, factor) {
     return scaleDetailed(line, factor).text;
+  }
+
+
+  // ---------------------------------------------------------------- fitting
+  // A single multiplier changes the SIZE of a meal but never its SHAPE: scale a
+  // 40%-fat dish by 1.4x and it is still 40% fat. To meet a macro split the
+  // amounts inside the recipe have to move relative to each other, which is what
+  // this does: nudge the rice up, the oil down, the chicken to suit, within
+  // bounds tight enough that the dish is still the dish.
+
+  // What each line mainly contributes, worked out from its own macros.
+  function roleOf(m, mealKcal) {
+    var kcal = m[0] || 0;
+    if (kcal < 8) return 'fixed';                       // seasoning, herbs, water
+    // A line carrying only a few percent of the meal cannot move its macros, but
+    // stretching it does produce silly amounts of sauce or veg. Hold it near size.
+    if (mealKcal && kcal / mealKcal < 0.09) return 'minor';
+    var p = (m[1] * 4) / kcal, c = (m[2] * 4) / kcal, f = (m[3] * 9) / kcal;
+    if (p >= c && p >= f) return 'protein';
+    if (c >= f) return 'carb';
+    return 'fat';
+  }
+
+  // How far each kind of ingredient may move from the meal's own portion size.
+  var REL = {
+    protein: [0.65, 1.55],
+    carb:    [0.55, 1.85],
+    fat:     [0.40, 1.45],
+    minor:   [0.85, 1.25],
+    fixed:   [1.00, 1.00]
+  };
+  var ABS = [0.30, 3.50];
+
+  function fitRecipe(recipe, want, opts) {
+    opts = opts || {};
+    var per = recipe.ingredientMacros;
+    var n = recipe.ingredients.length;
+    var base = recipe.calories > 0 ? (want.cal / recipe.calories) : 1;
+    base = Math.min(ABS[1], Math.max(ABS[0], base));
+
+    if (!per || per.length !== n) {                     // no per-line data: fall back
+      return scaleRecipe(recipe, base);
+    }
+
+    var lo = [], hi = [], x = [];
+    for (var i = 0; i < n; i++) {
+      var r = REL[roleOf(per[i], recipe.calories)];
+      lo.push(Math.max(ABS[0], base * r[0]));
+      hi.push(Math.min(ABS[1], base * r[1]));
+      x.push(base);
+    }
+
+    // Weights are in calorie-equivalents so the four targets are comparable.
+    // Calories matter most; the pull term keeps amounts near the honest portion
+    // so the solver cannot buy a macro fit by mangling the recipe.
+    var W = { cal: 1.0, prot: 0.9, carb: 0.8, fat: 1.1 };
+    // Fibre is not a target to hit, it is a ceiling not to sail past. Big
+    // calorie plans scale up oats, beans and wholegrains, and fibre rides along
+    // with them: left alone this reached 135 g a day, which nobody can stomach.
+    var fibMax = want.fibMax != null ? want.fibMax : Infinity;
+    var W_FIB = 2.2;
+    var PULL = opts.pull == null ? 0.06 : opts.pull;
+    var tgt = [want.cal, want.prot || 0, want.carb || 0, want.fat || 0];
+    var SCALE = [1, 4, 4, 9];
+    var WT = [W.cal, W.prot, W.carb, W.fat];
+
+    function totals() {
+      var t = [0, 0, 0, 0, 0];
+      for (var i = 0; i < n; i++)
+        for (var k = 0; k < 5; k++) t[k] += (per[i][k] || 0) * x[i];
+      return t;
+    }
+
+    // Coordinate descent: for one ingredient at a time the error is a simple
+    // quadratic, so the best value has a closed form. Clamp it and move on.
+    var t = totals();
+    for (var pass = 0; pass < 60; pass++) {
+      var moved = false;
+      for (var i = 0; i < n; i++) {
+        if (hi[i] - lo[i] < 1e-9) continue;
+        var A = 0, B = 0;
+        // Only bites when the meal is over its fibre ceiling, so normal meals
+        // are untouched.
+        if (isFinite(fibMax) && t[4] > fibMax && per[i][4] > 0) {
+          var af = per[i][4] * 4;
+          var restF = (t[4] - per[i][4] * x[i]) * 4;
+          A += W_FIB * af * af;
+          B += W_FIB * af * (restF - fibMax * 4);
+        }
+        for (var k = 0; k < 4; k++) {
+          var a = per[i][k] * SCALE[k];
+          if (!a) continue;
+          var rest = (t[k] - per[i][k] * x[i]) * SCALE[k];
+          var w = WT[k];
+          A += w * a * a;
+          B += w * a * (rest - tgt[k] * SCALE[k]);
+        }
+        var refCal = Math.max(per[i][0], 1);
+        A += PULL * refCal * refCal;
+        B -= PULL * refCal * refCal * base;
+        if (A <= 0) continue;
+        var nx = Math.min(hi[i], Math.max(lo[i], -B / A));
+        if (Math.abs(nx - x[i]) > 1e-6) {
+          for (var k2 = 0; k2 < 5; k2++) t[k2] += (per[i][k2] || 0) * (nx - x[i]);
+          x[i] = nx; moved = true;
+        }
+      }
+      if (!moved) break;
+    }
+
+    // Round each amount to something weighable, then re-add the macros from what
+    // was actually printed, so the numbers describe the food on the page.
+    var out = Object.assign({}, recipe);
+    var lines = recipe.ingredients.map(function (l, i) { return scaleDetailed(l, x[i]); });
+    out.ingredients = lines.map(function (d) { return d.text; });
+    out.factors = lines.map(function (d) { return d.ratio; });
+    out.portion = base;
+    var acc = [0, 0, 0, 0, 0];
+    for (var i2 = 0; i2 < n; i2++)
+      for (var k3 = 0; k3 < 5; k3++) acc[k3] += (per[i2][k3] || 0) * lines[i2].ratio;
+    out.calories = Math.round(acc[0]); out.protein = Math.round(acc[1]);
+    out.carbs = Math.round(acc[2]);    out.fats = Math.round(acc[3]);
+    out.fibre = Math.round(acc[4]);    out.exact = true;
+    out.tuned = true;
+    return out;
+  }
+
+  // Re-apply a solved set of per-ingredient factors, optionally for a batch
+  // (bulk prep cooks x7). Macros come back out of the rounded amounts.
+  function applyFactors(recipe, factors, batch) {
+    batch = batch || 1;
+    var per = recipe.ingredientMacros;
+    var lines = recipe.ingredients.map(function (l, i) {
+      return scaleDetailed(l, (factors && factors[i] != null ? factors[i] : 1) * batch);
+    });
+    var acc = [0, 0, 0, 0, 0];
+    if (per && per.length === lines.length) {
+      for (var i = 0; i < lines.length; i++)
+        for (var k = 0; k < 5; k++) acc[k] += (per[i][k] || 0) * lines[i].ratio;
+    }
+    return {
+      ingredients: lines.map(function (d) { return d.text; }),
+      calories: Math.round(acc[0] / batch), protein: Math.round(acc[1] / batch),
+      carbs: Math.round(acc[2] / batch), fats: Math.round(acc[3] / batch),
+      fibre: Math.round(acc[4] / batch)
+    };
   }
 
   // Portions the tool should never produce: below this you cannot weigh it,
@@ -491,6 +702,9 @@
   return {
     scaleIngredient: scaleIngredient,
     scaleDetailed: scaleDetailed,
+    fitRecipe: fitRecipe,
+    applyFactors: applyFactors,
+    roleOf: roleOf,
     scaleRecipe: scaleRecipe,
     clampPortion: clampPortion,
     roundPortion: roundPortion,
@@ -608,7 +822,14 @@ document.getElementById('nt-calc').addEventListener('click', ()=>{
   let cal = Math.round(bmr*act*(1+goal));
   const floor = state.sex==='male'?1500:1200;
   if(cal<floor) cal=floor;
-  const protein = Math.round(kg*2.0);
+  // Protein starts at 2.0 g per kg, then gets bounded as a share of intake.
+  // Unbounded, a heavy person on a deficit was being asked for 44% of their
+  // calories from protein, which no realistic set of meals can supply, and a
+  // light person on a big surplus was asked for 14%, which everything overshoots.
+  let protein = kg*2.0;
+  protein = Math.min(protein, cal*0.32/4);   // ceiling: achievable from real food
+  protein = Math.max(protein, cal*0.18/4);   // floor: keeps protein meaningful
+  protein = Math.round(Math.min(protein, kg*2.5));
   const fats = Math.round(cal*0.25/9);
   const carbs = Math.max(0, Math.round((cal - protein*4 - fats*9)/4));
   state.target = { cal, protein, carbs, fats };
@@ -680,29 +901,59 @@ function slots(n){
   return ['lunch','dinner'];
 }
 const SHARE={ breakfast:1, lunch:1.15, dinner:1.2, snack:0.55 };
+// Fibre is a ceiling, not a target. Roughly 14g per 1000 kcal is the usual
+// guideline; this allows a generous margin over it but stops a 4700 kcal plan
+// stacking up 135g of fibre, which is genuinely unpleasant to eat.
+function fibreCeiling(){
+  let c = Math.max(30, Math.min(55, 16 * state.target.cal / 1000));
+  // Plant-based eating is inherently higher in fibre and people eating that way
+  // are used to it. Holding vegan plans to the same ceiling as everyone else
+  // just forces the macros off instead.
+  const vegan = document.getElementById('f-vegan') && document.getElementById('f-vegan').checked;
+  const veg   = document.getElementById('f-veg')   && document.getElementById('f-veg').checked;
+  if(vegan) c *= 1.45; else if(veg) c *= 1.15;
+  return c;
+}
 function slotTargets(n){
   const s=slots(n); const w=s.map(x=>SHARE[x]); const sum=w.reduce((a,b)=>a+b,0);
-  return s.map((type,i)=>({ type, cal: state.target.cal*w[i]/sum,
-                                  prot: state.target.protein*w[i]/sum }));
+  const fib=fibreCeiling();
+  return s.map((type,i)=>({ type, share:w[i]/sum,
+    cal: state.target.cal*w[i]/sum, prot: state.target.protein*w[i]/sum,
+    carb: state.target.carbs*w[i]/sum, fat: state.target.fats*w[i]/sum,
+    fibMax: fib*w[i]/sum }));
 }
 
 // Scoring on calories alone let a plan hit its calorie target with whatever
 // protein happened to come along, which on restricted diets fell as much as
 // 40% short. Protein is a headline promise of the tool, so it is scored too.
-function pickFor(type, calTarget, used, protTarget){
+// A portion multiplier scales all of a recipe's macros together, so it can move
+// the size of a meal but never its shape. Hitting a macro split therefore has to
+// come from which recipes get chosen. This scores candidates on all four numbers
+// at once, in calorie-equivalent terms so they are comparable.
+const W_CARB = 0.85, W_FAT = 1.25, W_PROT_SHORT = 3.5, W_PROT_OVER = 2.0;
+
+function pickFor(type, want, used){
   const pool=RECIPES.filter(r=>r.mealType===type && passesFilters(r));
   if(!pool.length) return null;
   const scored=[];
   for(const r of pool){
-    const per=r.calories/(r.servings||1);
-    let mult=THScale.clampPortion(calTarget/per);
-    const delivered=per*mult;
-    let score=Math.abs(delivered-calTarget);
-    if(protTarget>0){
-      const gotP=(r.protein/(r.servings||1))*mult;
-      // Falling short of protein costs more than overshooting it.
-      const miss=protTarget-gotP;
-      score += (miss>0 ? miss*14 : -miss*4);
+    const per=1/(r.servings||1);
+    const cal=r.calories*per;
+    if(cal<=0) continue;
+    const mult=THScale.clampPortion(want.cal/cal);
+    const gotCal=cal*mult, gotP=r.protein*per*mult,
+          gotC=r.carbs*per*mult, gotF=r.fats*per*mult;
+    let score=Math.abs(gotCal-want.cal);
+    score += Math.abs(gotC-(want.carb||0))*4*W_CARB;
+    score += Math.abs(gotF-(want.fat||0))*9*W_FAT;
+    const missP=(want.prot||0)-gotP;
+    // Falling short of protein costs more than overshooting it.
+    score += (missP>0 ? missP*4*W_PROT_SHORT : -missP*4*W_PROT_OVER);
+    // Fibre only counts against a recipe once the slot's budget is spent, so
+    // high-volume plans stop stacking beans on oats on wholegrains.
+    if(want.fibMax!=null){
+      const gotFib=(r.fibre||0)*per*mult;
+      if(gotFib>want.fibMax) score += (gotFib-want.fibMax)*22;
     }
     score -= likeBoost(r)*120;          // favour liked foods
     if(used.has(r.id)) score+=400;
@@ -711,9 +962,8 @@ function pickFor(type, calTarget, used, protTarget){
   if(!scored.length) return null;
   scored.sort((a,b)=>a.score-b.score);
   // Always taking the single best made every day of the week identical. Draw
-  // from a shortlist of good-enough options instead, so the week stays varied
-  // without letting a poor fit through.
-  const cut=scored[0].score+90;
+  // from a shortlist of good-enough options instead.
+  const cut=scored[0].score+110;
   const short=scored.filter(x=>x.score<=cut).slice(0,8);
   const pickOne=short[Math.floor(Math.random()*short.length)];
   return { r:pickOne.r, mult:pickOne.mult };
@@ -724,12 +974,25 @@ function pickFor(type, calTarget, used, protTarget){
 function batchSize(){ return state.mode==='bulk' ? 7 : 1; }
 // Macros are re-added from the rounded ingredient amounts, so what the plan
 // counts is exactly what the ingredient list tells you to cook.
-function scaledMeal(pick, type){
-  const r=pick.r, b=batchSize();
-  const s=THScale.scaleRecipe(r, pick.mult*b);
-  return { id:r.id, type, name:r.name, mult:pick.mult,
-    cal:Math.round(s.calories/b), protein:Math.round(s.protein/b),
-    carbs:Math.round(s.carbs/b), fats:Math.round(s.fats/b), fibre:Math.round(s.fibre/b) };
+// Fit the ingredient amounts inside the recipe to what this slot needs, rather
+// than scaling the whole dish by one number. Falls back to a plain multiplier if
+// a recipe has no per-ingredient data.
+function fitMeal(r, want, type){
+  const f=THScale.fitRecipe(r, want);
+  const factors=f.factors || r.ingredients.map(()=>f.portion||1);
+  const b=batchSize();
+  const shown=THScale.applyFactors(r, factors, b);
+  return { id:r.id, type, name:r.name, mult:f.portion, factors,
+    cal:shown.calories, protein:shown.protein, carbs:shown.carbs,
+    fats:shown.fats, fibre:shown.fibre };
+}
+function scaledMeal(pick, type, want){
+  const r=pick.r;
+  const w = want || { cal:(r.calories/(r.servings||1))*pick.mult,
+                      prot:(r.protein/(r.servings||1))*pick.mult,
+                      carb:(r.carbs/(r.servings||1))*pick.mult,
+                      fat:(r.fats/(r.servings||1))*pick.mult };
+  return fitMeal(r, w, type);
 }
 
 // Calories a pick actually delivers once its amounts are rounded to something
@@ -766,20 +1029,76 @@ function normalizePicks(picks){
   picks.forEach((p,i)=>{ p.mult=best[i]; });
   return picks;
 }
-// Pick a full day of meals for the given slot targets, then normalize to target.
+// Pick a full day of meals, then tune the amounts inside each one.
+//
+// Two stages. First choose recipes whose macro shape suits what is left of the
+// day, because no amount of adjusting turns a nut snack into a carb source.
+// Then solve the ingredient amounts inside each chosen recipe so the day lands
+// on the person's actual calorie and macro targets. A couple of refinement
+// passes redistribute whatever the rounding leaves over.
 function buildMeals(st){
-  const used=new Set(); const picks=[];
-  st.forEach(s=>{ const p=pickFor(s.type,s.cal,used,s.prot); if(p){ used.add(p.r.id); picks.push({r:p.r,mult:p.mult,type:s.type}); } });
-  normalizePicks(picks);
-  return picks.map(p=>scaledMeal(p,p.type));
+  const used=new Set(); const chosen=[];
+  const rem={ cal:state.target.cal, prot:state.target.protein,
+              carb:state.target.carbs, fat:state.target.fats, fib:fibreCeiling() };
+  let shareLeft=st.reduce((a,s)=>a+s.share,0);
+  st.forEach(s=>{
+    const w = shareLeft>0 ? s.share/shareLeft : 1;
+    const want={ cal:Math.max(1,rem.cal*w), prot:Math.max(0,rem.prot*w),
+                 carb:Math.max(0,rem.carb*w), fat:Math.max(0,rem.fat*w),
+                 fibMax:Math.max(4, rem.fib*w) };
+    const p=pickFor(s.type, want, used);
+    if(!p) return;
+    used.add(p.r.id);
+    const meal=fitMeal(p.r, want, s.type);
+    chosen.push(meal);
+    rem.cal-=meal.cal; rem.prot-=meal.protein; rem.carb-=meal.carbs; rem.fat-=meal.fats;
+    rem.fib-=meal.fibre;
+    shareLeft-=s.share;
+  });
+  return refineMeals(chosen, st);
 }
-// Re-normalize an existing set of scaled meals (used after a swap) so the day
-// still hits the target once one meal has been replaced.
-function renormMeals(meals){
-  const picks=meals.map(m=>({r:RECIPES.find(x=>x.id===m.id),mult:m.mult,type:m.type})).filter(p=>p.r);
-  normalizePicks(picks);
-  return picks.map(p=>scaledMeal(p,p.type));
+
+// Re-solve every meal against the day's remaining need. Each pass gets closer,
+// because the amounts each meal can supply are now known rather than assumed.
+function refineMeals(meals, st){
+  if(!meals.length || !state.target) return meals;
+  const shares=meals.map(m=>{ const s=st.find(x=>x.type===m.type); return s?s.share:1/meals.length; });
+  const shareSum=shares.reduce((a,b)=>a+b,0)||1;
+  let best=meals, bestErr=dayError(meals);
+  for(let pass=0; pass<3 && bestErr>0.004; pass++){
+    const next=[]; const rem={ cal:state.target.cal, prot:state.target.protein,
+                               carb:state.target.carbs, fat:state.target.fats,
+                               fib:fibreCeiling() };
+    let left=shareSum;
+    meals.forEach((m,i)=>{
+      const r=RECIPES.find(x=>x.id===m.id); if(!r){ next.push(m); return; }
+      const w = left>0 ? shares[i]/left : 1;
+      const want={ cal:Math.max(1,rem.cal*w), prot:Math.max(0,rem.prot*w),
+                   carb:Math.max(0,rem.carb*w), fat:Math.max(0,rem.fat*w),
+                   fibMax:Math.max(4, rem.fib*w) };
+      const fitted=fitMeal(r, want, m.type);
+      next.push(fitted);
+      rem.cal-=fitted.cal; rem.prot-=fitted.protein; rem.carb-=fitted.carbs; rem.fat-=fitted.fats;
+      rem.fib-=fitted.fibre;
+      left-=shares[i];
+    });
+    const err=dayError(next);
+    if(err<bestErr){ bestErr=err; best=next; }
+    meals=next;
+  }
+  return best;
 }
+
+// One number for how far a day sits from target, so passes can be compared.
+function dayError(meals){
+  if(!state.target) return 0;
+  const t=dayTotals(meals), g=state.target;
+  const rel=(a,b)=> b>0 ? Math.abs(a-b)/b : 0;
+  return rel(t.cal,g.cal)*1.6 + rel(t.protein,g.protein) + rel(t.carbs,g.carbs) + rel(t.fats,g.fats);
+}
+
+// Re-tune an existing set of meals (used after a swap) so the day still lands.
+function renormMeals(meals){ return refineMeals(meals.slice(), slotTargets(meals.length)); }
 
 // ---- ingredient scaling ----
 // Every recipe in recipes.json is exactly one serving, so a portion multiplier
@@ -791,6 +1110,10 @@ function scaleQty(str, factor){ return THScale.scaleIngredient(str, factor); }
 function dailyFactor(meal){ const r=RECIPES.find(x=>x.id===meal.id); return meal.mult/(r&&r.servings||1); }
 function scaledIngredients(meal, factor){
   const r=RECIPES.find(x=>x.id===meal.id); if(!r) return [];
+  if(meal.factors && meal.factors.length===r.ingredients.length){
+    const b = (factor && meal.mult) ? (factor/meal.mult) : 1;   // 1 for a plate, 7 for a batch
+    return THScale.applyFactors(r, meal.factors, Math.round(b)||1).ingredients;
+  }
   return (r.ingredients||[]).map(i=>THScale.scaleIngredient(i, factor));
 }
 
@@ -829,11 +1152,14 @@ function renderReadout(){
   // Overshoot and shortfall both matter. The old readout only coloured a macro
   // when it went over, so a plan that missed protein looked fine.
   const cls=(v,tg)=> v>tg*(1+OFF_TARGET)?'over' : (v<tg*(1-OFF_TARGET)?'under':'ok');
+  // Show direction, not just colour. Over and under used to look identical.
+  const mark=(v,tg)=>{ const c=cls(v,tg); return c==='over'?'<span class="arrow">&#9650;</span>'
+    : c==='under'?'<span class="arrow">&#9660;</span>' : ''; };
   document.getElementById('nt-readout').innerHTML =
-    rcell('Calories',avg.cal,cls(avg.cal,t.cal))+
-    rcell('Protein',avg.protein+'g',cls(avg.protein,t.protein))+
-    rcell('Carbs',avg.carbs+'g',cls(avg.carbs,t.carbs))+
-    rcell('Fats',avg.fats+'g',cls(avg.fats,t.fats))+
+    rcell('Calories',avg.cal+mark(avg.cal,t.cal),cls(avg.cal,t.cal))+
+    rcell('Protein',avg.protein+'g'+mark(avg.protein,t.protein),cls(avg.protein,t.protein))+
+    rcell('Carbs',avg.carbs+'g'+mark(avg.carbs,t.carbs),cls(avg.carbs,t.carbs))+
+    rcell('Fats',avg.fats+'g'+mark(avg.fats,t.fats),cls(avg.fats,t.fats))+
     rcell('Fibre',avg.fibre+'g', avg.fibre>=25?'ok':'under');
 
   // Say in words what is off, rather than leaving a colour to be decoded.
@@ -912,17 +1238,19 @@ function bindMealEvents(){
     const st=slotTargets(state.meals);
     if(state.plan.mode==='bulk'){
       const slotType=state.plan.slots[si].type;
-      const sl=st.find(s=>s.type===slotType);
-      const target=sl?.cal || state.target.cal/state.plan.slots.length;
+      const sl=st.find(s=>s.type===slotType) || {cal:state.target.cal/state.plan.slots.length,prot:0,carb:0,fat:0};
       const used=new Set(state.plan.slots.map(m=>m.id));
-      const p=pickFor(slotType,target,used,sl?.prot||0); if(p) state.plan.slots[si]=scaledMeal(p,slotType);
+      const p=pickFor(slotType,sl,used);
+      if(p){ state.plan.slots[si]=fitMeal(p.r,sl,slotType);
+             state.plan.slots=refineMeals(state.plan.slots,st); }
       state.plan.slots=renormMeals(state.plan.slots);
     } else {
       const meals=state.plan.days[di]; const slotType=meals[si].type;
-      const sl=st.filter(s=>s.type===slotType)[0];
-      const target=sl?.cal || state.target.cal/meals.length;
+      const sl=st.filter(s=>s.type===slotType)[0] || {cal:state.target.cal/meals.length,prot:0,carb:0,fat:0};
       const used=new Set(meals.map(m=>m.id));
-      const p=pickFor(slotType,target,used,sl?.prot||0); if(p) meals[si]=scaledMeal(p,slotType);
+      const p=pickFor(slotType,sl,used);
+      if(p){ meals[si]=fitMeal(p.r,sl,slotType);
+             state.plan.days[di]=refineMeals(meals,st); }
       state.plan.days[di]=renormMeals(meals);
     }
     renderPlan();
@@ -935,14 +1263,18 @@ function openRecipe(di,si){
   const isBulk = state.plan.mode==='bulk';
   const factor = isBulk ? dailyFactor(m)*7 : dailyFactor(m);
   const ings = scaledIngredients(m, factor);
+  const tuned = m.factors && m.factors.some(f=>Math.abs(f-(m.factors[0]||1))>0.02);
   const portionTip = isBulk
     ? `Amounts below make the <strong>whole week</strong> of this meal. Cook it all, then divide into 7 portions, one a day (about ${m.cal} kcal each).`
     : `Amounts below are scaled to <strong>your portion</strong> for this meal (${m.cal} kcal).`;
+  const tunedNote = tuned
+    ? ` Individual amounts have been adjusted to fit your macro targets, so they will differ a little from the recipe as written.`
+    : '';
   inner.innerHTML = `<button class="nt-modal-close" id="nt-close" aria-label="Close recipe">&times;</button>
     <h3>${r.name}</h3>
     <div class="desc">${r.description||''}</div>
     <div class="macros">This portion: ${m.cal} kcal &middot; P ${m.protein}g &middot; C ${m.carbs}g &middot; F ${m.fats}g &middot; ${m.fibre}g fibre</div>
-    <div class="portion-tip">${portionTip}</div>
+    <div class="portion-tip">${portionTip}${tunedNote}</div>
     <h4>Ingredients</h4><ul>${ings.map(i=>`<li>${i}</li>`).join('')}</ul>
     <h4>Method</h4><ol>${(r.instructions||[]).map(i=>`<li>${i}</li>`).join('')}</ol>`;
   const modal=document.getElementById('nt-modal');
