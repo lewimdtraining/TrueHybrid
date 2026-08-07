@@ -175,6 +175,15 @@
         </div>
       </div>
       <div class="nt-caveat"><strong>On the deficit and surplus:</strong> these are kept in a sustainable range on purpose. Cutting much harder than this under-fuels your training and recovery; a bigger surplus is mostly fat, not muscle. A calorie floor also stops the target dropping too low. Slower and steady wins here.</div>
+      <div class="nt-caveat" id="nt-serving-note"><strong>How the amounts work.</strong>
+        On <strong>Daily variety</strong>, every meal is written as a single serve.
+        The amounts shown are one plate of food for one person. If you want to
+        cook the same meal for more than one, multiply the main ingredients
+        &mdash; the meat, rice, pasta, oats, vegetables &mdash; by however many
+        serves you need. Sauces, oil, spices and seasoning do not need doubling
+        or tripling: add a little more to taste and judge it by eye.
+        On <strong>Bulk-prep</strong>, the tool does the multiplying for you and
+        gives you the whole week in one cook, seven times everything.</div>
       <div class="nt-caveat" id="nt-disclaimer"><strong>Read this first.</strong>
         This tool gives a general estimate, not medical or dietetic advice. The
         figures come from a standard equation and a food database, so they are a
@@ -220,7 +229,7 @@
             <button data-mode="variety" class="on">Daily variety</button>
             <button data-mode="bulk">Bulk-prep</button>
           </div>
-          <div class="sub">Bulk-prep builds one big cook of each meal for the whole week.</div>
+          <div class="sub">Daily variety gives single-serve amounts. Bulk-prep multiplies everything by 7 for one cook.</div>
         </div>
       </div>
 
@@ -278,7 +287,6 @@
       professional before making significant changes to your diet.</p>
     <div class="footer-bar">
       <span>&copy; <span id="year"></span> True Hybrid</span>
-      <span>No tracking &middot; No ads &middot; No bullsh*t</span>
     </div>
   </footer>
 
@@ -1198,7 +1206,7 @@ function renderPlan(){
   const out=document.getElementById('nt-output');
   const banner=document.getElementById('nt-mode-banner');
   if(state.plan.mode==='bulk'){
-    banner.innerHTML = `<strong>Bulk-prep.</strong> The same ${state.plan.slots.length} meals every day. Cook each one once for the whole week using the quantities below, then split it into 7 daily portions.`;
+    banner.innerHTML = `<strong>Bulk-prep.</strong> The same ${state.plan.slots.length} meals every day. The quantities below are already multiplied by 7, so cook each one once for the whole week and split it into 7 daily portions.`;
     let html='<div class="nt-day"><h3>Your daily meals</h3>';
     state.plan.slots.forEach((m,i)=> html+=mealRow(m,-1,i));
     html+='</div>';
@@ -1215,7 +1223,7 @@ function renderPlan(){
     html+='</div>';
     out.innerHTML=html;
   } else {
-    banner.innerHTML = `<strong>Daily variety.</strong> A different mix every day, ${slots(state.meals).length} meals a day across the week. Tap Recipe on any meal for the exact amounts at your portion.`;
+    banner.innerHTML = `<strong>Daily variety.</strong> A different mix every day, ${slots(state.meals).length} meals a day across the week. Every amount below is a single serve. Cooking for more than one? Multiply the main ingredients by the number of serves; sauces and spices only need a little more, not the full multiple. Tap Recipe on any meal for the exact amounts.`;
     let html='';
     state.plan.days.forEach((meals,di)=>{
       html+=`<div class="nt-day"><h3>${DAYS[di]}</h3>`;
